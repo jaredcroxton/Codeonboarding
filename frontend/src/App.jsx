@@ -867,21 +867,32 @@ export default function App(){
             Download Certificate
           </button>
         </section>
-      ):allNZDone&&(
+      ):(()=>{
+        const doneList=[{di:0,name:"New Zealand",theme:"Our Story",col:"#60a5fa",next:"Australia"},{di:1,name:"Australia",theme:"Loyalty & Subscription Loyalty",col:"#f59e0b",next:"Indonesia"},{di:2,name:"Indonesia",theme:"The Explorer Product",col:"#34d399",next:teamChoice===null?"your next path":null}].filter(d=>isDestComplete(d.di));
+        if(doneList.length===0)return null;
+        const latest=doneList[doneList.length-1];
+        const themes=doneList.map(d=>d.theme);
+        const themesText=themes.length===1?themes[0]:themes.length===2?`${themes[0]} and ${themes[1]}`:`${themes.slice(0,-1).join(", ")}, and ${themes[themes.length-1]}`;
+        return(
         <section style={{padding:"40px 24px 80px",maxWidth:700,margin:"0 auto",textAlign:"center"}}>
           <div style={{background:"linear-gradient(135deg,#fefefe,#f8f6ff)",border:"2px solid #e8e8ed",borderRadius:24,padding:"48px 40px",position:"relative",overflow:"hidden"}}>
             <div style={{position:"absolute",top:0,left:0,right:0,height:4,background:"linear-gradient(90deg,#60a5fa,#34d399,#f59e0b,#f472b6)"}}/>
-            <div style={{fontSize:11,fontWeight:700,letterSpacing:".1em",color:"#86868b",textTransform:"uppercase",marginBottom:20}}>Destination Complete</div>
+            <div style={{fontSize:11,fontWeight:700,letterSpacing:".1em",color:"#86868b",textTransform:"uppercase",marginBottom:20}}>Journey Progress</div>
             <div style={{fontSize:48,marginBottom:16}}>&#127881;</div>
-            <h2 style={{fontSize:32,fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>New Zealand Stamped!</h2>
-            <p style={{fontSize:17,color:"#424245",lineHeight:1.6,marginBottom:24}}>You have completed all New Zealand modules and earned your first passport stamp. Australia is now unlocked.</p>
-            <div style={{display:"inline-flex",alignItems:"center",gap:8,background:"#60a5fa12",border:"1px solid #60a5fa30",padding:"10px 24px",borderRadius:980,fontSize:14,fontWeight:600,color:"#60a5fa"}}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              New Zealand: Our Story
+            <h2 style={{fontSize:32,fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>{latest.name} Stamped!</h2>
+            <p style={{fontSize:17,color:"#424245",lineHeight:1.6,marginBottom:24}}>You have completed all {themesText} modules.{latest.next?` ${latest.next} is now unlocked.`:""}</p>
+            <div style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:8}}>
+              {doneList.map((d,di)=>(
+                <div key={di} style={{display:"inline-flex",alignItems:"center",gap:6,background:`${d.col}12`,border:`1px solid ${d.col}30`,padding:"8px 16px",borderRadius:980}}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={d.col} strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span style={{fontSize:13,fontWeight:600,color:d.col}}>{d.theme}</span>
+                </div>
+              ))}
             </div>
           </div>
         </section>
-      )}
+        );
+      })()}
 
       {/* Stats + How it works */}
       <section style={{padding:"80px 24px",background:"white"}}>
