@@ -8,7 +8,7 @@ const D=[
   {id:"jakarta",city:"Jakarta",country:"Indonesia",mx:430,my:305,icon:"\u{1F1EE}\u{1F1E9}",mod:"The Explorer Product",tag:"Know it. Own it. Sell it.",col:"#34d399",glow:"rgba(52,211,153,.4)",
     tp:[{t:"Explorer Deep Dive",d:"Two Stay Plus nights, 30% dining, 15% drinks, instant Gold, 30 bonus nights.",s:1},{t:"Customer Profiles",d:"Who buys Explorer and why. Understanding the motivations behind every purchase.",s:0},{t:"Ease",d:"How simple it is to use, book and enjoy every Explorer benefit.",s:0},{t:"Value Calculators",d:"Building a compelling ROI story for every prospect.",s:0}]},
   {id:"india",city:"Mumbai",country:"India",mx:135,my:185,icon:"\u{1F1EE}\u{1F1F3}",mod:"Outbound Acquisition",tag:"Our Sales Methodology",col:"#f472b6",glow:"rgba(244,114,182,.4)",
-    tp:[{t:"Sales Principles",d:"The foundations of consultative selling and what drives conversion.",s:1},{t:"Connect Early",d:"Building rapport in the first 30 seconds.",s:0},{t:"Clarify Needs",d:"Asking the right questions about travel habits and lifestyle.",s:0},{t:"Confirm & Present",d:"Matching benefits to needs. Personal, not transactional.",s:0},{t:"Close & Manage Concerns",d:"Handling objections with confidence and closing with conviction.",s:0},{t:"Celebrate Belonging",d:"Welcoming new members into the Explorer community.",s:0},{t:"Zendesk & Expectations",d:"Platform training, workflows and performance expectations for your role.",s:0}]},
+    tp:[{t:"Sales Principles",d:"The foundations of consultative selling and what drives conversion.",s:1},{t:"Connect Early",d:"Building rapport in the first 30 seconds.",s:0},{t:"Clarify Needs",d:"Asking the right questions about travel habits and lifestyle.",s:0},{t:"Confirm and Present",d:"Matching benefits to needs. Personal, not transactional.",s:0},{t:"Close & Manage Concerns",d:"Handling objections with confidence and closing with conviction.",s:0},{t:"Celebrate Belonging",d:"Welcoming new members into the Explorer community.",s:0},{t:"Zendesk & Expectations",d:"Platform training, workflows and performance expectations for your role.",s:0}]},
   {id:"membercare",city:"Mumbai",country:"India",mx:135,my:185,icon:"\u{1F1EE}\u{1F1F3}",mod:"Member Care",tag:"Support. Resolve. Retain.",col:"#8b5cf6",glow:"rgba(139,92,246,.4)",
     tp:[{t:"Onboarding Years",d:"Understanding the member lifecycle from day one through renewal.",s:1},{t:"ACE Framework",d:"Acknowledge, Clarify, Execute: the foundation of every member interaction.",s:0},{t:"Positive First Response",d:"Setting the tone with empathy and ownership from the first contact.",s:0},{t:"Complaint Identifying",d:"Recognising complaint types and escalation pathways.",s:0},{t:"Zendesk System & Tickets",d:"Platform navigation, ticket management and SLA expectations.",s:0}]},
 ];
@@ -28,44 +28,80 @@ const LMODULES={
   0:[{title:"Vision, Purpose & the Why",steps:[
     {type:"learn",title:"Why This Matters",content:"Your agents are calling people who did not ask to be called. The only thing that makes that psychologically sustainable long-term is belief. In the product, in the outcome for the member, and in the team they belong to.\n\nAn Accor Plus membership genuinely unlocks hotel rates, dining benefits, and recognition across hundreds of properties. When an agent calls a lapsed member, they are not chasing a target. They are potentially reconnecting someone to experiences that matter.\n\nYour job this week is to make that real. Not as a script line, but as a shared belief your team actually holds.",img:"\u{1F3AF}"},
     {type:"video",title:"Start With Why",duration:"18:00",desc:"Simon Sinek explains the Why, How, What model and how NASA\'s moon-landing BHAG aligned thousands around one clear objective. Watch for how the Why model applies to your agents picking up the phone each morning, and why people do not buy what you do, they buy why you do it."},
+    {type:"apply",title:"Scenario: The Disengaged Team",scenario:"Your team has been underperforming for three weeks. Dials are down, energy is flat, and two agents have started arriving late. You overhear one saying 'I do not see the point of these calls.' You have a team huddle in 10 minutes. What do you do?",choices:[
+      {label:"Address the lateness directly and reinforce KPI expectations",col:"#ef4444",feedback:"This addresses the symptom but not the cause. The agent said they do not see the point. Tightening targets without reconnecting them to purpose will create compliance, not commitment. Performance may lift briefly but the underlying disengagement remains."},
+      {label:"Share your team mission and ask the team what is making the work feel pointless right now",col:"#10b981",feedback:"This is the strongest approach. You are leading with purpose rather than pressure. By asking what is making the work feel pointless, you create space for honest conversation. The mission gives them something to reconnect to. This is what values-driven leadership looks like under pressure."},
+      {label:"Cancel the huddle and have individual 1:1s instead to understand what is happening",col:"#3b82f6",feedback:"1:1s are valuable but delaying the team conversation means the negative energy continues to spread. The comment was made publicly, which means others heard it. Addressing it in the team setting, with vulnerability and purpose, can shift the culture faster than individual conversations alone."}
+    ]},
     {type:"learn",title:"The 3 Elements of Vision",content:"Visionary companies preserve a cherished core ideology while stimulating progress. A BHAG engages people. It reaches out and grabs them in the gut. It is tangible, energising, and highly focused.\n\nThree elements make a vision work:\n\n1. A core purpose that answers \'why do we exist beyond making money?\'\n2. Core values that define how you operate when no one is watching\n3. A BHAG that creates a 10 to 30 year stretch goal everyone can rally behind\n\nFor your team, this translates to: why does this team exist beyond the revenue target?",img:"\u{1F4A1}"},
     {type:"reflect",title:"Practice: Build Your Vision",prompt:"Write three things this week. Be specific.\n\n1. Your team mission (one sentence, why does this team exist beyond revenue?)\n2. Your BHAG, the 12-month stretch goal that would galvanise your team\n3. A vivid description: what does your team look and feel like when the BHAG is achieved?"},
-    {type:"reflect",title:"Deep Reflection",prompt:"Answer these three questions honestly:\n\n1. What do your agents actually believe they are doing when they make calls, and what do you want them to believe?\n\n2. When was the last time someone on your team felt genuinely proud of a call? What made that conversation different?\n\n3. What would have to be true about your leadership for agents to feel their work here genuinely matters?"}
+    {type:"reflect",title:"Deep Reflection",prompt:"Answer these three questions honestly:\n\n1. What do your agents actually believe they are doing when they make calls, and what do you want them to believe?\n\n2. When was the last time someone on your team felt genuinely proud of a call? What made that conversation different?\n\n3. What would have to be true about your leadership for agents to feel their work here genuinely matters?"},
+    {type:"mission",title:"Mission: Share Your Vision",brief:"This week, run a 15-minute team huddle where you share your team mission statement. Do not present it as finished. Ask your team: 'Does this feel true? What would you change?' Let the conversation run. Document what they said, whether the mission evolved, and what surprised you.\n\nThis is not a presentation. It is a conversation. Your job is to listen more than you speak."}
   ]}],
   1:[{title:"The Wellbeing Wheel",steps:[
     {type:"learn",title:"Why This Matters",content:"Most contact centre leaders believe burnout is caused by long hours or difficult calls. It is not. Burnout is the gap between what someone\'s life demands and what they have the capacity to give.\n\nYou have agents calling lapsed members while their own life is lapsed. Relationships at 3 out of 10, health at 2 out of 10, financial wellbeing at 4 out of 10. That does not fix itself by hitting 120 dials.\n\nIt fixes when someone sees the gap and starts closing it themselves. The wheel makes the gap visible. You facilitate the conversation. They own the action.",img:"\u{1F33F}"},
     {type:"video",title:"Working Towards Wellbeing",duration:"12:00",desc:"This video explores the difference between what is important to you and what you think should be important to you. These are not the same thing. Watch for how the wheel makes it instantly visible which areas of life need attention, without judgment, just data. The key principle: the owner of the wheel must come up with all the content."},
+    {type:"apply",title:"Scenario: The High Performer in Trouble",scenario:"Your top agent has hit target every month for 12 months. This week their conversion dropped to 8%. They look tired. In your 1:1, they say 'I am fine, just a rough week.' You suspect something deeper is going on. What do you do?",choices:[
+      {label:"Take them at their word and check in again next week",col:"#f59e0b",feedback:"Respecting their answer seems kind, but 'I am fine' is rarely the full truth from someone whose performance has suddenly dropped. Waiting another week means another week of decline without support. Sometimes the most caring thing is to gently push past the surface."},
+      {label:"Introduce the Wellbeing Wheel and ask if they would be open to exploring it together",col:"#10b981",feedback:"This is the right approach. The Wellbeing Wheel gives them a structured, non-judgmental way to see their own situation. You are not diagnosing them. You are holding up a mirror. Remember: they must generate all the content. Your job is to ask the questions and let them see the truth for themselves."},
+      {label:"Share that you have noticed the performance change and ask directly what is going on at home",col:"#ef4444",feedback:"While direct, asking 'what is going on at home' can feel invasive and presumptuous. It assumes the issue is personal and puts them on the defensive. The Wellbeing Wheel approach lets them identify the domain themselves without you making assumptions about where the problem lies."}
+    ]},
     {type:"learn",title:"The Principle",content:"The Wellbeing Wheel conversation is fundamentally different from a performance review. You are not asking what the business needs from them. You are asking what they need from life, and what is currently missing.\n\nThe leader\'s job is not to fix it. The leader\'s job is to hold the mirror and let the person see the truth for themselves.\n\nKey rule: the owner of the wheel must generate all content themselves. The values, the scores, and the solutions. Never someone else\'s goals for them.",img:"\u2764\uFE0F"},
     {type:"reflect",title:"Practice: Your Wheel",prompt:"Complete your own Wellbeing Wheel first. Do not skip this. Then run it with one agent this week.\n\n1. Which domain scored lowest on your own wheel?\n2. What is one action you committed to in that domain?\n3. What did you notice when you ran this with an agent?"},
-    {type:"reflect",title:"Deep Reflection",prompt:"1. What did your own Wellbeing Wheel reveal that you have been avoiding looking at directly?\n\n2. Which agent on your team would benefit most from this conversation right now, and what is stopping you from running it with them?\n\n3. How would your leadership change if you treated wellbeing as a leading indicator rather than a trailing excuse?"}
+    {type:"reflect",title:"Deep Reflection",prompt:"1. What did your own Wellbeing Wheel reveal that you have been avoiding looking at directly?\n\n2. Which agent on your team would benefit most from this conversation right now, and what is stopping you from running it with them?\n\n3. How would your leadership change if you treated wellbeing as a leading indicator rather than a trailing excuse?"},
+    {type:"mission",title:"Mission: Run the Wheel",brief:"Complete your own Wellbeing Wheel first. Score each life domain honestly from 1 to 10. Then run the exercise with one team member in a 1:1 this week.\n\nRules: You ask the questions. They fill in every answer. You do not suggest scores. You do not offer solutions. You hold the mirror.\n\nDocument which domain scored lowest for you and for them, what action each of you committed to, and what you noticed about the conversation."}
   ]}],
   2:[{title:"Radical Candour",steps:[
     {type:"learn",title:"Why This Matters",content:"You have agents who are underperforming and you are protecting them from the truth because you do not want to hurt their feelings. That is not compassion. That is cowardice dressed as kindness.\n\nEvery week you delay the conversation, you are stealing their opportunity to improve.\n\nRadical Candour is not about being harsh. It is about caring enough to tell someone the truth while also caring enough to help them do something about it.\n\nThis week: stop rewriting feedback to make it softer. First draft is the real draft. Deliver it with respect and let them respond.",img:"\u{1F4AC}"},
     {type:"video",title:"Radical Candour: How to Be a Better Boss",duration:"15:00",desc:"Kim Scott explains why Ruinous Empathy, caring without challenging, is the most common management failure. Watch for the two-axis framework: Care Personally (vertical) and Challenge Directly (horizontal). And how withholding feedback to avoid discomfort is fundamentally selfish, not kind."},
+    {type:"apply",title:"Scenario: The Feedback You Have Been Avoiding",scenario:"An agent on your team has been underperforming for six weeks. Their conversion rate is 9% against a team average of 19%. You have mentioned it casually twice but never had a direct conversation. Their attitude is positive and they are well-liked by the team. Your manager asks you why their numbers have not improved. What do you do?",choices:[
+      {label:"Schedule a formal performance improvement conversation with HR documentation",col:"#ef4444",feedback:"Jumping to formal process after six weeks of avoiding the conversation is unfair to the agent. They have never received clear, direct feedback about the gap. Starting with documentation before candour is Manipulative Insincerity. They deserve to hear the truth from you first."},
+      {label:"Have a direct 1:1 where you state the gap clearly, express that you care about their success, and build a plan together",col:"#10b981",feedback:"This is Radical Candour. You care personally (you want them to succeed) and you challenge directly (the numbers are not acceptable). The key is saying it clearly without softening it into meaninglessness. First draft is the real draft. Deliver it with respect and give them space to respond."},
+      {label:"Pair them with your top performer for shadowing and hope the numbers improve naturally",col:"#f59e0b",feedback:"This is Ruinous Empathy. You care about them but you are avoiding the direct conversation. Shadowing might help tactically, but the agent still does not know you see a problem. They deserve to know where they stand. Avoidance is not kindness."}
+    ]},
     {type:"learn",title:"The Feedback Fallacy",content:"Telling people what we think of their performance does not help them thrive and excel. Focus on outcomes and growth, not on correcting weaknesses.\n\nThe highest-performing teams are not those that receive the most criticism. They are the ones where people know exactly where they stand and what excellence looks like in their role.\n\nThe difference between kind and nice matters. Nice avoids the truth to protect comfort. Kind delivers the truth to enable growth. Most leaders default to nice. The best leaders choose kind.",img:"\u{1F4CB}"},
     {type:"reflect",title:"Practice: Deliver Feedback",prompt:"Think of one agent whose performance is below standard. Write and deliver Radically Candid feedback this week.\n\n1. Who did you give feedback to?\n2. What did you actually say? Write the real words.\n3. How did they respond?"},
-    {type:"reflect",title:"Deep Reflection",prompt:"1. Where are you currently operating in Ruinous Empathy, caring about someone but avoiding the conversation they actually need?\n\n2. What is the cost to your team when you withhold direct feedback to protect your own comfort?\n\n3. What would change if you treated honest feedback as an act of respect rather than an act of criticism?"}
+    {type:"reflect",title:"Deep Reflection",prompt:"1. Where are you currently operating in Ruinous Empathy, caring about someone but avoiding the conversation they actually need?\n\n2. What is the cost to your team when you withhold direct feedback to protect your own comfort?\n\n3. What would change if you treated honest feedback as an act of respect rather than an act of criticism?"},
+    {type:"mission",title:"Mission: Deliver Candid Feedback",brief:"Identify one agent whose performance is below standard. Write the feedback you would give if you were being Radically Candid. Direct and clear, but rooted in genuine care for their success.\n\nDeliver it in your next 1:1. Do not dilute it. Do not apologise for it. Say it and give them space to respond.\n\nDocument: Who did you speak to? What did you actually say (the real words)? How did they respond? What did you agree to do next?"}
   ]}],
   3:[{title:"GROW Conversations",steps:[
     {type:"learn",title:"Why This Matters",content:"The GROW model is not a script. It is a discipline. The leader\'s job is to resist the urge to tell and instead create the conditions for the person to think.\n\nMost managers solve problems faster than their people do. That is why their people never learn to solve problems themselves.\n\nGROW stands for:\n\nG: Goal. What do you want to achieve?\nR: Reality. What is happening right now?\nO: Options. What could you do?\nW: Will. What will you do?\n\nThe sequence matters. Starting with Reality before Goal leads to problem-focused thinking. Starting with Goal creates aspiration-focused thinking.",img:"\u{1F3AF}"},
     {type:"video",title:"The GROW Model: Coaching for Performance",duration:"12:00",desc:"Watch for why the sequence matters: Goal, Reality, Options, Will, not the other way around. How asking \'What have you tried?\' shifts ownership back to the person being coached. And the difference between solving someone\'s problem for them and helping them solve it themselves."},
+    {type:"apply",title:"Scenario: The Agent Who Wants Answers",scenario:"You are running a GROW conversation with an agent whose conversion has dropped. You ask \'What options do you have?\' They respond: \'I do not know, just tell me what to do.\' They look frustrated. What do you do?",choices:[
+      {label:"Give them two specific actions to try this week and check back on Friday",col:"#f59e0b",feedback:"This solves the immediate problem but creates dependency. Every time they hit a wall, they will come to you for the answer. Coaching takes longer in the short term but builds capability that compounds. If they never learn to generate their own options, they will never grow beyond needing you."},
+      {label:"Acknowledge the frustration, then reframe: 'If you did know, what would you try first?'",col:"#10b981",feedback:"This is the coaching discipline. The reframe 'If you did know' is powerful because it bypasses the mental block. Most people do know what to try. They just want permission or validation. Your job is to create the space for them to think, not to think for them."},
+      {label:"Move to the Will stage and ask what they are committed to doing regardless",col:"#ef4444",feedback:"Skipping Options goes against the GROW sequence. Without exploring what they could do, any commitment will be shallow. The sequence matters: Goal creates aspiration, Reality creates honesty, Options create ownership, Will creates accountability. Jumping ahead produces a plan without buy-in."}
+    ]},
     {type:"learn",title:"Coaching vs Telling",content:"Most managers default to telling because it is faster. \'Do this. Stop doing that. Here is how I would handle it.\' The problem: it works in the moment but creates dependency.\n\nCoaching takes longer in the short term but builds capability that compounds. An agent who learns to diagnose their own conversion problem will fix the next problem themselves. An agent who is told the answer will wait for the next answer.\n\nThe discipline is in the pause. When they ask you what to do, your response is: \'What do you think your options are?\'",img:"\u{1F4A1}"},
     {type:"reflect",title:"Practice: Run a GROW Conversation",prompt:"Pick one agent whose performance is below your team\'s standard. Run a GROW conversation with them this week.\n\n1. What was the Goal?\n2. What was the Reality they described?\n3. What Options did they generate?\n4. What Will they do this week?"},
-    {type:"reflect",title:"Deep Reflection",prompt:"1. How often do you default to telling instead of coaching, and what triggers that behaviour?\n\n2. What would change if you treated coaching as a performance requirement, not a performance reward?\n\n3. Think about the last time an agent surprised you with their own solution. What did you do differently in that conversation that created the space for them to think?"}
+    {type:"reflect",title:"Deep Reflection",prompt:"1. How often do you default to telling instead of coaching, and what triggers that behaviour?\n\n2. What would change if you treated coaching as a performance requirement, not a performance reward?\n\n3. Think about the last time an agent surprised you with their own solution. What did you do differently in that conversation that created the space for them to think?"},
+    {type:"mission",title:"Mission: Run a Full GROW",brief:"Pick one agent whose performance is below your team standard. Run a complete GROW conversation with them this week. Use the full structure:\n\nG: What is your goal?\nR: What is happening right now?\nO: What could you do?\nW: What will you do?\n\nDocument each stage. What goal did they set? What reality did they describe? What options did they generate themselves (not your suggestions)? What will they commit to this week?"}
   ]}],
   4:[{title:"Values-Based Leadership",steps:[
     {type:"learn",title:"Why This Matters",content:"Ethical fading is real in outbound sales. When a team is behind target, a leader under pressure might implicitly push agents toward tactics that compromise the member experience. Rushing the presentation, glossing over terms, or using emotional pressure to close.\n\nThese behaviours produce short-term conversions but drive long-term chargebacks, complaints, and attrition.\n\nA values-based leader defines what the team will never do to hit a number, not just what it will do.",img:"\u{1F6E1}\uFE0F"},
     {type:"video",title:"Leaders Eat Last",duration:"14:00",desc:"Simon Sinek explains the circle of safety and what leaders owe the people in their charge. Watch for how a values-vacuum in leadership creates a self-protection culture on the floor, and what happens to team cohesion when short-term pressure overrides stated values."},
+    {type:"apply",title:"Scenario: The Target vs The Values",scenario:"Your team is 15% behind target with three days left in the month. A senior agent suggests a tactic: calling recently cancelled members and implying their cancellation 'did not process correctly' to get them back on a call. Other agents are listening. What do you do?",choices:[
+      {label:"Thank them for the initiative but explain that this approach compromises member trust and is not how you operate",col:"#10b981",feedback:"This is values-based leadership under pressure. You are reinforcing what the team will never do, even when the target is at risk. Saying it publicly, when others are listening, sets the cultural standard. The short-term miss is recoverable. The trust damage from deceptive tactics is not."},
+      {label:"Ask the team to discuss it and reach consensus",col:"#f59e0b",feedback:"Putting deceptive tactics to a team vote implies they are a legitimate option. Some things are not up for debate. Your non-negotiables exist for exactly this moment. A leader defines the line. The team operates within it. Consensus-seeking on ethical boundaries signals that values are flexible under pressure."},
+      {label:"Allow it for the remaining three days and address the broader issue next month",col:"#ef4444",feedback:"This is ethical fading in real time. Short-term conversions will come at the cost of chargebacks, complaints, and attrition. More importantly, the team now knows that values bend when pressure rises. Once that precedent is set, it is very difficult to rebuild. The target will reset. Trust will not."}
+    ]},
     {type:"learn",title:"BHAGs and Values Alignment",content:"A BHAG is not a budget goal. It is a rallying cry. A goal so clear and emotionally compelling that it aligns how people make decisions when no one is watching.\n\nCompanies that articulate this clearly outperform those that do not, not because the goal is magical, but because clarity creates momentum.\n\nFor your team: what are the three values you would never compromise, even when the target is behind? If you cannot answer that instantly, neither can your agents.",img:"\u2B50"},
     {type:"reflect",title:"Practice: Define Your Non-Negotiables",prompt:"Two actions this week: facilitate a team values conversation and write your personal non-negotiables.\n\n1. What three values did your team name most often?\n2. Your three leadership non-negotiables (behaviours never acceptable regardless of pressure)\n3. One recent moment where target pressure may have pushed toward a values compromise"},
-    {type:"reflect",title:"Deep Reflection",prompt:"1. What is one value you profess to your team but have not been fully living yourself this month?\n\n2. If your agents described your leadership style to someone who had never met you, what three words would they use, and what three words do you want them to use?\n\n3. Where does short-term target pressure most commonly create values tension in your team right now?"}
+    {type:"reflect",title:"Deep Reflection",prompt:"1. What is one value you profess to your team but have not been fully living yourself this month?\n\n2. If your agents described your leadership style to someone who had never met you, what three words would they use, and what three words do you want them to use?\n\n3. Where does short-term target pressure most commonly create values tension in your team right now?"},
+    {type:"mission",title:"Mission: Define Your Non-Negotiables",brief:"Facilitate a 20-minute team values conversation this week. Ask your team: \'What are three things we will never do to hit a target?\'\n\nLet them generate the answers. Write them down publicly. Then write your own three leadership non-negotiables.\n\nDocument: What three values did your team name? Did anything surprise you? What are your personal non-negotiables? Where has target pressure most recently tested your values?"}
   ]}],
   5:[{title:"High Performance Standards",steps:[
     {type:"learn",title:"Why This Matters",content:"You have agents who can hit 80 dials but only convert at 12%. You have agents who know the script but do not sound like they believe a word of it. You have been accepting good enough because raising the standard feels harsh.\n\nIt is not harsh. It is clarity.\n\nHigh performance is not about working harder. It is about knowing exactly what excellent looks like and coaching people toward it.\n\nThis week: define one non-negotiable standard for your team. Conversion rate, handle time, or quality score. Then identify the person furthest from that standard.",img:"\u{1F4C8}"},
     {type:"video",title:"Setting the Standard",duration:"10:00",desc:"High standards without coaching creates pressure. Coaching without standards creates drift. Watch for how the best leaders hold both simultaneously, never lowering the bar but always raising the capability of their people to reach it."},
+    {type:"apply",title:"Scenario: The Standard Has Slipped",scenario:"Your team conversion target is 18%. Three months ago, your team averaged 20%. Over the past eight weeks, the average has drifted to 14%. No one has said anything. The lowest performer is at 8% and the highest is at 22%. You have a team meeting tomorrow. What do you do?",choices:[
+      {label:"Reset the standard publicly: 'Our minimum is 18%. Here is where each of you stands.' Then offer coaching support.",col:"#10b981",feedback:"This is clarity with support. You are not lowering the bar. You are naming the gap and offering to help close it. Stating where each person stands removes ambiguity. The combination of clear standards plus coaching commitment is what high-performance leadership looks like."},
+      {label:"Focus on the top performer: celebrate their 22% and hope it motivates the rest",col:"#f59e0b",feedback:"Celebrating one person without addressing the gap sends a mixed message. The underperformers hear 'great job to them' but not 'here is what I expect from you.' Recognition without accountability creates a two-tier culture where standards only apply to those who choose to meet them."},
+      {label:"Lower the target to 15% temporarily to rebuild confidence",col:"#ef4444",feedback:"Lowering the standard teaches the team that underperformance is self-correcting. The bar drops, people meet the lower bar, and the original standard becomes aspirational rather than expected. High standards without coaching creates pressure. But coaching without standards creates drift. You need both."}
+    ]},
     {type:"learn",title:"The Standards Framework",content:"Three levels of performance exist on every team:\n\n1. The Standard: the minimum acceptable level of performance. This is not average. This is the floor.\n2. The Target: where you expect your team to operate consistently. Above the standard, within reach.\n3. The Stretch: the level your top performers hit. This is what you coach toward.\n\nMost leaders confuse the standard with the target. When the standard drops, the target drops with it. And the stretch disappears entirely.\n\nYour job is to hold the standard, coach toward the target, and celebrate the stretch.",img:"\u{1F3C6}"},
     {type:"reflect",title:"Practice: Set Your Standard",prompt:"1. What standard did you define or reinforce this week? Be specific with the metric.\n2. Who is the person furthest from that standard on your team?\n3. What is your plan to close the gap? Not lower the bar, close the gap."},
-    {type:"reflect",title:"Deep Reflection",prompt:"1. Where have you lowered standards to avoid difficult conversations, and what has that cost your team?\n\n2. Who is the highest performer on your team, and what standard do they hold that the rest of your team does not?\n\n3. What would change if you treated every 1:1 as a coaching conversation, not a check-in?"}
+    {type:"reflect",title:"Deep Reflection",prompt:"1. Where have you lowered standards to avoid difficult conversations, and what has that cost your team?\n\n2. Who is the highest performer on your team, and what standard do they hold that the rest of your team does not?\n\n3. What would change if you treated every 1:1 as a coaching conversation, not a check-in?"},
+    {type:"mission",title:"Mission: Set and Hold a Standard",brief:"Define one non-negotiable performance standard for your team this week. Be specific with the metric: conversion rate, handle time, quality score, or dials.\n\nCommunicate it clearly to the team. At the end of the week, review who met it and who did not.\n\nDocument: What standard did you set? How did you communicate it? Who met it and who did not? What will you do about the gap? Did you hold the line or find yourself wanting to lower it?"}
   ]}]
 };
 
@@ -204,6 +240,7 @@ const MODULES={
     ]},
     {title:"Connect Early",steps:[
       {type:"learn",title:"The First 30 Seconds",content:"You have 30 seconds to earn the right to continue the conversation. Connection is everything.\n\nThe Connect Early framework:\n\u2022 Warm greeting with energy and a smile (they can hear it)\n\u2022 Use their name naturally within the first 10 seconds\n\u2022 State your purpose clearly and briefly\n\u2022 Ask a permission question: \'Do you have a couple of minutes?\'\n\u2022 Bridge to discovery: \'I noticed you...\'\n\nA connected prospect stays on the line. A disconnected one hangs up.",img:"\u{1F44B}"},
+      {type:"listen",title:"Listen: Connect Early",duration:"0:45",context:"An agent calls a lapsed member. Listen to how they build rapport in the opening 30 seconds before any mention of the product."},
       {type:"quiz",title:"Knowledge Check",questions:[
         {q:"How quickly should you use the prospect\'s name?",opts:["Within 10 seconds","Within 30 seconds","Within 1 minute","At the end"],correct:0},
         {q:"What type of question should you ask after your introduction?",opts:["A closing question","A price question","A permission question","A product question"],correct:2}
@@ -212,6 +249,7 @@ const MODULES={
     ]},
     {title:"Clarify Needs",steps:[
       {type:"learn",title:"Discovery Through Questions",content:"The best salespeople are the best question-askers. Clarify Needs is where you learn what matters.\n\nKey discovery questions:\n\u2022 \'How often do you and your family travel for leisure?\'\n\u2022 \'When you travel, what type of hotels do you typically stay at?\'\n\u2022 \'Do you dine out at hotel restaurants regularly?\'\n\u2022 \'What would make your travel experiences even better?\'\n\u2022 \'Have you ever had a loyalty programme that you really valued?\'\n\nListen for triggers: frequency, frustration, aspiration, and budget signals. These are your selling anchors.",img:"\u{1F50D}"},
+      {type:"listen",title:"Listen: Clarify Needs",duration:"1:15",context:"The agent asks open questions to understand the member\'s travel habits, dining preferences, and what they valued most about their previous membership."},
       {type:"quiz",title:"Knowledge Check",questions:[
         {q:"What are the four listening triggers to identify?",opts:["Price, product, place, people","Frequency, frustration, aspiration, budget","Name, age, location, income","Brand, tier, points, status"],correct:1},
         {q:"What is the primary purpose of the Clarify Needs stage?",opts:["To present the product","To close the sale","To learn what matters to the prospect","To handle objections"],correct:2}
@@ -220,6 +258,7 @@ const MODULES={
     ]},
     {title:"Confirm and Present",steps:[
       {type:"learn",title:"Matching Benefits to Needs",content:"Now you present, but only what matters to them. This is not a feature dump.\n\nThe Confirm and Present framework:\n\u2022 Confirm: \'So what I am hearing is you travel twice a year and love dining out.\'\n\u2022 Bridge: \'Based on that, there is something that would be perfect for you.\'\n\u2022 Present: Lead with their top two benefits, not all of them\n\u2022 Prove: Use specific numbers. \'At 30% off dining twice a month, that is $540 saved.\'\n\u2022 Check: \'Does that sound like something that would work for you?\'\n\nPersonal, specific, and relevant. Every time.",img:"\u{1F381}"},
+      {type:"listen",title:"Listen: Confirm and Present",duration:"1:30",context:"The agent links specific Explorer benefits to the member\'s stated needs. Listen for whether the presentation feels personal or scripted."},
       {type:"quiz",title:"Knowledge Check",questions:[
         {q:"How many benefits should you lead with?",opts:["All of them","Their top two","Just one","At least five"],correct:1},
         {q:"What should you do before presenting any benefits?",opts:["State the price","Confirm what you heard","Ask for the sale","Describe all tiers"],correct:1}
@@ -228,6 +267,7 @@ const MODULES={
     ]},
     {title:"Close and Manage Concerns",steps:[
       {type:"learn",title:"Closing with Conviction",content:"Closing is not aggressive. It is a natural conclusion to a good conversation.\n\nCommon concerns and responses:\n\u2022 \'I need to think about it\' > \'Of course. What specifically would you like to think through?\'\n\u2022 \'It is too expensive\' > \'I understand. Let me show you the maths on what you would save.\'\n\u2022 \'I do not travel enough\' > \'Even one trip plus regular dining covers the cost.\'\n\u2022 \'I already have a loyalty programme\' > \'Great, you clearly value rewards. Explorer stacks on top.\'\n\nClose with confidence: \'Shall I get you set up today so you can start using your benefits straight away?\'",img:"\u{1F91D}"},
+      {type:"listen",title:"Listen: Close and Manage Concerns",duration:"1:00",context:"The member says \'I need to think about it.\' Listen to how the agent acknowledges the concern and guides the conversation toward a decision."},
       {type:"quiz",title:"Knowledge Check",questions:[
         {q:"When a prospect says \'I need to think about it,\' what should you do?",opts:["End the call","Offer a discount","Ask what specifically they want to think through","Call back tomorrow"],correct:2},
         {q:"What is the recommended closing phrase?",opts:["Sign up now or miss out","Shall I get you set up today?","This is a limited offer","You have to decide now"],correct:1}
@@ -236,6 +276,7 @@ const MODULES={
     ]},
     {title:"Celebrate Belonging",steps:[
       {type:"learn",title:"The Welcome Moment",content:"The sale is not the finish line. It is the starting line.\n\nCelebrate Belonging means:\n\u2022 Congratulate them genuinely: \'Welcome to Explorer, you are going to love this.\'\n\u2022 Set expectations: Walk them through what happens next (activation, app, first booking)\n\u2022 Highlight one immediate action: \'Your Gold status is active in 24 hours. Check the app tomorrow.\'\n\u2022 Plant the renewal seed: \'Members who book early get the most out of their first year.\'\n\u2022 Thank them by name: \'Thanks David, enjoy your Explorer journey.\'\n\nThis moment determines whether they become a one-year member or a lifetime advocate.",img:"\u{1F389}"},
+      {type:"listen",title:"Listen: Celebrate Belonging",duration:"0:50",context:"The sale is made. Listen to how the agent sets expectations for the membership and makes the new member feel they made the right decision."},
       {type:"quiz",title:"Knowledge Check",questions:[
         {q:"When does the Celebrate Belonging stage happen?",opts:["Before the sale","During the pitch","Immediately after the sale","At renewal"],correct:2},
         {q:"What immediate action should you highlight to the new member?",opts:["Refer a friend","Check Gold status in the app tomorrow","Book a flight","Write a review"],correct:1}
@@ -262,6 +303,7 @@ const MODULES={
     ]},
     {title:"ACE Framework",steps:[
       {type:"learn",title:"Acknowledge, Clarify, Execute",content:"ACE is the foundation of every member interaction in Member Care.\n\n\u2022 Acknowledge: Show the member you hear them. \'I completely understand your frustration.\' Never dismiss, minimise, or skip this step.\n\u2022 Clarify: Ensure you understand the full picture before acting. \'Let me make sure I have this right...\'\n\u2022 Execute: Take clear action and confirm. \'Here is exactly what I am going to do for you, and here is when it will be resolved.\'\n\nACE works for every scenario: questions, complaints, requests, and escalations. It builds trust because the member feels heard, understood, and helped.",img:"\u{1F31F}"},
+      {type:"listen",title:"Listen: ACE Framework",duration:"1:20",context:"A member calls about a billing discrepancy. Listen to how the agent Acknowledges the concern, Clarifies the details, and Executes a resolution."},
       {type:"quiz",title:"Knowledge Check",questions:[
         {q:"What does the A in ACE stand for?",opts:["Act","Acknowledge","Assess","Approve"],correct:1},
         {q:"What must you do before executing a solution?",opts:["Escalate","Clarify the full picture","Transfer the call","Check with a manager"],correct:1}
@@ -270,6 +312,7 @@ const MODULES={
     ]},
     {title:"Positive First Response",steps:[
       {type:"learn",title:"Setting the Tone",content:"The first 15 seconds of a member care interaction set the tone for everything that follows.\n\nPositive First Response means:\n\u2022 Warm, genuine greeting: energy and empathy\n\u2022 Use their name and membership status: \'Welcome back, Gold member.\'\n\u2022 Assume positive intent from the member\n\u2022 Take ownership immediately: \'I can absolutely help with that.\'\n\u2022 Never say: \'That is not my department\' or \'I cannot do that\'\n\u2022 Instead say: \'Let me find the best way to resolve this for you.\'\n\nMembers remember how you made them feel, not what you said.",img:"\u2764\uFE0F"},
+      {type:"listen",title:"Listen: Positive First Response",duration:"1:00",context:"An upset member calls about a hotel experience. Listen to how the agent sets the tone with empathy and ownership from the first words."},
       {type:"quiz",title:"Knowledge Check",questions:[
         {q:"What should you never say to a member?",opts:["How can I help?","That is not my department","Let me look into that","I understand"],correct:1},
         {q:"What should you assume about every member who calls?",opts:["They want to cancel","They are angry","Positive intent","They need a manager"],correct:2}
@@ -278,6 +321,7 @@ const MODULES={
     ]},
     {title:"Complaint Identifying",steps:[
       {type:"learn",title:"Types and Escalation",content:"Not all complaints are equal. Identifying the type determines your response.\n\n\u2022 Service complaint: Hotel did not deliver on a promise. Resolve with ACE and compensation guidelines.\n\u2022 Product complaint: Member does not understand a benefit or feels misled. Educate and clarify.\n\u2022 Billing complaint: Charge dispute or refund request. Follow financial escalation process.\n\u2022 Systemic complaint: Multiple members reporting the same issue. Flag to team leader immediately.\n\nEscalation triggers:\n\u2022 Member requests a manager\n\u2022 Legal or media threats\n\u2022 Health and safety concerns\n\u2022 Three or more contacts on the same issue",img:"\u26A0\uFE0F"},
+      {type:"listen",title:"Listen: Complaint Identifying",duration:"1:30",context:"A member describes multiple issues across two stays. Listen to how the agent identifies the core complaint type and determines the escalation pathway."},
       {type:"quiz",title:"Knowledge Check",questions:[
         {q:"A member says they were charged twice. What type of complaint is this?",opts:["Service","Product","Billing","Systemic"],correct:2},
         {q:"When should you flag an issue to your team leader immediately?",opts:["Every complaint","Billing only","Multiple members reporting the same issue","Only if asked"],correct:2}
@@ -295,12 +339,326 @@ const MODULES={
   ]
 };
 
+
+const CONTENT_REVIEWS={
+  onboarding:[
+    {dest:"New Zealand",modules:["The ALL Accor+ Journey","The Accor Plus Journey","Our Brand Portfolio","Key Hotels in APAC"],reviewed:"28 March 2026",status:"current"},
+    {dest:"Australia",modules:["Why Loyalty Matters","Why Members Stay","ALL Loyalty Tiers","Retention & Renewal"],reviewed:"15 March 2026",status:"current"},
+    {dest:"Indonesia",modules:["Explorer Deep Dive","Customer Profiles","Ease","Value Calculators"],reviewed:"10 February 2026",status:"review"},
+    {dest:"India",modules:["Sales Principles","Connect Early","Clarify Needs","Confirm and Present","Close and Manage","Celebrate Belonging","Zendesk"],reviewed:"22 March 2026",status:"current"}
+  ],
+  leadership:[
+    {dest:"New Zealand",modules:["Vision, Purpose & the Why"],reviewed:"1 April 2026",status:"current"},
+    {dest:"Australia",modules:["The Wellbeing Wheel"],reviewed:"1 April 2026",status:"current"},
+    {dest:"Philippines",modules:["Radical Candour"],reviewed:"28 March 2026",status:"current"},
+    {dest:"Indonesia",modules:["GROW Conversations"],reviewed:"28 March 2026",status:"current"},
+    {dest:"Thailand",modules:["Values-Based Leadership"],reviewed:"20 March 2026",status:"current"},
+    {dest:"India",modules:["High Performance Standards"],reviewed:"20 March 2026",status:"current"}
+  ]
+};
+const PULSE_QUIZZES={
+  0:[
+    {q:{en:"In what year was the first Novotel opened?",id:"Pada tahun berapa Novotel pertama dibuka?",th:"โรงแรม Novotel แห่งแรกเปิดในปีใด?"},opts:["1957","1963","1967","1975"],correct:2,mod:"The ALL Accor+ Journey"},
+    {q:{en:"How many members does Accor Plus have across Asia Pacific?",id:"Berapa jumlah anggota Accor Plus di Asia Pasifik?",th:"Accor Plus มีสมาชิกกี่คนทั่วเอเชียแปซิฟิก?"},opts:["150,000+","250,000+","450,000+","750,000+"],correct:2,mod:"The Accor Plus Journey"},
+    {q:{en:"Approximately how many hotel brands does Accor operate?",id:"Berapa kira-kira jumlah merek hotel Accor?",th:"Accor ดำเนินการแบรนด์โรงแรมประมาณกี่แบรนด์?"},opts:["15+","25+","35+","45+"],correct:3,mod:"Our Brand Portfolio"}
+  ],
+  1:[
+    {q:{en:"How much more do loyal guests typically spend compared to new guests?",id:"Berapa lebih banyak tamu setia biasanya menghabiskan?",th:"แขกที่ภักดีมักใช้จ่ายมากกว่าแขกใหม่เท่าไร?"},opts:["25%","50%","67%","80%"],correct:2,mod:"Why Loyalty Matters"},
+    {q:{en:"Members who use benefits in the first 90 days are how much more likely to renew?",id:"Anggota yang menggunakan manfaat dalam 90 hari pertama?",th:"สมาชิกที่ใช้สิทธิประโยชน์ใน 90 วันแรก?"},opts:["1.5x","2x","3x","5x"],correct:2,mod:"Why Members Stay"},
+    {q:{en:"What status do ALL Accor+ Explorer members automatically receive?",id:"Status apa yang otomatis diterima anggota Explorer?",th:"สมาชิก Explorer ได้รับสถานะอะไรโดยอัตโนมัติ?"},opts:["Silver","Gold","Platinum","Diamond"],correct:1,mod:"ALL Loyalty Tiers"}
+  ],
+  2:[
+    {q:{en:"What does an Explorer membership guarantee in hotel discounts?",id:"Diskon hotel apa yang dijamin keanggotaan Explorer?",th:"สมาชิก Explorer รับประกันส่วนลดโรงแรมเท่าไร?"},opts:["10%","15%","20%","25%"],correct:1,mod:"Explorer Deep Dive"},
+    {q:{en:"What are the four listening triggers in sales discovery?",id:"Apa empat pemicu mendengarkan dalam penemuan penjualan?",th:"สี่ตัวกระตุ้นการฟังในการค้นพบการขาย?"},opts:{en:["Price, product, place, people","Frequency, frustration, aspiration, budget","Name, age, location, income","Brand, tier, points, status"],id:["Harga, produk, tempat, orang","Frekuensi, frustrasi, aspirasi, anggaran","Nama, usia, lokasi, pendapatan","Merek, tingkat, poin, status"],th:["ราคา ผลิตภัณฑ์ สถานที่ คน","ความถี่ ความไม่พอใจ แรงบันดาลใจ งบประมาณ","ชื่อ อายุ ที่ตั้ง รายได้","แบรนด์ ระดับ คะแนน สถานะ"]},correct:1,mod:"Customer Profiles"}
+  ]
+};
+
+const MODULES_ID={
+  0:[
+    {title:"Perjalanan ALL Accor+",steps:[
+      {type:"learn",title:"Selamat Datang di Kisah Kami",content:"Selamat datang di modul pertama Anda. Dalam beberapa langkah ke depan, Anda akan menemukan perjalanan luar biasa Accor, dari satu hotel di pinggir jalan di Prancis utara hingga menjadi salah satu grup perhotelan terbesar di dunia. Di akhir modul, Anda akan memahami warisan, skala, dan ambisi di balik setiap interaksi Anda sebagai anggota tim ALL Accor+ Explorer.",img:"\u{1F30F}"},
+      {type:"video",title:"Kisah Pendirian",duration:"4:30",desc:"Pada tahun 1967, dua visioner, Paul Dubrule dan Gerard Pelisson, membuka Novotel pertama di pinggir jalan dekat Lille di Prancis utara. Perjalanan sedang berkembang pesat di seluruh Eropa, dan industri hotel belum berkembang untuk memenuhi permintaan. Ide mereka sederhana namun revolusioner: hotel terstandar dengan kenyamanan modern termasuk kamar mandi pribadi, AC, dan kolam renang. Ini adalah awal dari segalanya."},
+      {type:"learn",title:"Pertumbuhan dan Ekspansi",content:"Dari Novotel pertama itu, Accor tumbuh pesat:\n\n1967: Novotel pertama dibuka di Lille, Prancis\n1974: Merek ibis diluncurkan di Bordeaux, membawa perhotelan ekonomi\n1975: Jaringan Mercure diakuisisi, mendorong ke perjalanan bisnis metropolitan\n1980: Sofitel diakuisisi, menandai masuknya Accor ke perhotelan mewah\n1983: Perusahaan resmi menjadi \'Accor\', terdaftar di Bursa Saham Paris\n1990-an: Ekspansi ke Asia Pasifik, menjadi grup hotel terkemuka di kawasan pada 1996\n\nPada pergantian milenium, Accor telah menjadi perusahaan perhotelan yang benar-benar global dengan kehadiran di setiap benua.",img:"\u{1F4C8}"},
+      {type:"learn",title:"Accor Hari Ini",content:"Hari ini, Accor adalah raksasa perhotelan global:\n\n\u2022 5.700+ hotel dan resor di seluruh dunia\n\u2022 850.000 kamar di 110+ negara\n\u2022 Lebih dari 45 merek hotel dari mewah hingga ekonomi\n\u2022 360.000 anggota tim secara global\n\u2022 100+ juta anggota loyalitas dalam ekosistem ALL\n\nDipimpin oleh Chairman dan CEO Sebastien Bazin sejak 2013, Accor terus mendefinisikan ulang arti perhotelan, berekspansi ke gaya hidup, kebugaran, co-working, dan hiburan. Kantor pusat perusahaan berada di Issy-les-Moulineaux, dekat Paris, Prancis.",img:"\u{1F3E8}"},
+      {type:"learn",title:"Tujuan Kami",content:"Tujuan Accor sangat kuat dan jelas:\n\n\'Merintis seni loyalitas berlangganan, menghubungkan budaya, dengan kepedulian tulus.\'\n\nIni bukan sekadar slogan. Ini mendorong setiap keputusan, dari desain hotel berkelanjutan hingga keterlibatan komunitas, dari inisiatif keberagaman hingga cara kami menyambut setiap tamu. Sebagai anggota tim ALL Accor+ Explorer, Anda adalah bagian dari tujuan ini. Setiap percakapan Anda, setiap keanggotaan yang Anda jual, menghubungkan seorang pelancong ke jaringan global kepedulian dan penemuan ini.",img:"\u2764\uFE0F"},
+      {type:"quiz",title:"Pemeriksaan Pengetahuan",questions:[
+        {q:"Pada tahun berapa hotel Novotel pertama dibuka?",opts:["1957","1963","1967","1975"],correct:2},
+        {q:"Siapa dua pendiri Accor?",opts:["Sebastien Bazin dan Emilie Couton","Paul Dubrule dan Gerard Pelisson","Jean-Marc Espalioux dan Gilles Pelisson","Pierre Lamond dan Jacques Borel"],correct:1},
+        {q:"Berapa kira-kira jumlah hotel yang dioperasikan Accor di seluruh dunia saat ini?",opts:["2.500+","4.000+","5.700+","8.000+"],correct:2}
+      ]},
+      {type:"reflect",title:"Refleksi Anda",prompt:"Sekarang setelah Anda mengetahui kisah Accor, bagian mana dari perjalanan perusahaan yang paling beresonansi dengan Anda? Bagaimana memahami sejarah ini membantu Anda merasa lebih terhubung dengan merek yang akan Anda wakili setiap hari?"}
+    ]},
+    {title:"Perjalanan Accor Plus",steps:[
+      {type:"learn",title:"Selamat Datang di Kisah Accor Plus",content:"Dalam modul ini, Anda akan belajar tentang Accor Plus, bisnis loyalitas berlangganan yang sekarang Anda ikuti. Didirikan di Sydney pada tahun 1994, Accor Plus telah memimpin kategori langganan loyalitas di Asia Pasifik selama lebih dari 30 tahun. Memahami visi, misi, dan evolusi kami akan membantu Anda mengartikulasikan nilai kami dengan percaya diri.",img:"\u{1F48E}"},
+      {type:"video",title:"Apa itu Accor Plus?",duration:"5:15",desc:"Accor Plus adalah bisnis langganan loyalitas Accor, anak perusahaan yang sepenuhnya dimiliki yang mengembangkan, menjual, dan mengelola langganan keanggotaan premium di 20 negara di Asia Pasifik. Dengan lebih dari 450.000 anggota, anggota Accor Plus menginap lima kali lebih banyak malam daripada non-anggota, memesan lebih dari 3,1 juta malam kamar pada 2024, dan menukarkan lebih dari satu miliar poin ALL Accor Reward."},
+      {type:"learn",title:"Visi dan Misi Kami",content:"Misi Kami:\n\'Menjadi program yang paling dicintai untuk anggota dan mitra kami, dan menginspirasi tim Heartist kami di setiap langkah.\'\n\nVisi Kami:\nMenjadi langganan loyalitas perjalanan terkemuka di dunia, memberikan nilai dan pengalaman abadi yang benar-benar tinggal bersama anggota kami. Karena loyalitas bukan hanya sebuah program; ini adalah bagaimana kami membuat orang merasa setiap kali mereka bepergian.\n\nSeperti yang dikatakan CEO Emilie Couton: \'Kami jauh melampaui penyediaan nilai luar biasa. Kami mendorong loyalitas melalui akses eksklusif, membangun komunitas, dan menciptakan penjelajah sejati.\'",img:"\u{1F31F}"},
+      {type:"learn",title:"Ekosistem ALL",content:"ALL Accor+ Explorer terintegrasi dengan mulus dalam ekosistem loyalitas global ALL Accor:\n\n\u2022 100+ juta anggota secara global di ALL Accor\n\u2022 Anggota mendapatkan dan menukarkan poin Reward di 5.700+ hotel\n\u2022 Lima tingkat status: Classic, Silver, Gold, Platinum, Diamond\n\u2022 110+ mitra global termasuk Qantas, American Express\n\u2022 2.000+ acara dan pengalaman eksklusif\n\nKetika Anda menjual keanggotaan Explorer, Anda tidak hanya menjual langganan. Anda menghubungkan seseorang ke seluruh ekosistem global perjalanan, hadiah, dan pengakuan ini.",img:"\u{1F310}"},
+      {type:"learn",title:"Evolusi ke ALL Accor+ Explorer",content:"Pada 1 Oktober 2025, Accor Plus berganti merek dan berevolusi menjadi ALL Accor+ Explorer, transformasi terbesar dalam sejarah program selama 30+ tahun. Ini dibentuk oleh penelitian ekstensif dengan 7.000+ anggota di 12 negara.\n\nApa yang berubah:\n\u2022 Menyatukan semua jenis keanggotaan di bawah satu produk Explorer premium\n\u2022 Status ALL Accor Gold (atau lebih tinggi) dijamin untuk semua anggota\n\u2022 30 Malam Status bonus tahunan\n\u2022 Diskon 15% di seluruh dunia di 4.500+ hotel dan 30+ merek\n\u2022 Pada Maret 2026, ALL Accor+ Explorer memenangkan \'Peluncuran Ulang Program Loyalitas Terbaik\' di Asia Pacific Loyalty Awards",img:"\u{1F680}"},
+      {type:"quiz",title:"Pemeriksaan Pengetahuan",questions:[
+        {q:"Pada tahun berapa Accor Plus awalnya didirikan?",opts:["1987","1994","2001","2010"],correct:1},
+        {q:"Berapa jumlah anggota Accor Plus di seluruh Asia Pasifik?",opts:["150.000+","250.000+","450.000+","750.000+"],correct:2},
+        {q:"Status apa yang secara otomatis diterima anggota ALL Accor+ Explorer?",opts:["Silver","Gold","Platinum","Diamond"],correct:1}
+      ]},
+      {type:"reflect",title:"Refleksi Anda",prompt:"Misi kami adalah menjadi \'program yang paling dicintai untuk anggota dan mitra kami.\' Dengan kata-kata Anda sendiri, apa arti \'paling dicintai\' bagi Anda dalam konteks panggilan yang akan Anda lakukan dan percakapan yang akan Anda miliki?"}
+    ]},
+    {title:"Portofolio Merek Kami",steps:[
+      {type:"learn",title:"Selamat Datang di Dunia Merek Kami",content:"Accor adalah rumah bagi lebih dari 45 merek hotel, masing-masing dengan kepribadian, janji tamu, dan posisi pasar sendiri. Dalam modul ini, Anda akan menjelajahi portofolio dari ultra-mewah hingga ekonomi, sehingga Anda dapat berbicara dengan percaya diri tentang merek apa pun yang ditanyakan prospek.",img:"\u{1F3E8}"},
+      {type:"video",title:"Portofolio Tak Tertandingi",duration:"3:45",desc:"Tidak ada perusahaan perhotelan lain di dunia yang menawarkan keluasan ini. Dari Raffles legendaris di Singapura hingga ibis yang semarak di jantung Bangkok, merek Accor mencakup setiap momen perjalanan dan setiap anggaran. Keragaman inilah yang membuat ALL Accor+ Explorer begitu menarik. Satu keanggotaan membuka semuanya."},
+      {type:"learn",title:"Merek Mewah",content:"Puncak portofolio Accor:\n\n\u2022 Orient Express: Merek kereta api dan hotel legendaris, pelayaran mewah diluncurkan 2026\n\u2022 Raffles: Ikonik sejak 1887, rumah Singapore Sling, layanan legendaris\n\u2022 Fairmont: Hotel mewah megah termasuk The Savoy London, Fairmont Bab Al Bahr Abu Dhabi\n\u2022 Sofitel: Kemewahan Prancis dengan 120+ alamat, seni hidup ala Prancis\n\u2022 MGallery: Koleksi butik hotel bersejarah, masing-masing dengan karakter unik\n\nMerek-merek ini mewakili aspirasi. Ketika seorang anggota menggunakan malam Stay Plus mereka di Raffles atau Sofitel, itu bisa menjadi pengalaman transformasional yang membayar keanggotaan berkali-kali lipat.",img:"\u{1F451}"},
+      {type:"learn",title:"Merek Premium",content:"Titik temu antara gaya dan substansi:\n\n\u2022 Pullman: Hotel kosmopolitan untuk pelancong berpengalaman dan pemimpin bisnis\n\u2022 Swissotel: Presisi dan keramahtamahan Swiss di kota-kota global utama\n\u2022 Movenpick: Keramahtamahan terinspirasi Swiss yang terkenal dengan makanan dan anggur luar biasa\n\u2022 Grand Mercure: Karakter lokal premium di Asia Pasifik\n\u2022 Peppers: Merek resor dan hotel premium Australia dan Selandia Baru\n\u2022 The Sebel: Merek hotel apartemen premier di Australia\n\nBanyak prospek Anda akan mengenal dan menyukai merek-merek ini. Mereka mewakili nilai fantastis bagi anggota Explorer yang menggunakan diskon makan dan malam Stay Plus mereka.",img:"\u2B50"},
+      {type:"quiz",title:"Pemeriksaan Pengetahuan",questions:[
+        {q:"Merek Accor mana yang didirikan pertama?",opts:["Sofitel","ibis","Novotel","Mercure"],correct:2},
+        {q:"Merek mana yang digambarkan sebagai \'kemewahan Prancis, seni hidup ala Prancis\'?",opts:["Raffles","Fairmont","MGallery","Sofitel"],correct:3},
+        {q:"Berapa kira-kira jumlah merek hotel yang dioperasikan Accor?",opts:["15+","25+","35+","45+"],correct:3}
+      ]},
+      {type:"reflect",title:"Refleksi Anda",prompt:"Merek mana dalam portofolio Accor yang paling menggairahkan Anda dan mengapa? Bagaimana Anda akan menggunakan pengetahuan tentang merek ini untuk menciptakan kegembiraan dalam percakapan penjualan dengan prospek?"}
+    ]},
+    {title:"Hotel Utama di Asia Pasifik",steps:[
+      {type:"learn",title:"Selamat Datang di Kehadiran APAC Kami",content:"Asia Pasifik adalah rumah ALL Accor+ Explorer. Dengan 1.400+ hotel di 18 negara dan 25+ merek, di sinilah anggota kami bepergian, bersantap, dan menciptakan kenangan. Dalam modul ini, Anda akan belajar tentang properti dan pasar utama kami sehingga Anda dapat melukiskan gambaran yang jelas untuk setiap prospek.",img:"\u{1F30D}"},
+      {type:"video",title:"Jejak APAC Kami",duration:"4:00",desc:"Dari pantai Bali hingga cakrawala Sydney, dari kuil Bangkok hingga pegunungan Queenstown, kehadiran Accor di Asia Pasifik tak tertandingi. Lebih dari 1.400 hotel di 25+ merek, dengan lebih banyak dibuka setiap tahun. Ketika seorang anggota bergabung dengan Explorer, mereka membuka akses ke jaringan hotel paling beragam di kawasan ini."},
+      {type:"learn",title:"Australia dan Selandia Baru",content:"Pasar rumah dan kawasan terbesar kami:\n\n\u2022 Sofitel Sydney Darling Harbour: Kemewahan bintang lima menghadap pelabuhan\n\u2022 Pullman Auckland Hotel and Apartments: Premium di jantung kota\n\u2022 Novotel Sydney Olympic Park: Ramah keluarga dengan fasilitas spektakuler\n\u2022 Peppers Cradle Mountain Lodge: Pengalaman alam liar Tasmania yang ikonik\n\u2022 The Sebel Residences Melbourne Docklands: Hunian apartemen premier\n\u2022 Mercure Queenstown Resort: Lokasi tepi danau yang menakjubkan\n\nAustralia dan NZ adalah tempat di mana sebagian besar prospek Anda akan menggunakan manfaat mereka pertama kali. Mengetahui properti ini membantu Anda membuat keanggotaan terasa nyata.",img:"\u{1F1E6}\u{1F1FA}"},
+      {type:"learn",title:"Asia Tenggara",content:"Kawasan di mana Explorer benar-benar bersinar:\n\n\u2022 Raffles Singapore: Hotel paling ikonik di dunia, rumah Singapore Sling\n\u2022 Sofitel Bali Nusa Dua Beach Resort: Kemewahan tropis bintang lima\n\u2022 Pullman Bangkok Hotel G: Hotel kota yang semarak di jantung Silom\n\u2022 Movenpick Resort Kuredhivaru Maldives: Surga vila di atas air\n\u2022 Fairmont Jakarta: Hotel bisnis premium\n\u2022 Novotel Phu Quoc Resort: Pelarian pulau Vietnam\n\nMalam Stay Plus di properti ini memberikan nilai luar biasa. Satu malam di Raffles Singapore bisa bernilai lebih dari biaya keanggotaan tahunan.",img:"\u{1F334}"},
+      {type:"learn",title:"India dan Pasar Berkembang",content:"India adalah pasar Accor yang paling cepat berkembang di APAC:\n\n\u2022 Kemitraan Accor dan InterGlobe: Tumbuh dari 70 menjadi 300 hotel pada 2030\n\u2022 Investasi bersama di Treebo, menjadikan aliansi operator hotel terbesar ketiga di India\n\u2022 Fairmont Jaipur: Warisan kerajaan bertemu kemewahan modern\n\u2022 Novotel Mumbai Juhu Beach: Tepi pantai premium di ibukota hiburan India\n\u2022 Pullman New Delhi Aerocity: Kemewahan terhubung untuk pelancong bisnis\n\nDengan ekspansi cepat di Thailand, Vietnam, Filipina, dan Indonesia, jaringan yang dapat diakses anggota Anda berkembang setiap kuartal.",img:"\u{1F1EE}\u{1F1F3}"},
+      {type:"quiz",title:"Pemeriksaan Pengetahuan",questions:[
+        {q:"Berapa jumlah hotel yang dioperasikan Accor di seluruh Asia Pasifik?",opts:["800+","1.000+","1.400+","2.000+"],correct:2},
+        {q:"Hotel ikonik Singapura mana yang merupakan bagian dari portofolio Accor?",opts:["Marina Bay Sands","The Fullerton","Raffles Singapore","Shangri-La"],correct:2},
+        {q:"Pada 2030, berapa jumlah hotel Accor yang direncanakan untuk India melalui kemitraan InterGlobe?",opts:["100","200","300","500"],correct:2}
+      ]},
+      {type:"reflect",title:"Refleksi Anda",prompt:"Pikirkan tentang seorang prospek yang suka bepergian di Asia Tenggara. Menggunakan apa yang telah Anda pelajari dalam modul ini, bagaimana Anda akan menggambarkan nilai keanggotaan Explorer kepada mereka? Hotel atau pengalaman spesifik apa yang akan Anda soroti?"}
+    ]}
+  ]
+};
+
+const MODULES_TH={
+  0:[
+    {title:"การเดินทาง ALL Accor+",steps:[
+      {type:"learn",title:"ยินดีต้อนรับสู่เรื่องราวของเรา",content:"ยินดีต้อนรับสู่โมดูลแรกของคุณ ในขั้นตอนถัดไป คุณจะค้นพบการเดินทางอันน่าทึ่งของ Accor จากโรงแรมเดียวริมถนนในฝรั่งเศสตอนเหนือสู่หนึ่งในกลุ่มการบริการที่ใหญ่ที่สุดในโลก เมื่อจบโมดูล คุณจะเข้าใจมรดก ขนาด และความทะเยอทะยานที่อยู่เบื้องหลังทุกปฏิสัมพันธ์ของคุณในฐานะสมาชิกทีม ALL Accor+ Explorer",img:"\u{1F30F}"},
+      {type:"video",title:"เรื่องราวการก่อตั้ง",duration:"4:30",desc:"ในปี 1967 นักวิสัยทัศน์สองคน Paul Dubrule และ Gerard Pelisson เปิด Novotel แห่งแรกริมถนนใกล้ Lille ในฝรั่งเศสตอนเหนือ การเดินทางกำลังเฟื่องฟูทั่วยุโรป และอุตสาหกรรมโรงแรมยังไม่ขยายตัวเพื่อรองรับความต้องการ แนวคิดของพวกเขาเรียบง่ายแต่ปฏิวัติวงการ: โรงแรมมาตรฐานพร้อมสิ่งอำนวยความสะดวกทันสมัย รวมถึงห้องน้ำส่วนตัว เครื่องปรับอากาศ และสระว่ายน้ำ นี่คือจุดเริ่มต้นของทุกสิ่ง"},
+      {type:"learn",title:"การเติบโตและการขยายตัว",content:"จาก Novotel แห่งแรก Accor เติบโตอย่างรวดเร็ว:\n\n1967: Novotel แห่งแรกเปิดใน Lille ฝรั่งเศส\n1974: แบรนด์ ibis เปิดตัวใน Bordeaux นำการบริการราคาประหยัด\n1975: เครือ Mercure ถูกซื้อกิจการ ผลักดันเข้าสู่การเดินทางธุรกิจในเมือง\n1980: Sofitel ถูกซื้อกิจการ ถือเป็นการเข้าสู่การบริการระดับหรูของ Accor\n1983: บริษัทกลายเป็น \'Accor\' อย่างเป็นทางการ จดทะเบียนในตลาดหลักทรัพย์ปารีส\n1990s: ขยายสู่เอเชียแปซิฟิก กลายเป็นกลุ่มโรงแรมชั้นนำของภูมิภาคภายในปี 1996\n\nเมื่อถึงสหัสวรรษใหม่ Accor ได้กลายเป็นบริษัทการบริการระดับโลกอย่างแท้จริงด้วยการมีตัวตนในทุกทวีป",img:"\u{1F4C8}"},
+      {type:"learn",title:"Accor วันนี้",content:"วันนี้ Accor เป็นยักษ์ใหญ่ด้านการบริการระดับโลก:\n\n\u2022 โรงแรมและรีสอร์ท 5,700+ แห่งทั่วโลก\n\u2022 850,000 ห้องใน 110+ ประเทศ\n\u2022 แบรนด์โรงแรมมากกว่า 45 แบรนด์ตั้งแต่หรูหราถึงประหยัด\n\u2022 สมาชิกทีม 360,000 คนทั่วโลก\n\u2022 สมาชิกโปรแกรมความภักดี 100+ ล้านคนในระบบนิเวศ ALL\n\nนำโดยประธานและ CEO Sebastien Bazin ตั้งแต่ปี 2013 Accor ยังคงนิยามความหมายของการบริการใหม่ ขยายสู่ไลฟ์สไตล์ สุขภาพ Co-working และความบันเทิง สำนักงานใหญ่ของบริษัทอยู่ที่ Issy-les-Moulineaux ใกล้ปารีส ฝรั่งเศส",img:"\u{1F3E8}"},
+      {type:"learn",title:"จุดมุ่งหมายของเรา",content:"จุดมุ่งหมายของ Accor ทรงพลังและชัดเจน:\n\n\'บุกเบิกศิลปะแห่งความภักดีของสมาชิก เชื่อมโยงวัฒนธรรม ด้วยการดูแลจากใจ\'\n\nนี่ไม่ใช่แค่สโลแกน มันขับเคลื่อนทุกการตัดสินใจ ตั้งแต่การออกแบบโรงแรมที่ยั่งยืนถึงการมีส่วนร่วมของชุมชน จากความหลากหลายถึงวิธีที่เราต้อนรับแขกทุกคน ในฐานะสมาชิกทีม ALL Accor+ Explorer คุณเป็นส่วนหนึ่งของจุดมุ่งหมายนี้",img:"\u2764\uFE0F"},
+      {type:"quiz",title:"ตรวจสอบความรู้",questions:[
+        {q:"โรงแรม Novotel แห่งแรกเปิดในปีใด?",opts:["1957","1963","1967","1975"],correct:2},
+        {q:"ใครเป็นผู้ก่อตั้ง Accor สองคน?",opts:["Sebastien Bazin และ Emilie Couton","Paul Dubrule และ Gerard Pelisson","Jean-Marc Espalioux และ Gilles Pelisson","Pierre Lamond และ Jacques Borel"],correct:1},
+        {q:"Accor ดำเนินการโรงแรมประมาณกี่แห่งทั่วโลกในปัจจุบัน?",opts:["2,500+","4,000+","5,700+","8,000+"],correct:2}
+      ]},
+      {type:"reflect",title:"การสะท้อนของคุณ",prompt:"ตอนนี้คุณรู้เรื่องราวของ Accor แล้ว ส่วนไหนของการเดินทางของบริษัทที่สะท้อนกับคุณมากที่สุด? การเข้าใจประวัติศาสตร์นี้ช่วยให้คุณรู้สึกเชื่อมโยงกับแบรนด์ที่คุณจะเป็นตัวแทนทุกวันอย่างไร?"}
+    ]},
+    {title:"การเดินทาง Accor Plus",steps:[
+      {type:"learn",title:"ยินดีต้อนรับสู่เรื่องราว Accor Plus",content:"ในโมดูลนี้ คุณจะเรียนรู้เกี่ยวกับ Accor Plus ธุรกิจสมาชิกความภักดีที่คุณเป็นส่วนหนึ่งแล้ว ก่อตั้งในซิดนีย์ปี 1994 Accor Plus เป็นผู้นำในหมวดสมาชิกความภักดีในเอเชียแปซิฟิกมากว่า 30 ปี การเข้าใจวิสัยทัศน์ พันธกิจ และวิวัฒนาการของเราจะช่วยให้คุณสื่อสารคุณค่าของเราได้อย่างมั่นใจ",img:"\u{1F48E}"},
+      {type:"video",title:"Accor Plus คืออะไร?",duration:"5:15",desc:"Accor Plus คือธุรกิจสมาชิกความภักดีของ Accor บริษัทในเครือที่ดำเนินการพัฒนา ขาย และจัดการสมาชิกพรีเมียมใน 20 ประเทศในเอเชียแปซิฟิก ด้วยสมาชิกมากกว่า 450,000 คน สมาชิก Accor Plus พักค้างคืนมากกว่าผู้ที่ไม่ใช่สมาชิกถึง 5 เท่า จองห้องพักมากกว่า 3.1 ล้านคืนในปี 2024"},
+      {type:"learn",title:"วิสัยทัศน์และพันธกิจของเรา",content:"พันธกิจของเรา:\n\'เป็นโปรแกรมที่เป็นที่รักมากที่สุดสำหรับสมาชิกและพันธมิตรของเรา และสร้างแรงบันดาลใจให้ทีม Heartist ของเราในทุกก้าว\'\n\nวิสัยทัศน์ของเรา:\nเป็นสมาชิกความภักดีการเดินทางชั้นนำของโลก มอบคุณค่าและประสบการณ์ที่คงอยู่กับสมาชิกของเราอย่างแท้จริง เพราะความภักดีไม่ใช่แค่โปรแกรม มันคือวิธีที่เราทำให้ผู้คนรู้สึกทุกครั้งที่พวกเขาเดินทาง",img:"\u{1F31F}"},
+      {type:"learn",title:"ระบบนิเวศ ALL",content:"ALL Accor+ Explorer ผสานรวมอย่างไร้รอยต่อภายในระบบนิเวศความภักดีระดับโลก ALL Accor:\n\n\u2022 สมาชิก 100+ ล้านคนทั่วโลกใน ALL Accor\n\u2022 สมาชิกสะสมและแลกคะแนนรางวัลที่โรงแรม 5,700+ แห่ง\n\u2022 ห้าระดับสถานะ: Classic, Silver, Gold, Platinum, Diamond\n\u2022 พันธมิตรระดับโลก 110+ รายรวมถึง Qantas, American Express\n\u2022 กิจกรรมและประสบการณ์พิเศษ 2,000+ รายการ",img:"\u{1F310}"},
+      {type:"learn",title:"วิวัฒนาการสู่ ALL Accor+ Explorer",content:"เมื่อวันที่ 1 ตุลาคม 2025 Accor Plus เปลี่ยนแบรนด์และพัฒนาเป็น ALL Accor+ Explorer การเปลี่ยนแปลงครั้งใหญ่ที่สุดในประวัติศาสตร์โปรแกรมกว่า 30 ปี\n\nสิ่งที่เปลี่ยนแปลง:\n\u2022 รวมทุกประเภทสมาชิกภายใต้ผลิตภัณฑ์ Explorer พรีเมียมเดียว\n\u2022 รับประกันสถานะ ALL Accor Gold สำหรับสมาชิกทุกคน\n\u2022 30 คืนสถานะโบนัสต่อปี\n\u2022 ส่วนลด 15% ทั่วโลกที่โรงแรม 4,500+ แห่งและ 30+ แบรนด์",img:"\u{1F680}"},
+      {type:"quiz",title:"ตรวจสอบความรู้",questions:[
+        {q:"Accor Plus ก่อตั้งในปีใด?",opts:["1987","1994","2001","2010"],correct:1},
+        {q:"Accor Plus มีสมาชิกกี่คนทั่วเอเชียแปซิฟิก?",opts:["150,000+","250,000+","450,000+","750,000+"],correct:2},
+        {q:"สมาชิก ALL Accor+ Explorer ได้รับสถานะอะไรโดยอัตโนมัติ?",opts:["Silver","Gold","Platinum","Diamond"],correct:1}
+      ]},
+      {type:"reflect",title:"การสะท้อนของคุณ",prompt:"พันธกิจของเราคือเป็น 'โปรแกรมที่เป็นที่รักมากที่สุดสำหรับสมาชิกและพันธมิตรของเรา' ในคำพูดของคุณเอง 'เป็นที่รักมากที่สุด' หมายความว่าอะไรสำหรับคุณ?"}
+    ]},
+    {title:"พอร์ตโฟลิโอแบรนด์ของเรา",steps:[
+      {type:"learn",title:"ยินดีต้อนรับสู่โลกแห่งแบรนด์ของเรา",content:"Accor เป็นบ้านของแบรนด์โรงแรมมากกว่า 45 แบรนด์ แต่ละแบรนด์มีบุคลิก คำมั่นสัญญาต่อแขก และตำแหน่งตลาดของตัวเอง ในโมดูลนี้ คุณจะท่องพอร์ตโฟลิโอตั้งแต่อัลตร้าลักชัวรีถึงประหยัด เพื่อให้คุณสามารถพูดได้อย่างมั่นใจเกี่ยวกับทุกแบรนด์",img:"\u{1F3E8}"},
+      {type:"video",title:"พอร์ตโฟลิโอที่ไม่มีใครเทียบ",duration:"3:45",desc:"ไม่มีบริษัทการบริการอื่นใดในโลกที่มีความกว้างเช่นนี้ จาก Raffles ตำนานในสิงคโปร์ถึง ibis ที่มีชีวิตชีวาใจกลางกรุงเทพฯ แบรนด์ของ Accor ครอบคลุมทุกช่วงเวลาการเดินทางและทุกงบประมาณ ความหลากหลายนี้ทำให้ ALL Accor+ Explorer น่าสนใจมาก สมาชิกเดียวเปิดทุกอย่าง"},
+      {type:"learn",title:"แบรนด์หรูหรา",content:"จุดสูงสุดของพอร์ตโฟลิโอ Accor:\n\n\u2022 Orient Express: แบรนด์รถไฟและโรงแรมตำนาน ล่องเรือหรูเปิดตัว 2026\n\u2022 Raffles: ไอคอนตั้งแต่ 1887 บ้านของ Singapore Sling บริการตำนาน\n\u2022 Fairmont: โรงแรมหรูยิ่งใหญ่รวมถึง The Savoy London\n\u2022 Sofitel: ความหรูหราฝรั่งเศสกับ 120+ สถานที่ ศิลปะแห่งการใช้ชีวิตแบบฝรั่งเศส\n\u2022 MGallery: คอลเลกชันบูติคโรงแรมที่มีเรื่องราว แต่ละแห่งมีเอกลักษณ์เฉพาะ",img:"\u{1F451}"},
+      {type:"learn",title:"แบรนด์พรีเมียม",content:"จุดที่สมดุลระหว่างสไตล์และเนื้อหา:\n\n\u2022 Pullman: โรงแรมสากลสำหรับนักเดินทางผู้มีประสบการณ์\n\u2022 Swissotel: ความแม่นยำและการต้อนรับแบบสวิสในเมืองสำคัญระดับโลก\n\u2022 Movenpick: การต้อนรับแรงบันดาลใจจากสวิสที่ขึ้นชื่อเรื่องอาหารและไวน์\n\u2022 Grand Mercure: ตัวตนท้องถิ่นระดับพรีเมียมในเอเชียแปซิฟิก\n\u2022 Peppers: แบรนด์รีสอร์ทและโรงแรมพรีเมียมออสเตรเลียและนิวซีแลนด์",img:"\u2B50"},
+      {type:"quiz",title:"ตรวจสอบความรู้",questions:[
+        {q:"แบรนด์ Accor ใดก่อตั้งก่อน?",opts:["Sofitel","ibis","Novotel","Mercure"],correct:2},
+        {q:"แบรนด์ใดถูกอธิบายว่า 'ความหรูหราฝรั่งเศส ศิลปะแห่งการใช้ชีวิตแบบฝรั่งเศส'?",opts:["Raffles","Fairmont","MGallery","Sofitel"],correct:3},
+        {q:"Accor ดำเนินการแบรนด์โรงแรมประมาณกี่แบรนด์?",opts:["15+","25+","35+","45+"],correct:3}
+      ]},
+      {type:"reflect",title:"การสะท้อนของคุณ",prompt:"แบรนด์ใดในพอร์ตโฟลิโอ Accor ที่ทำให้คุณตื่นเต้นมากที่สุดและทำไม? คุณจะใช้ความรู้เกี่ยวกับแบรนด์นี้สร้างความตื่นเต้นในการสนทนาขายกับลูกค้าเป้าหมายอย่างไร?"}
+    ]},
+    {title:"โรงแรมสำคัญในเอเชียแปซิฟิก",steps:[
+      {type:"learn",title:"ยินดีต้อนรับสู่การปรากฏตัวของเราใน APAC",content:"เอเชียแปซิฟิกเป็นบ้านของ ALL Accor+ Explorer ด้วยโรงแรม 1,400+ แห่งใน 18 ประเทศและ 25+ แบรนด์ ที่นี่คือที่ที่สมาชิกของเราเดินทาง รับประทานอาหาร และสร้างความทรงจำ",img:"\u{1F30D}"},
+      {type:"video",title:"รอยเท้า APAC ของเรา",duration:"4:00",desc:"จากชายหาดบาหลีถึงเส้นขอบฟ้าซิดนีย์ จากวัดในกรุงเทพฯถึงภูเขาควีนส์ทาวน์ การปรากฏตัวของ Accor ในเอเชียแปซิฟิกไม่มีใครเทียบ โรงแรมกว่า 1,400 แห่งใน 25+ แบรนด์"},
+      {type:"learn",title:"ออสเตรเลียและนิวซีแลนด์",content:"ตลาดบ้านและภูมิภาคที่ใหญ่ที่สุดของเรา:\n\n\u2022 Sofitel Sydney Darling Harbour: ความหรูหราห้าดาวมองเห็นท่าเรือ\n\u2022 Pullman Auckland: พรีเมียมใจกลางเมือง\n\u2022 Novotel Sydney Olympic Park: เหมาะสำหรับครอบครัวพร้อมสิ่งอำนวยความสะดวกยอดเยี่ยม\n\u2022 Peppers Cradle Mountain Lodge: ประสบการณ์ป่าแทสเมเนียที่เป็นตำนาน",img:"\u{1F1E6}\u{1F1FA}"},
+      {type:"learn",title:"เอเชียตะวันออกเฉียงใต้",content:"ภูมิภาคที่ Explorer ส่องสว่างอย่างแท้จริง:\n\n\u2022 Raffles Singapore: โรงแรมที่เป็นที่รู้จักมากที่สุดในโลก\n\u2022 Sofitel Bali Nusa Dua Beach Resort: ความหรูหราเขตร้อนห้าดาว\n\u2022 Pullman Bangkok Hotel G: โรงแรมเมืองที่มีชีวิตชีวาใจกลางสีลม\n\u2022 Fairmont Jakarta: โรงแรมธุรกิจพรีเมียม\n\nคืน Stay Plus ที่โรงแรมเหล่านี้มอบคุณค่าที่ยอดเยี่ยม",img:"\u{1F334}"},
+      {type:"learn",title:"อินเดียและตลาดเกิดใหม่",content:"อินเดียเป็นตลาดที่เติบโตเร็วที่สุดของ Accor ใน APAC:\n\n\u2022 พันธมิตร Accor และ InterGlobe: เติบโตจาก 70 เป็น 300 โรงแรมภายในปี 2030\n\u2022 Fairmont Jaipur: มรดกราชวงศ์พบกับความหรูหราสมัยใหม่\n\u2022 Novotel Mumbai Juhu Beach: ริมชายหาดพรีเมียม\n\nด้วยการขยายตัวอย่างรวดเร็วทั่วไทย เวียดนาม ฟิลิปปินส์ และอินโดนีเซีย เครือข่ายที่สมาชิกของคุณเข้าถึงได้กำลังเติบโตทุกไตรมาส",img:"\u{1F1EE}\u{1F1F3}"},
+      {type:"quiz",title:"ตรวจสอบความรู้",questions:[
+        {q:"Accor ดำเนินการโรงแรมกี่แห่งทั่วเอเชียแปซิฟิก?",opts:["800+","1,000+","1,400+","2,000+"],correct:2},
+        {q:"โรงแรมไอคอนสิงคโปร์ใดเป็นส่วนหนึ่งของพอร์ตโฟลิโอ Accor?",opts:["Marina Bay Sands","The Fullerton","Raffles Singapore","Shangri-La"],correct:2},
+        {q:"ภายในปี 2030 มีแผนโรงแรม Accor กี่แห่งสำหรับอินเดีย?",opts:["100","200","300","500"],correct:2}
+      ]},
+      {type:"reflect",title:"การสะท้อนของคุณ",prompt:"ลองนึกถึงลูกค้าเป้าหมายที่ชอบเดินทางในเอเชียตะวันออกเฉียงใต้ จากสิ่งที่คุณได้เรียนรู้ในโมดูลนี้ คุณจะอธิบายคุณค่าของสมาชิก Explorer ให้พวกเขาอย่างไร?"}
+    ]}
+  ]
+};
+
 const Lk=()=><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>;
 const Ar=()=><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>;
 
 export default function App(){
   const [view,setView]=useState("login"); // login | academy | academy-mgr | onboarding | agent | manager | leadership | compliance
   const [isManager,setIsManager]=useState(false);
+  const [lang,setLang]=useState("en");
+  const [showLangMenu,setShowLangMenu]=useState(false);
+  const [pulseActive,setPulseActive]=useState(null);
+  const [pulseAnswers,setPulseAnswers]=useState({});
+  const [pulseDismissed,setPulseDismissed]=useState({});
+  const T={
+    en:{
+      bizProposal:"BUSINESS PROPOSAL",acad:"Academy.",tagline:"Pioneering the art of subscription loyalty",teamMember:"Team Member",manager:"Manager",
+      hub:"Your Learning Hub.",hubSub:"Everything you need to grow, develop, and succeed as an ALL Accor+ team member.",
+      onboarding:"Onboarding",onbDesc:"Complete your Explorer Digital Passport across four APAC destinations. 19 interactive modules covering our story, loyalty, the product, and your role.",
+      leadership:"Leadership",leadDesc:"Develop your leadership capabilities through two self-paced programmes designed for Accor Plus team leaders.",
+      pocketCust:"Pocket Customer",pocketDesc:"Practice your sales conversations with an AI-powered roleplay simulator. The AI plays the customer. You close the deal.",
+      compliance:"Compliance",compDesc:"Annual compliance modules including data privacy, workplace safety, and code of conduct. Launching soon.",
+      active:"Active",comingSoon:"Coming Soon",enter:"Enter",launch:"Launch",voiceRoleplay:"Voice roleplay",
+      passport:"Your Digital Passport.",yourPassport:"Your Explorer Passport.",cont:"Continue",welcome:"Welcome,",begin:"Begin",
+      programmes:"programmes",comingQ3:"Coming Q3 2026",
+      leaderV1:"Leadership Volume 1.",sixDest:"Six destinations. Six leadership capabilities.",
+      modComplete:"modules complete.",inProgress:"In Progress",progComplete:"Programme Complete",
+      selectDest:"Select a destination to begin",selectYourDest:"Select your destination to begin learning",leaderPassport:"Your Leadership Passport.",
+      completeStamp:"Complete each module to earn your stamp.",completeEachDest:"Complete each destination to earn your stamp.",stamped:"Stamped",locked:"Locked",
+      leaderCert:"Leadership Volume 1 Complete!",certCongrats:"Congratulations, Jared. You have completed all six leadership modules and earned your Leadership Certification.",
+      certified:"Certified",backToModule:"Back to Module",step:"Step",of:"of",prev:"Previous",next:"Next",markComplete:"Mark Complete",
+      completedIn:"Completed in",min:"min",underOne:"under 1",
+      mgrDash:"Manager Dashboard.",mgrSub:"Track your team's progress across all programmes.",
+      activeLearners:"Active Learners",avgCompletion:"Avg Completion",avgDays:"Avg Days to Complete",quizAccuracy:"Quiz Accuracy",
+      acrossAll:"Across all programmes",onbProg:"Onboarding programme",perDest:"Per destination",acrossQuiz:"Across all quizzes",
+      onbProgTitle:"Onboarding Programme",explorerPass:"Explorer Digital Passport",leadProgTitle:"Leadership Programme",vol12:"Volume 1 & Volume 2",
+      compProgTitle:"Compliance Programme",launchingQ3:"Launching Q3 2026",
+      logOut:"Log out",academy:"Academy",complete:"Complete",continueLearning:"Continue Learning",allComplete:"All Complete",
+      apply:"Apply",listen:"Listen",mission:"Mission",
+      applyLabel:"SCENARIO",listenLabel:"LISTEN",missionLabel:"WEEKLY MISSION",
+      chooseApproach:"Choose your approach",whatHappens:"What happens with this approach:",
+      listenPlaceholder:"Audio clip will be available here. Listen to the call, then answer the questions below.",
+      listenQ1:"What did the agent do well?",listenQ2:"What would you change?",
+      missionBrief:"Your mission this week:",missionDoc:"Document what happened:",
+      missionWhat:"What did you do?",missionObserved:"What did you observe?",missionDiff:"What would you do differently?",
+      knowledgePulse:"Knowledge Pulse",pulseIntro:"It has been 14 days since you completed",pulseQuestion:"Can you still answer these?",
+      pulseCorrect:"You remembered!",pulseWrong:"Time to revisit this module.",pulseScore:"Your retention score:",reviewModule:"Review Module",pulseDismiss:"Dismiss",
+      coachingInsights:"Coaching Insights",insightAction:"Action needed",insightCelebrate:"Celebrate",insightFollowUp:"Follow up",
+      downloadCert:"Download Certificate",shareLinkedIn:"Share to LinkedIn",verifyUrl:"Verification URL",
+      certId:"Certificate ID",certIssued:"Issued",
+      contentUpdated:"Updated",lastReviewed:"Last reviewed",contentCurrent:"Content is current",contentNeedsReview:"Review recommended",
+      poweredBy:"Powered by "
+    },
+    id:{
+      bizProposal:"PROPOSAL BISNIS",acad:"Akademi.",tagline:"Merintis seni loyalitas berlangganan",teamMember:"Anggota Tim",manager:"Manajer",
+      hub:"Pusat Pembelajaran Anda.",hubSub:"Semua yang Anda butuhkan untuk tumbuh, berkembang, dan sukses sebagai anggota tim ALL Accor+.",
+      onboarding:"Orientasi",onbDesc:"Selesaikan Paspor Digital Explorer Anda di empat destinasi APAC. 19 modul interaktif mencakup cerita kami, loyalitas, produk, dan peran Anda.",
+      leadership:"Kepemimpinan",leadDesc:"Kembangkan kemampuan kepemimpinan Anda melalui dua program mandiri yang dirancang untuk pemimpin tim Accor Plus.",
+      pocketCust:"Pocket Customer",pocketDesc:"Latih percakapan penjualan Anda dengan simulator roleplay bertenaga AI. AI berperan sebagai pelanggan. Anda menutup kesepakatan.",
+      compliance:"Kepatuhan",compDesc:"Modul kepatuhan tahunan termasuk privasi data, keselamatan kerja, dan kode etik. Segera hadir.",
+      active:"Aktif",comingSoon:"Segera Hadir",enter:"Masuk",launch:"Buka",voiceRoleplay:"Roleplay suara",
+      passport:"Paspor Digital Anda.",cont:"Lanjutkan",welcome:"Selamat datang,",begin:"Mulai",
+      programmes:"program",comingQ3:"Hadir Q3 2026",
+      leaderV1:"Kepemimpinan Volume 1.",sixDest:"Enam destinasi. Enam kemampuan kepemimpinan.",
+      modComplete:"modul selesai.",inProgress:"Sedang Berlangsung",progComplete:"Program Selesai",
+      selectDest:"Pilih destinasi untuk memulai",leaderPassport:"Paspor Kepemimpinan Anda.",
+      completeStamp:"Selesaikan setiap modul untuk mendapatkan stempel Anda.",stamped:"Distempel",locked:"Terkunci",
+      leaderCert:"Kepemimpinan Volume 1 Selesai!",certCongrats:"Selamat, Jared. Anda telah menyelesaikan enam modul kepemimpinan dan mendapatkan Sertifikasi Kepemimpinan.",
+      certified:"Bersertifikat",backToModule:"Kembali ke Modul",step:"Langkah",of:"dari",prev:"Sebelumnya",next:"Berikutnya",markComplete:"Tandai Selesai",
+      completedIn:"Selesai dalam",min:"mnt",underOne:"kurang dari 1",
+      mgrDash:"Dasbor Manajer.",mgrSub:"Pantau kemajuan tim Anda di semua program.",
+      activeLearners:"Pelajar Aktif",avgCompletion:"Rata-rata Selesai",avgDays:"Rata-rata Hari",quizAccuracy:"Akurasi Kuis",
+      acrossAll:"Di semua program",onbProg:"Program orientasi",perDest:"Per destinasi",acrossQuiz:"Di semua kuis",
+      onbProgTitle:"Program Orientasi",explorerPass:"Paspor Digital Explorer",leadProgTitle:"Program Kepemimpinan",vol12:"Volume 1 & Volume 2",
+      compProgTitle:"Program Kepatuhan",launchingQ3:"Hadir Q3 2026",
+      logOut:"Keluar",academy:"Akademi",complete:"Selesai",continueLearning:"Lanjutkan Belajar",allComplete:"Semua Selesai",
+      learningModules:"MODUL PEMBELAJARAN",steps:"langkah",knowledgeCheck:"Pemeriksaan Pengetahuan",yourReflection:"Refleksi Anda",
+      correct:"Benar!",incorrect:"Tidak tepat",tryAgain:"Coba lagi",score:"Skor",
+      yourPassport:"Paspor Explorer Anda.",completeEachDest:"Selesaikan setiap destinasi untuk mendapatkan stempel Anda.",
+      notRequired:"Tidak Diperlukan",required:"Diperlukan",
+      destinations:"destinasi",modules:"modul",interactive:"interaktif",
+      explorerCertified:"EXPLORER BERSERTIFIKAT",congratsJared:"Selamat, Jared.",
+      completedAll:"Anda telah menyelesaikan semua destinasi dan mendapatkan Sertifikasi Explorer Anda.",
+      certifiedDate:"Bersertifikat",downloadCert:"Unduh Sertifikat",
+      howItWorks:"Cara Kerjanya.",howDesc:"Tiga langkah menuju sertifikasi Explorer Anda.",
+      step1:"Pelajari",step1d:"Selesaikan modul interaktif di setiap destinasi",
+      step2:"Dapatkan",step2d:"Kumpulkan stempel paspor saat Anda maju",
+      step3:"Sertifikasi",step3d:"Selesaikan semua destinasi untuk mendapatkan sertifikat Anda",
+      selectYourDest:"Pilih destinasi Anda untuk mulai belajar",
+      prev:"Sebelumnya",nxt:"Berikutnya",
+      yourDigitalPassport:"Paspor Digital Anda.",
+      completeMyJourney:"Selesaikan Perjalanan Saya",continueToCC:"Lanjut ke Contact Centre",
+      outboundAcq:"Akuisisi Outbound",memberCare:"Layanan Anggota",
+      chooseYourPath:"Pilih Jalur Anda",
+      corpIT:"Untuk tim korporat dan IT",salesCare:"Untuk tim penjualan dan layanan",
+      nzStory:"Kisah Kami",auLoyalty:"Loyalitas & Langganan",idProduct:"Produk Explorer",inSales:"Penjualan atau Layanan Anggota",
+      vol1:"Volume 1",vol2:"Volume 2",comingQ32:"Segera Hadir",
+      prog:"program",active2:"Aktif",enrolled:"Terdaftar",notStarted:"Belum Mulai",inProg:"Sedang Berlangsung",
+      ofText:"dari",acrossAllProg:"Di semua program",
+      backAcademy:"Akademi",
+      poweredBy:"Didukung oleh",
+      apply:"Terapkan",listen:"Dengarkan",mission:"Misi",
+      applyLabel:"SKENARIO",listenLabel:"DENGARKAN",missionLabel:"MISI MINGGUAN",
+      chooseApproach:"Pilih pendekatan Anda",
+      whatHappens:"Apa yang terjadi dengan pendekatan ini:",
+      listenPlaceholder:"Klip audio akan tersedia di sini. Dengarkan panggilan, lalu jawab pertanyaan di bawah.",
+      listenQ1:"Apa yang dilakukan agen dengan baik?",listenQ2:"Apa yang akan Anda ubah?",
+      missionBrief:"Misi Anda minggu ini:",
+      missionDoc:"Dokumentasikan apa yang terjadi:",
+      missionWhat:"Apa yang Anda lakukan?",missionObserved:"Apa yang Anda amati?",missionDiff:"Apa yang akan Anda lakukan secara berbeda?",
+      knowledgePulse:"Denyut Pengetahuan",pulseIntro:"Sudah 14 hari sejak Anda menyelesaikan",pulseQuestion:"Bisakah Anda masih menjawab ini?",
+      pulseCorrect:"Anda ingat!",pulseWrong:"Waktunya meninjau modul ini.",pulseScore:"Skor retensi Anda:",reviewModule:"Tinjau Modul",pulseDismiss:"Tutup",
+      coachingInsights:"Wawasan Pembinaan",insightStuck:"telah berada di",insightFor:"selama",insightDays:"hari",insightAvg:"Rata-rata penyelesaian:",insightDay:"hari",
+      insightQuiz:"mendapat",insightOn:"pada",insightTeamAvg:"Rata-rata tim:",insightStar:"menyelesaikan semua modul dalam",insightWith:"dengan",insightAccuracy:"akurasi",
+      insightConsider:"Pertimbangkan sebagai pelatih rekan",insightAction:"Tindakan diperlukan",insightCelebrate:"Rayakan",insightFollowUp:"Tindak lanjuti",
+      downloadCert:"Unduh Sertifikat",shareLinkedIn:"Bagikan ke LinkedIn",verifyUrl:"URL Verifikasi",
+      certId:"ID Sertifikat",certIssued:"Diterbitkan",certHolder:"Ini menyatakan bahwa",certCompleted:"telah berhasil menyelesaikan",
+      certOnboarding:"Program Orientasi ALL Accor+ Explorer",certLeadership:"Program Kepemimpinan Volume 1",
+      contentUpdated:"Diperbarui",lastReviewed:"Terakhir ditinjau",reviewAll:"Tinjau semua tanggal konten",
+      contentCurrent:"Konten terkini",contentNeedsReview:"Tinjauan disarankan"
+    },
+    th:{
+      bizProposal:"ข้อเสนอธุรกิจ",acad:"อะคาเดมี.",tagline:"บุกเบิกศิลปะแห่งความภักดีของสมาชิก",teamMember:"สมาชิกทีม",manager:"ผู้จัดการ",
+      hub:"ศูนย์การเรียนรู้ของคุณ.",hubSub:"ทุกสิ่งที่คุณต้องการเพื่อเติบโต พัฒนา และประสบความสำเร็จในฐานะสมาชิกทีม ALL Accor+",
+      onboarding:"การปฐมนิเทศ",onbDesc:"ทำพาสปอร์ตดิจิทัล Explorer ของคุณให้สำเร็จใน 4 จุดหมายปลายทาง APAC โมดูลเชิงโต้ตอบ 19 โมดูลครอบคลุมเรื่องราวของเรา ความภักดี ผลิตภัณฑ์ และบทบาทของคุณ",
+      leadership:"ภาวะผู้นำ",leadDesc:"พัฒนาความสามารถด้านภาวะผู้นำของคุณผ่านสองโปรแกรมเรียนรู้ด้วยตนเองที่ออกแบบสำหรับหัวหน้าทีม Accor Plus",
+      pocketCust:"Pocket Customer",pocketDesc:"ฝึกการสนทนาขายของคุณด้วยตัวจำลองบทบาทที่ขับเคลื่อนด้วย AI AI เล่นเป็นลูกค้า คุณปิดดีล",
+      compliance:"การปฏิบัติตามกฎระเบียบ",compDesc:"โมดูลการปฏิบัติตามกฎระเบียบประจำปี รวมถึงความเป็นส่วนตัวของข้อมูล ความปลอดภัยในสถานที่ทำงาน และจรรยาบรรณ เร็วๆ นี้",
+      active:"ใช้งาน",comingSoon:"เร็วๆ นี้",enter:"เข้า",launch:"เปิด",voiceRoleplay:"บทบาทสมมติเสียง",
+      passport:"พาสปอร์ตดิจิทัลของคุณ.",cont:"ดำเนินการต่อ",welcome:"ยินดีต้อนรับ,",begin:"เริ่ม",
+      programmes:"โปรแกรม",comingQ3:"Q3 2026",
+      leaderV1:"ภาวะผู้นำ เล่มที่ 1.",sixDest:"หกจุดหมาย หกความสามารถผู้นำ",
+      modComplete:"โมดูลเสร็จสมบูรณ์",inProgress:"กำลังดำเนินการ",progComplete:"โปรแกรมเสร็จสมบูรณ์",
+      selectDest:"เลือกจุดหมายเพื่อเริ่มต้น",selectYourDest:"เลือกจุดหมายของคุณเพื่อเริ่มเรียนรู้",
+      leaderPassport:"พาสปอร์ตภาวะผู้นำของคุณ.",
+      completeStamp:"ทำแต่ละโมดูลให้สำเร็จเพื่อรับตราประทับของคุณ",
+      completeEachDest:"ทำแต่ละจุดหมายให้สำเร็จเพื่อรับตราประทับของคุณ",
+      stamped:"ประทับแล้ว",locked:"ล็อค",
+      leaderCert:"ภาวะผู้นำ เล่มที่ 1 เสร็จสมบูรณ์!",certCongrats:"ยินดีด้วย Jared คุณได้ทำโมดูลภาวะผู้นำทั้งหกสำเร็จและได้รับการรับรองภาวะผู้นำ",
+      certified:"ได้รับการรับรอง",backToModule:"กลับไปที่โมดูล",step:"ขั้นตอน",of:"จาก",prev:"ก่อนหน้า",next:"ถัดไป",markComplete:"ทำเครื่องหมายเสร็จ",
+      completedIn:"เสร็จใน",min:"นาที",underOne:"น้อยกว่า 1",
+      mgrDash:"แดชบอร์ดผู้จัดการ.",mgrSub:"ติดตามความคืบหน้าของทีมคุณในทุกโปรแกรม",
+      activeLearners:"ผู้เรียนที่ใช้งาน",avgCompletion:"ค่าเฉลี่ยเสร็จสมบูรณ์",avgDays:"จำนวนวันเฉลี่ย",quizAccuracy:"ความแม่นยำแบบทดสอบ",
+      acrossAll:"ในทุกโปรแกรม",onbProg:"โปรแกรมปฐมนิเทศ",perDest:"ต่อจุดหมาย",acrossQuiz:"ในทุกแบบทดสอบ",
+      onbProgTitle:"โปรแกรมปฐมนิเทศ",explorerPass:"พาสปอร์ตดิจิทัล Explorer",leadProgTitle:"โปรแกรมภาวะผู้นำ",vol12:"เล่มที่ 1 & เล่มที่ 2",
+      compProgTitle:"โปรแกรมการปฏิบัติตามกฎระเบียบ",launchingQ3:"เปิดตัว Q3 2026",
+      logOut:"ออกจากระบบ",academy:"อะคาเดมี",complete:"เสร็จสมบูรณ์",continueLearning:"เรียนรู้ต่อ",allComplete:"ทั้งหมดเสร็จ",
+      learningModules:"โมดูลการเรียนรู้",steps:"ขั้นตอน",knowledgeCheck:"ตรวจสอบความรู้",yourReflection:"การสะท้อนของคุณ",
+      correct:"ถูกต้อง!",incorrect:"ไม่ถูกต้อง",tryAgain:"ลองอีกครั้ง",score:"คะแนน",
+      yourPassport:"พาสปอร์ต Explorer ของคุณ.",
+      notRequired:"ไม่จำเป็น",required:"จำเป็น",
+      explorerCertified:"EXPLORER ได้รับการรับรอง",congratsJared:"ยินดีด้วย Jared",
+      completedAll:"คุณได้ทำทุกจุดหมายสำเร็จและได้รับการรับรอง Explorer",
+      howItWorks:"วิธีการทำงาน.",
+      poweredBy:"ขับเคลื่อนโดย",
+      apply:"นำไปใช้",listen:"ฟัง",mission:"ภารกิจ",
+      applyLabel:"สถานการณ์จำลอง",listenLabel:"ฟัง",missionLabel:"ภารกิจประจำสัปดาห์",
+      chooseApproach:"เลือกแนวทางของคุณ",
+      whatHappens:"สิ่งที่เกิดขึ้นกับแนวทางนี้:",
+      listenPlaceholder:"คลิปเสียงจะพร้อมใช้งานที่นี่ ฟังการโทร จากนั้นตอบคำถามด้านล่าง",
+      listenQ1:"ตัวแทนทำอะไรได้ดี?",listenQ2:"คุณจะเปลี่ยนอะไร?",
+      missionBrief:"ภารกิจของคุณสัปดาห์นี้:",
+      missionDoc:"บันทึกสิ่งที่เกิดขึ้น:",
+      missionWhat:"คุณทำอะไร?",missionObserved:"คุณสังเกตเห็นอะไร?",missionDiff:"คุณจะทำอะไรแตกต่างออกไป?",
+      knowledgePulse:"การทบทวนความรู้",pulseIntro:"ผ่านมา 14 วันแล้วตั้งแต่คุณทำเสร็จ",pulseQuestion:"คุณยังตอบคำถามเหล่านี้ได้ไหม?",
+      pulseCorrect:"คุณจำได้!",pulseWrong:"ถึงเวลาทบทวนโมดูลนี้",pulseScore:"คะแนนการจดจำของคุณ:",reviewModule:"ทบทวนโมดูล",pulseDismiss:"ปิด",
+      coachingInsights:"ข้อมูลเชิงลึกการโค้ช",insightStuck:"อยู่ที่",insightFor:"เป็นเวลา",insightDays:"วัน",insightAvg:"เฉลี่ยการเสร็จสิ้น:",insightDay:"วัน",
+      insightQuiz:"ได้คะแนน",insightOn:"ใน",insightTeamAvg:"ค่าเฉลี่ยทีม:",insightStar:"ทำโมดูลทั้งหมดเสร็จใน",insightWith:"ด้วย",insightAccuracy:"ความแม่นยำ",
+      insightConsider:"พิจารณาเป็นโค้ชเพื่อน",insightAction:"ต้องดำเนินการ",insightCelebrate:"ยินดีด้วย",insightFollowUp:"ติดตามผล",
+      downloadCert:"ดาวน์โหลดใบรับรอง",shareLinkedIn:"แชร์ไปยัง LinkedIn",verifyUrl:"URL การยืนยัน",
+      certId:"รหัสใบรับรอง",certIssued:"ออกเมื่อ",certHolder:"ขอรับรองว่า",certCompleted:"ได้สำเร็จหลักสูตร",
+      certOnboarding:"โปรแกรมปฐมนิเทศ ALL Accor+ Explorer",certLeadership:"โปรแกรมภาวะผู้นำ เล่มที่ 1",
+      contentUpdated:"อัปเดต",lastReviewed:"ตรวจสอบล่าสุด",reviewAll:"ตรวจสอบวันที่เนื้อหาทั้งหมด",
+      contentCurrent:"เนื้อหาเป็นปัจจุบัน",contentNeedsReview:"แนะนำให้ตรวจสอบ"
+    }
+  };
+  const t=T[lang]||T.en;
   const [lCur,setLCur]=useState(-1);
   const [lPl,setLPl]=useState({x:790,y:385,r:0,v:false});
   const [lFl,setLFl]=useState(false);
@@ -408,6 +766,8 @@ export default function App(){
       }
     };requestAnimationFrame(anim);
   },[lFl,lCur,lCompletedMods]);
+
+  const getModules=(dest)=>{if(lang==="id"&&dest===0&&MODULES_ID[0])return MODULES_ID[0];if(lang==="th"&&dest===0&&MODULES_TH[0])return MODULES_TH[0];return MODULES[dest]||[];};
   const allNZDone=isDestComplete(0);
   const isLModComplete=(d,m)=>!!lCompletedMods[`${d}-${m}`];
   const isLDestComplete=(di)=>LMODULES[di]&&LMODULES[di].every((_,mi)=>isLModComplete(di,mi));
@@ -624,13 +984,21 @@ export default function App(){
         <div style={{maxWidth:1024,margin:"0 auto",padding:"0 22px",height:48,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
           <div style={{display:"flex",alignItems:"center",gap:10}}><div style={{width:26,height:26,borderRadius:7,background:"#1d1d1f",display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,fontWeight:800,color:"white"}}>A+</div><span style={{fontSize:12,fontWeight:600}}>Accor+ Academy</span></div>
           {view!=="login"&&view!=="onboarding"&&view!=="academy-mgr"&&<div style={{display:"flex",alignItems:"center",gap:16}}>
-            <span style={{fontSize:12,color:"#86868b"}}>Welcome, <strong style={{color:"#1d1d1f"}}>Jared</strong></span>
+            <span style={{fontSize:12,color:"#86868b"}}>{t.welcome} <strong style={{color:"#1d1d1f"}}>Jared</strong></span>
             {(view==="agent"||view==="manager")&&<div style={{display:"flex",alignItems:"center",gap:8}}><div style={{width:100,height:3,borderRadius:2,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:`${overallPct}%`,height:"100%",borderRadius:2,background:"linear-gradient(90deg,#0071e3,#34d399)"}}/></div><span style={{fontSize:11,color:"#86868b",fontWeight:500}}>{completedCount}/{totalMods}</span></div>}
             {view==="leadership-learn"&&<div style={{display:"flex",alignItems:"center",gap:8}}><div style={{width:100,height:3,borderRadius:2,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:`${lOverallPct}%`,height:"100%",borderRadius:2,background:"linear-gradient(90deg,#7c3aed,#ec4899)"}}/></div><span style={{fontSize:11,color:"#86868b",fontWeight:500}}>{lDoneMods}/{lOverallMods}</span></div>}
             {view==="manager"&&<button onClick={()=>setView("agent")} style={{fontSize:11,fontWeight:600,color:"#0071e3",background:"none",border:"none",cursor:"pointer"}}>Agent View</button>}
             <div style={{width:28,height:28,borderRadius:"50%",background:"linear-gradient(135deg,#0071e3,#64acff)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,fontWeight:700,color:"white"}}>J</div>
+            <div style={{position:"relative"}}>
+            <button onClick={()=>setShowLangMenu(!showLangMenu)} style={{fontSize:11,fontWeight:600,color:"#0071e3",background:"#f0f5ff",border:"1px solid #dbeafe",borderRadius:980,padding:"4px 10px",cursor:"pointer",transition:"all .2s",display:"flex",alignItems:"center",gap:4}} onMouseEnter={e=>e.currentTarget.style.background="#dbeafe"} onMouseLeave={e=>e.currentTarget.style.background="#f0f5ff"}>{lang==="en"?"EN \u{1F1EC}\u{1F1E7}":lang==="id"?"ID \u{1F1EE}\u{1F1E9}":"TH \u{1F1F9}\u{1F1ED}"}<svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+            {showLangMenu&&<div style={{position:"absolute",top:"100%",right:0,marginTop:6,background:"white",border:"1px solid #e8e8ed",borderRadius:12,overflow:"hidden",minWidth:150,boxShadow:"0 8px 32px rgba(0,0,0,.12)",zIndex:100}}>
+              {[{code:"en",label:"English",flag:"\u{1F1EC}\u{1F1E7}"},{code:"id",label:"Bahasa",flag:"\u{1F1EE}\u{1F1E9}"},{code:"th",label:"\u0E44\u0E17\u0E22",flag:"\u{1F1F9}\u{1F1ED}"}].map(l=>(
+                <button key={l.code} onClick={()=>{setLang(l.code);setShowLangMenu(false);}} style={{display:"flex",alignItems:"center",gap:8,width:"100%",padding:"8px 14px",background:lang===l.code?"#f0f5ff":"transparent",border:"none",color:"#1d1d1f",fontSize:12,fontWeight:lang===l.code?600:400,cursor:"pointer",textAlign:"left"}} onMouseEnter={e=>e.currentTarget.style.background="#f5f5f7"} onMouseLeave={e=>e.currentTarget.style.background=lang===l.code?"#f0f5ff":"transparent"}><span>{l.flag}</span>{l.label}{lang===l.code&&<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0071e3" strokeWidth="3" style={{marginLeft:"auto"}}><polyline points="20 6 9 17 4 12"/></svg>}</button>
+              ))}
+            </div>}
+          </div>
             {(view==="agent"||view==="manager"||view==="leadership"||view==="leadership-learn"||view==="compliance"||view==="onboarding")&&<button onClick={()=>{setView("academy");window.scrollTo(0,0);}} style={{fontSize:12,fontWeight:600,color:"#0071e3",background:"none",border:"none",cursor:"pointer",display:"flex",alignItems:"center",gap:4}}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="15 18 9 12 15 6"/></svg>Academy</button>}
-            <button onClick={()=>{setView("login");window.scrollTo(0,0);}} style={{fontSize:11,fontWeight:500,color:"#86868b",background:"none",border:"none",cursor:"pointer",marginLeft:4}}>Log out</button>
+            <button onClick={()=>{setView("login");window.scrollTo(0,0);}} style={{fontSize:11,fontWeight:500,color:"#86868b",background:"none",border:"none",cursor:"pointer",marginLeft:4}}>{t.logOut}</button>
           </div>}
         </div>
       </nav>
@@ -638,19 +1006,27 @@ export default function App(){
       {view==="login"&&<>
       
       <section style={{minHeight:"100vh",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",textAlign:"center",padding:"0",position:"relative",overflow:"hidden"}}>
+        <div style={{position:"absolute",top:20,right:20,zIndex:10}}>
+            <button onClick={()=>setShowLangMenu(!showLangMenu)} style={{fontSize:12,fontWeight:600,color:"rgba(255,255,255,.8)",background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"6px 14px",cursor:"pointer",transition:"all .2s",display:"flex",alignItems:"center",gap:6}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>{lang==="en"?"English \u{1F1EC}\u{1F1E7}":lang==="id"?"Bahasa \u{1F1EE}\u{1F1E9}":"\u0E44\u0E17\u0E22 \u{1F1F9}\u{1F1ED}"}<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+            {showLangMenu&&<div style={{position:"absolute",top:"100%",right:0,marginTop:6,background:"rgba(30,30,30,.95)",backdropFilter:"blur(16px)",border:"1px solid rgba(255,255,255,.15)",borderRadius:12,overflow:"hidden",minWidth:160,boxShadow:"0 8px 32px rgba(0,0,0,.3)"}}>
+              {[{code:"en",label:"English",flag:"\u{1F1EC}\u{1F1E7}"},{code:"id",label:"Bahasa Indonesia",flag:"\u{1F1EE}\u{1F1E9}"},{code:"th",label:"\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",flag:"\u{1F1F9}\u{1F1ED}"}].map(l=>(
+                <button key={l.code} onClick={()=>{setLang(l.code);setShowLangMenu(false);}} style={{display:"flex",alignItems:"center",gap:8,width:"100%",padding:"10px 16px",background:lang===l.code?"rgba(255,255,255,.15)":"transparent",border:"none",color:"white",fontSize:13,fontWeight:lang===l.code?600:400,cursor:"pointer",textAlign:"left"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.1)"} onMouseLeave={e=>e.currentTarget.style.background=lang===l.code?"rgba(255,255,255,.15)":"transparent"}><span>{l.flag}</span>{l.label}{lang===l.code&&<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" style={{marginLeft:"auto"}}><polyline points="20 6 9 17 4 12"/></svg>}</button>
+              ))}
+            </div>}
+          </div>
         <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg, #0a1628 0%, #132d55 25%, #1a4a6e 45%, #2563a0 60%, #3b82f6 80%, #93c5fd 100%)"}}>
 
           <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 50% 70%, rgba(212,120,90,.15) 0%, transparent 60%)"}}/>
         </div>
         <div style={{position:"relative",zIndex:2,animation:"fu .8s ease",maxWidth:680,padding:"120px 24px 80px"}}>
           <p style={{fontSize:15,fontWeight:600,color:"rgba(255,255,255,.85)",letterSpacing:".08em",textTransform:"uppercase",marginBottom:16}}>ALL Accor+</p>
-          <h1 style={{fontSize:"clamp(44px,8vw,80px)",fontWeight:700,lineHeight:1.05,letterSpacing:"-.04em",marginBottom:24,color:"white",textShadow:"0 2px 20px rgba(0,0,0,.3)"}}>Academy.</h1>
+          <h1 style={{fontSize:"clamp(44px,8vw,80px)",fontWeight:700,lineHeight:1.05,letterSpacing:"-.04em",marginBottom:24,color:"white",textShadow:"0 2px 20px rgba(0,0,0,.3)"}}>{t.acad}</h1>
           <div style={{animation:"fu .8s ease .3s both",display:"flex",justifyContent:"center"}}>
             <img src={cardImg} alt="ALL Accor+ Explorer Card" style={{width:280,borderRadius:16,boxShadow:"0 20px 60px rgba(0,0,0,.35), 0 4px 16px rgba(0,0,0,.2)",transform:"perspective(800px) rotateY(-4deg) rotateX(2deg)",transition:"transform .4s ease"}} onMouseEnter={e=>e.target.style.transform="perspective(800px) rotateY(0deg) rotateX(0deg) scale(1.03)"} onMouseLeave={e=>e.target.style.transform="perspective(800px) rotateY(-4deg) rotateX(2deg)"}/>
           </div>
           {view==="login"&&<div style={{animation:"fu .8s ease .6s both",display:"flex",gap:14,marginTop:32,justifyContent:"center"}}>
-            <button onClick={()=>{setIsManager(false);setView("academy");window.scrollTo(0,0);}} style={{padding:"16px 34px",borderRadius:980,background:"rgba(255,255,255,.95)",border:"none",cursor:"pointer",boxShadow:"0 4px 24px rgba(0,0,0,.12)",transition:"all .2s",backdropFilter:"blur(12px)"}} onMouseEnter={e=>{e.currentTarget.style.transform="scale(1.05)";e.currentTarget.style.boxShadow="0 8px 32px rgba(0,0,0,.16)"}} onMouseLeave={e=>{e.currentTarget.style.transform="scale(1)";e.currentTarget.style.boxShadow="0 4px 24px rgba(0,0,0,.12)"}}><span className="apple-grad" style={{fontSize:17,fontWeight:700}}>Team Member</span></button>
-            <button onClick={()=>{setIsManager(true);setView("academy-mgr");window.scrollTo(0,0);}} style={{padding:"16px 34px",borderRadius:980,background:"rgba(255,255,255,.95)",border:"none",cursor:"pointer",boxShadow:"0 4px 24px rgba(0,0,0,.12)",transition:"all .2s",backdropFilter:"blur(12px)"}} onMouseEnter={e=>{e.currentTarget.style.transform="scale(1.05)";e.currentTarget.style.boxShadow="0 8px 32px rgba(0,0,0,.16)"}} onMouseLeave={e=>{e.currentTarget.style.transform="scale(1)";e.currentTarget.style.boxShadow="0 4px 24px rgba(0,0,0,.12)"}}><span className="apple-grad" style={{fontSize:17,fontWeight:700}}>Manager</span></button>
+            <button onClick={()=>{setIsManager(false);setView("academy");window.scrollTo(0,0);}} style={{padding:"16px 34px",borderRadius:980,background:"rgba(255,255,255,.95)",border:"none",cursor:"pointer",boxShadow:"0 4px 24px rgba(0,0,0,.12)",transition:"all .2s",backdropFilter:"blur(12px)"}} onMouseEnter={e=>{e.currentTarget.style.transform="scale(1.05)";e.currentTarget.style.boxShadow="0 8px 32px rgba(0,0,0,.16)"}} onMouseLeave={e=>{e.currentTarget.style.transform="scale(1)";e.currentTarget.style.boxShadow="0 4px 24px rgba(0,0,0,.12)"}}><span className="apple-grad" style={{fontSize:17,fontWeight:700}}>{t.teamMember}</span></button>
+            <button onClick={()=>{setIsManager(true);setView("academy-mgr");window.scrollTo(0,0);}} style={{padding:"16px 34px",borderRadius:980,background:"rgba(255,255,255,.95)",border:"none",cursor:"pointer",boxShadow:"0 4px 24px rgba(0,0,0,.12)",transition:"all .2s",backdropFilter:"blur(12px)"}} onMouseEnter={e=>{e.currentTarget.style.transform="scale(1.05)";e.currentTarget.style.boxShadow="0 8px 32px rgba(0,0,0,.16)"}} onMouseLeave={e=>{e.currentTarget.style.transform="scale(1)";e.currentTarget.style.boxShadow="0 4px 24px rgba(0,0,0,.12)"}}><span className="apple-grad" style={{fontSize:17,fontWeight:700}}>{t.manager}</span></button>
           </div>}
 
         </div>
@@ -671,10 +1047,10 @@ export default function App(){
         <div style={{maxWidth:680,margin:"0 auto"}}>
           <div style={{display:"inline-flex",alignItems:"center",gap:8,background:"#f5f0ff",padding:"6px 16px",borderRadius:980,marginBottom:20}}>
             <div style={{width:8,height:8,borderRadius:"50%",background:"#7c3aed"}}/>
-            <span style={{fontSize:12,fontWeight:600,color:"#7c3aed"}}>{lOverallPct===100?"Programme Complete":"In Progress"}</span>
+            <span style={{fontSize:12,fontWeight:600,color:"#7c3aed"}}>{lOverallPct===100?t.progComplete:t.inProgress}</span>
           </div>
-          <h1 style={{fontSize:"clamp(36px,6vw,56px)",fontWeight:700,lineHeight:1.08,letterSpacing:"-.04em",marginBottom:12}}>Leadership Volume 1.</h1>
-          <p style={{fontSize:"clamp(17px,2.5vw,21px)",color:"#86868b",lineHeight:1.5,maxWidth:480,margin:"0 auto"}}>{lOverallPct===100?"All six modules complete. You are certified.":lDoneMods>0?`${lDoneMods} of ${lOverallMods} modules complete.`:"Six destinations. Six leadership capabilities."}</p>
+          <h1 style={{fontSize:"clamp(36px,6vw,56px)",fontWeight:700,lineHeight:1.08,letterSpacing:"-.04em",marginBottom:12}}>{t.leaderV1}</h1>
+          <p style={{fontSize:"clamp(17px,2.5vw,21px)",color:"#86868b",lineHeight:1.5,maxWidth:480,margin:"0 auto"}}>{lOverallPct===100?"All six {t.modComplete} You are certified.":lDoneMods>0?`${lDoneMods} of ${lOverallMods} {t.modComplete}`:"Six destinations. Six leadership capabilities."}</p>
           {lOverallPct>0&&lOverallPct<100&&<div style={{maxWidth:320,margin:"20px auto 0"}}><div style={{height:6,borderRadius:3,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:`${lOverallPct}%`,height:"100%",borderRadius:3,background:"linear-gradient(90deg,#7c3aed,#ec4899)",transition:"width .6s ease"}}/></div><p style={{fontSize:12,color:"#b4b4b4",marginTop:8}}>{lOverallPct}%</p></div>}
           {(()=>{const nm=Object.keys(LMODULES).flatMap(k=>LMODULES[parseInt(k)].map((m,mi)=>({dest:parseInt(k),mod:mi,title:m.title}))).find(m=>!isLModComplete(m.dest,m.mod));return nm?<button onClick={()=>startLModule(nm.dest,nm.mod)} style={{display:"inline-flex",alignItems:"center",gap:8,marginTop:28,padding:"14px 32px",borderRadius:980,background:"#7c3aed",color:"white",fontSize:16,fontWeight:600,border:"none",cursor:"pointer",boxShadow:"0 4px 16px rgba(124,58,237,.3)",transition:"all .2s"}} onMouseEnter={e=>{e.currentTarget.style.transform="scale(1.03)"}} onMouseLeave={e=>{e.currentTarget.style.transform="scale(1)"}}>{lDoneMods===0?"Begin":"Continue"}: {nm.title}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>:null;})()}
         </div>
@@ -682,7 +1058,7 @@ export default function App(){
 
       {/* Leadership Map */}
       <section style={{padding:"0 0 60px",maxWidth:1200,margin:"0 auto"}}>
-        <div style={{textAlign:"center",padding:"20px 24px 32px"}}><p style={{fontSize:14,fontWeight:600,color:"#86868b",letterSpacing:".04em"}}>Select a destination to begin</p></div>
+        <div style={{textAlign:"center",padding:"20px 24px 32px"}}><p style={{fontSize:14,fontWeight:600,color:"#86868b",letterSpacing:".04em"}}>{t.selectYourDest}</p></div>
         <div style={{position:"relative",width:"calc(100% - 32px)",maxWidth:1160,margin:"0 auto 40px",height:"clamp(420px, 70vh, 700px)",borderRadius:28,overflow:"hidden",boxShadow:"0 8px 60px rgba(0,0,0,.15), 0 2px 8px rgba(0,0,0,.08)"}}>
           <svg viewBox="0 0 870 540" preserveAspectRatio="xMidYMid slice" style={{width:"100%",height:"100%",display:"block"}}>
             <defs>
@@ -808,7 +1184,7 @@ export default function App(){
                 {unlocked?<span style={{fontSize:14}}>{d.icon}</span>:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b4b4b4" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>}
               </div>
               <h3 style={{fontSize:13,fontWeight:700,marginBottom:2,lineHeight:1.2}}>{d.city}</h3>
-              <p style={{fontSize:10,color:"#86868b"}}>{d.mod}</p>
+              <p style={{fontSize:10,color:"#86868b"}}>{lang==="id"&&i===0?"Kisah Kami":lang==="id"&&i===1?"Loyalitas & Langganan":lang==="id"&&i===2?"Produk Explorer":lang==="id"?"Penjualan atau Layanan":lang==="th"&&i===0?"เรื่องราวของเรา":lang==="th"&&i===1?"ความภักดี & สมาชิก":lang==="th"&&i===2?"ผลิตภัณฑ์ Explorer":lang==="th"?"การขายหรือบริการ":d.mod}</p>
               {done&&<div style={{display:"inline-flex",alignItems:"center",gap:3,background:"#f0fdf4",border:"1px solid #bbf7d0",padding:"2px 8px",borderRadius:980,marginTop:6}}><span style={{fontSize:9,fontWeight:600,color:"#16a34a"}}>Complete</span></div>}
             </div>
           );})}
@@ -825,7 +1201,7 @@ export default function App(){
               <div key={i}>
                 <div style={{width:80,height:80,borderRadius:"50%",margin:"0 auto 10px",border:done?`3px solid ${d.col}`:"3px dashed #d2d2d7",background:done?`${d.col}12`:"#f9f9f9",display:"flex",alignItems:"center",justifyContent:"center",fontSize:32,opacity:done?1:.4,transition:"all .5s"}}>{done?d.icon:<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d2d2d7" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>}</div>
                 <p style={{fontSize:12,fontWeight:600,color:done?"#1d1d1f":"#86868b"}}>{d.mod}</p>
-                <p style={{fontSize:10,color:done?d.col:"#d2d2d7",fontWeight:600,marginTop:2}}>{done?"Stamped":"Locked"}</p>
+                <p style={{fontSize:10,color:done?d.col:"#d2d2d7",fontWeight:600,marginTop:2}}>{done?t.stamped:t.locked}</p>
               </div>
             );})}
           </div>
@@ -857,7 +1233,7 @@ export default function App(){
       </section>
 
       <section style={{padding:"0 24px 100px",maxWidth:1100,margin:"0 auto"}}>
-        <div style={{textAlign:"center",marginBottom:56}}><h2 style={{fontSize:"clamp(32px,5vw,48px)",fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>How it works.</h2><p style={{fontSize:19,color:"#86868b"}}>A four-week hybrid learning cycle for every module.</p></div>
+        <div style={{textAlign:"center",marginBottom:56}}><h2 style={{fontSize:"clamp(32px,5vw,48px)",fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>{lang==="id"?"Cara kerjanya.":lang==="th"?"วิธีการทำงาน":"How it works."}</h2><p style={{fontSize:19,color:"#86868b"}}>{lang==="id"?"Siklus pembelajaran hibrida empat minggu untuk setiap modul.":"A four-week hybrid learning cycle for every module."}</p></div>
         <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:20}}>
           {[
             {s:"01",t:"Live Introduction Session",d:"Each module begins with a one-hour facilitated session. Your facilitator introduces the core concepts, frameworks, and the leadership challenge for the coming four weeks. This is where the thinking starts.",ic:"\u{1F399}\uFE0F",bg:"linear-gradient(135deg,#f5f0ff 0%,#e8f4ff 100%)"},
@@ -881,7 +1257,7 @@ export default function App(){
         </div>
       </section>
 
-      <footer style={{padding:"24px",borderTop:"1px solid #e8e8ed",textAlign:"center",background:"#f5f5f7"}}><p style={{fontSize:12,color:"#86868b"}}>ALL Accor+ Academy &middot; Leadership Volume 1</p></footer>
+      <footer style={{padding:"24px",borderTop:"1px solid #e8e8ed",textAlign:"center",background:"#f5f5f7"}}><p style={{fontSize:12,color:"#86868b"}}>{lang==="id"?"ALL Accor+ Akademi · Kepemimpinan Volume 1":"ALL Accor+ Academy · Leadership Volume 1"}</p></footer>
 
       {/* Leadership Confetti */}
       {lConfetti&&lConfettiPieces.map(p=>p.isFlag?<div key={p.id} className="confetti-piece" style={{left:`${p.left}%`,fontSize:p.size*2,lineHeight:1,background:"transparent","--drift":`${p.drift}px`,"--spin":`${p.spin}deg`,"--dur":`${p.dur}s`,"--delay":`${p.delay}s`}}>{p.flag}</div>:<div key={p.id} className="confetti-piece" style={{left:`${p.left}%`,width:p.shape==="circle"?p.size:p.size*.6,height:p.size,borderRadius:p.shape==="circle"?"50%":"2px",background:p.color,"--drift":`${p.drift}px`,"--spin":`${p.spin}deg`,"--dur":`${p.dur}s`,"--delay":`${p.delay}s`}}/>)}
@@ -926,7 +1302,7 @@ export default function App(){
                 {LMODULES[lDt]&&LMODULES[lDt].map((mod,mi)=>{const done=isLModComplete(lDt,mi);return(
                   <div key={mi} className="rw" onClick={()=>{startLModule(lDt,mi);setLDt(null);}} style={{padding:"14px 16px",background:done?`${d.col}10`:"transparent",border:`1px solid ${done?`${d.col}30`:"#e8e8ed"}`,display:"flex",gap:12,borderRadius:14,cursor:"pointer",marginBottom:6}}>
                     <div style={{width:26,height:26,borderRadius:7,background:done?"#10b981":d.col,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,color:"white"}}>{done?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="5 3 19 12 5 21"/></svg>}</div>
-                    <div style={{flex:1}}><p style={{fontSize:14,fontWeight:600,color:done?"#10b981":"#1d1d1f"}}>{mod.title}{done?" \u2713":""}</p><p style={{fontSize:12,color:"#86868b"}}>{mod.steps.length} steps</p></div>
+                    <div style={{flex:1}}><p style={{fontSize:14,fontWeight:600,color:done?"#10b981":"#1d1d1f"}}>{mod.title}{done?" \u2713":""}</p><p style={{fontSize:12,color:"#86868b"}}>{mod.steps.length} {lang==="id"?"langkah":lang==="th"?"ขั้นตอน":"steps"}</p></div>
                   </div>
                 );})}
                 <button onClick={()=>{const idx=LMODULES[lDt]?LMODULES[lDt].findIndex((_,mi)=>!isLModComplete(lDt,mi)):-1;if(idx>=0){startLModule(lDt,idx);setLDt(null);}}} style={{width:"100%",padding:"14px",borderRadius:980,background:d.col,color:"white",fontSize:17,border:"none",cursor:"pointer",marginTop:20}}>{LMODULES[lDt]&&LMODULES[lDt].every((_,mi)=>isLModComplete(lDt,mi))?"All Complete \u2713":"Continue Learning"}</button>
@@ -946,22 +1322,62 @@ export default function App(){
         return(
         <div style={{position:"fixed",inset:0,zIndex:500,background:"#fbfbfd",overflowY:"auto",fontFamily:"-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif",color:"#1d1d1f"}}>
           <div style={{position:"sticky",top:0,background:"rgba(251,251,253,.92)",backdropFilter:"blur(20px)",borderBottom:"1px solid #e8e8ed",padding:"12px 24px",display:"flex",alignItems:"center",justifyContent:"space-between",zIndex:10}}>
-            <button onClick={()=>{const dest=lActiveModule.dest;setLActiveModule(null);setLDt(dest);}} style={{display:"flex",alignItems:"center",gap:6,background:"none",border:"none",color:"#7c3aed",fontSize:14,fontWeight:500,cursor:"pointer",padding:"6px 0"}}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="15 18 9 12 15 6"/></svg>Back to Module</button>
-            <span style={{fontSize:13,color:"#86868b",fontWeight:500}}>Step {lModuleStep+1} of {steps.length}</span>
+            <button onClick={()=>{const dest=lActiveModule.dest;setLActiveModule(null);setLDt(dest);}} style={{display:"flex",alignItems:"center",gap:6,background:"none",border:"none",color:"#7c3aed",fontSize:14,fontWeight:500,cursor:"pointer",padding:"6px 0"}}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="15 18 9 12 15 6"/></svg>{t.backToModule}</button>
+            <span style={{fontSize:13,color:"#86868b",fontWeight:500}}>{t.step} {lModuleStep+1} {t.of} {steps.length}</span>
           </div>
-          <div style={{padding:"0 24px",maxWidth:800,margin:"0 auto"}}><div style={{height:3,background:"#e8e8ed",borderRadius:2,marginTop:16,overflow:"hidden"}}><div style={{width:`${pct}%`,height:"100%",background:"linear-gradient(90deg,#7c3aed,#ec4899)",borderRadius:2,transition:"width .4s ease"}}/></div><div style={{display:"flex",justifyContent:"space-between",marginTop:8,marginBottom:32}}><span style={{fontSize:12,color:"#86868b"}}>Step {lModuleStep+1} of {steps.length}</span><span style={{fontSize:12,color:"#86868b"}}>{Math.round(pct)}%</span></div></div>
+          <div style={{padding:"0 24px",maxWidth:800,margin:"0 auto"}}><div style={{height:3,background:"#e8e8ed",borderRadius:2,marginTop:16,overflow:"hidden"}}><div style={{width:`${pct}%`,height:"100%",background:"linear-gradient(90deg,#7c3aed,#ec4899)",borderRadius:2,transition:"width .4s ease"}}/></div><div style={{display:"flex",justifyContent:"space-between",marginTop:8,marginBottom:32}}><span style={{fontSize:12,color:"#86868b"}}>{t.step} {lModuleStep+1} {t.of} {steps.length}</span><span style={{fontSize:12,color:"#86868b"}}>{Math.round(pct)}%</span></div></div>
           <div style={{maxWidth:800,margin:"0 auto",padding:"0 24px 120px"}}>
-            <div style={{marginBottom:16}}><span style={{fontSize:11,fontWeight:700,letterSpacing:".06em",textTransform:"uppercase",color:step.type==="reflect"?"#8b5cf6":step.type==="video"?"#ef4444":"#7c3aed",background:step.type==="reflect"?"#ede9fe":step.type==="video"?"#fee2e2":"#f0e7ff",padding:"4px 12px",borderRadius:980}}>{step.type==="learn"?"Learn":step.type==="video"?"Watch":step.type==="reflect"?"Practice & Reflect":step.type}</span></div>
+            <div style={{marginBottom:16}}><span style={{fontSize:11,fontWeight:700,letterSpacing:".06em",textTransform:"uppercase",color:step.type==="reflect"?"#8b5cf6":step.type==="video"?"#ef4444":step.type==="apply"?"#f59e0b":step.type==="listen"?"#0ea5e9":step.type==="mission"?"#10b981":"#7c3aed",background:step.type==="reflect"?"#ede9fe":step.type==="video"?"#fee2e2":step.type==="apply"?"#fef3c7":step.type==="listen"?"#e0f2fe":step.type==="mission"?"#d1fae5":"#f0e7ff",padding:"4px 12px",borderRadius:980}}>{step.type==="learn"?"Learn":step.type==="video"?"Watch":step.type==="reflect"?"Practice & Reflect":step.type==="apply"?t.apply:step.type==="listen"?t.listen:step.type==="mission"?t.mission:step.type}</span></div>
             <h1 style={{fontSize:"clamp(28px,4vw,40px)",fontWeight:700,letterSpacing:"-.03em",marginBottom:24,lineHeight:1.15}}>{step.title}</h1>
             {step.type==="learn"&&<div>{step.img&&<div style={{fontSize:48,marginBottom:20}}>{step.img}</div>}{step.content.split("\n\n").map((p,pi)=><p key={pi} style={{fontSize:17,lineHeight:1.7,color:"#424245",marginBottom:16,whiteSpace:"pre-line"}}>{p}</p>)}</div>}
             {step.type==="video"&&<div><div style={{background:"#000",borderRadius:16,overflow:"hidden",aspectRatio:"16/9",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:24}}><div style={{width:72,height:72,borderRadius:"50%",background:"rgba(255,255,255,.9)",display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",boxShadow:"0 4px 20px rgba(0,0,0,.3)"}}><svg width="28" height="28" viewBox="0 0 24 24" fill="#1d1d1f"><polygon points="8,5 20,12 8,19"/></svg></div></div><p style={{fontSize:17,lineHeight:1.7,color:"#424245"}}>{step.desc}</p></div>}
             {step.type==="reflect"&&<div><div style={{background:"#f5f0ff",borderRadius:16,padding:"24px",marginBottom:24}}><p style={{fontSize:17,lineHeight:1.6,color:"#5b21b6",fontWeight:500,whiteSpace:"pre-line"}}>{step.prompt}</p></div><textarea value={lReflectText} onChange={e=>setLReflectText(e.target.value)} placeholder="Write your response here..." style={{width:"100%",minHeight:180,padding:20,borderRadius:16,border:"1.5px solid #e8e8ed",fontSize:16,lineHeight:1.6,fontFamily:"inherit",resize:"vertical",outline:"none",boxSizing:"border-box",background:"white",color:"#1d1d1f"}} onFocus={e=>e.target.style.borderColor="#7c3aed"} onBlur={e=>e.target.style.borderColor="#e8e8ed"}/></div>}
+            {step.type==="apply"&&<div>
+              <div style={{background:"#fffbeb",borderRadius:16,padding:"24px",marginBottom:24,border:"1px solid #fde68a"}}>
+                <p style={{fontSize:11,fontWeight:700,letterSpacing:".06em",color:"#92400e",marginBottom:12}}>{t.applyLabel}</p>
+                <p style={{fontSize:17,lineHeight:1.7,color:"#78350f",fontWeight:500,whiteSpace:"pre-line"}}>{step.scenario}</p>
+              </div>
+              <p style={{fontSize:14,fontWeight:600,color:"#1d1d1f",marginBottom:16}}>{t.chooseApproach}</p>
+              <div style={{display:"flex",flexDirection:"column",gap:10}}>
+                {step.choices&&step.choices.map((ch,ci)=>{const picked=lPracticeFields["apply"]===ci;return(
+                  <div key={ci} onClick={()=>setLPracticeFields({...lPracticeFields,apply:ci})} style={{padding:"16px 20px",borderRadius:14,border:picked?`2px solid ${ch.col||"#f59e0b"}`:"1.5px solid #e8e8ed",background:picked?`${ch.col||"#f59e0b"}08`:"white",cursor:"pointer",transition:"all .2s"}}>
+                    <p style={{fontSize:15,fontWeight:600,color:"#1d1d1f",marginBottom:4}}>{ch.label}</p>
+                    {picked&&<div style={{marginTop:10,padding:"12px 16px",borderRadius:10,background:"rgba(0,0,0,.04)"}}><p style={{fontSize:13,fontWeight:600,color:"#6b7280",marginBottom:4}}>{t.whatHappens}</p><p style={{fontSize:14,lineHeight:1.6,color:"#374151"}}>{ch.feedback}</p></div>}
+                  </div>
+                );})}
+              </div>
+            </div>}
+            {step.type==="listen"&&<div>
+              <div style={{background:"#0f172a",borderRadius:16,overflow:"hidden",marginBottom:24}}>
+                <div style={{padding:"32px",display:"flex",flexDirection:"column",alignItems:"center",gap:16}}>
+                  <div style={{width:64,height:64,borderRadius:"50%",background:"rgba(255,255,255,.1)",display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",border:"2px solid rgba(255,255,255,.2)"}}><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div>
+                  <p style={{fontSize:13,color:"rgba(255,255,255,.5)"}}>{step.duration||"1:00"}</p>
+                  <div style={{width:"100%",height:4,borderRadius:2,background:"rgba(255,255,255,.1)"}}><div style={{width:"0%",height:"100%",borderRadius:2,background:"#0ea5e9"}}/></div>
+                </div>
+                {step.context&&<div style={{padding:"0 32px 24px"}}><p style={{fontSize:13,color:"rgba(255,255,255,.6)",lineHeight:1.5}}>{step.context}</p></div>}
+              </div>
+              <p style={{fontSize:14,color:"#6b7280",marginBottom:20,fontStyle:"italic"}}>{t.listenPlaceholder}</p>
+              <div style={{marginBottom:16}}><p style={{fontSize:14,fontWeight:600,color:"#1d1d1f",marginBottom:8}}>{t.listenQ1}</p><textarea value={lPracticeFields.listenQ1||""} onChange={e=>setLPracticeFields({...lPracticeFields,listenQ1:e.target.value})} placeholder="..." style={{width:"100%",minHeight:80,padding:16,borderRadius:12,border:"1.5px solid #e8e8ed",fontSize:15,lineHeight:1.5,fontFamily:"inherit",resize:"vertical",outline:"none",boxSizing:"border-box"}} onFocus={e=>e.target.style.borderColor="#0ea5e9"} onBlur={e=>e.target.style.borderColor="#e8e8ed"}/></div>
+              <div><p style={{fontSize:14,fontWeight:600,color:"#1d1d1f",marginBottom:8}}>{t.listenQ2}</p><textarea value={lPracticeFields.listenQ2||""} onChange={e=>setLPracticeFields({...lPracticeFields,listenQ2:e.target.value})} placeholder="..." style={{width:"100%",minHeight:80,padding:16,borderRadius:12,border:"1.5px solid #e8e8ed",fontSize:15,lineHeight:1.5,fontFamily:"inherit",resize:"vertical",outline:"none",boxSizing:"border-box"}} onFocus={e=>e.target.style.borderColor="#0ea5e9"} onBlur={e=>e.target.style.borderColor="#e8e8ed"}/></div>
+            </div>}
+            {step.type==="mission"&&<div>
+              <div style={{background:"#ecfdf5",borderRadius:16,padding:"24px",marginBottom:24,border:"1px solid #a7f3d0"}}>
+                <p style={{fontSize:11,fontWeight:700,letterSpacing:".06em",color:"#065f46",marginBottom:12}}>{t.missionLabel}</p>
+                <p style={{fontSize:17,lineHeight:1.7,color:"#064e3b",fontWeight:500,whiteSpace:"pre-line"}}>{step.brief}</p>
+              </div>
+              <p style={{fontSize:14,fontWeight:600,color:"#1d1d1f",marginBottom:16}}>{t.missionDoc}</p>
+              <div style={{display:"flex",flexDirection:"column",gap:14}}>
+                <div><p style={{fontSize:13,fontWeight:600,color:"#6b7280",marginBottom:6}}>{t.missionWhat}</p><textarea value={lPracticeFields.mWhat||""} onChange={e=>setLPracticeFields({...lPracticeFields,mWhat:e.target.value})} placeholder="..." style={{width:"100%",minHeight:80,padding:16,borderRadius:12,border:"1.5px solid #e8e8ed",fontSize:15,lineHeight:1.5,fontFamily:"inherit",resize:"vertical",outline:"none",boxSizing:"border-box"}} onFocus={e=>e.target.style.borderColor="#10b981"} onBlur={e=>e.target.style.borderColor="#e8e8ed"}/></div>
+                <div><p style={{fontSize:13,fontWeight:600,color:"#6b7280",marginBottom:6}}>{t.missionObserved}</p><textarea value={lPracticeFields.mObs||""} onChange={e=>setLPracticeFields({...lPracticeFields,mObs:e.target.value})} placeholder="..." style={{width:"100%",minHeight:80,padding:16,borderRadius:12,border:"1.5px solid #e8e8ed",fontSize:15,lineHeight:1.5,fontFamily:"inherit",resize:"vertical",outline:"none",boxSizing:"border-box"}} onFocus={e=>e.target.style.borderColor="#10b981"} onBlur={e=>e.target.style.borderColor="#e8e8ed"}/></div>
+                <div><p style={{fontSize:13,fontWeight:600,color:"#6b7280",marginBottom:6}}>{t.missionDiff}</p><textarea value={lPracticeFields.mDiff||""} onChange={e=>setLPracticeFields({...lPracticeFields,mDiff:e.target.value})} placeholder="..." style={{width:"100%",minHeight:80,padding:16,borderRadius:12,border:"1.5px solid #e8e8ed",fontSize:15,lineHeight:1.5,fontFamily:"inherit",resize:"vertical",outline:"none",boxSizing:"border-box"}} onFocus={e=>e.target.style.borderColor="#10b981"} onBlur={e=>e.target.style.borderColor="#e8e8ed"}/></div>
+              </div>
+            </div>}
           </div>
           <div style={{position:"fixed",bottom:0,left:0,right:0,background:"rgba(251,251,253,.95)",backdropFilter:"blur(20px)",borderTop:"1px solid #e8e8ed",padding:"16px 24px"}}>
             <div style={{maxWidth:800,margin:"0 auto",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-              <button onClick={()=>{if(lModuleStep>0){setLModuleStep(lModuleStep-1);setLReflectText("");}}} style={{padding:"10px 24px",borderRadius:980,border:"1px solid #e8e8ed",background:"white",fontSize:15,fontWeight:500,cursor:lModuleStep>0?"pointer":"default",opacity:lModuleStep>0?1:.4,color:"#1d1d1f"}}>Previous</button>
-              {isLast?<div style={{display:"flex",alignItems:"center",gap:12}}>{lCompletionTime!==null&&<div style={{display:"flex",alignItems:"center",gap:6,padding:"6px 14px",borderRadius:980,background:"#f5f0ff",border:"1px solid #e9d5ff"}}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span style={{fontSize:12,fontWeight:600,color:"#7c3aed"}}>Completed in {lCompletionTime<1?"under 1":lCompletionTime} min</span></div>}<button onClick={completeLModule} style={{padding:"10px 28px",borderRadius:980,background:"#1d1d1f",color:"white",fontSize:15,fontWeight:500,border:"none",cursor:"pointer",display:"flex",alignItems:"center",gap:8}}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>Mark Complete</button></div>
-              :<button onClick={()=>{setLModuleStep(lModuleStep+1);setLReflectText("");}} style={{padding:"10px 28px",borderRadius:980,background:"#7c3aed",color:"white",fontSize:15,fontWeight:500,border:"none",cursor:"pointer",display:"flex",alignItems:"center",gap:6}}>Next<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>}
+              <button onClick={()=>{if(lModuleStep>0){setLModuleStep(lModuleStep-1);setLReflectText("");}}} style={{padding:"10px 24px",borderRadius:980,border:"1px solid #e8e8ed",background:"white",fontSize:15,fontWeight:500,cursor:lModuleStep>0?"pointer":"default",opacity:lModuleStep>0?1:.4,color:"#1d1d1f"}}>{t.prev}</button>
+              {isLast?<div style={{display:"flex",alignItems:"center",gap:12}}>{lCompletionTime!==null&&<div style={{display:"flex",alignItems:"center",gap:6,padding:"6px 14px",borderRadius:980,background:"#f5f0ff",border:"1px solid #e9d5ff"}}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span style={{fontSize:12,fontWeight:600,color:"#7c3aed"}}>{t.completedIn} {lCompletionTime<1?t.underOne:lCompletionTime} {t.min}</span></div>}<button onClick={completeLModule} style={{padding:"10px 28px",borderRadius:980,background:"#1d1d1f",color:"white",fontSize:15,fontWeight:500,border:"none",cursor:"pointer",display:"flex",alignItems:"center",gap:8}}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>{t.markComplete}</button></div>
+              :<button onClick={()=>{setLModuleStep(lModuleStep+1);setLReflectText("");}} style={{padding:"10px 28px",borderRadius:980,background:"#7c3aed",color:"white",fontSize:15,fontWeight:500,border:"none",cursor:"pointer",display:"flex",alignItems:"center",gap:6}}>{t.next}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>}
             </div>
           </div>
         </div>);
@@ -973,7 +1389,15 @@ export default function App(){
       {view==="academy-mgr"&&(
         <section style={{minHeight:"100vh"}}>
           <div style={{position:"relative",overflow:"hidden",padding:"100px 24px 60px",textAlign:"center"}}>
-            <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg, #0a1628 0%, #132d55 25%, #1a4a6e 45%, #2563a0 60%, #3b82f6 80%, #93c5fd 100%)"}}>
+            <div style={{position:"absolute",top:20,right:20,zIndex:10}}>
+            <button onClick={()=>setShowLangMenu(!showLangMenu)} style={{fontSize:12,fontWeight:600,color:"rgba(255,255,255,.8)",background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"6px 14px",cursor:"pointer",transition:"all .2s",display:"flex",alignItems:"center",gap:6}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>{lang==="en"?"English \u{1F1EC}\u{1F1E7}":lang==="id"?"Bahasa \u{1F1EE}\u{1F1E9}":"\u0E44\u0E17\u0E22 \u{1F1F9}\u{1F1ED}"}<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+            {showLangMenu&&<div style={{position:"absolute",top:"100%",right:0,marginTop:6,background:"rgba(30,30,30,.95)",backdropFilter:"blur(16px)",border:"1px solid rgba(255,255,255,.15)",borderRadius:12,overflow:"hidden",minWidth:160,boxShadow:"0 8px 32px rgba(0,0,0,.3)"}}>
+              {[{code:"en",label:"English",flag:"\u{1F1EC}\u{1F1E7}"},{code:"id",label:"Bahasa Indonesia",flag:"\u{1F1EE}\u{1F1E9}"},{code:"th",label:"\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",flag:"\u{1F1F9}\u{1F1ED}"}].map(l=>(
+                <button key={l.code} onClick={()=>{setLang(l.code);setShowLangMenu(false);}} style={{display:"flex",alignItems:"center",gap:8,width:"100%",padding:"10px 16px",background:lang===l.code?"rgba(255,255,255,.15)":"transparent",border:"none",color:"white",fontSize:13,fontWeight:lang===l.code?600:400,cursor:"pointer",textAlign:"left"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.1)"} onMouseLeave={e=>e.currentTarget.style.background=lang===l.code?"rgba(255,255,255,.15)":"transparent"}><span>{l.flag}</span>{l.label}{lang===l.code&&<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" style={{marginLeft:"auto"}}><polyline points="20 6 9 17 4 12"/></svg>}</button>
+              ))}
+            </div>}
+          </div>
+        <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg, #0a1628 0%, #132d55 25%, #1a4a6e 45%, #2563a0 60%, #3b82f6 80%, #93c5fd 100%)"}}>
               <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 50% 80%, rgba(255,255,255,.08) 0%, transparent 60%)"}}/>
             </div>
             <button onClick={()=>{setView("login");window.scrollTo(0,0);}} style={{position:"absolute",top:64,left:20,zIndex:10,display:"flex",alignItems:"center",gap:6,background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"8px 16px",color:"rgba(255,255,255,.9)",fontSize:13,fontWeight:500,cursor:"pointer",transition:"all .2s"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>
@@ -982,8 +1406,8 @@ export default function App(){
             </button>
             <div style={{position:"relative",zIndex:2,maxWidth:680,margin:"0 auto",animation:"fu .8s ease"}}>
               <p style={{fontSize:14,fontWeight:600,color:"rgba(255,255,255,.7)",letterSpacing:".1em",textTransform:"uppercase",marginBottom:16}}>ALL Accor+ Academy</p>
-              <h1 style={{fontSize:"clamp(36px,6vw,56px)",fontWeight:700,lineHeight:1.08,letterSpacing:"-.04em",marginBottom:12,color:"white",textShadow:"0 2px 20px rgba(0,0,0,.3)"}}>Manager<br/>Dashboard.</h1>
-              <p style={{fontSize:"clamp(16px,2vw,19px)",color:"rgba(255,255,255,.7)",lineHeight:1.5,maxWidth:460,margin:"0 auto"}}>Track your team's progress across all programmes.</p>
+              <h1 style={{fontSize:"clamp(36px,6vw,56px)",fontWeight:700,lineHeight:1.08,letterSpacing:"-.04em",marginBottom:12,color:"white",textShadow:"0 2px 20px rgba(0,0,0,.3)"}}>{lang==="en"?"Manager":lang==="id"?"Manajer":"ผู้จัดการ"}<br/>{lang==="en"?"Dashboard.":lang==="id"?"Dasbor.":"แดชบอร์ด"}</h1>
+              <p style={{fontSize:"clamp(16px,2vw,19px)",color:"rgba(255,255,255,.7)",lineHeight:1.5,maxWidth:460,margin:"0 auto"}}>{t.mgrSub}</p>
             </div>
           </div>
 
@@ -1000,6 +1424,34 @@ export default function App(){
                   <div style={{fontSize:40,fontWeight:700,color:s.c,letterSpacing:"-.02em"}}>{s.v}</div>
                   <div style={{fontSize:14,fontWeight:600,color:"#1d1d1f",marginTop:4}}>{s.l}</div>
                   <div style={{fontSize:11,color:"#b4b4b4",marginTop:2}}>{s.sub}</div>
+                </div>
+              ))}
+            </div>
+
+
+            {/* Coaching Insights */}
+            <div style={{background:"white",borderRadius:20,border:"1px solid #e8e8ed",overflow:"hidden",marginBottom:24}}>
+              <div style={{padding:"20px 24px",borderBottom:"1px solid #e8e8ed",display:"flex",alignItems:"center",gap:12}}>
+                <div style={{width:36,height:36,borderRadius:10,background:"linear-gradient(135deg,#fef3c7,#fde68a)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:16}}>&#9889;</div>
+                <div>
+                  <h3 style={{fontSize:18,fontWeight:700}}>{t.coachingInsights}</h3>
+                  <p style={{fontSize:12,color:"#86868b"}}>{lang==="id"?"Peringatan yang memerlukan perhatian Anda":lang==="th"?"การแจ้งเตือนที่ต้องการความสนใจของคุณ":"Alerts that need your attention"}</p>
+                </div>
+              </div>
+              {[
+                {type:"action",name:"Mai Nguyen",msg:{en:"has been on Module 2 (Why Members Stay) for 7 days. Average completion: 1.2 days.",id:"telah berada di Modul 2 (Mengapa Anggota Tetap) selama 7 hari. Rata-rata penyelesaian: 1,2 hari.",th:"อยู่ที่โมดูล 2 (ทำไมสมาชิกจึงอยู่) เป็นเวลา 7 วัน เฉลี่ยการเสร็จสิ้น: 1.2 วัน"},col:"#f59e0b",action:{en:"Schedule a check-in",id:"Jadwalkan check-in",th:"นัดตรวจสอบ"}},
+                {type:"followup",name:"Liam Chen",msg:{en:"scored 60% on Value Calculators quiz. Team average: 88%. This module may need a coaching conversation.",id:"mendapat 60% pada kuis Kalkulator Nilai. Rata-rata tim: 88%. Modul ini mungkin memerlukan percakapan pembinaan.",th:"ได้คะแนน 60% ในแบบทดสอบเครื่องคำนวณมูลค่า ค่าเฉลี่ยทีม: 88% โมดูลนี้อาจต้องการการสนทนาโค้ช"},col:"#ef4444",action:{en:"Review quiz results",id:"Tinjau hasil kuis",th:"ตรวจสอบผลแบบทดสอบ"}},
+                {type:"celebrate",name:"Priya Sharma",msg:{en:"completed all modules in 3.1 days with 97% quiz accuracy. Top performer. Consider as peer coach or buddy for new starters.",id:"menyelesaikan semua modul dalam 3,1 hari dengan akurasi kuis 97%. Performa terbaik. Pertimbangkan sebagai pelatih rekan.",th:"ทำโมดูลทั้งหมดเสร็จใน 3.1 วัน ด้วยความแม่นยำแบบทดสอบ 97% ผู้ปฏิบัติงานชั้นนำ พิจารณาเป็นโค้ชเพื่อน"},col:"#10b981",action:{en:"Assign as buddy",id:"Tetapkan sebagai rekan",th:"มอบหมายเป็นบัดดี้"}},
+                {type:"action",name:"Tom Walker",msg:{en:"has not started any modules after 5 days since enrolment. May need a direct conversation about expectations.",id:"belum memulai modul apa pun setelah 5 hari sejak pendaftaran. Mungkin perlu percakapan langsung tentang ekspektasi.",th:"ยังไม่เริ่มโมดูลใดเลยหลังจาก 5 วันนับจากลงทะเบียน อาจต้องมีการสนทนาโดยตรงเกี่ยวกับความคาดหวัง"},col:"#f59e0b",action:{en:"Have a direct conversation",id:"Lakukan percakapan langsung",th:"สนทนาโดยตรง"}},
+                {type:"followup",name:"Rizky Pratama",msg:{en:"enrolled 10 days ago, 0% progress. Check if access or technical issues are blocking them.",id:"terdaftar 10 hari lalu, kemajuan 0%. Periksa apakah masalah akses atau teknis menghalangi mereka.",th:"ลงทะเบียน 10 วันที่แล้ว ความคืบหน้า 0% ตรวจสอบว่ามีปัญหาการเข้าถึงหรือเทคนิคหรือไม่"},col:"#ef4444",action:{en:"Check access",id:"Periksa akses",th:"ตรวจสอบการเข้าถึง"}}
+              ].map((insight,ii)=>(
+                <div key={ii} style={{padding:"14px 24px",borderBottom:"1px solid #f5f5f7",display:"flex",alignItems:"flex-start",gap:14}}>
+                  <div style={{width:8,height:8,borderRadius:"50%",background:insight.col,marginTop:6,flexShrink:0}}/>
+                  <div style={{flex:1}}>
+                    <p style={{fontSize:14,lineHeight:1.5,color:"#1d1d1f"}}><strong>{insight.name}</strong> {insight.msg[lang]||insight.msg.en}</p>
+                    <button style={{marginTop:8,padding:"5px 14px",borderRadius:980,fontSize:11,fontWeight:600,border:`1px solid ${insight.col}30`,background:`${insight.col}08`,color:insight.col,cursor:"pointer"}}>{insight.action[lang]||insight.action.en}</button>
+                  </div>
+                  <span style={{fontSize:10,fontWeight:600,color:insight.type==="action"?insight.col:insight.type==="celebrate"?"#10b981":"#ef4444",background:insight.type==="action"?"#fef3c7":insight.type==="celebrate"?"#d1fae5":"#fee2e2",padding:"3px 10px",borderRadius:980,flexShrink:0}}>{insight.type==="action"?(t.insightAction):insight.type==="celebrate"?(t.insightCelebrate):(t.insightFollowUp)}</span>
                 </div>
               ))}
             </div>
@@ -1082,6 +1534,44 @@ export default function App(){
               ))}
             </div>
 
+
+            {/* Content Review Dates */}
+            <div style={{background:"white",borderRadius:20,border:"1px solid #e8e8ed",overflow:"hidden",marginBottom:24}}>
+              <div style={{padding:"20px 24px",borderBottom:"1px solid #e8e8ed",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                <div style={{display:"flex",alignItems:"center",gap:12}}>
+                  <div style={{width:36,height:36,borderRadius:10,background:"linear-gradient(135deg,#e0f2fe,#bae6fd)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:16}}>&#128197;</div>
+                  <div>
+                    <h3 style={{fontSize:18,fontWeight:700}}>{lang==="id"?"Tinjauan Konten":lang==="th"?"การตรวจสอบเนื้อหา":"Content Review"}</h3>
+                    <p style={{fontSize:12,color:"#86868b"}}>{t.lastReviewed}</p>
+                  </div>
+                </div>
+              </div>
+              {CONTENT_REVIEWS.onboarding.map((cr,ci)=>(
+                <div key={ci} style={{padding:"12px 24px",borderBottom:"1px solid #f5f5f7",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                  <div>
+                    <p style={{fontSize:14,fontWeight:600}}>{cr.dest}</p>
+                    <p style={{fontSize:11,color:"#86868b"}}>{cr.modules.length} {lang==="id"?"modul":lang==="th"?"โมดูล":"modules"}</p>
+                  </div>
+                  <div style={{display:"flex",alignItems:"center",gap:10}}>
+                    <span style={{fontSize:11,color:"#86868b"}}>{cr.reviewed}</span>
+                    <span style={{fontSize:10,fontWeight:600,padding:"3px 10px",borderRadius:980,background:cr.status==="current"?"#d1fae5":"#fef3c7",color:cr.status==="current"?"#065f46":"#92400e"}}>{cr.status==="current"?t.contentCurrent:t.contentNeedsReview}</span>
+                  </div>
+                </div>
+              ))}
+              {CONTENT_REVIEWS.leadership.map((cr,ci)=>(
+                <div key={"l"+ci} style={{padding:"12px 24px",borderBottom:"1px solid #f5f5f7",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                  <div>
+                    <p style={{fontSize:14,fontWeight:600}}>{cr.dest} <span style={{fontSize:11,color:"#86868b",fontWeight:400}}>(Leadership)</span></p>
+                    <p style={{fontSize:11,color:"#86868b"}}>{cr.modules[0]}</p>
+                  </div>
+                  <div style={{display:"flex",alignItems:"center",gap:10}}>
+                    <span style={{fontSize:11,color:"#86868b"}}>{cr.reviewed}</span>
+                    <span style={{fontSize:10,fontWeight:600,padding:"3px 10px",borderRadius:980,background:"#d1fae5",color:"#065f46"}}>{t.contentCurrent}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
             {/* Compliance Programme Section */}
             <div style={{background:"white",borderRadius:20,border:"1px solid #e8e8ed",overflow:"hidden",opacity:.6}}>
               <div style={{padding:"20px 24px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
@@ -1092,7 +1582,7 @@ export default function App(){
                     <p style={{fontSize:12,color:"#86868b"}}>Launching Q3 2026</p>
                   </div>
                 </div>
-                <span style={{fontSize:12,color:"#86868b",background:"#f5f5f7",padding:"6px 14px",borderRadius:980}}>Coming Soon</span>
+                <span style={{fontSize:12,color:"#86868b",background:"#f5f5f7",padding:"6px 14px",borderRadius:980}}>{t.comingSoon}</span>
               </div>
             </div>
           </div>
@@ -1116,7 +1606,7 @@ export default function App(){
               <img src={cardImg} alt="ALL Accor+ Explorer Card" style={{width:280,borderRadius:16,boxShadow:"0 20px 60px rgba(0,0,0,.35), 0 4px 16px rgba(0,0,0,.2)",transform:"perspective(800px) rotateY(-4deg) rotateX(2deg)",transition:"transform .4s ease"}} onMouseEnter={e=>e.target.style.transform="perspective(800px) rotateY(0deg) rotateX(0deg) scale(1.03)"} onMouseLeave={e=>e.target.style.transform="perspective(800px) rotateY(-4deg) rotateX(2deg)"}/>
             </div>
             <div style={{animation:"fu .8s ease .6s both",display:"flex",justifyContent:"center",marginTop:32}}>
-              <button onClick={()=>{setView("agent");window.scrollTo(0,0);}} style={{padding:"16px 40px",borderRadius:980,background:"rgba(255,255,255,.95)",border:"none",cursor:"pointer",boxShadow:"0 4px 24px rgba(0,0,0,.12)",transition:"all .2s",backdropFilter:"blur(12px)",display:"flex",alignItems:"center",gap:8}} onMouseEnter={e=>{e.currentTarget.style.transform="scale(1.05)";e.currentTarget.style.boxShadow="0 8px 32px rgba(0,0,0,.16)"}} onMouseLeave={e=>{e.currentTarget.style.transform="scale(1)";e.currentTarget.style.boxShadow="0 4px 24px rgba(0,0,0,.12)"}}><span className="apple-grad" style={{fontSize:17,fontWeight:700}}>Continue</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0071e3" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+              <button onClick={()=>{setView("agent");window.scrollTo(0,0);}} style={{padding:"16px 40px",borderRadius:980,background:"rgba(255,255,255,.95)",border:"none",cursor:"pointer",boxShadow:"0 4px 24px rgba(0,0,0,.12)",transition:"all .2s",backdropFilter:"blur(12px)",display:"flex",alignItems:"center",gap:8}} onMouseEnter={e=>{e.currentTarget.style.transform="scale(1.05)";e.currentTarget.style.boxShadow="0 8px 32px rgba(0,0,0,.16)"}} onMouseLeave={e=>{e.currentTarget.style.transform="scale(1)";e.currentTarget.style.boxShadow="0 4px 24px rgba(0,0,0,.12)"}}><span className="apple-grad" style={{fontSize:17,fontWeight:700}}>{t.cont}</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0071e3" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
             </div>
           </div>
         </section>
@@ -1127,13 +1617,21 @@ export default function App(){
         <section style={{minHeight:"100vh"}}>
           {/* Academy Hero */}
           <div style={{position:"relative",overflow:"hidden",padding:"100px 24px 60px",textAlign:"center"}}>
-            <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg, #0a1628 0%, #132d55 25%, #1a4a6e 45%, #2563a0 60%, #3b82f6 80%, #93c5fd 100%)"}}>
+            <div style={{position:"absolute",top:20,right:20,zIndex:10}}>
+            <button onClick={()=>setShowLangMenu(!showLangMenu)} style={{fontSize:12,fontWeight:600,color:"rgba(255,255,255,.8)",background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"6px 14px",cursor:"pointer",transition:"all .2s",display:"flex",alignItems:"center",gap:6}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>{lang==="en"?"English \u{1F1EC}\u{1F1E7}":lang==="id"?"Bahasa \u{1F1EE}\u{1F1E9}":"\u0E44\u0E17\u0E22 \u{1F1F9}\u{1F1ED}"}<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+            {showLangMenu&&<div style={{position:"absolute",top:"100%",right:0,marginTop:6,background:"rgba(30,30,30,.95)",backdropFilter:"blur(16px)",border:"1px solid rgba(255,255,255,.15)",borderRadius:12,overflow:"hidden",minWidth:160,boxShadow:"0 8px 32px rgba(0,0,0,.3)"}}>
+              {[{code:"en",label:"English",flag:"\u{1F1EC}\u{1F1E7}"},{code:"id",label:"Bahasa Indonesia",flag:"\u{1F1EE}\u{1F1E9}"},{code:"th",label:"\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",flag:"\u{1F1F9}\u{1F1ED}"}].map(l=>(
+                <button key={l.code} onClick={()=>{setLang(l.code);setShowLangMenu(false);}} style={{display:"flex",alignItems:"center",gap:8,width:"100%",padding:"10px 16px",background:lang===l.code?"rgba(255,255,255,.15)":"transparent",border:"none",color:"white",fontSize:13,fontWeight:lang===l.code?600:400,cursor:"pointer",textAlign:"left"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.1)"} onMouseLeave={e=>e.currentTarget.style.background=lang===l.code?"rgba(255,255,255,.15)":"transparent"}><span>{l.flag}</span>{l.label}{lang===l.code&&<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" style={{marginLeft:"auto"}}><polyline points="20 6 9 17 4 12"/></svg>}</button>
+              ))}
+            </div>}
+          </div>
+        <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg, #0a1628 0%, #132d55 25%, #1a4a6e 45%, #2563a0 60%, #3b82f6 80%, #93c5fd 100%)"}}>
               <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 50% 80%, rgba(255,255,255,.08) 0%, transparent 60%)"}}/>
             </div>
             <div style={{position:"relative",zIndex:2,maxWidth:680,margin:"0 auto",animation:"fu .8s ease"}}>
               <p style={{fontSize:14,fontWeight:600,color:"rgba(255,255,255,.7)",letterSpacing:".1em",textTransform:"uppercase",marginBottom:16}}>ALL Accor+ Academy</p>
               <h1 style={{fontSize:"clamp(40px,7vw,68px)",fontWeight:700,lineHeight:1.08,letterSpacing:"-.04em",marginBottom:16,color:"white",textShadow:"0 2px 20px rgba(0,0,0,.3)"}}>Your Learning<br/>Hub.</h1>
-              <p style={{fontSize:"clamp(16px,2vw,19px)",color:"rgba(255,255,255,.7)",lineHeight:1.5,maxWidth:460,margin:"0 auto"}}>Everything you need to grow, develop, and succeed as an ALL Accor+ team member.</p>
+              <p style={{fontSize:"clamp(16px,2vw,19px)",color:"rgba(255,255,255,.7)",lineHeight:1.5,maxWidth:460,margin:"0 auto"}}>{t.hubSub}</p>
             </div>
           </div>
 
@@ -1143,21 +1641,21 @@ export default function App(){
           <div style={{maxWidth:1000,margin:"0 auto",padding:"20px 24px 80px"}}>
             <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:20}}>
               {/* Onboarding */}
-              <div onClick={()=>{setView("onboarding");window.scrollTo(0,0);}} style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",cursor:"pointer",transition:"all .3s"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 16px 48px rgba(0,0,0,.1)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
+              <div onClick={()=>{setView("onboarding");window.scrollTo(0,0);}} style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",cursor:"pointer",transition:"all .3s",display:"flex",flexDirection:"column"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 16px 48px rgba(0,0,0,.1)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
                 <div style={{height:140,position:"relative",overflow:"hidden",background:"linear-gradient(180deg,#0a1628 0%,#132d55 40%,#d4785a 75%,#e8a87c 100%)"}}>
                   <svg viewBox="0 0 400 100" preserveAspectRatio="none" style={{position:"absolute",bottom:0,left:0,width:"100%",height:"70%",opacity:.3}}><path d="M0,100 L0,70 L15,70 L15,55 L25,55 L25,70 L35,70 L35,45 L45,45 L45,70 L55,70 L55,60 L60,40 L65,60 L70,60 L75,35 L80,60 L90,60 L90,50 L100,50 L100,70 L110,70 L110,30 L115,30 L115,25 L120,25 L120,30 L125,30 L125,70 L140,70 L140,40 L150,40 L150,70 L165,70 L165,55 L175,55 L175,45 L180,45 L180,55 L185,55 L185,70 L200,70 L200,35 L205,35 L205,25 L210,20 L215,25 L215,35 L220,35 L220,70 L235,70 L235,50 L245,50 L245,70 L260,70 L260,60 L265,45 L270,30 L275,45 L280,60 L285,60 L285,70 L300,70 L300,40 L310,40 L310,30 L315,25 L320,30 L320,40 L325,40 L325,70 L340,70 L340,55 L350,55 L350,70 L365,70 L365,45 L375,45 L375,70 L400,70 L400,100 Z" fill="white"/></svg>
                   </div>
-                <div style={{padding:"24px"}}>
-                  <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f0fdf4",padding:"3px 10px",borderRadius:980,marginBottom:12}}>
+                <div style={{padding:"24px",display:"flex",flexDirection:"column",flex:1}}>
+                  <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f0fdf4",padding:"3px 10px",borderRadius:980,marginBottom:12,alignSelf:"flex-start"}}>
                     <div style={{width:6,height:6,borderRadius:"50%",background:"#10b981"}}/>
-                    <span style={{fontSize:11,fontWeight:600,color:"#10b981"}}>Active</span>
+                    <span style={{fontSize:11,fontWeight:600,color:"#10b981"}}>{t.active}</span>
                   </div>
-                  <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>Onboarding</h3>
-                  <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:16}}>Your Explorer digital passport. Four destinations, real Accor content, and your path to becoming a certified specialist.</p>
+                  <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>{t.onboarding}</h3>
+                  <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:16,flex:1}}>{t.onbDesc}</p>
                   <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-                    <span style={{fontSize:12,color:"#b4b4b4"}}>19 modules</span>
+                    <span style={{fontSize:12,color:"#b4b4b4"}}>{lang==="id"?"19 modul":lang==="th"?"19 โมดูล":"19 modules"}</span>
                     <div style={{display:"flex",alignItems:"center",gap:4,color:"#0071e3",fontSize:13,fontWeight:600}}>
-                      Enter
+                      {t.enter}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </div>
                   </div>
@@ -1165,21 +1663,21 @@ export default function App(){
               </div>
 
               {/* Leadership */}
-              <div onClick={()=>{setView("leadership-learn");window.scrollTo(0,0);}} style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",cursor:"pointer",transition:"all .3s"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 16px 48px rgba(0,0,0,.1)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
+              <div onClick={()=>{setView("leadership-learn");window.scrollTo(0,0);}} style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",cursor:"pointer",transition:"all .3s",display:"flex",flexDirection:"column"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 16px 48px rgba(0,0,0,.1)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
                 <div style={{height:140,position:"relative",overflow:"hidden",background:"linear-gradient(180deg,#0a0a20 0%,#1a1040 30%,#2d1b69 60%,#7c3aed 100%)"}}>
                   <svg viewBox="0 0 400 100" preserveAspectRatio="none" style={{position:"absolute",bottom:0,left:0,width:"100%",height:"70%",opacity:.25}}><path d="M0,100 L0,65 L20,65 L20,50 L30,50 L30,65 L50,65 L50,45 L55,45 L55,35 L60,30 L65,35 L65,45 L70,45 L70,65 L85,65 L85,40 L95,40 L95,65 L110,65 L110,55 L115,55 L115,50 L120,50 L120,55 L125,55 L125,65 L140,65 L140,20 L145,20 L145,15 L165,15 L165,20 L170,20 L170,65 L175,65 L178,18 L205,14 L208,65 L215,65 L215,25 L220,25 L220,20 L240,20 L240,25 L245,25 L245,65 L260,65 L260,50 L270,50 L270,65 L285,65 L285,35 L290,30 L295,25 L300,30 L305,35 L305,65 L320,65 L320,45 L330,45 L330,65 L345,65 L345,55 L355,55 L355,65 L375,65 L375,50 L385,50 L385,65 L400,65 L400,100 Z" fill="white"/></svg>
                   </div>
-                <div style={{padding:"24px"}}>
-                  <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f0fdf4",padding:"3px 10px",borderRadius:980,marginBottom:12}}>
+                <div style={{padding:"24px",display:"flex",flexDirection:"column",flex:1}}>
+                  <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f0fdf4",padding:"3px 10px",borderRadius:980,marginBottom:12,alignSelf:"flex-start"}}>
                     <div style={{width:6,height:6,borderRadius:"50%",background:"#10b981"}}/>
-                    <span style={{fontSize:11,fontWeight:600,color:"#10b981"}}>Active</span>
+                    <span style={{fontSize:11,fontWeight:600,color:"#10b981"}}>{t.active}</span>
                   </div>
-                  <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>Leadership</h3>
-                  <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:16}}>Develop your leadership capabilities through two self-paced programmes designed for Accor Plus team leaders.</p>
+                  <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>{t.leadership}</h3>
+                  <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:16,flex:1}}>{t.leadDesc}</p>
                   <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-                    <span style={{fontSize:12,color:"#b4b4b4"}}>2 programmes</span>
+                    <span style={{fontSize:12,color:"#b4b4b4"}}>2 {t.programmes}</span>
                     <div style={{display:"flex",alignItems:"center",gap:4,color:"#0071e3",fontSize:13,fontWeight:600}}>
-                      Enter
+                      {t.enter}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </div>
                   </div>
@@ -1187,21 +1685,21 @@ export default function App(){
               </div>
 
               {/* Pocket Customer */}
-              <div onClick={()=>window.open("https://performos.vip/login","_blank")} style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",cursor:"pointer",transition:"all .3s"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 16px 48px rgba(0,0,0,.1)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
+              <div onClick={()=>window.open("https://performos.vip/login","_blank")} style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",cursor:"pointer",transition:"all .3s",display:"flex",flexDirection:"column"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 16px 48px rgba(0,0,0,.1)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
                 <div style={{height:140,position:"relative",overflow:"hidden",background:"linear-gradient(180deg,#0a1628 0%,#14532d 40%,#16a34a 75%,#4ade80 100%)"}}>
                   <svg viewBox="0 0 400 100" preserveAspectRatio="none" style={{position:"absolute",bottom:0,left:0,width:"100%",height:"70%",opacity:.25}}><path d="M0,100 L0,65 L20,65 L25,55 L30,50 L35,55 L40,65 L60,65 L65,45 L70,40 L75,45 L80,65 L100,65 L100,50 L110,50 L110,65 L130,65 L135,55 L140,45 L145,40 L150,45 L155,55 L160,65 L180,65 L185,50 L190,45 L195,50 L200,65 L220,65 L225,55 L230,50 L235,55 L240,65 L260,65 L265,45 L270,40 L275,45 L280,65 L300,65 L305,55 L310,50 L315,55 L320,65 L340,65 L345,50 L350,45 L355,50 L360,65 L380,65 L385,55 L390,50 L395,55 L400,65 L400,100 Z" fill="white"/></svg>
                 </div>
-                <div style={{padding:"24px"}}>
-                  <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f0fdf4",padding:"3px 10px",borderRadius:980,marginBottom:12}}>
+                <div style={{padding:"24px",display:"flex",flexDirection:"column",flex:1}}>
+                  <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f0fdf4",padding:"3px 10px",borderRadius:980,marginBottom:12,alignSelf:"flex-start"}}>
                     <div style={{width:6,height:6,borderRadius:"50%",background:"#10b981"}}/>
-                    <span style={{fontSize:11,fontWeight:600,color:"#10b981"}}>Active</span>
+                    <span style={{fontSize:11,fontWeight:600,color:"#10b981"}}>{t.active}</span>
                   </div>
-                  <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>Pocket Customer</h3>
-                  <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:16}}>Practice your sales conversations with an AI-powered roleplay simulator. The AI plays the customer. You close the deal.</p>
+                  <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>{t.pocketCust}</h3>
+                  <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:16,flex:1}}>{t.pocketDesc}</p>
                   <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-                    <span style={{fontSize:12,color:"#b4b4b4"}}>Voice roleplay</span>
+                    <span style={{fontSize:12,color:"#b4b4b4"}}>{t.voiceRoleplay}</span>
                     <div style={{display:"flex",alignItems:"center",gap:4,color:"#0071e3",fontSize:13,fontWeight:600}}>
-                      Launch
+                      {t.launch}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                     </div>
                   </div>
@@ -1209,19 +1707,19 @@ export default function App(){
               </div>
 
               {/* Compliance */}
-              <div style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",opacity:.55}}>
+              <div style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",opacity:.55,display:"flex",flexDirection:"column"}}>
                 <div style={{height:140,position:"relative",overflow:"hidden",background:"linear-gradient(180deg,#1a2a3a 0%,#2d3f50 40%,#475569 70%,#64748b 100%)"}}>
                   <svg viewBox="0 0 400 100" preserveAspectRatio="none" style={{position:"absolute",bottom:0,left:0,width:"100%",height:"70%",opacity:.2}}><path d="M0,100 L0,65 L20,65 L20,55 L30,55 L30,65 L50,65 L50,50 L55,40 L58,25 L60,15 L62,25 L65,40 L70,50 L70,65 L90,65 L90,45 L100,45 L100,65 L115,65 L115,55 L120,55 L120,50 L125,50 L125,55 L130,55 L130,65 L150,65 L155,50 L158,35 L160,20 L162,10 L164,20 L166,35 L170,50 L170,65 L190,65 L190,40 L200,40 L200,30 L205,25 L210,30 L210,40 L215,40 L215,65 L235,65 L240,45 L243,30 L245,18 L247,30 L250,45 L255,65 L275,65 L275,50 L285,50 L285,65 L300,65 L300,55 L310,55 L310,45 L315,40 L320,45 L320,55 L325,55 L325,65 L345,65 L345,50 L355,50 L355,65 L375,65 L375,55 L385,55 L385,65 L400,65 L400,100 Z" fill="white"/></svg>
                   </div>
-                <div style={{padding:"24px"}}>
-                  <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f5f5f7",padding:"3px 10px",borderRadius:980,marginBottom:12}}>
+                <div style={{padding:"24px",display:"flex",flexDirection:"column",flex:1}}>
+                  <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f5f5f7",padding:"3px 10px",borderRadius:980,marginBottom:12,alignSelf:"flex-start"}}>
                     <div style={{width:6,height:6,borderRadius:"50%",background:"#b4b4b4"}}/>
-                    <span style={{fontSize:11,fontWeight:600,color:"#86868b"}}>Coming Soon</span>
+                    <span style={{fontSize:11,fontWeight:600,color:"#86868b"}}>{t.comingSoon}</span>
                   </div>
-                  <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>Compliance</h3>
-                  <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:16}}>Annual compliance modules including data privacy, workplace safety, and code of conduct. Launching soon.</p>
+                  <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>{t.compliance}</h3>
+                  <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:16,flex:1}}>{t.compDesc}</p>
                   <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-                    <span style={{fontSize:12,color:"#b4b4b4"}}>Coming Q3 2026</span>
+                    <span style={{fontSize:12,color:"#b4b4b4"}}>{t.comingQ3}</span>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b4b4b4" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
                   </div>
                 </div>
@@ -1259,7 +1757,7 @@ export default function App(){
                 <div style={{padding:"24px"}}>
                   <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f5f5f7",padding:"3px 10px",borderRadius:980,marginBottom:12}}>
                     <div style={{width:6,height:6,borderRadius:"50%",background:"#b4b4b4"}}/>
-                    <span style={{fontSize:11,fontWeight:600,color:"#86868b"}}>Coming Soon</span>
+                    <span style={{fontSize:11,fontWeight:600,color:"#86868b"}}>{t.comingSoon}</span>
                   </div>
                   <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>Leadership Volume 1</h3>
                   <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:12}}>Foundations of leadership. Psychological safety, coaching with GROW, radical candour, and leading with purpose.</p>
@@ -1275,7 +1773,7 @@ export default function App(){
                 <div style={{padding:"24px"}}>
                   <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f5f5f7",padding:"3px 10px",borderRadius:980,marginBottom:12}}>
                     <div style={{width:6,height:6,borderRadius:"50%",background:"#b4b4b4"}}/>
-                    <span style={{fontSize:11,fontWeight:600,color:"#86868b"}}>Coming Soon</span>
+                    <span style={{fontSize:11,fontWeight:600,color:"#86868b"}}>{t.comingSoon}</span>
                   </div>
                   <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>Leadership Volume 2</h3>
                   <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:12}}>Advanced leadership. Strategic thinking, change management, performance culture, and leading across cultures.</p>
@@ -1344,21 +1842,21 @@ export default function App(){
         <div style={{maxWidth:680,margin:"0 auto"}}>
           <div style={{display:"inline-flex",alignItems:"center",gap:8,background:"#f0f5ff",padding:"6px 16px",borderRadius:980,marginBottom:20}}>
             <div style={{width:8,height:8,borderRadius:"50%",background:"#0071e3"}}/>
-            <span style={{fontSize:12,fontWeight:600,color:"#0071e3"}}>{overallPct===100?"Journey Complete":"Journey in Progress"}</span>
+            <span style={{fontSize:12,fontWeight:600,color:"#0071e3"}}>{overallPct===100?(lang==="id"?"Perjalanan Selesai":"Journey Complete"):(lang==="id"?"Perjalanan Berlangsung":"Journey in Progress")}</span>
           </div>
-          <h1 style={{fontSize:"clamp(36px,6vw,56px)",fontWeight:700,lineHeight:1.08,letterSpacing:"-.04em",marginBottom:12}}>Welcome, Jared.</h1>
-          <p style={{fontSize:"clamp(17px,2.5vw,21px)",color:"#86868b",lineHeight:1.5,maxWidth:480,margin:"0 auto"}}>{overallPct===100?"All New Zealand modules complete. Australia awaits.":overallPct>0?`${completedCount} of ${totalMods} modules complete across New Zealand.`:"Your Explorer journey begins in New Zealand."}</p>
+          <h1 style={{fontSize:"clamp(36px,6vw,56px)",fontWeight:700,lineHeight:1.08,letterSpacing:"-.04em",marginBottom:12}}>{t.welcome} Jared.</h1>
+          <p style={{fontSize:"clamp(17px,2.5vw,21px)",color:"#86868b",lineHeight:1.5,maxWidth:480,margin:"0 auto"}}>{overallPct===100?(lang==="id"?"Semua Selandia Baru selesai. Australia menunggu.":"All New Zealand complete. Australia awaits."):overallPct>0?(lang==="id"?`${completedCount} dari ${totalMods} modul selesai di Selandia Baru.`:`${completedCount} of ${totalMods} modules complete across New Zealand.`):(lang==="id"?"Perjalanan Explorer Anda dimulai di Selandia Baru.":lang==="th"?"การเดินทาง Explorer ของคุณเริ่มต้นที่นิวซีแลนด์":"Your Explorer journey begins in New Zealand.")}</p>
           {overallPct>0&&overallPct<100&&<div style={{maxWidth:320,margin:"20px auto 0"}}>
             <div style={{height:6,borderRadius:3,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:`${overallPct}%`,height:"100%",borderRadius:3,background:"linear-gradient(90deg,#60a5fa,#34d399)",transition:"width .6s ease"}}/></div>
             <p style={{fontSize:12,color:"#b4b4b4",marginTop:8}}>{overallPct}%</p>
           </div>}
           {nextModule&&<button onClick={()=>startModule(nextModule.dest,nextModule.mod)} style={{display:"inline-flex",alignItems:"center",gap:8,marginTop:28,padding:"14px 32px",borderRadius:980,background:"#0071e3",color:"white",fontSize:16,fontWeight:600,border:"none",cursor:"pointer",boxShadow:"0 4px 16px rgba(0,113,227,.3)",transition:"all .2s"}} onMouseEnter={e=>{e.currentTarget.style.transform="scale(1.03)";e.currentTarget.style.boxShadow="0 6px 24px rgba(0,113,227,.4)"}} onMouseLeave={e=>{e.currentTarget.style.transform="scale(1)";e.currentTarget.style.boxShadow="0 4px 16px rgba(0,113,227,.3)"}}>
-            {completedCount===0?"Begin":"Continue"}: {nextModule.title}
+            {completedCount===0?t.begin:t.cont}: {nextModule.title}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </button>}
           {!nextModule&&allNZDone&&<div style={{display:"inline-flex",alignItems:"center",gap:8,marginTop:28,padding:"12px 24px",borderRadius:980,background:"#f0fdf4",border:"1px solid #bbf7d0",fontSize:14,fontWeight:600,color:"#16a34a"}}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            New Zealand Complete
+            {lang==="id"?"Selandia Baru Selesai":"New Zealand Complete"}
           </div>}
         </div>
       </section>
@@ -1366,7 +1864,7 @@ export default function App(){
       {/* ===== THE HERO MAP SECTION ===== */}
       <section id="mp" style={{padding:"0 0 60px",maxWidth:1200,margin:"0 auto"}}>
         <div style={{textAlign:"center",padding:"20px 24px 32px"}}>
-          <p style={{fontSize:14,fontWeight:600,color:"#86868b",letterSpacing:".04em"}}>Select a destination to begin</p>
+          <p style={{fontSize:14,fontWeight:600,color:"#86868b",letterSpacing:".04em"}}>{t.selectYourDest}</p>
         </div>
 
         {/* IMMERSIVE MAP - the hero */}
@@ -1561,6 +2059,44 @@ export default function App(){
       </section>
 
 
+
+      {/* Knowledge Pulse - Spaced Repetition */}
+      {Object.keys(completedMods).length>0&&(()=>{
+        const destIdx=parseInt(Object.keys(completedMods)[0]?.split("-")[0]||"0");
+        const pq=PULSE_QUIZZES[destIdx];
+        if(!pq||!isDestComplete(destIdx)||pulseDismissed[destIdx])return null;
+        const destName=D[destIdx]?.country||"";
+        const answered=Object.keys(pulseAnswers).filter(k=>k.startsWith("p"+destIdx)).length;
+        const correct=Object.keys(pulseAnswers).filter(k=>k.startsWith("p"+destIdx)&&pulseAnswers[k]===true).length;
+        const allDone=answered>=pq.length;
+        return(
+        <section style={{padding:"40px 24px",background:"#fffbeb"}}>
+          <div style={{maxWidth:600,margin:"0 auto",background:"white",borderRadius:20,padding:"28px",border:"1px solid #fde68a",boxShadow:"0 4px 24px rgba(245,158,11,.1)"}}>
+            <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:16}}>
+              <div style={{display:"flex",alignItems:"center",gap:10}}>
+                <div style={{width:36,height:36,borderRadius:10,background:"#f59e0b",display:"flex",alignItems:"center",justifyContent:"center",fontSize:18}}>&#9889;</div>
+                <div><p style={{fontSize:16,fontWeight:700,color:"#92400e"}}>{t.knowledgePulse}</p><p style={{fontSize:13,color:"#a16207"}}>{t.pulseIntro} {destName}. {t.pulseQuestion}</p></div>
+              </div>
+              <button onClick={()=>setPulseDismissed({...pulseDismissed,[destIdx]:true})} style={{background:"none",border:"none",color:"#a16207",cursor:"pointer",fontSize:12,fontWeight:600,padding:"4px 8px"}}>{t.pulseDismiss}</button>
+            </div>
+            {pq.map((q,qi)=>{const key="p"+destIdx+"_"+qi;const ans=pulseAnswers[key];const opts=Array.isArray(q.opts)?q.opts:(q.opts[lang]||q.opts.en);return(
+              <div key={qi} style={{marginBottom:qi<pq.length-1?16:0,padding:"16px",background:"#fefce8",borderRadius:14}}>
+                <p style={{fontSize:14,fontWeight:600,color:"#78350f",marginBottom:10}}>{typeof q.q==="string"?q.q:(q.q[lang]||q.q.en)}</p>
+                <div style={{display:"flex",flexWrap:"wrap",gap:8}}>
+                  {opts.map((o,oi)=>{const picked=ans!==undefined;const isCorrect=oi===q.correct;const isThis=ans===true&&isCorrect||ans===false&&pulseAnswers[key+"_pick"]===oi;return(
+                    <button key={oi} onClick={()=>{if(ans!==undefined)return;const c2=oi===q.correct;setPulseAnswers({...pulseAnswers,[key]:c2,[key+"_pick"]:oi});}} style={{padding:"8px 16px",borderRadius:980,fontSize:13,fontWeight:500,border:picked&&isCorrect?"2px solid #10b981":picked&&isThis&&!isCorrect?"2px solid #ef4444":"1.5px solid #e5e7eb",background:picked&&isCorrect?"#d1fae5":picked&&isThis&&!isCorrect?"#fee2e2":"white",color:picked&&isCorrect?"#065f46":picked&&isThis&&!isCorrect?"#991b1b":"#374151",cursor:picked?"default":"pointer",transition:"all .2s"}}>{o}</button>
+                  );})}
+                </div>
+              </div>
+            );})}
+            {allDone&&<div style={{marginTop:16,padding:"14px 20px",borderRadius:14,background:correct===pq.length?"#d1fae5":"#fee2e2",textAlign:"center"}}>
+              <p style={{fontSize:16,fontWeight:700,color:correct===pq.length?"#065f46":"#991b1b"}}>{t.pulseScore} {correct}/{pq.length}</p>
+              <p style={{fontSize:13,color:correct===pq.length?"#047857":"#b91c1c",marginTop:4}}>{correct===pq.length?t.pulseCorrect:t.pulseWrong}</p>
+            </div>}
+          </div>
+        </section>);
+      })()}
+
       {/* Passport Stamps */}
       <section style={{padding:"60px 24px",background:"white"}}>
         <div style={{maxWidth:800,margin:"0 auto",textAlign:"center"}}>
@@ -1585,7 +2121,7 @@ export default function App(){
               <img src={cardImg} alt="Explorer Certified" style={{width:240,borderRadius:16,boxShadow:"0 12px 40px rgba(0,0,0,.15)"}}/>
               <div style={{position:"absolute",bottom:12,left:0,right:0,textAlign:"center"}}>
                 <div style={{display:"inline-block",background:"rgba(0,0,0,.7)",backdropFilter:"blur(8px)",padding:"6px 16px",borderRadius:980}}>
-                  <span style={{fontSize:11,fontWeight:700,color:"white",letterSpacing:".06em"}}>EXPLORER CERTIFIED</span>
+                  <span style={{fontSize:11,fontWeight:700,color:"white",letterSpacing:".06em"}}>{lang==="id"?t.explorerCertified:"EXPLORER CERTIFIED"}</span>
                 </div>
               </div>
             </div>
@@ -1603,7 +2139,7 @@ export default function App(){
             <div style={{marginBottom:20,display:"flex",justifyContent:"center"}}>
               <img src={cardImg} alt="Explorer Card" style={{width:180,borderRadius:12,boxShadow:"0 8px 30px rgba(0,0,0,.12)"}}/>
             </div>
-            <h2 style={{fontSize:32,fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>Congratulations, Jared!</h2>
+            <h2 style={{fontSize:32,fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>{lang==="id"?"Selamat, Jared!":lang==="th"?"ยินดีด้วย Jared!":"Congratulations, Jared!"}</h2>
             <p style={{fontSize:17,color:"#424245",lineHeight:1.6,marginBottom:24}}>You have successfully completed all onboarding modules and earned your Explorer Certification as an ALL Accor+ specialist. You are ready.</p>
             <div style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:8,marginBottom:24}}>
               {(teamChoice==="done"?[{n:"Our Story",col:"#60a5fa"},{n:"Loyalty & Subscription Loyalty",col:"#f59e0b"},{n:"The Explorer Product",col:"#34d399"}]:[{n:"Our Story",col:"#60a5fa"},{n:"Loyalty & Subscription Loyalty",col:"#f59e0b"},{n:"The Explorer Product",col:"#34d399"},{n:safeTeam===4?"Member Care":"Outbound Acquisition",col:safeTeam===4?"#8b5cf6":"#f472b6"}]).map((d,di)=>(
@@ -1653,18 +2189,18 @@ export default function App(){
       {/* Stats + How it works */}
       <section style={{padding:"80px 24px",background:"white"}}>
         <div style={{maxWidth:980,margin:"0 auto",display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24,textAlign:"center"}}>
-          {[{v:"460,000+",l:"Explorer Members across Asia Pacific"},{v:"1,400+",l:"Hotels for Stay Plus Nights"},{v:"1,300+",l:"Restaurants with Dining Discounts"}].map((s,i)=><div key={i}><div className="apple-grad" style={{fontSize:"clamp(32px,4vw,48px)",fontWeight:700,letterSpacing:"-.03em"}}>{s.v}</div><div style={{fontSize:14,color:"#86868b",marginTop:4}}>{s.l}</div></div>)}
+          {[{v:"460,000+",l:lang==="id"?"Anggota Explorer di Asia Pasifik":lang==="th"?"สมาชิก Explorer ทั่วเอเชียแปซิฟิก":"Explorer Members across Asia Pacific"},{v:"1,400+",l:lang==="id"?"Hotel untuk Stay Plus Nights":lang==="th"?"โรงแรมสำหรับคืน Stay Plus":"Hotels for Stay Plus Nights"},{v:"1,300+",l:lang==="id"?"Restoran dengan Diskon Makan":lang==="th"?"ร้านอาหารพร้อมส่วนลด":"Restaurants with Dining Discounts"}].map((s,i)=><div key={i}><div className="apple-grad" style={{fontSize:"clamp(32px,4vw,48px)",fontWeight:700,letterSpacing:"-.03em"}}>{s.v}</div><div style={{fontSize:14,color:"#86868b",marginTop:4}}>{s.l}</div></div>)}
         </div>
       </section>
 
       <section style={{padding:"80px 24px 100px",maxWidth:1100,margin:"0 auto"}}>
-        <div style={{textAlign:"center",marginBottom:56}}><h2 style={{fontSize:"clamp(32px,5vw,48px)",fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>How it works.</h2><p style={{fontSize:19,color:"#86868b"}}>Live sessions and self-paced modules, working together.</p></div>
+        <div style={{textAlign:"center",marginBottom:56}}><h2 style={{fontSize:"clamp(32px,5vw,48px)",fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>{lang==="id"?"Cara kerjanya.":lang==="th"?"วิธีการทำงาน":"How it works."}</h2><p style={{fontSize:19,color:"#86868b"}}>{lang==="id"?"Sesi langsung dan modul mandiri, bekerja bersama.":lang==="th"?"เซสชันสดและโมดูลเรียนรู้ด้วยตนเอง ทำงานร่วมกัน":"Live sessions and self-paced modules, working together."}</p></div>
         <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:20}}>
           {[
-            {s:"01",t:"Join a Live Session",d:"Connect with your team via Google Meet for guided walkthroughs of each destination's core content. Your leaders take you through what matters most.",ic:"\u{1F4E1}",bg:"linear-gradient(135deg,#f5f0ff 0%,#e8f4ff 100%)"},
-            {s:"02",t:"Explore Your Modules",d:"After each live session, dive into interactive self-paced modules within your current destination. Learn at your own pace, on your own time.",ic:"\u{1F4D6}",bg:"linear-gradient(135deg,#e8f4ff 0%,#f0faf5 100%)"},
-            {s:"03",t:"Complete & Stamp",d:"Finish all modules in a destination to earn your passport stamp and unlock the next flight. Track your progress as you go.",ic:"\u2705",bg:"linear-gradient(135deg,#f0faf5 0%,#fff5f0 100%)"},
-            {s:"04",t:"Earn Your Onboarding Graduation",d:"Complete all four destinations to graduate as a certified ALL Accor+ Explorer specialist. Welcome to the team.",ic:"\u{1F3C6}",bg:"linear-gradient(135deg,#fff5f0 0%,#f5f0ff 100%)"}
+            {s:"01",t:lang==="id"?"Ikuti Sesi Langsung":lang==="th"?"เข้าร่วมเซสชันสด":"Join a Live Session",d:lang==="id"?"Terhubung dengan tim Anda melalui Google Meet untuk panduan konten inti setiap destinasi. Pemimpin Anda membawa Anda melalui hal-hal yang paling penting.":"Connect with your team via Google Meet for guided walkthroughs of each destination's core content. Your leaders take you through what matters most.",ic:"\u{1F4E1}",bg:"linear-gradient(135deg,#f5f0ff 0%,#e8f4ff 100%)"},
+            {s:"02",t:lang==="id"?"Jelajahi Modul Anda":lang==="th"?"สำรวจโมดูลของคุณ":"Explore Your Modules",d:lang==="id"?"Setelah setiap sesi langsung, selami modul interaktif mandiri di destinasi Anda saat ini. Belajar sesuai kecepatan Anda, di waktu Anda sendiri.":"After each live session, dive into interactive self-paced modules within your current destination. Learn at your own pace, on your own time.",ic:"\u{1F4D6}",bg:"linear-gradient(135deg,#e8f4ff 0%,#f0faf5 100%)"},
+            {s:"03",t:lang==="id"?"Selesaikan & Stempel":lang==="th"?"เสร็จสิ้น & ประทับตรา":"Complete & Stamp",d:lang==="id"?"Selesaikan semua modul di suatu destinasi untuk mendapatkan stempel paspor Anda dan membuka penerbangan berikutnya. Pantau kemajuan Anda.":"Finish all modules in a destination to earn your passport stamp and unlock the next flight. Track your progress as you go.",ic:"\u2705",bg:"linear-gradient(135deg,#f0faf5 0%,#fff5f0 100%)"},
+            {s:"04",t:lang==="id"?"Dapatkan Wisuda Orientasi Anda":lang==="th"?"รับวุฒิบัตรปฐมนิเทศของคุณ":"Earn Your Onboarding Graduation",d:lang==="id"?"Selesaikan keempat destinasi untuk lulus sebagai spesialis ALL Accor+ Explorer bersertifikat. Selamat datang di tim.":"Complete all four destinations to graduate as a certified ALL Accor+ Explorer specialist. Welcome to the team.",ic:"\u{1F3C6}",bg:"linear-gradient(135deg,#fff5f0 0%,#f5f0ff 100%)"}
           ].map((it,i)=>(
             <div key={i} style={{background:it.bg,borderRadius:24,padding:"40px 36px",border:"1px solid rgba(0,0,0,.04)",position:"relative",overflow:"hidden",minHeight:220,display:"flex",flexDirection:"column",justifyContent:"space-between",transition:"transform .3s ease,box-shadow .3s ease",cursor:"default"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-4px)";e.currentTarget.style.boxShadow="0 12px 40px rgba(0,0,0,.08)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
               <div style={{position:"absolute",top:24,right:28,fontSize:64,opacity:.15,lineHeight:1}}>{it.ic}</div>
@@ -1689,7 +2225,7 @@ export default function App(){
         <div style={{position:"fixed",inset:0,zIndex:900,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",background:"rgba(0,0,0,.75)",animation:"gradFadeIn .8s ease",backdropFilter:"blur(8px)"}}>
           <div style={{animation:"gradTitle 1s ease .3s both"}}>
             <p style={{fontSize:14,fontWeight:600,color:"rgba(255,255,255,.6)",letterSpacing:".1em",textTransform:"uppercase",marginBottom:12,textAlign:"center"}}>ALL Accor+ Explorer</p>
-            <h1 style={{fontSize:"clamp(40px,8vw,72px)",fontWeight:700,color:"white",textAlign:"center",letterSpacing:"-.04em",lineHeight:1.05,textShadow:"0 4px 30px rgba(0,0,0,.3)"}}>Explorer Certified.</h1>
+            <h1 style={{fontSize:"clamp(40px,8vw,72px)",fontWeight:700,color:"white",textAlign:"center",letterSpacing:"-.04em",lineHeight:1.05,textShadow:"0 4px 30px rgba(0,0,0,.3)"}}>{lang==="id"?"Explorer Bersertifikat.":lang==="th"?"Explorer ได้รับการรับรอง":"Explorer Certified."}</h1>
           </div>
           <div style={{display:"flex",gap:20,marginTop:40}}>
             {(teamChoice==="done"?[{i:0,col:"#60a5fa"},{i:1,col:"#f59e0b"},{i:2,col:"#34d399"}]:[{i:0,col:"#60a5fa"},{i:1,col:"#f59e0b"},{i:2,col:"#34d399"},{i:teamChoice||3,col:D[safeTeam]?.col||"#f472b6"}]).map((s,si)=>(
@@ -1703,7 +2239,7 @@ export default function App(){
               <img src={cardImg} alt="Explorer Card" style={{width:320,borderRadius:20,boxShadow:"0 20px 80px rgba(0,0,0,.4)"}}/>
               <div style={{position:"absolute",bottom:16,left:0,right:0,textAlign:"center"}}>
                 <div style={{display:"inline-block",background:"rgba(0,0,0,.7)",backdropFilter:"blur(8px)",padding:"8px 20px",borderRadius:980}}>
-                  <span style={{fontSize:14,fontWeight:700,color:"white",letterSpacing:".06em"}}>EXPLORER CERTIFIED</span>
+                  <span style={{fontSize:14,fontWeight:700,color:"white",letterSpacing:".06em"}}>{lang==="id"?t.explorerCertified:"EXPLORER CERTIFIED"}</span>
                 </div>
               </div>
             </div>
@@ -1772,8 +2308,8 @@ export default function App(){
 
 
       {/* ===== FULL MODULE LEARNING PAGE ===== */}
-      {activeModule!==null&&MODULES[activeModule.dest]&&(()=>{
-        const modData=MODULES[activeModule.dest][activeModule.mod];
+      {activeModule!==null&&getModules(activeModule.dest)&&(()=>{
+        const modData=getModules(activeModule.dest)[activeModule.mod];
         const steps=modData.steps;
         const step=steps[moduleStep];
         const isLast=moduleStep===steps.length-1;
@@ -1786,7 +2322,7 @@ export default function App(){
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="15 18 9 12 15 6"/></svg>
               Back to Modules
             </button>
-            <span style={{fontSize:13,color:"#86868b",fontWeight:500}}>Module {activeModule.mod+1} of {MODULES[activeModule.dest].length}</span>
+            <span style={{fontSize:13,color:"#86868b",fontWeight:500}}>Module {activeModule.mod+1} of {getModules(activeModule.dest).length}</span>
           </div>
 
           {/* Progress bar */}
@@ -1795,7 +2331,7 @@ export default function App(){
               <div style={{width:`${pct}%`,height:"100%",background:"linear-gradient(90deg,#0071e3,#64acff)",borderRadius:2,transition:"width .4s ease"}}/>
             </div>
             <div style={{display:"flex",justifyContent:"space-between",marginTop:8,marginBottom:32}}>
-              <span style={{fontSize:12,color:"#86868b"}}>Step {moduleStep+1} of {steps.length}</span>
+              <span style={{fontSize:12,color:"#86868b"}}>{t.step} {moduleStep+1} {t.of} {steps.length}</span>
               <span style={{fontSize:12,color:"#86868b"}}>{Math.round(pct)}% complete</span>
             </div>
           </div>
@@ -1804,7 +2340,7 @@ export default function App(){
           <div style={{maxWidth:800,margin:"0 auto",padding:"0 24px 120px"}}>
             {/* Step type badge */}
             <div style={{marginBottom:16}}>
-              <span style={{fontSize:11,fontWeight:700,letterSpacing:".06em",textTransform:"uppercase",color:step.type==="quiz"?"#f59e0b":step.type==="reflect"?"#8b5cf6":step.type==="video"?"#ef4444":"#0071e3",background:step.type==="quiz"?"#fef3c7":step.type==="reflect"?"#ede9fe":step.type==="video"?"#fee2e2":"#e0f2fe",padding:"4px 12px",borderRadius:980}}>{step.type==="learn"?"Learn":step.type==="video"?"Watch":step.type==="quiz"?"Quiz":step.type==="reflect"?"Reflect":step.type}</span>
+              <span style={{fontSize:11,fontWeight:700,letterSpacing:".06em",textTransform:"uppercase",color:step.type==="quiz"?"#f59e0b":step.type==="reflect"?"#8b5cf6":step.type==="video"?"#ef4444":step.type==="apply"?"#f59e0b":step.type==="listen"?"#0ea5e9":step.type==="mission"?"#10b981":"#0071e3",background:step.type==="quiz"?"#fef3c7":step.type==="reflect"?"#ede9fe":step.type==="video"?"#fee2e2":step.type==="apply"?"#fef3c7":step.type==="listen"?"#e0f2fe":step.type==="mission"?"#d1fae5":"#e0f2fe",padding:"4px 12px",borderRadius:980}}>{step.type==="learn"?"Learn":step.type==="video"?"Watch":step.type==="quiz"?"Quiz":step.type==="reflect"?"Reflect":step.type==="apply"?t.apply:step.type==="listen"?t.listen:step.type==="mission"?t.mission:step.type}</span>
             </div>
             <h1 style={{fontSize:"clamp(28px,4vw,40px)",fontWeight:700,letterSpacing:"-.03em",marginBottom:24,lineHeight:1.15}}>{step.title}</h1>
 
@@ -1860,7 +2396,7 @@ export default function App(){
                           );
                         })}
                       </div>
-                      {answered&&<p style={{marginTop:12,fontSize:14,fontWeight:600,color:isCorrect?"#10b981":"#ef4444"}}>{isCorrect?"Correct!":"Not quite. The correct answer is highlighted above."}</p>}
+                      {answered&&<p style={{marginTop:12,fontSize:14,fontWeight:600,color:isCorrect?"#10b981":"#ef4444"}}>{isCorrect?(lang==="id"?"Benar!":lang==="th"?"ถูกต้อง!":"Correct!"):(lang==="id"?"Tidak tepat. Jawaban yang benar ditandai di atas.":"Not quite. The correct answer is highlighted above.")}</p>}
                     </div>
                   );
                 })}
@@ -1880,6 +2416,37 @@ export default function App(){
                 }} onFocus={e=>e.target.style.borderColor="#0071e3"} onBlur={e=>e.target.style.borderColor="#e8e8ed"}/>
               </div>
             )}
+            {step.type==="apply"&&(
+              <div>
+                <div style={{background:"#fffbeb",borderRadius:16,padding:"24px",marginBottom:24,border:"1px solid #fde68a"}}>
+                  <p style={{fontSize:11,fontWeight:700,letterSpacing:".06em",color:"#92400e",marginBottom:12}}>{t.applyLabel}</p>
+                  <p style={{fontSize:17,lineHeight:1.7,color:"#78350f",fontWeight:500,whiteSpace:"pre-line"}}>{step.scenario}</p>
+                </div>
+                <p style={{fontSize:14,fontWeight:600,color:"#1d1d1f",marginBottom:16}}>{t.chooseApproach}</p>
+                <div style={{display:"flex",flexDirection:"column",gap:10}}>
+                  {step.choices&&step.choices.map((ch,ci)=>{const picked=quizAnswers["apply"]===ci;return(
+                    <div key={ci} onClick={()=>setQuizAnswers({...quizAnswers,apply:ci})} style={{padding:"16px 20px",borderRadius:14,border:picked?`2px solid ${ch.col||"#f59e0b"}`:"1.5px solid #e8e8ed",background:picked?`${ch.col||"#f59e0b"}08`:"white",cursor:"pointer",transition:"all .2s"}}>
+                      <p style={{fontSize:15,fontWeight:600,color:"#1d1d1f",marginBottom:4}}>{ch.label}</p>
+                      {picked&&<div style={{marginTop:10,padding:"12px 16px",borderRadius:10,background:"rgba(0,0,0,.04)"}}><p style={{fontSize:13,fontWeight:600,color:"#6b7280",marginBottom:4}}>{t.whatHappens}</p><p style={{fontSize:14,lineHeight:1.6,color:"#374151"}}>{ch.feedback}</p></div>}
+                    </div>
+                  );})}
+                </div>
+              </div>
+            )}
+            {step.type==="listen"&&(
+              <div>
+                <div style={{background:"#0f172a",borderRadius:16,overflow:"hidden",marginBottom:24}}>
+                  <div style={{padding:"32px",display:"flex",flexDirection:"column",alignItems:"center",gap:16}}>
+                    <div style={{width:64,height:64,borderRadius:"50%",background:"rgba(255,255,255,.1)",display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",border:"2px solid rgba(255,255,255,.2)"}}><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div>
+                    <p style={{fontSize:13,color:"rgba(255,255,255,.5)"}}>{step.duration||"1:00"}</p>
+                    <div style={{width:"100%",height:4,borderRadius:2,background:"rgba(255,255,255,.1)"}}><div style={{width:"0%",height:"100%",borderRadius:2,background:"#0ea5e9"}}/></div>
+                  </div>
+                  {step.context&&<div style={{padding:"0 32px 24px"}}><p style={{fontSize:13,color:"rgba(255,255,255,.6)",lineHeight:1.5}}>{step.context}</p></div>}
+                </div>
+                <p style={{fontSize:14,color:"#6b7280",marginBottom:20,fontStyle:"italic"}}>{t.listenPlaceholder}</p>
+                <div style={{marginBottom:16}}><p style={{fontSize:14,fontWeight:600,color:"#1d1d1f",marginBottom:8}}>{t.listenQ1}</p><textarea value={reflectText} onChange={e=>setReflectText(e.target.value)} placeholder="..." style={{width:"100%",minHeight:80,padding:16,borderRadius:12,border:"1.5px solid #e8e8ed",fontSize:15,lineHeight:1.5,fontFamily:"inherit",resize:"vertical",outline:"none",boxSizing:"border-box"}} onFocus={e=>e.target.style.borderColor="#0ea5e9"} onBlur={e=>e.target.style.borderColor="#e8e8ed"}/></div>
+              </div>
+            )}
           </div>
 
           {/* Bottom nav */}
@@ -1888,7 +2455,7 @@ export default function App(){
               <button onClick={()=>{if(moduleStep>0){setModuleStep(moduleStep-1);setReflectText("");}}} style={{
                 padding:"10px 24px",borderRadius:980,border:"1px solid #e8e8ed",background:"white",fontSize:15,fontWeight:500,
                 cursor:moduleStep>0?"pointer":"default",opacity:moduleStep>0?1:.4,color:"#1d1d1f"
-              }}>Previous</button>
+              }}>{t.prev}</button>
               {isLast?(
                 <div style={{display:"flex",alignItems:"center",gap:12}}>
                 {moduleQuizResults.length>0&&(()=>{
@@ -1902,7 +2469,7 @@ export default function App(){
                 })()}
                 {completionTime!==null&&<div style={{display:"flex",alignItems:"center",gap:6,padding:"6px 14px",borderRadius:980,background:"#f0f5ff",border:"1px solid #bfdbfe"}}>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0071e3" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  <span style={{fontSize:12,fontWeight:600,color:"#0071e3"}}>Completed in {completionTime<1?"under 1":completionTime} min</span>
+                  <span style={{fontSize:12,fontWeight:600,color:"#0071e3"}}>{t.completedIn} {completionTime<1?t.underOne:completionTime} {t.min}</span>
                 </div>}
                 <button onClick={completeModule} style={{
                   padding:"10px 28px",borderRadius:980,background:"#1d1d1f",color:"white",fontSize:15,fontWeight:500,
@@ -1944,11 +2511,11 @@ export default function App(){
             <div style={{display:"flex",flexDirection:"column",gap:12}}>
               <button onClick={endChoiceComplete} style={{padding:"18px 24px",borderRadius:16,background:"#10b981",color:"white",fontSize:16,fontWeight:600,border:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",gap:10,transition:"all .2s"}} onMouseEnter={e=>e.currentTarget.style.transform="translateY(-2px)"} onMouseLeave={e=>e.currentTarget.style.transform="translateY(0)"}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Complete My Journey
+                {lang==="id"?"Selesaikan Perjalanan Saya":"Complete My Journey"}
               </button>
               <p style={{fontSize:12,color:"#86868b",marginTop:-4,marginBottom:4}}>I am part of corporate, IT, or another team.</p>
               <button onClick={endChoiceContinue} style={{padding:"18px 24px",borderRadius:16,background:"#0071e3",color:"white",fontSize:16,fontWeight:600,border:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",gap:10,transition:"all .2s"}} onMouseEnter={e=>e.currentTarget.style.transform="translateY(-2px)"} onMouseLeave={e=>e.currentTarget.style.transform="translateY(0)"}>
-                Continue to Contact Centres
+                {lang==="id"?"Lanjut ke Contact Centre":"Continue to Contact Centres"}
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </button>
             </div>
@@ -1966,13 +2533,13 @@ export default function App(){
             <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:14,marginBottom:14}}>
               <div onClick={()=>pickTeam(3)} style={{padding:"24px 18px",borderRadius:16,border:"1.5px solid #f472b630",background:"#f472b608",cursor:"pointer",transition:"all .2s"}} onMouseEnter={e=>{e.currentTarget.style.borderColor="#f472b6";e.currentTarget.style.transform="translateY(-2px)"}} onMouseLeave={e=>{e.currentTarget.style.borderColor="#f472b630";e.currentTarget.style.transform="translateY(0)"}}>
                 <div style={{fontSize:26,marginBottom:8}}>&#128222;</div>
-                <h3 style={{fontSize:15,fontWeight:700,marginBottom:3,color:"#f472b6"}}>Outbound Acquisition</h3>
+                <h3 style={{fontSize:15,fontWeight:700,marginBottom:3,color:"#f472b6"}}>{lang==="id"?"Akuisisi Outbound":"Outbound Acquisition"}</h3>
                 <p style={{fontSize:12,color:"#86868b"}}>Mumbai, India</p>
                 <p style={{fontSize:11,color:"#86868b",marginTop:6}}>Sales methodology and closing</p>
               </div>
               <div onClick={()=>pickTeam(4)} style={{padding:"24px 18px",borderRadius:16,border:"1.5px solid #8b5cf630",background:"#8b5cf608",cursor:"pointer",transition:"all .2s"}} onMouseEnter={e=>{e.currentTarget.style.borderColor="#8b5cf6";e.currentTarget.style.transform="translateY(-2px)"}} onMouseLeave={e=>{e.currentTarget.style.borderColor="#8b5cf630";e.currentTarget.style.transform="translateY(0)"}}>
                 <div style={{fontSize:26,marginBottom:8}}>&#128172;</div>
-                <h3 style={{fontSize:15,fontWeight:700,marginBottom:3,color:"#8b5cf6"}}>Member Care</h3>
+                <h3 style={{fontSize:15,fontWeight:700,marginBottom:3,color:"#8b5cf6"}}>{lang==="id"?"Layanan Anggota":"Member Care"}</h3>
                 <p style={{fontSize:12,color:"#86868b"}}>Mumbai, India</p>
                 <p style={{fontSize:11,color:"#86868b",marginTop:6}}>Support frameworks and Zendesk</p>
               </div>
@@ -1985,7 +2552,7 @@ export default function App(){
       </>
       }
 
-      <footer style={{padding:"24px",borderTop:"1px solid #e8e8ed",textAlign:"center",background:"#f5f5f7"}}><p style={{fontSize:12,color:"#86868b"}}>ALL Accor+ Explorer Onboarding &middot; Pioneering the art of subscription loyalty.</p></footer>
+      <footer style={{padding:"24px",borderTop:"1px solid #e8e8ed",textAlign:"center",background:"#f5f5f7"}}><p style={{fontSize:12,color:"#86868b"}}>ALL Accor+ Explorer Onboarding &middot; {t.tagline}.</p></footer>
 
       {/* Detail Panel */}
       {dt!==null&&(
@@ -2000,20 +2567,20 @@ export default function App(){
                 <div style={{textAlign:"center"}}><div style={{fontSize:42,marginBottom:8}}>{d.icon}</div><h2 style={{fontSize:26,fontWeight:700,letterSpacing:"-.02em",marginBottom:3}}>{d.city}</h2><p style={{fontSize:15,fontWeight:600,color:d.col}}>{d.mod}</p><p style={{fontSize:13,color:"#86868b",marginTop:3}}>{d.tag}</p></div>
               </div>
               <div style={{padding:"24px 28px"}}>
-                <p style={{fontSize:11,fontWeight:700,color:"#86868b",letterSpacing:".06em",marginBottom:14}}>LEARNING MODULES</p>
+                <p style={{fontSize:11,fontWeight:700,color:"#86868b",letterSpacing:".06em",marginBottom:14}}>{lang==="id"?"MODUL PEMBELAJARAN":lang==="th"?"โมดูลการเรียนรู้":"LEARNING MODULES"}</p>
                 <div style={{display:"flex",flexDirection:"column",gap:6}}>
                   {d.tp.map((tp,ti)=>{
                     const done=isModComplete(dt,ti);
-                    const hasModules=MODULES[dt]&&MODULES[dt][ti];
+                    const hasModules=getModules(dt)&&getModules(dt)[ti];
                     return(
                     <div key={ti} className="rw" onClick={()=>{if(hasModules){startModule(dt,ti);sDt(null);}}} style={{padding:"14px 16px",background:done?`${d.col}10`:tp.s?`${d.col}08`:"transparent",border:`1px solid ${done?`${d.col}30`:tp.s?`${d.col}20`:"#e8e8ed"}`,display:"flex",gap:12,borderRadius:14,cursor:hasModules?"pointer":"default",transition:"all .2s"}}>
                       <div style={{width:26,height:26,borderRadius:7,background:done?"#10b981":tp.s?d.col:"#f5f5f7",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,color:done?"white":tp.s?"white":"#86868b"}}>{done?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>:<Ar/>}</div>
-                      <div><p style={{fontSize:14,fontWeight:600,color:done?"#10b981":"#1d1d1f",marginBottom:2}}>{tp.t}{done?" \u2713":""}</p><p style={{fontSize:12,color:"#86868b",lineHeight:1.5}}>{tp.d}</p></div>
+                      <div><p style={{fontSize:14,fontWeight:600,color:done?"#10b981":"#1d1d1f",marginBottom:2}}>{(lang==="id"&&dt===0&&MODULES_ID[0]&&MODULES_ID[0][ti])?MODULES_ID[0][ti].title:(lang==="th"&&dt===0&&MODULES_TH[0]&&MODULES_TH[0][ti])?MODULES_TH[0][ti].title:tp.t}{done?" \u2713":""}</p><p style={{fontSize:12,color:"#86868b",lineHeight:1.5}}>{tp.d}</p></div>
                     </div>
                     );
                   })}
                 </div>
-                <button onClick={()=>{const idx=d.tp.findIndex((_,ti)=>!isModComplete(dt,ti));if(idx>=0&&MODULES[dt]&&MODULES[dt][idx]){startModule(dt,idx);sDt(null);}}} style={{width:"100%",padding:"14px",borderRadius:980,background:d.col,color:"white",fontSize:17,border:"none",cursor:"pointer",marginTop:24}}>{d.tp.every((_,ti)=>isModComplete(dt,ti))?"All Complete \u2713":MODULES[dt]?"Continue Learning":"Coming Soon"}</button>
+                <button onClick={()=>{const idx=d.tp.findIndex((_,ti)=>!isModComplete(dt,ti));if(idx>=0&&getModules(dt)&&getModules(dt)[idx]){startModule(dt,idx);sDt(null);}}} style={{width:"100%",padding:"14px",borderRadius:980,background:d.col,color:"white",fontSize:17,border:"none",cursor:"pointer",marginTop:24}}>{d.tp.every((_,ti)=>isModComplete(dt,ti))?t.allComplete+" \u2713":getModules(dt)?t.continueLearning:t.comingSoon}</button>
                 <div style={{display:"flex",justifyContent:"space-between",marginTop:20,paddingTop:16,borderTop:"1px solid #e8e8ed"}}>
                   <button disabled={dt===0} onClick={()=>{sDt(null);setTimeout(()=>go(dt-1),250)}} style={{background:"transparent",border:"none",color:dt===0?"#d2d2d7":"#0071e3",fontSize:14,fontWeight:500,cursor:dt===0?"not-allowed":"pointer"}}>{"\u2190"} Previous</button>
                   <button disabled={dt===3} onClick={()=>{sDt(null);setTimeout(()=>go(dt+1),250)}} style={{background:"transparent",border:"none",color:dt===3?"#d2d2d7":"#0071e3",fontSize:14,fontWeight:500,cursor:dt===3?"not-allowed":"pointer"}}>Next {"\u2192"}</button>
