@@ -14,6 +14,61 @@ const D=[
 ];
 
 
+
+const LD=[
+  {id:"nz",city:"Auckland",country:"New Zealand",mod:"Vision & Purpose",icon:"\u{1F1F3}\u{1F1FF}",col:"#3B82F6",mx:790,my:385,tag:"Module 1",tp:[{t:"Vision, Purpose & the Why",d:"Why does this team exist beyond the revenue target?"}]},
+  {id:"au",city:"Sydney",country:"Australia",mod:"Wellbeing",icon:"\u{1F1E6}\u{1F1FA}",col:"#84CC16",mx:605,my:400,tag:"Module 2",tp:[{t:"The Wellbeing Wheel",d:"You cannot lead a sustainable team from an unsustainable life."}]},
+  {id:"ph",city:"Manila",country:"Philippines",mod:"Radical Candour",icon:"\u{1F1F5}\u{1F1ED}",col:"#EC4899",mx:500,my:260,tag:"Module 3",tp:[{t:"Radical Candour",d:"Care personally. Challenge directly."}]},
+  {id:"id",city:"Jakarta",country:"Indonesia",mod:"GROW Coaching",icon:"\u{1F1EE}\u{1F1E9}",col:"#8B5CF6",mx:430,my:305,tag:"Module 4",tp:[{t:"GROW Conversations",d:"The discipline of coaching, not telling."}]},
+  {id:"th",city:"Bangkok",country:"Thailand",mod:"Values-Based Leadership",icon:"\u{1F1F9}\u{1F1ED}",col:"#F59E0B",mx:340,my:255,tag:"Module 5",tp:[{t:"Values-Based Leadership",d:"What do you stand for when pressure is on?"}]},
+  {id:"in",city:"Mumbai",country:"India",mod:"High Performance",icon:"\u{1F1EE}\u{1F1F3}",col:"#EF4444",mx:155,my:200,tag:"Module 6",tp:[{t:"High Performance Standards",d:"Coaching unlocks potential. Standards define what it looks like."}]}
+];
+
+const LMODULES={
+  0:[{title:"Vision, Purpose & the Why",steps:[
+    {type:"learn",title:"Why This Matters",content:"Your agents are calling people who did not ask to be called. The only thing that makes that psychologically sustainable long-term is belief. In the product, in the outcome for the member, and in the team they belong to.\n\nAn Accor Plus membership genuinely unlocks hotel rates, dining benefits, and recognition across hundreds of properties. When an agent calls a lapsed member, they are not chasing a target. They are potentially reconnecting someone to experiences that matter.\n\nYour job this week is to make that real. Not as a script line, but as a shared belief your team actually holds.",img:"\u{1F3AF}"},
+    {type:"video",title:"Start With Why",duration:"18:00",desc:"Simon Sinek explains the Why, How, What model and how NASA\'s moon-landing BHAG aligned thousands around one clear objective. Watch for how the Why model applies to your agents picking up the phone each morning, and why people do not buy what you do, they buy why you do it."},
+    {type:"learn",title:"The 3 Elements of Vision",content:"Visionary companies preserve a cherished core ideology while stimulating progress. A BHAG engages people. It reaches out and grabs them in the gut. It is tangible, energising, and highly focused.\n\nThree elements make a vision work:\n\n1. A core purpose that answers \'why do we exist beyond making money?\'\n2. Core values that define how you operate when no one is watching\n3. A BHAG that creates a 10 to 30 year stretch goal everyone can rally behind\n\nFor your team, this translates to: why does this team exist beyond the revenue target?",img:"\u{1F4A1}"},
+    {type:"reflect",title:"Practice: Build Your Vision",prompt:"Write three things this week. Be specific.\n\n1. Your team mission (one sentence, why does this team exist beyond revenue?)\n2. Your BHAG, the 12-month stretch goal that would galvanise your team\n3. A vivid description: what does your team look and feel like when the BHAG is achieved?"},
+    {type:"reflect",title:"Deep Reflection",prompt:"Answer these three questions honestly:\n\n1. What do your agents actually believe they are doing when they make calls, and what do you want them to believe?\n\n2. When was the last time someone on your team felt genuinely proud of a call? What made that conversation different?\n\n3. What would have to be true about your leadership for agents to feel their work here genuinely matters?"}
+  ]}],
+  1:[{title:"The Wellbeing Wheel",steps:[
+    {type:"learn",title:"Why This Matters",content:"Most contact centre leaders believe burnout is caused by long hours or difficult calls. It is not. Burnout is the gap between what someone\'s life demands and what they have the capacity to give.\n\nYou have agents calling lapsed members while their own life is lapsed. Relationships at 3 out of 10, health at 2 out of 10, financial wellbeing at 4 out of 10. That does not fix itself by hitting 120 dials.\n\nIt fixes when someone sees the gap and starts closing it themselves. The wheel makes the gap visible. You facilitate the conversation. They own the action.",img:"\u{1F33F}"},
+    {type:"video",title:"Working Towards Wellbeing",duration:"12:00",desc:"This video explores the difference between what is important to you and what you think should be important to you. These are not the same thing. Watch for how the wheel makes it instantly visible which areas of life need attention, without judgment, just data. The key principle: the owner of the wheel must come up with all the content."},
+    {type:"learn",title:"The Principle",content:"The Wellbeing Wheel conversation is fundamentally different from a performance review. You are not asking what the business needs from them. You are asking what they need from life, and what is currently missing.\n\nThe leader\'s job is not to fix it. The leader\'s job is to hold the mirror and let the person see the truth for themselves.\n\nKey rule: the owner of the wheel must generate all content themselves. The values, the scores, and the solutions. Never someone else\'s goals for them.",img:"\u2764\uFE0F"},
+    {type:"reflect",title:"Practice: Your Wheel",prompt:"Complete your own Wellbeing Wheel first. Do not skip this. Then run it with one agent this week.\n\n1. Which domain scored lowest on your own wheel?\n2. What is one action you committed to in that domain?\n3. What did you notice when you ran this with an agent?"},
+    {type:"reflect",title:"Deep Reflection",prompt:"1. What did your own Wellbeing Wheel reveal that you have been avoiding looking at directly?\n\n2. Which agent on your team would benefit most from this conversation right now, and what is stopping you from running it with them?\n\n3. How would your leadership change if you treated wellbeing as a leading indicator rather than a trailing excuse?"}
+  ]}],
+  2:[{title:"Radical Candour",steps:[
+    {type:"learn",title:"Why This Matters",content:"You have agents who are underperforming and you are protecting them from the truth because you do not want to hurt their feelings. That is not compassion. That is cowardice dressed as kindness.\n\nEvery week you delay the conversation, you are stealing their opportunity to improve.\n\nRadical Candour is not about being harsh. It is about caring enough to tell someone the truth while also caring enough to help them do something about it.\n\nThis week: stop rewriting feedback to make it softer. First draft is the real draft. Deliver it with respect and let them respond.",img:"\u{1F4AC}"},
+    {type:"video",title:"Radical Candour: How to Be a Better Boss",duration:"15:00",desc:"Kim Scott explains why Ruinous Empathy, caring without challenging, is the most common management failure. Watch for the two-axis framework: Care Personally (vertical) and Challenge Directly (horizontal). And how withholding feedback to avoid discomfort is fundamentally selfish, not kind."},
+    {type:"learn",title:"The Feedback Fallacy",content:"Telling people what we think of their performance does not help them thrive and excel. Focus on outcomes and growth, not on correcting weaknesses.\n\nThe highest-performing teams are not those that receive the most criticism. They are the ones where people know exactly where they stand and what excellence looks like in their role.\n\nThe difference between kind and nice matters. Nice avoids the truth to protect comfort. Kind delivers the truth to enable growth. Most leaders default to nice. The best leaders choose kind.",img:"\u{1F4CB}"},
+    {type:"reflect",title:"Practice: Deliver Feedback",prompt:"Think of one agent whose performance is below standard. Write and deliver Radically Candid feedback this week.\n\n1. Who did you give feedback to?\n2. What did you actually say? Write the real words.\n3. How did they respond?"},
+    {type:"reflect",title:"Deep Reflection",prompt:"1. Where are you currently operating in Ruinous Empathy, caring about someone but avoiding the conversation they actually need?\n\n2. What is the cost to your team when you withhold direct feedback to protect your own comfort?\n\n3. What would change if you treated honest feedback as an act of respect rather than an act of criticism?"}
+  ]}],
+  3:[{title:"GROW Conversations",steps:[
+    {type:"learn",title:"Why This Matters",content:"The GROW model is not a script. It is a discipline. The leader\'s job is to resist the urge to tell and instead create the conditions for the person to think.\n\nMost managers solve problems faster than their people do. That is why their people never learn to solve problems themselves.\n\nGROW stands for:\n\nG: Goal. What do you want to achieve?\nR: Reality. What is happening right now?\nO: Options. What could you do?\nW: Will. What will you do?\n\nThe sequence matters. Starting with Reality before Goal leads to problem-focused thinking. Starting with Goal creates aspiration-focused thinking.",img:"\u{1F3AF}"},
+    {type:"video",title:"The GROW Model: Coaching for Performance",duration:"12:00",desc:"Watch for why the sequence matters: Goal, Reality, Options, Will, not the other way around. How asking \'What have you tried?\' shifts ownership back to the person being coached. And the difference between solving someone\'s problem for them and helping them solve it themselves."},
+    {type:"learn",title:"Coaching vs Telling",content:"Most managers default to telling because it is faster. \'Do this. Stop doing that. Here is how I would handle it.\' The problem: it works in the moment but creates dependency.\n\nCoaching takes longer in the short term but builds capability that compounds. An agent who learns to diagnose their own conversion problem will fix the next problem themselves. An agent who is told the answer will wait for the next answer.\n\nThe discipline is in the pause. When they ask you what to do, your response is: \'What do you think your options are?\'",img:"\u{1F4A1}"},
+    {type:"reflect",title:"Practice: Run a GROW Conversation",prompt:"Pick one agent whose performance is below your team\'s standard. Run a GROW conversation with them this week.\n\n1. What was the Goal?\n2. What was the Reality they described?\n3. What Options did they generate?\n4. What Will they do this week?"},
+    {type:"reflect",title:"Deep Reflection",prompt:"1. How often do you default to telling instead of coaching, and what triggers that behaviour?\n\n2. What would change if you treated coaching as a performance requirement, not a performance reward?\n\n3. Think about the last time an agent surprised you with their own solution. What did you do differently in that conversation that created the space for them to think?"}
+  ]}],
+  4:[{title:"Values-Based Leadership",steps:[
+    {type:"learn",title:"Why This Matters",content:"Ethical fading is real in outbound sales. When a team is behind target, a leader under pressure might implicitly push agents toward tactics that compromise the member experience. Rushing the presentation, glossing over terms, or using emotional pressure to close.\n\nThese behaviours produce short-term conversions but drive long-term chargebacks, complaints, and attrition.\n\nA values-based leader defines what the team will never do to hit a number, not just what it will do.",img:"\u{1F6E1}\uFE0F"},
+    {type:"video",title:"Leaders Eat Last",duration:"14:00",desc:"Simon Sinek explains the circle of safety and what leaders owe the people in their charge. Watch for how a values-vacuum in leadership creates a self-protection culture on the floor, and what happens to team cohesion when short-term pressure overrides stated values."},
+    {type:"learn",title:"BHAGs and Values Alignment",content:"A BHAG is not a budget goal. It is a rallying cry. A goal so clear and emotionally compelling that it aligns how people make decisions when no one is watching.\n\nCompanies that articulate this clearly outperform those that do not, not because the goal is magical, but because clarity creates momentum.\n\nFor your team: what are the three values you would never compromise, even when the target is behind? If you cannot answer that instantly, neither can your agents.",img:"\u2B50"},
+    {type:"reflect",title:"Practice: Define Your Non-Negotiables",prompt:"Two actions this week: facilitate a team values conversation and write your personal non-negotiables.\n\n1. What three values did your team name most often?\n2. Your three leadership non-negotiables (behaviours never acceptable regardless of pressure)\n3. One recent moment where target pressure may have pushed toward a values compromise"},
+    {type:"reflect",title:"Deep Reflection",prompt:"1. What is one value you profess to your team but have not been fully living yourself this month?\n\n2. If your agents described your leadership style to someone who had never met you, what three words would they use, and what three words do you want them to use?\n\n3. Where does short-term target pressure most commonly create values tension in your team right now?"}
+  ]}],
+  5:[{title:"High Performance Standards",steps:[
+    {type:"learn",title:"Why This Matters",content:"You have agents who can hit 80 dials but only convert at 12%. You have agents who know the script but do not sound like they believe a word of it. You have been accepting good enough because raising the standard feels harsh.\n\nIt is not harsh. It is clarity.\n\nHigh performance is not about working harder. It is about knowing exactly what excellent looks like and coaching people toward it.\n\nThis week: define one non-negotiable standard for your team. Conversion rate, handle time, or quality score. Then identify the person furthest from that standard.",img:"\u{1F4C8}"},
+    {type:"video",title:"Setting the Standard",duration:"10:00",desc:"High standards without coaching creates pressure. Coaching without standards creates drift. Watch for how the best leaders hold both simultaneously, never lowering the bar but always raising the capability of their people to reach it."},
+    {type:"learn",title:"The Standards Framework",content:"Three levels of performance exist on every team:\n\n1. The Standard: the minimum acceptable level of performance. This is not average. This is the floor.\n2. The Target: where you expect your team to operate consistently. Above the standard, within reach.\n3. The Stretch: the level your top performers hit. This is what you coach toward.\n\nMost leaders confuse the standard with the target. When the standard drops, the target drops with it. And the stretch disappears entirely.\n\nYour job is to hold the standard, coach toward the target, and celebrate the stretch.",img:"\u{1F3C6}"},
+    {type:"reflect",title:"Practice: Set Your Standard",prompt:"1. What standard did you define or reinforce this week? Be specific with the metric.\n2. Who is the person furthest from that standard on your team?\n3. What is your plan to close the gap? Not lower the bar, close the gap."},
+    {type:"reflect",title:"Deep Reflection",prompt:"1. Where have you lowered standards to avoid difficult conversations, and what has that cost your team?\n\n2. Who is the highest performer on your team, and what standard do they hold that the rest of your team does not?\n\n3. What would change if you treated every 1:1 as a coaching conversation, not a check-in?"}
+  ]}]
+};
+
 const MODULES={
   0:[
     {title:"The ALL Accor+ Journey",steps:[
@@ -21,7 +76,7 @@ const MODULES={
       {type:"video",title:"The Founding Story",duration:"4:30",desc:"In 1967, two visionaries, Paul Dubrule and Gerard Pelisson, opened the first Novotel on a roadside near Lille in northern France. Travel was booming across Europe, and the hotel industry had not yet expanded to meet the demand. Their idea was simple but revolutionary: standardised hotels with modern comforts including private bathrooms, air conditioning, and swimming pools. This was the beginning of everything."},
       {type:"learn",title:"Growth and Expansion",content:"From that first Novotel, Accor grew rapidly:\n\n1967: First Novotel opens in Lille, France\n1974: ibis brand launches in Bordeaux, bringing economy hospitality\n1975: Mercure chain acquired, pushing into metropolitan business travel\n1980: Sofitel acquired, marking Accor\'s entry into luxury hospitality\n1983: The company officially becomes \'Accor\', listed on the Paris Stock Exchange\n1990s: Expansion into Asia Pacific, becoming the region\'s leading hotel group by 1996\n\nBy the turn of the millennium, Accor had become a truly global hospitality company with presence across every continent.",img:"\u{1F4C8}"},
       {type:"learn",title:"Accor Today",content:"Today, Accor is a powerhouse of global hospitality:\n\n\u2022 5,700+ hotels and resorts worldwide\n\u2022 850,000 rooms across 110+ countries\n\u2022 More than 45 hotel brands from luxury to economy\n\u2022 360,000 team members globally\n\u2022 100+ million loyalty members in the ALL ecosystem\n\nLed by Chairman and CEO Sebastien Bazin since 2013, Accor continues to redefine what hospitality means, expanding into lifestyle, wellness, co-working, and entertainment. The company\'s headquarters is in Issy-les-Moulineaux, near Paris, France.",img:"\u{1F3E8}"},
-      {type:"learn",title:"Our Purpose",content:"Accor\'s purpose is powerful and clear:\n\n\'Pioneering the art of responsible hospitality, connecting cultures, with heartfelt care.\'\n\nThis is not just a tagline. It drives every decision, from sustainable hotel design to community engagement, from diversity initiatives to how we welcome every single guest. As a member of the ALL Accor+ Explorer team, you are part of this purpose. Every conversation you have, every membership you sell, connects a traveller to this global network of care and discovery.",img:"\u2764\uFE0F"},
+      {type:"learn",title:"Our Purpose",content:"Accor\'s purpose is powerful and clear:\n\n\'Pioneering the art of subscription loyalty, connecting cultures, with heartfelt care.\'\n\nThis is not just a tagline. It drives every decision, from sustainable hotel design to community engagement, from diversity initiatives to how we welcome every single guest. As a member of the ALL Accor+ Explorer team, you are part of this purpose. Every conversation you have, every membership you sell, connects a traveller to this global network of care and discovery.",img:"\u2764\uFE0F"},
       {type:"quiz",title:"Knowledge Check",questions:[
         {q:"In what year was the first Novotel hotel opened?",opts:["1957","1963","1967","1975"],correct:2},
         {q:"Who were the two founders of Accor?",opts:["Sebastien Bazin and Emilie Couton","Paul Dubrule and Gerard Pelisson","Jean-Marc Espalioux and Gilles Pelisson","Pierre Lamond and Jacques Borel"],correct:1},
@@ -244,7 +299,25 @@ const Lk=()=><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke=
 const Ar=()=><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>;
 
 export default function App(){
-  const [view,setView]=useState("login");
+  const [view,setView]=useState("login"); // login | academy | academy-mgr | onboarding | agent | manager | leadership | compliance
+  const [isManager,setIsManager]=useState(false);
+  const [lCur,setLCur]=useState(-1);
+  const [lPl,setLPl]=useState({x:790,y:385,r:0,v:false});
+  const [lFl,setLFl]=useState(false);
+  const [lDt,setLDt]=useState(null);
+  const [lActiveModule,setLActiveModule]=useState(null);
+  const [lModuleStep,setLModuleStep]=useState(0);
+  const [lCompletedMods,setLCompletedMods]=useState({});
+  const [lQuizAnswers,setLQuizAnswers]=useState({});
+  const [lReflectText,setLReflectText]=useState("");
+  const [lPracticeFields,setLPracticeFields]=useState({});
+  const [lConfetti,setLConfetti]=useState(false);
+  const [lConfettiPieces,setLConfettiPieces]=useState([]);
+  const [lStampAnim,setLStampAnim]=useState(null);
+  const [lGraduated,setLGraduated]=useState(false);
+  const [lShowGrad,setLShowGrad]=useState(false);
+  const [lModuleStartTime,setLModuleStartTime]=useState(null);
+  const [lCompletionTime,setLCompletionTime]=useState(null);
   const [cur,sC]=useState(-1);
   const [pl,sP]=useState({x:0,y:0,r:0,v:false});
   const [fl,sF]=useState(false);
@@ -308,7 +381,60 @@ export default function App(){
   const totalMods=MODULES[0]?MODULES[0].length:0;
   const completedCount=MODULES[0]?MODULES[0].filter((_,mi)=>isModComplete(0,mi)).length:0;
   const overallPct=totalMods>0?Math.round((completedCount/totalMods)*100):0;
+  const lFlyTo=useCallback((i)=>{
+    if(lFl||!isLDestUnlocked(i))return;
+    if(lCur===i){setLDt(i);return;}
+    setLFl(true);setLDt(null);
+    const sx=lCur>=0?LD[lCur].mx:790,sy=lCur>=0?LD[lCur].my:385;
+    const ex=LD[i].mx,ey=LD[i].my;
+    const cx=(sx+ex)/2;const cy=Math.min(sy,ey)-60;
+    setLPl({x:sx,y:sy,r:0,v:true});
+    const dur=2500;const st=performance.now();
+    const anim=(now)=>{
+      const t=Math.min((now-st)/dur,1);
+      const e=t<0.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+      const px=(1-e)*(1-e)*sx+2*(1-e)*e*cx+e*e*ex;
+      const py=(1-e)*(1-e)*sy+2*(1-e)*e*cy+e*e*ey;
+      const tx=2*(1-e)*(cx-sx)+2*e*(ex-cx);
+      const ty=2*(1-e)*(cy-sy)+2*e*(ey-cy);
+      const angle=Math.atan2(ty,tx)*(180/Math.PI)+90;
+      setLPl({x:px,y:py,r:angle,v:true});
+      if(t<1)requestAnimationFrame(anim);
+      else{setLCur(i);setLFl(false);setLDt(i);
+        const colors=["#f472b6","#60a5fa","#34d399","#f59e0b","#8b5cf6","#ec4899"];
+        const flag=LD[i].icon;
+        const cp=Array.from({length:40}).map((_,j)=>({id:Date.now()+j,left:Math.random()*100,color:colors[j%colors.length],size:Math.random()*8+4,drift:(Math.random()-.5)*200,spin:Math.random()*1080-540,dur:Math.random()*2+2.5,delay:Math.random()*.4,shape:Math.random()>.5?"circle":"rect",isFlag:j<8,flag}));
+        setLConfetti(true);setLConfettiPieces(cp);setTimeout(()=>setLConfetti(false),4000);
+      }
+    };requestAnimationFrame(anim);
+  },[lFl,lCur,lCompletedMods]);
   const allNZDone=isDestComplete(0);
+  const isLModComplete=(d,m)=>!!lCompletedMods[`${d}-${m}`];
+  const isLDestComplete=(di)=>LMODULES[di]&&LMODULES[di].every((_,mi)=>isLModComplete(di,mi));
+  const isLDestUnlocked=(di)=>{if(di===0)return true;return isLDestComplete(di-1);};
+  const lTotalMods=Object.keys(LMODULES).length;
+  const lCompletedCount=Object.keys(LMODULES).filter(k=>isLDestComplete(parseInt(k))).length;
+  const lOverallMods=Object.values(LMODULES).reduce((a,v)=>a+v.length,0);
+  const lDoneMods=Object.keys(lCompletedMods).length;
+  const lOverallPct=lOverallMods>0?Math.round((lDoneMods/lOverallMods)*100):0;
+  const allLDone=Object.keys(LMODULES).every(k=>isLDestComplete(parseInt(k)));
+  const startLModule=(di,mi)=>{setLActiveModule({dest:di,mod:mi});setLModuleStep(0);setLQuizAnswers({});setLReflectText("");setLPracticeFields({});setLModuleStartTime(Date.now());setLCompletionTime(null);};
+  const completeLModule=()=>{
+    const key=`${lActiveModule.dest}-${lActiveModule.mod}`;
+    const dest=lActiveModule.dest;
+    const elapsed=lModuleStartTime?Math.round((Date.now()-lModuleStartTime)/60000):null;
+    setLCompletionTime(elapsed);
+    const newCompleted={...lCompletedMods,[key]:true};
+    setLCompletedMods(newCompleted);
+    const allDone=LMODULES[dest]&&LMODULES[dest].every((_,mi)=>mi===lActiveModule.mod||!!lCompletedMods[`${dest}-${mi}`]);
+    setLActiveModule(null);setLModuleStep(0);
+    if(allDone){
+      setLDt(null);window.scrollTo({top:0,behavior:"smooth"});
+      setTimeout(()=>setLStampAnim(dest),600);setTimeout(()=>setLStampAnim(null),4000);
+      const willGrad=Object.keys(LMODULES).every(k=>parseInt(k)===dest||isLDestComplete(parseInt(k)));
+      if(willGrad&&!lGraduated){setTimeout(()=>setLShowGrad(true),4200);setTimeout(()=>{setLShowGrad(false);setLGraduated(true);},10000);}
+    }else{setLDt(dest);}
+  };
   const allAccessibleDone=teamChoice==="done"?[0,1,2].every(i=>isDestComplete(i)):[0,1,2,safeTeam].filter(i=>MODULES[i]).every(i=>isDestComplete(i));
   const nextModule=(()=>{
     for(let di=0;di<5;di++){
@@ -496,13 +622,14 @@ export default function App(){
 
       <nav className="nv" style={{position:"fixed",top:0,left:0,right:0,zIndex:100,borderBottom:"1px solid rgba(0,0,0,.06)"}}>
         <div style={{maxWidth:1024,margin:"0 auto",padding:"0 22px",height:48,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-          <div style={{display:"flex",alignItems:"center",gap:10}}><div style={{width:26,height:26,borderRadius:7,background:"#1d1d1f",display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,fontWeight:800,color:"white"}}>A+</div><span style={{fontSize:12,fontWeight:600}}>Explorer Onboarding</span></div>
-          {view!=="login"&&<div style={{display:"flex",alignItems:"center",gap:16}}>
-            <span style={{fontSize:12,color:"#86868b"}}>Welcome back, <strong style={{color:"#1d1d1f"}}>Jared</strong></span>
-            <div style={{display:"flex",alignItems:"center",gap:8}}><div style={{width:100,height:3,borderRadius:2,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:`${overallPct}%`,height:"100%",borderRadius:2,background:"linear-gradient(90deg,#0071e3,#34d399)"}}/></div><span style={{fontSize:11,color:"#86868b",fontWeight:500}}>{completedCount}/{totalMods}</span></div>
-            {view==="agent"&&<button onClick={()=>setView("manager")} style={{fontSize:11,fontWeight:600,color:"#0071e3",background:"none",border:"none",cursor:"pointer"}}>Manager View</button>}
+          <div style={{display:"flex",alignItems:"center",gap:10}}><div style={{width:26,height:26,borderRadius:7,background:"#1d1d1f",display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,fontWeight:800,color:"white"}}>A+</div><span style={{fontSize:12,fontWeight:600}}>Accor+ Academy</span></div>
+          {view!=="login"&&view!=="onboarding"&&view!=="academy-mgr"&&<div style={{display:"flex",alignItems:"center",gap:16}}>
+            <span style={{fontSize:12,color:"#86868b"}}>Welcome, <strong style={{color:"#1d1d1f"}}>Jared</strong></span>
+            {(view==="agent"||view==="manager")&&<div style={{display:"flex",alignItems:"center",gap:8}}><div style={{width:100,height:3,borderRadius:2,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:`${overallPct}%`,height:"100%",borderRadius:2,background:"linear-gradient(90deg,#0071e3,#34d399)"}}/></div><span style={{fontSize:11,color:"#86868b",fontWeight:500}}>{completedCount}/{totalMods}</span></div>}
+            {view==="leadership-learn"&&<div style={{display:"flex",alignItems:"center",gap:8}}><div style={{width:100,height:3,borderRadius:2,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:`${lOverallPct}%`,height:"100%",borderRadius:2,background:"linear-gradient(90deg,#7c3aed,#ec4899)"}}/></div><span style={{fontSize:11,color:"#86868b",fontWeight:500}}>{lDoneMods}/{lOverallMods}</span></div>}
             {view==="manager"&&<button onClick={()=>setView("agent")} style={{fontSize:11,fontWeight:600,color:"#0071e3",background:"none",border:"none",cursor:"pointer"}}>Agent View</button>}
             <div style={{width:28,height:28,borderRadius:"50%",background:"linear-gradient(135deg,#0071e3,#64acff)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,fontWeight:700,color:"white"}}>J</div>
+            {(view==="agent"||view==="manager"||view==="leadership"||view==="leadership-learn"||view==="compliance"||view==="onboarding")&&<button onClick={()=>{setView("academy");window.scrollTo(0,0);}} style={{fontSize:12,fontWeight:600,color:"#0071e3",background:"none",border:"none",cursor:"pointer",display:"flex",alignItems:"center",gap:4}}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="15 18 9 12 15 6"/></svg>Academy</button>}
             <button onClick={()=>{setView("login");window.scrollTo(0,0);}} style={{fontSize:11,fontWeight:500,color:"#86868b",background:"none",border:"none",cursor:"pointer",marginLeft:4}}>Log out</button>
           </div>}
         </div>
@@ -511,25 +638,654 @@ export default function App(){
       {view==="login"&&<>
       
       <section style={{minHeight:"100vh",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",textAlign:"center",padding:"0",position:"relative",overflow:"hidden"}}>
-        <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg, #0a1628 0%, #132d55 30%, #1a4a6e 50%, #d4785a 75%, #e8a87c 90%, #f0c8a0 100%)"}}>
+        <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg, #0a1628 0%, #132d55 25%, #1a4a6e 45%, #2563a0 60%, #3b82f6 80%, #93c5fd 100%)"}}>
 
           <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 50% 70%, rgba(212,120,90,.15) 0%, transparent 60%)"}}/>
         </div>
         <div style={{position:"relative",zIndex:2,animation:"fu .8s ease",maxWidth:680,padding:"120px 24px 80px"}}>
-          <p style={{fontSize:15,fontWeight:600,color:"rgba(255,255,255,.85)",letterSpacing:".08em",textTransform:"uppercase",marginBottom:16}}>ALL Accor+ Explorer</p>
-          <h1 style={{fontSize:"clamp(44px,8vw,80px)",fontWeight:700,lineHeight:1.05,letterSpacing:"-.04em",marginBottom:24,color:"white",textShadow:"0 2px 20px rgba(0,0,0,.3)"}}>Your Digital<br/>Passport.</h1>
+          <p style={{fontSize:15,fontWeight:600,color:"rgba(255,255,255,.85)",letterSpacing:".08em",textTransform:"uppercase",marginBottom:16}}>ALL Accor+</p>
+          <h1 style={{fontSize:"clamp(44px,8vw,80px)",fontWeight:700,lineHeight:1.05,letterSpacing:"-.04em",marginBottom:24,color:"white",textShadow:"0 2px 20px rgba(0,0,0,.3)"}}>Academy.</h1>
           <div style={{animation:"fu .8s ease .3s both",display:"flex",justifyContent:"center"}}>
             <img src={cardImg} alt="ALL Accor+ Explorer Card" style={{width:280,borderRadius:16,boxShadow:"0 20px 60px rgba(0,0,0,.35), 0 4px 16px rgba(0,0,0,.2)",transform:"perspective(800px) rotateY(-4deg) rotateX(2deg)",transition:"transform .4s ease"}} onMouseEnter={e=>e.target.style.transform="perspective(800px) rotateY(0deg) rotateX(0deg) scale(1.03)"} onMouseLeave={e=>e.target.style.transform="perspective(800px) rotateY(-4deg) rotateX(2deg)"}/>
           </div>
           {view==="login"&&<div style={{animation:"fu .8s ease .6s both",display:"flex",gap:14,marginTop:32,justifyContent:"center"}}>
-            <button onClick={()=>{setView("agent");window.scrollTo(0,0);}} style={{padding:"14px 30px",borderRadius:980,background:"#0071e3",color:"white",fontSize:16,fontWeight:600,border:"none",cursor:"pointer",boxShadow:"0 4px 16px rgba(0,113,227,.4)",transition:"all .2s",letterSpacing:".01em"}} onMouseEnter={e=>{e.currentTarget.style.background="#0077ED";e.currentTarget.style.transform="scale(1.04)"}} onMouseLeave={e=>{e.currentTarget.style.background="#0071e3";e.currentTarget.style.transform="scale(1)"}}>Team Member</button>
-            <button onClick={()=>{setView("manager");window.scrollTo(0,0);}} style={{padding:"14px 30px",borderRadius:980,background:"white",color:"#1d1d1f",fontSize:16,fontWeight:600,border:"none",cursor:"pointer",boxShadow:"0 4px 16px rgba(0,0,0,.15)",transition:"all .2s",letterSpacing:".01em"}} onMouseEnter={e=>{e.currentTarget.style.background="#f5f5f7";e.currentTarget.style.transform="scale(1.04)"}} onMouseLeave={e=>{e.currentTarget.style.background="white";e.currentTarget.style.transform="scale(1)"}}>Manager</button>
+            <button onClick={()=>{setIsManager(false);setView("academy");window.scrollTo(0,0);}} style={{padding:"16px 34px",borderRadius:980,background:"rgba(255,255,255,.95)",border:"none",cursor:"pointer",boxShadow:"0 4px 24px rgba(0,0,0,.12)",transition:"all .2s",backdropFilter:"blur(12px)"}} onMouseEnter={e=>{e.currentTarget.style.transform="scale(1.05)";e.currentTarget.style.boxShadow="0 8px 32px rgba(0,0,0,.16)"}} onMouseLeave={e=>{e.currentTarget.style.transform="scale(1)";e.currentTarget.style.boxShadow="0 4px 24px rgba(0,0,0,.12)"}}><span className="apple-grad" style={{fontSize:17,fontWeight:700}}>Team Member</span></button>
+            <button onClick={()=>{setIsManager(true);setView("academy-mgr");window.scrollTo(0,0);}} style={{padding:"16px 34px",borderRadius:980,background:"rgba(255,255,255,.95)",border:"none",cursor:"pointer",boxShadow:"0 4px 24px rgba(0,0,0,.12)",transition:"all .2s",backdropFilter:"blur(12px)"}} onMouseEnter={e=>{e.currentTarget.style.transform="scale(1.05)";e.currentTarget.style.boxShadow="0 8px 32px rgba(0,0,0,.16)"}} onMouseLeave={e=>{e.currentTarget.style.transform="scale(1)";e.currentTarget.style.boxShadow="0 4px 24px rgba(0,0,0,.12)"}}><span className="apple-grad" style={{fontSize:17,fontWeight:700}}>Manager</span></button>
           </div>}
+
         </div>
       </section>
 
       </>}
 
+
+
+
+
+
+      {/* ===== LEADERSHIP VOLUME 1 LEARNING ===== */}
+      {view==="leadership-learn"&&<>
+
+      {/* Leadership Welcome */}
+      <section style={{padding:"80px 24px 20px",textAlign:"center"}}>
+        <div style={{maxWidth:680,margin:"0 auto"}}>
+          <div style={{display:"inline-flex",alignItems:"center",gap:8,background:"#f5f0ff",padding:"6px 16px",borderRadius:980,marginBottom:20}}>
+            <div style={{width:8,height:8,borderRadius:"50%",background:"#7c3aed"}}/>
+            <span style={{fontSize:12,fontWeight:600,color:"#7c3aed"}}>{lOverallPct===100?"Programme Complete":"In Progress"}</span>
+          </div>
+          <h1 style={{fontSize:"clamp(36px,6vw,56px)",fontWeight:700,lineHeight:1.08,letterSpacing:"-.04em",marginBottom:12}}>Leadership Volume 1.</h1>
+          <p style={{fontSize:"clamp(17px,2.5vw,21px)",color:"#86868b",lineHeight:1.5,maxWidth:480,margin:"0 auto"}}>{lOverallPct===100?"All six modules complete. You are certified.":lDoneMods>0?`${lDoneMods} of ${lOverallMods} modules complete.`:"Six destinations. Six leadership capabilities."}</p>
+          {lOverallPct>0&&lOverallPct<100&&<div style={{maxWidth:320,margin:"20px auto 0"}}><div style={{height:6,borderRadius:3,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:`${lOverallPct}%`,height:"100%",borderRadius:3,background:"linear-gradient(90deg,#7c3aed,#ec4899)",transition:"width .6s ease"}}/></div><p style={{fontSize:12,color:"#b4b4b4",marginTop:8}}>{lOverallPct}%</p></div>}
+          {(()=>{const nm=Object.keys(LMODULES).flatMap(k=>LMODULES[parseInt(k)].map((m,mi)=>({dest:parseInt(k),mod:mi,title:m.title}))).find(m=>!isLModComplete(m.dest,m.mod));return nm?<button onClick={()=>startLModule(nm.dest,nm.mod)} style={{display:"inline-flex",alignItems:"center",gap:8,marginTop:28,padding:"14px 32px",borderRadius:980,background:"#7c3aed",color:"white",fontSize:16,fontWeight:600,border:"none",cursor:"pointer",boxShadow:"0 4px 16px rgba(124,58,237,.3)",transition:"all .2s"}} onMouseEnter={e=>{e.currentTarget.style.transform="scale(1.03)"}} onMouseLeave={e=>{e.currentTarget.style.transform="scale(1)"}}>{lDoneMods===0?"Begin":"Continue"}: {nm.title}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>:null;})()}
+        </div>
+      </section>
+
+      {/* Leadership Map */}
+      <section style={{padding:"0 0 60px",maxWidth:1200,margin:"0 auto"}}>
+        <div style={{textAlign:"center",padding:"20px 24px 32px"}}><p style={{fontSize:14,fontWeight:600,color:"#86868b",letterSpacing:".04em"}}>Select a destination to begin</p></div>
+        <div style={{position:"relative",width:"calc(100% - 32px)",maxWidth:1160,margin:"0 auto 40px",height:"clamp(420px, 70vh, 700px)",borderRadius:28,overflow:"hidden",boxShadow:"0 8px 60px rgba(0,0,0,.15), 0 2px 8px rgba(0,0,0,.08)"}}>
+          <svg viewBox="0 0 870 540" preserveAspectRatio="xMidYMid slice" style={{width:"100%",height:"100%",display:"block"}}>
+            <defs>
+              <radialGradient id="locean" cx="55%" cy="50%" r="65%">
+                <stop offset="0%" stopColor="#1a3a5c"/><stop offset="50%" stopColor="#0f2844"/><stop offset="100%" stopColor="#091a30"/>
+              </radialGradient>
+              <linearGradient id="lindiaG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#e89ac0"/><stop offset="100%" stopColor="#c27098"/></linearGradient>
+              <linearGradient id="lindoG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#5ee4c8"/><stop offset="100%" stopColor="#38b89a"/></linearGradient>
+              <linearGradient id="lausG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#f0c080"/><stop offset="100%" stopColor="#d4975a"/></linearGradient>
+              <linearGradient id="lnzG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#8ac4f8"/><stop offset="100%" stopColor="#5a9ad8"/></linearGradient>
+              <linearGradient id="lphG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#f9a8d4"/><stop offset="100%" stopColor="#ec4899"/></linearGradient>
+              <linearGradient id="lthG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#fcd34d"/><stop offset="100%" stopColor="#f59e0b"/></linearGradient>
+              <linearGradient id="lrouteG" x1="0%" x2="100%"><stop offset="0%" stopColor="#3B82F6"/><stop offset="20%" stopColor="#84CC16"/><stop offset="40%" stopColor="#EC4899"/><stop offset="60%" stopColor="#8B5CF6"/><stop offset="80%" stopColor="#F59E0B"/><stop offset="100%" stopColor="#EF4444"/></linearGradient>
+              <filter id="llandShadow"><feDropShadow dx="0" dy="2" stdDeviation="4" floodColor="#000" floodOpacity=".3"/></filter>
+              <filter id="llandGlow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <filter id="lrouteGlow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <filter id="lmarkerGlow"><feGaussianBlur stdDeviation="6"/></filter>
+              <filter id="ltextShadow"><feDropShadow dx="0" dy="1" stdDeviation="3" floodColor="#000" floodOpacity=".6"/></filter>
+            </defs>
+
+            <rect width="870" height="540" fill="url(#locean)"/>
+            {[100,180,260,340,420,500].map(y=><line key={y} x1="0" y1={y} x2="870" y2={y} stroke="rgba(255,255,255,.025)" strokeWidth=".5"/>)}
+            {[100,200,300,400,500,600,700,800].map(x=><line key={x} x1={x} y1="0" x2={x} y2="540" stroke="rgba(255,255,255,.025)" strokeWidth=".5"/>)}
+
+            {/* China/Japan context */}
+            <g opacity=".15">
+              <path d="M445.9,176.2 C448.3,180.1 447.2,182.0 453.0,180.8 C458.8,179.6 472.8,171.9 480.8,169.2 C488.8,166.5 494.8,166.5 500.8,164.6 C506.8,162.7 512.1,161.1 516.9,157.6 C521.7,154.1 526.9,147.7 529.5,143.8 C532.1,140.0 532.6,137.2 532.6,134.5 C532.6,131.8 531.6,130.3 529.5,127.6 C527.4,124.9 522.7,121.0 520.1,118.3 C517.5,115.6 516.5,112.8 513.8,111.3 C511.1,109.8 504.1,110.9 504.1,109.0 C504.1,107.1 509.6,101.0 513.8,99.8 C518.0,98.6 527.4,103.3 529.5,102.1 C531.6,100.9 530.1,95.1 526.4,92.8 C522.7,90.5 513.8,87.4 507.3,88.2 C500.8,89.0 494.2,93.7 487.5,97.5 C480.8,101.3 472.9,105.1 467.1,111.3 C461.4,117.5 457.8,126.8 453.0,134.5 C448.2,142.2 439.8,150.7 438.6,157.6 C437.4,164.5 443.5,172.3 445.9,176.2Z" fill="#3a5a48"/>
+            </g>
+
+            {/* SE Asia / Thailand */}
+            <g filter="url(#llandShadow)">
+              <path d="M362.0,180.8 C364.9,178.9 371.4,178.1 378.0,176.2 C384.6,174.3 394.3,169.2 401.3,169.2 C408.3,169.2 415.2,172.7 420.2,176.2 C425.2,179.7 427.6,186.2 431.3,190.1 C435.0,193.9 439.9,195.8 442.3,199.3 C444.7,202.8 445.9,207.0 445.9,210.9 C445.9,214.8 444.7,220.2 442.3,222.5 C439.9,224.8 435.6,224.0 431.3,224.8 C427.0,225.6 420.2,226.3 416.5,227.1 C412.8,227.9 410.9,227.1 409.0,229.4 C407.1,231.7 406.5,236.8 405.2,241.0 C403.9,245.2 403.2,251.4 401.3,254.9 C399.4,258.4 395.5,259.9 393.6,261.8 C391.7,263.7 388.5,265.6 389.8,266.5 C391.1,267.4 398.1,267.4 401.3,267.4 C404.5,267.4 407.1,266.5 409.0,266.5 C410.9,266.5 413.3,266.6 412.7,267.4 C412.1,268.2 408.4,270.9 405.2,271.1 C402.0,271.3 397.5,270.7 393.6,268.8 C389.7,266.9 384.5,263.0 381.9,259.5 C379.3,256.0 380.0,251.4 378.0,247.9 C376.0,244.4 372.1,242.2 370.1,238.7 C368.1,235.2 367.5,231.7 366.1,227.1 C364.8,222.5 363.4,215.9 362.0,210.9 C360.6,205.9 358.3,200.9 358.0,197.0 C357.7,193.1 359.7,190.4 360.4,187.7 C361.1,185.0 359.1,182.7 362.0,180.8Z" fill="url(#lthG)" opacity=".75"/>
+            </g>
+
+            {/* Philippines */}
+            <g filter="url(#llandShadow)">
+              <path d="M520.1,187.7 C522.2,186.2 527.4,188.5 529.5,190.1 C531.6,191.7 531.6,194.3 532.6,197.0 C533.6,199.7 536.2,204.4 535.7,206.3 C535.2,208.2 531.0,207.8 529.5,208.6 C528.0,209.4 528.0,211.3 526.4,210.9 C524.8,210.5 521.7,208.2 520.1,206.3 C518.5,204.4 516.9,202.4 516.9,199.3 C516.9,196.2 518.0,189.2 520.1,187.7Z" fill="url(#lphG)" opacity=".8"/>
+              <path d="M544.7,229.4 C546.7,229.4 551.2,232.1 553.7,234.0 C556.2,235.9 559.0,239.1 559.5,241.0 C560.0,242.9 558.1,245.2 556.6,245.6 C555.1,246.0 552.7,244.5 550.7,243.3 C548.7,242.2 546.2,240.2 544.7,238.7 C543.2,237.1 541.7,235.6 541.7,234.0 C541.7,232.4 542.7,229.4 544.7,229.4Z" fill="url(#lphG)" opacity=".75"/>
+            </g>
+
+            {/* India */}
+            <g filter="url(#llandShadow)">
+              <path d="M84.9,164.6 C84.0,167.3 96.1,169.6 100.4,171.5 C104.7,173.4 107.3,175.0 110.7,176.2 C114.1,177.4 117.5,177.0 120.9,178.5 C124.3,180.0 128.5,183.1 131.0,185.4 C133.5,187.7 134.3,189.7 136.0,192.4 C137.7,195.1 138.5,198.9 141.0,201.6 C143.5,204.3 148.5,206.3 151.0,208.6 C153.5,210.9 153.5,213.2 155.9,215.5 C158.3,217.8 162.4,219.4 165.7,222.5 C169.0,225.6 172.2,231.8 175.5,234.0 C178.8,236.2 182.0,236.2 185.2,235.4 C188.4,234.6 191.9,231.2 194.8,229.4 C197.7,227.6 200.5,226.7 202.4,224.8 C204.3,222.9 205.1,220.1 206.2,217.8 C207.3,215.5 207.8,213.6 209.0,210.9 C210.2,208.2 211.3,204.3 213.7,201.6 C216.0,198.9 219.2,197.0 223.1,194.7 C227.0,192.4 232.4,190.0 237.0,187.7 C241.6,185.4 246.2,183.1 250.7,180.8 C255.2,178.5 260.5,175.5 264.2,173.9 C267.9,172.3 270.1,172.3 273.1,171.5 C276.1,170.7 279.8,170.0 282.0,169.2 C284.2,168.4 285.7,168.8 286.4,166.9 C287.1,165.0 287.1,160.3 286.4,157.6 C285.7,154.9 284.2,152.2 282.0,150.7 C279.8,149.2 278.3,149.2 273.1,148.4 C267.9,147.6 257.5,146.7 250.7,146.1 C243.9,145.5 238.5,145.5 232.3,144.7 C226.1,143.9 219.9,142.7 213.7,141.4 C207.4,140.1 200.4,138.3 194.8,136.8 C189.2,135.3 185.2,133.2 180.3,132.2 C175.5,131.2 170.6,130.4 165.7,130.8 C160.8,131.2 155.9,132.7 151.0,134.5 C146.1,136.3 141.0,139.1 136.0,141.4 C131.0,143.7 126.0,146.1 120.9,148.4 C115.8,150.7 111.6,152.6 105.6,155.3 C99.6,158.0 85.8,161.9 84.9,164.6Z" fill="url(#lindiaG)" opacity=".85"/>
+              <path d="M204.3,228.0 C206.4,227.6 210.9,232.2 213.7,234.0 C216.5,235.8 220.4,236.9 221.2,238.7 C222.0,240.5 220.4,243.5 218.4,244.7 C216.4,245.8 211.7,246.1 209.0,245.6 C206.3,245.1 203.7,243.4 202.4,241.9 C201.1,240.4 201.1,238.7 201.4,236.4 C201.7,234.1 202.2,228.4 204.3,228.0Z" fill="url(#lindiaG)" opacity=".7"/>
+            </g>
+
+            {/* Indonesia */}
+            <g filter="url(#llandShadow)">
+              <path d="M340.0,247.9 C341.4,247.4 349.6,247.8 354.0,249.3 C358.4,250.9 362.8,254.3 366.1,257.2 C369.4,260.1 371.4,263.8 374.0,266.5 C376.6,269.2 379.3,271.1 381.9,273.4 C384.5,275.7 386.6,278.1 389.8,280.3 C393.0,282.5 397.5,284.5 401.3,286.4 C405.1,288.3 409.6,289.8 412.7,291.9 C415.8,294.0 419.6,297.5 420.2,298.9 C420.8,300.3 419.0,301.1 416.5,300.3 C414.0,299.5 409.0,296.0 405.2,294.2 C401.4,292.4 397.5,291.9 393.6,289.6 C389.7,287.3 385.8,283.4 381.9,280.3 C378.0,277.2 374.1,274.2 370.1,271.1 C366.1,268.0 362.1,264.9 358.0,261.8 C353.9,258.7 348.8,254.9 345.8,252.6 C342.8,250.3 338.6,248.4 340.0,247.9Z" fill="url(#lindoG)" opacity=".8"/>
+              <path d="M420.2,300.3 C422.1,299.9 427.0,300.7 431.3,301.2 C435.6,301.7 441.7,302.9 445.9,303.5 C450.1,304.1 453.1,304.5 456.6,304.9 C460.1,305.3 463.6,305.0 467.1,305.8 C470.6,306.6 474.5,308.5 477.4,309.5 C480.2,310.5 483.6,311.1 484.2,311.8 C484.8,312.5 483.1,313.7 480.8,313.7 C478.5,313.7 474.5,312.4 470.5,311.8 C466.5,311.2 461.3,311.0 456.6,310.4 C451.9,309.8 447.1,308.9 442.3,308.1 C437.5,307.3 431.4,306.6 427.7,305.8 C424.0,305.0 421.4,304.4 420.2,303.5 C418.9,302.6 418.3,300.7 420.2,300.3Z" fill="url(#lindoG)" opacity=".85"/>
+              <path d="M449.4,266.5 C451.8,264.6 456.0,263.4 460.1,261.8 C464.2,260.2 469.4,258.7 474.0,257.2 C478.6,255.7 483.0,253.1 487.5,252.6 C492.0,252.1 496.9,252.8 500.8,254.0 C504.7,255.2 509.5,257.0 510.6,259.5 C511.7,262.0 508.4,266.1 507.3,268.8 C506.2,271.5 505.2,273.4 504.1,275.7 C503.0,278.0 502.5,280.1 500.8,282.7 C499.1,285.2 497.0,289.5 494.2,291.0 C491.4,292.5 488.1,292.1 484.2,291.9 C480.2,291.7 474.5,290.4 470.5,289.6 C466.5,288.8 463.0,288.9 460.1,287.3 C457.2,285.8 455.4,282.6 453.0,280.3 C450.6,278.0 446.5,275.7 445.9,273.4 C445.3,271.1 447.0,268.4 449.4,266.5Z" fill="url(#lindoG)" opacity=".75"/>
+            </g>
+
+            {/* Australia */}
+            <g filter="url(#llandShadow)">
+              <path d="M544.7,345.2 C547.7,343.3 550.3,338.8 553.7,338.2 C557.1,337.6 562.0,341.5 565.3,341.9 C568.6,342.3 570.9,342.0 573.7,340.5 C576.5,339.0 579.8,334.5 582.1,332.7 C584.4,330.9 585.7,330.5 587.5,329.9 C589.3,329.3 590.7,328.9 592.9,329.0 C595.1,329.1 598.2,329.2 600.8,330.3 C603.4,331.4 606.4,333.4 608.5,335.9 C610.6,338.4 611.9,343.1 613.6,345.2 C615.3,347.3 616.9,347.4 618.5,348.4 C620.1,349.4 621.8,351.3 623.4,351.2 C625.0,351.1 626.6,349.3 628.2,347.5 C629.8,345.7 631.4,343.0 633.0,340.5 C634.6,338.0 636.3,335.2 637.6,332.7 C638.9,330.2 639.8,326.9 640.8,325.3 C641.8,323.8 642.6,323.2 643.6,323.4 C644.6,323.6 645.7,324.5 646.7,326.6 C647.7,328.7 648.7,332.8 649.8,335.9 C650.9,339.0 652.1,342.5 653.3,345.2 C654.4,347.9 655.8,349.4 656.7,352.1 C657.6,354.8 657.7,359.5 658.9,361.4 C660.1,363.3 662.4,362.7 663.9,363.7 C665.4,364.7 666.6,365.9 668.0,367.4 C669.4,368.9 670.8,370.8 672.0,372.9 C673.2,375.0 674.2,378.0 675.2,379.9 C676.2,381.8 676.5,382.6 677.9,384.5 C679.3,386.4 682.2,389.2 683.6,391.5 C685.0,393.8 685.6,396.1 686.2,398.4 C686.8,400.7 687.4,402.7 687.3,405.4 C687.2,408.1 686.1,411.9 685.5,414.6 C684.9,417.3 684.6,419.1 683.6,421.6 C682.6,424.2 680.9,427.2 679.8,429.9 C678.7,432.6 678.1,435.3 677.1,437.8 C676.1,440.3 675.2,442.9 674.0,444.7 C672.8,446.5 671.7,447.2 670.0,448.4 C668.3,449.6 666.0,450.9 663.9,451.7 C661.8,452.5 659.7,453.2 657.6,453.0 C655.5,452.8 653.3,450.5 651.1,450.3 C648.9,450.1 647.1,451.7 644.5,451.7 C641.9,451.7 638.0,451.5 635.3,450.3 C632.6,449.1 630.2,446.6 628.2,444.7 C626.2,442.8 624.8,440.0 623.4,439.2 C622.0,438.4 621.2,440.7 620.0,440.1 C618.8,439.5 617.3,436.6 616.0,435.4 C614.7,434.2 613.2,433.1 612.0,433.1 C610.8,433.1 610.4,435.9 608.5,435.4 C606.6,434.9 603.8,431.4 600.8,429.9 C597.8,428.4 593.8,427.6 590.2,426.2 C586.6,424.8 583.0,422.5 579.3,421.6 C575.6,420.7 571.9,420.2 568.1,420.6 C564.3,421.0 560.5,422.6 556.6,423.9 C552.7,425.2 548.7,427.4 544.7,428.5 C540.7,429.6 536.7,430.6 532.6,430.8 C528.5,431.0 524.3,430.3 520.1,429.9 C515.9,429.5 511.6,428.5 507.3,428.5 C503.0,428.5 497.3,431.0 494.2,429.9 C491.1,428.8 490.2,424.5 488.9,421.6 C487.6,418.7 487.5,416.2 486.2,412.3 C484.9,408.4 482.3,402.6 480.8,398.4 C479.3,394.1 477.6,390.3 477.4,386.8 C477.2,383.3 478.3,379.9 479.4,377.6 C480.5,375.3 481.7,374.4 484.2,372.9 C486.7,371.3 490.3,369.4 494.2,368.3 C498.1,367.2 503.5,367.9 507.3,366.0 C511.1,364.1 513.7,359.0 516.9,356.7 C520.1,354.4 523.3,353.2 526.4,352.1 C529.5,351.0 532.7,351.0 535.7,349.8 C538.8,348.6 541.7,347.1 544.7,345.2Z" fill="url(#lausG)" opacity=".85"/>
+            </g>
+
+            {/* New Zealand - scaled 2x */}
+            <g filter="url(#llandShadow)" transform="translate(785,415) scale(2) translate(-785,-415)">
+              <path d="M786.8,389.1 C786.8,388.3 788.2,390.2 788.9,391.4 C789.6,392.6 790.2,394.6 790.9,396.1 C791.5,397.7 792.0,399.3 792.8,400.7 C793.6,402.1 795.0,403.2 795.6,404.4 C796.2,405.6 796.4,406.4 796.4,407.7 C796.4,409.0 796.0,410.8 795.6,412.3 C795.2,413.8 794.4,415.6 793.8,416.9 C793.2,418.2 792.4,419.6 791.9,420.2 C791.4,420.8 791.0,421.5 790.5,420.6 C790.0,419.7 789.2,416.8 788.9,414.6 C788.6,412.5 788.3,410.0 788.5,407.7 C788.7,405.4 789.8,402.6 789.9,400.7 C790.0,398.8 789.4,398.0 788.9,396.1 C788.4,394.2 786.8,389.9 786.8,389.1Z" fill="url(#lnzG)" opacity=".85"/>
+              <path d="M787.9,419.2 C788.4,419.4 789.3,420.3 789.5,421.5 C789.7,422.7 789.2,424.6 788.9,426.2 C788.6,427.8 788.6,429.6 787.9,430.8 C787.2,432.0 785.7,432.3 784.6,433.1 C783.5,433.9 782.2,434.2 781.2,435.4 C780.2,436.6 779.9,438.6 778.9,440.1 C777.9,441.7 776.2,444.3 775.2,444.7 C774.2,445.1 773.2,443.5 772.6,442.4 C772.0,441.2 771.1,439.7 771.3,437.8 C771.5,435.9 773.0,432.7 773.9,430.8 C774.8,428.9 775.4,427.4 776.4,426.2 C777.4,425.0 778.9,424.7 780.1,423.9 C781.3,423.1 782.4,422.1 783.5,421.5 C784.6,420.9 786.1,420.6 786.8,420.2 C787.5,419.8 787.4,419.0 787.9,419.2Z" fill="url(#lnzG)" opacity=".85"/>
+            </g>
+
+            {/* Flight route glow */}
+            <path d={`M${LD[0].mx},${LD[0].my} Q${(LD[0].mx+LD[1].mx)/2},${Math.min(LD[0].my,LD[1].my)-65} ${LD[1].mx},${LD[1].my} Q${(LD[1].mx+LD[2].mx)/2},${Math.min(LD[1].my,LD[2].my)-60} ${LD[2].mx},${LD[2].my} Q${(LD[2].mx+LD[3].mx)/2},${Math.min(LD[2].my,LD[3].my)-50} ${LD[3].mx},${LD[3].my} Q${(LD[3].mx+LD[4].mx)/2},${Math.min(LD[3].my,LD[4].my)-45} ${LD[4].mx},${LD[4].my} Q${(LD[4].mx+LD[5].mx)/2},${Math.min(LD[4].my,LD[5].my)-40} ${LD[5].mx},${LD[5].my}`} fill="none" stroke="url(#lrouteG)" strokeWidth="8" opacity=".15" filter="url(#lrouteGlow)"/>
+            {/* Flight route dashed */}
+            <path d={`M${LD[0].mx},${LD[0].my} Q${(LD[0].mx+LD[1].mx)/2},${Math.min(LD[0].my,LD[1].my)-65} ${LD[1].mx},${LD[1].my} Q${(LD[1].mx+LD[2].mx)/2},${Math.min(LD[1].my,LD[2].my)-60} ${LD[2].mx},${LD[2].my} Q${(LD[2].mx+LD[3].mx)/2},${Math.min(LD[2].my,LD[3].my)-50} ${LD[3].mx},${LD[3].my} Q${(LD[3].mx+LD[4].mx)/2},${Math.min(LD[3].my,LD[4].my)-45} ${LD[4].mx},${LD[4].my} Q${(LD[4].mx+LD[5].mx)/2},${Math.min(LD[4].my,LD[5].my)-40} ${LD[5].mx},${LD[5].my}`} fill="none" stroke="url(#lrouteG)" strokeWidth="2" strokeDasharray="8 6" opacity=".6" className="ra"/>
+
+            {/* Destination markers */}
+            {LD.map((d,i)=>{
+              const a=lCur===i;const unlocked=isLDestUnlocked(i);
+              const num=String(i+1).padStart(2,"0");
+              const lbl=[{x:790,y:425,anchor:"middle"},{x:605,y:435,anchor:"middle"},{x:470,y:190,anchor:"middle"},{x:430,y:345,anchor:"middle"},{x:290,y:295,anchor:"middle"},{x:155,y:140,anchor:"middle"}];
+              const lb=lbl[i]||{x:d.mx,y:d.my+40,anchor:"middle"};
+              return(
+                <g key={d.id} onClick={()=>lFlyTo(i)} style={{cursor:unlocked?"pointer":"default",opacity:unlocked?1:.75,transition:"opacity .5s"}}>
+                  {/* Ambient glow */}
+                  <circle cx={d.mx} cy={d.my} r="30" fill={d.col} opacity={a?.2:.08} filter="url(#lmarkerGlow)"/>
+                  {/* Pulse rings */}
+                  {a&&<><circle cx={d.mx} cy={d.my} r="18" fill="none" stroke={d.col} strokeWidth="1.5" opacity=".6"><animate attributeName="r" values="18;36;18" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0;.6" dur="2.5s" repeatCount="indefinite"/></circle></>}
+                  {/* Outer ring */}
+                  <circle cx={d.mx} cy={d.my} r={a?14:10} fill="none" stroke={d.col} strokeWidth={a?1.5:1} opacity={a?.7:.35}/>
+                  {/* Core dot */}
+                  <circle cx={d.mx} cy={d.my} r={a?6:4.5} fill={d.col} stroke="white" strokeWidth="2"/>
+                  {a&&<circle cx={d.mx} cy={d.my} r="2" fill="white"/>}
+
+                  {/* Floating label card */}
+                  <g filter="url(#ltextShadow)">
+                    {/* Number badge */}
+                    <rect x={d.mx-15} y={d.my-28} width="30" height="18" rx="9" fill={a?d.col:"rgba(255,255,255,.25)"} stroke={a?"none":"rgba(255,255,255,.3)"} strokeWidth="1"/>
+                    <text x={d.mx} y={d.my-16} textAnchor="middle" fontSize="10" fontWeight="700" fill="white" fontFamily="system-ui">{num}</text>
+                    {/* Country name + module with background */}
+                    <rect x={lb.x-80} y={lb.y-16} width="160" height="38" rx="10" fill="rgba(0,0,0,.7)" stroke="rgba(255,255,255,.2)" strokeWidth="1"/>
+                    <text x={lb.x} y={lb.y+1} textAnchor={lb.anchor} fontSize="14" fontWeight="700" fill="white" fontFamily="system-ui">{d.country}</text>
+                    <text x={lb.x} y={lb.y+16} textAnchor={lb.anchor} fontSize="10" fontWeight="700" fill={a?d.col:"white"} fontFamily="system-ui">{d.mod}</text>
+                  </g>
+                </g>
+              );
+            })}
+
+            {/* Plane */}
+            {lPl.v&&(
+              <g style={{transition:"none"}} transform={`translate(${lPl.x},${lPl.y})`}>
+                <circle r="18" fill={LD[lCur>=0?lCur:0].col||"#7c3aed"} opacity=".12"><animate attributeName="r" values="18;42;18" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".15;0;.15" dur="2s" repeatCount="indefinite"/></circle>
+                <g transform={`rotate(${lPl.r})`} filter="url(#lrouteGlow)">
+                  <path d="M0,-30 C1.5,-28 2.5,-24 3,-18 L3.5,-12 L4,-6 L22,-1 C23,0 23,2 22,3 L4,6 L3.5,12 L3,18 L10,22 C10.5,23 10,24 9,24 L0,22 L-9,24 C-10,24 -10.5,23 -10,22 L-3,18 L-3.5,12 L-4,6 L-22,3 C-23,2 -23,0 -22,-1 L-4,-6 L-3.5,-12 L-3,-18 C-2.5,-24 -1.5,-28 0,-30Z" fill="white" opacity=".95"/>
+                  <line x1="0" y1="-26" x2="0" y2="20" stroke="rgba(255,255,255,.3)" strokeWidth=".5"/>
+                  <ellipse cx="-12" cy="1" rx="2.5" ry="5" fill="rgba(255,255,255,.7)"/>
+                  <ellipse cx="12" cy="1" rx="2.5" ry="5" fill="rgba(255,255,255,.7)"/>
+                </g>
+              </g>
+            )}
+          </svg>
+        </div>
+
+        {/* Destination cards */}
+        <div style={{display:"grid",gridTemplateColumns:"repeat(6,1fr)",gap:10,padding:"0 16px",maxWidth:1160,margin:"0 auto"}}>
+          {LD.map((d,i)=>{const unlocked=isLDestUnlocked(i);const done=isLDestComplete(i);return(
+            <div key={d.id} className={unlocked?"cd":""} onClick={()=>lFlyTo(i)} style={{background:done?`${d.col}08`:lCur===i?d.col+"12":"white",borderRadius:14,padding:"14px 12px",border:done?`1.5px solid ${d.col}30`:lCur===i?`1.5px solid ${d.col}30`:"1px solid #e8e8ed",cursor:unlocked?"pointer":"default",opacity:unlocked?1:.55}}>
+              <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:8}}>
+                <span style={{fontSize:10,fontWeight:700,color:done?"#10b981":unlocked?d.col:"#b4b4b4",letterSpacing:".05em"}}>{done?"\u2713":"0"+(i+1)}</span>
+                {unlocked?<span style={{fontSize:14}}>{d.icon}</span>:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b4b4b4" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>}
+              </div>
+              <h3 style={{fontSize:13,fontWeight:700,marginBottom:2,lineHeight:1.2}}>{d.city}</h3>
+              <p style={{fontSize:10,color:"#86868b"}}>{d.mod}</p>
+              {done&&<div style={{display:"inline-flex",alignItems:"center",gap:3,background:"#f0fdf4",border:"1px solid #bbf7d0",padding:"2px 8px",borderRadius:980,marginTop:6}}><span style={{fontSize:9,fontWeight:600,color:"#16a34a"}}>Complete</span></div>}
+            </div>
+          );})}
+        </div>
+      </section>
+
+      {/* Leadership Passport */}
+      <section style={{padding:"60px 24px",background:"white"}}>
+        <div style={{maxWidth:900,margin:"0 auto",textAlign:"center"}}>
+          <h2 style={{fontSize:"clamp(28px,4vw,40px)",fontWeight:700,letterSpacing:"-.03em",marginBottom:6}}>Your Leadership Passport.</h2>
+          <p style={{fontSize:17,color:"#86868b",marginBottom:40}}>Complete each module to earn your stamp.</p>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(6,1fr)",gap:16}}>
+            {LD.map((d,i)=>{const done=isLDestComplete(i);return(
+              <div key={i}>
+                <div style={{width:80,height:80,borderRadius:"50%",margin:"0 auto 10px",border:done?`3px solid ${d.col}`:"3px dashed #d2d2d7",background:done?`${d.col}12`:"#f9f9f9",display:"flex",alignItems:"center",justifyContent:"center",fontSize:32,opacity:done?1:.4,transition:"all .5s"}}>{done?d.icon:<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d2d2d7" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>}</div>
+                <p style={{fontSize:12,fontWeight:600,color:done?"#1d1d1f":"#86868b"}}>{d.mod}</p>
+                <p style={{fontSize:10,color:done?d.col:"#d2d2d7",fontWeight:600,marginTop:2}}>{done?"Stamped":"Locked"}</p>
+              </div>
+            );})}
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Certificate */}
+      {lGraduated&&(
+        <section style={{padding:"40px 24px 80px",maxWidth:700,margin:"0 auto",textAlign:"center"}}>
+          <div style={{background:"linear-gradient(135deg,#fefefe,#f8f0ff)",border:"2px solid #e8e8ed",borderRadius:24,padding:"48px 40px",position:"relative",overflow:"hidden"}}>
+            <div style={{position:"absolute",top:0,left:0,right:0,height:4,background:"linear-gradient(90deg,#3B82F6,#84CC16,#EC4899,#8B5CF6,#F59E0B,#EF4444)"}}/>
+            <div style={{fontSize:11,fontWeight:700,letterSpacing:".1em",color:"#86868b",textTransform:"uppercase",marginBottom:20}}>ALL Accor+ Academy</div>
+            <div style={{marginBottom:20,display:"flex",justifyContent:"center"}}><img src={cardImg} alt="Explorer Card" style={{width:180,borderRadius:12,boxShadow:"0 8px 30px rgba(0,0,0,.12)"}}/></div>
+            <h2 style={{fontSize:32,fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>Leadership Volume 1 Complete!</h2>
+            <p style={{fontSize:17,color:"#424245",lineHeight:1.6,marginBottom:24}}>Congratulations, Jared. You have completed all six leadership modules and earned your Leadership Certification.</p>
+            <div style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:6}}>
+              {LD.map((d,i)=>(<div key={i} style={{display:"inline-flex",alignItems:"center",gap:4,background:`${d.col}12`,border:`1px solid ${d.col}30`,padding:"6px 12px",borderRadius:980}}><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={d.col} strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg><span style={{fontSize:11,fontWeight:600,color:d.col}}>{d.mod}</span></div>))}
+            </div>
+            <div style={{marginTop:24,paddingTop:20,borderTop:"1px solid #e8e8ed"}}><p style={{fontSize:13,color:"#86868b"}}>Certified {new Date().toLocaleDateString("en-AU",{day:"numeric",month:"long",year:"numeric"})}</p></div>
+          </div>
+        </section>
+      )}
+
+      {/* How it Works */}
+      <section style={{padding:"80px 24px",background:"white"}}>
+        <div style={{maxWidth:980,margin:"0 auto",display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24,textAlign:"center"}}>
+          {[{v:"6",l:"Leadership Modules"},{v:"4",l:"Weeks Per Module"},{v:"1:1",l:"Weekly Leader Coaching"}].map((s,i)=><div key={i}><div className="apple-grad" style={{fontSize:"clamp(32px,4vw,48px)",fontWeight:700,letterSpacing:"-.03em"}}>{s.v}</div><div style={{fontSize:14,color:"#86868b",marginTop:4}}>{s.l}</div></div>)}
+        </div>
+      </section>
+
+      <section style={{padding:"0 24px 100px",maxWidth:1100,margin:"0 auto"}}>
+        <div style={{textAlign:"center",marginBottom:56}}><h2 style={{fontSize:"clamp(32px,5vw,48px)",fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>How it works.</h2><p style={{fontSize:19,color:"#86868b"}}>A four-week hybrid learning cycle for every module.</p></div>
+        <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:20}}>
+          {[
+            {s:"01",t:"Live Introduction Session",d:"Each module begins with a one-hour facilitated session. Your facilitator introduces the core concepts, frameworks, and the leadership challenge for the coming four weeks. This is where the thinking starts.",ic:"\u{1F399}\uFE0F",bg:"linear-gradient(135deg,#f5f0ff 0%,#e8f4ff 100%)"},
+            {s:"02",t:"Self-Paced Module & Practice",d:"Complete the online module at your own pace across the four weeks. Watch the video, read the material, and complete the practice fields with real actions from your team. Open questions, role plays, and scenario work bring the content to life.",ic:"\u{1F4D6}",bg:"linear-gradient(135deg,#e8f4ff 0%,#f0faf5 100%)"},
+            {s:"03",t:"Learning Circles & One-on-Ones",d:"Every week, join your peer learning circle to discuss how you applied the concepts. Share what worked, what did not, and what you are trying next. In parallel, your weekly one-on-one with your leader becomes a coaching conversation grounded in the module content.",ic:"\u{1F91D}",bg:"linear-gradient(135deg,#f0faf5 0%,#fff5f0 100%)"},
+            {s:"04",t:"Team Huddle & Competency Review",d:"In week four, the cohort comes together for a team huddle. You present what you did, how you applied the framework, and what changed in your team. This is where the learning becomes visible and the competency is demonstrated. Real leadership, shown not just studied.",ic:"\u{1F3C6}",bg:"linear-gradient(135deg,#fff5f0 0%,#f5f0ff 100%)"}
+          ].map((it,i)=>(
+            <div key={i} style={{background:it.bg,borderRadius:24,padding:"40px 36px",border:"1px solid rgba(0,0,0,.04)",position:"relative",overflow:"hidden",minHeight:220,display:"flex",flexDirection:"column",justifyContent:"space-between",transition:"transform .3s ease,box-shadow .3s ease",cursor:"default"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-4px)";e.currentTarget.style.boxShadow="0 12px 40px rgba(0,0,0,.08)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
+              <div style={{position:"absolute",top:24,right:28,fontSize:64,opacity:.15,lineHeight:1}}>{it.ic}</div>
+              <div>
+                <div className="apple-grad" style={{fontSize:48,fontWeight:800,letterSpacing:"-.03em",lineHeight:1,marginBottom:16}}>{it.s}</div>
+                <h3 style={{fontSize:22,fontWeight:700,letterSpacing:"-.02em",marginBottom:8,color:"#1d1d1f"}}>{it.t}</h3>
+                <p style={{fontSize:15,color:"#6e6e73",lineHeight:1.6,maxWidth:340}}>{it.d}</p>
+              </div>
+              <div style={{display:"flex",alignItems:"center",gap:6,marginTop:20}}>
+                <span style={{fontSize:28}}>{it.ic}</span>
+                <div style={{flex:1,height:3,borderRadius:2,background:"rgba(0,0,0,.06)"}}><div style={{width:`${(i+1)*25}%`,height:"100%",borderRadius:2,background:"linear-gradient(90deg,#7c3aed,#ec4899)",transition:"width 1s ease"}}/></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <footer style={{padding:"24px",borderTop:"1px solid #e8e8ed",textAlign:"center",background:"#f5f5f7"}}><p style={{fontSize:12,color:"#86868b"}}>ALL Accor+ Academy &middot; Leadership Volume 1</p></footer>
+
+      {/* Leadership Confetti */}
+      {lConfetti&&lConfettiPieces.map(p=>p.isFlag?<div key={p.id} className="confetti-piece" style={{left:`${p.left}%`,fontSize:p.size*2,lineHeight:1,background:"transparent","--drift":`${p.drift}px`,"--spin":`${p.spin}deg`,"--dur":`${p.dur}s`,"--delay":`${p.delay}s`}}>{p.flag}</div>:<div key={p.id} className="confetti-piece" style={{left:`${p.left}%`,width:p.shape==="circle"?p.size:p.size*.6,height:p.size,borderRadius:p.shape==="circle"?"50%":"2px",background:p.color,"--drift":`${p.drift}px`,"--spin":`${p.spin}deg`,"--dur":`${p.dur}s`,"--delay":`${p.delay}s`}}/>)}
+
+      {/* Leadership Stamp Animation */}
+      {lStampAnim!==null&&(
+        <div style={{position:"fixed",inset:0,zIndex:800,pointerEvents:"none",display:"flex",alignItems:"center",justifyContent:"center"}}>
+          <div style={{position:"absolute",inset:0,background:"rgba(0,0,0,.15)",animation:"fi .3s ease"}}/>
+          <div style={{position:"absolute",top:"50%",left:"50%",animation:"stampHit 3.4s cubic-bezier(.22,1,.36,1) forwards"}}>
+            <div style={{width:200,height:200,borderRadius:"50%",border:`6px solid ${LD[lStampAnim]?.col||"#7c3aed"}`,background:"white",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",boxShadow:`0 0 60px ${LD[lStampAnim]?.col||"rgba(124,58,237,.4)"}40`}}>
+              <div style={{fontSize:56,marginBottom:4}}>{LD[lStampAnim]?.icon}</div>
+              <div style={{fontSize:16,fontWeight:700,color:"#1d1d1f"}}>{LD[lStampAnim]?.mod}</div>
+              <div style={{fontSize:11,fontWeight:600,color:LD[lStampAnim]?.col,marginTop:2}}>Complete</div>
+            </div>
+          </div>
+          <div style={{position:"absolute",top:"50%",left:"50%",animation:"stampLabel 3.4s ease forwards"}}><div style={{marginTop:130,textAlign:"center"}}><div style={{fontSize:28,fontWeight:800,color:LD[lStampAnim]?.col||"#7c3aed",letterSpacing:".08em",textTransform:"uppercase"}}>Stamped!</div></div></div>
+        </div>
+      )}
+
+      {/* Leadership Graduation */}
+      {lShowGrad&&(
+        <div style={{position:"fixed",inset:0,zIndex:900,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",background:"rgba(0,0,0,.75)",animation:"gradFadeIn .8s ease",backdropFilter:"blur(8px)"}}>
+          <div style={{animation:"gradTitle 1s ease .3s both"}}><p style={{fontSize:14,fontWeight:600,color:"rgba(255,255,255,.6)",letterSpacing:".1em",textTransform:"uppercase",marginBottom:12,textAlign:"center"}}>ALL Accor+ Academy</p><h1 style={{fontSize:"clamp(40px,8vw,72px)",fontWeight:700,color:"white",textAlign:"center",letterSpacing:"-.04em",lineHeight:1.05}}>Leadership Certified.</h1></div>
+          <div style={{display:"flex",gap:14,marginTop:40}}>{LD.map((d,i)=>(<div key={i} style={{width:56,height:56,borderRadius:"50%",border:`3px solid ${d.col}`,background:"rgba(255,255,255,.1)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:24,animation:`gradStamp .6s ease ${0.8+i*0.25}s both`}}>{d.icon}</div>))}</div>
+          <div style={{marginTop:40,animation:"gradCard 1.2s ease 2.5s both"}}><div style={{position:"relative",animation:"gradGlow 2s ease 3.5s infinite"}}><img src={cardImg} alt="Card" style={{width:280,borderRadius:20,boxShadow:"0 20px 80px rgba(0,0,0,.4)"}}/><div style={{position:"absolute",bottom:16,left:0,right:0,textAlign:"center"}}><div style={{display:"inline-block",background:"rgba(0,0,0,.7)",backdropFilter:"blur(8px)",padding:"8px 20px",borderRadius:980}}><span style={{fontSize:14,fontWeight:700,color:"white",letterSpacing:".06em"}}>LEADERSHIP CERTIFIED</span></div></div></div></div>
+          <p style={{color:"rgba(255,255,255,.5)",fontSize:14,marginTop:32,animation:"gradFadeIn 1s ease 4s both"}}>Congratulations, Jared. You are ready to lead.</p>
+        </div>
+      )}
+
+      {/* Leadership Detail Panel */}
+      {lDt!==null&&(
+        <div style={{position:"fixed",inset:0,zIndex:200,display:"flex",justifyContent:"flex-end"}} onClick={()=>setLDt(null)}>
+          <div className="ov" style={{position:"absolute",inset:0,background:"rgba(0,0,0,.3)"}}/>
+          <div className="pn" style={{width:400,maxWidth:"90vw",height:"100%",background:"white",position:"relative",zIndex:1,overflowY:"auto",boxShadow:"-8px 0 40px rgba(0,0,0,.1)"}} onClick={e=>e.stopPropagation()}>
+            {(()=>{const d=LD[lDt];return(<>
+              <button onClick={()=>setLDt(null)} style={{position:"absolute",top:16,right:16,width:32,height:32,borderRadius:"50%",border:"none",background:"#f5f5f7",display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",zIndex:2}}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#86868b" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              <div style={{padding:"32px 28px 20px",borderBottom:"1px solid #f5f5f7",background:`linear-gradient(180deg,${d.col}08,transparent)`}}>
+                <div style={{textAlign:"center"}}><div style={{fontSize:42,marginBottom:8}}>{d.icon}</div><h2 style={{fontSize:26,fontWeight:700,letterSpacing:"-.02em",marginBottom:3}}>{d.city}</h2><p style={{fontSize:15,fontWeight:600,color:d.col}}>{d.mod}</p></div>
+              </div>
+              <div style={{padding:"24px 28px"}}>
+                <p style={{fontSize:11,fontWeight:700,color:"#86868b",letterSpacing:".06em",marginBottom:14}}>MODULE</p>
+                {LMODULES[lDt]&&LMODULES[lDt].map((mod,mi)=>{const done=isLModComplete(lDt,mi);return(
+                  <div key={mi} className="rw" onClick={()=>{startLModule(lDt,mi);setLDt(null);}} style={{padding:"14px 16px",background:done?`${d.col}10`:"transparent",border:`1px solid ${done?`${d.col}30`:"#e8e8ed"}`,display:"flex",gap:12,borderRadius:14,cursor:"pointer",marginBottom:6}}>
+                    <div style={{width:26,height:26,borderRadius:7,background:done?"#10b981":d.col,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,color:"white"}}>{done?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="5 3 19 12 5 21"/></svg>}</div>
+                    <div style={{flex:1}}><p style={{fontSize:14,fontWeight:600,color:done?"#10b981":"#1d1d1f"}}>{mod.title}{done?" \u2713":""}</p><p style={{fontSize:12,color:"#86868b"}}>{mod.steps.length} steps</p></div>
+                  </div>
+                );})}
+                <button onClick={()=>{const idx=LMODULES[lDt]?LMODULES[lDt].findIndex((_,mi)=>!isLModComplete(lDt,mi)):-1;if(idx>=0){startLModule(lDt,idx);setLDt(null);}}} style={{width:"100%",padding:"14px",borderRadius:980,background:d.col,color:"white",fontSize:17,border:"none",cursor:"pointer",marginTop:20}}>{LMODULES[lDt]&&LMODULES[lDt].every((_,mi)=>isLModComplete(lDt,mi))?"All Complete \u2713":"Continue Learning"}</button>
+              </div>
+            </>);})()}
+          </div>
+        </div>
+      )}
+
+      {/* Leadership Module Learning Page */}
+      {lActiveModule!==null&&LMODULES[lActiveModule.dest]&&(()=>{
+        const modData=LMODULES[lActiveModule.dest][lActiveModule.mod];
+        const steps=modData.steps;
+        const step=steps[lModuleStep];
+        const isLast=lModuleStep===steps.length-1;
+        const pct=((lModuleStep+1)/steps.length)*100;
+        return(
+        <div style={{position:"fixed",inset:0,zIndex:500,background:"#fbfbfd",overflowY:"auto",fontFamily:"-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif",color:"#1d1d1f"}}>
+          <div style={{position:"sticky",top:0,background:"rgba(251,251,253,.92)",backdropFilter:"blur(20px)",borderBottom:"1px solid #e8e8ed",padding:"12px 24px",display:"flex",alignItems:"center",justifyContent:"space-between",zIndex:10}}>
+            <button onClick={()=>{const dest=lActiveModule.dest;setLActiveModule(null);setLDt(dest);}} style={{display:"flex",alignItems:"center",gap:6,background:"none",border:"none",color:"#7c3aed",fontSize:14,fontWeight:500,cursor:"pointer",padding:"6px 0"}}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="15 18 9 12 15 6"/></svg>Back to Module</button>
+            <span style={{fontSize:13,color:"#86868b",fontWeight:500}}>Step {lModuleStep+1} of {steps.length}</span>
+          </div>
+          <div style={{padding:"0 24px",maxWidth:800,margin:"0 auto"}}><div style={{height:3,background:"#e8e8ed",borderRadius:2,marginTop:16,overflow:"hidden"}}><div style={{width:`${pct}%`,height:"100%",background:"linear-gradient(90deg,#7c3aed,#ec4899)",borderRadius:2,transition:"width .4s ease"}}/></div><div style={{display:"flex",justifyContent:"space-between",marginTop:8,marginBottom:32}}><span style={{fontSize:12,color:"#86868b"}}>Step {lModuleStep+1} of {steps.length}</span><span style={{fontSize:12,color:"#86868b"}}>{Math.round(pct)}%</span></div></div>
+          <div style={{maxWidth:800,margin:"0 auto",padding:"0 24px 120px"}}>
+            <div style={{marginBottom:16}}><span style={{fontSize:11,fontWeight:700,letterSpacing:".06em",textTransform:"uppercase",color:step.type==="reflect"?"#8b5cf6":step.type==="video"?"#ef4444":"#7c3aed",background:step.type==="reflect"?"#ede9fe":step.type==="video"?"#fee2e2":"#f0e7ff",padding:"4px 12px",borderRadius:980}}>{step.type==="learn"?"Learn":step.type==="video"?"Watch":step.type==="reflect"?"Practice & Reflect":step.type}</span></div>
+            <h1 style={{fontSize:"clamp(28px,4vw,40px)",fontWeight:700,letterSpacing:"-.03em",marginBottom:24,lineHeight:1.15}}>{step.title}</h1>
+            {step.type==="learn"&&<div>{step.img&&<div style={{fontSize:48,marginBottom:20}}>{step.img}</div>}{step.content.split("\n\n").map((p,pi)=><p key={pi} style={{fontSize:17,lineHeight:1.7,color:"#424245",marginBottom:16,whiteSpace:"pre-line"}}>{p}</p>)}</div>}
+            {step.type==="video"&&<div><div style={{background:"#000",borderRadius:16,overflow:"hidden",aspectRatio:"16/9",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:24}}><div style={{width:72,height:72,borderRadius:"50%",background:"rgba(255,255,255,.9)",display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",boxShadow:"0 4px 20px rgba(0,0,0,.3)"}}><svg width="28" height="28" viewBox="0 0 24 24" fill="#1d1d1f"><polygon points="8,5 20,12 8,19"/></svg></div></div><p style={{fontSize:17,lineHeight:1.7,color:"#424245"}}>{step.desc}</p></div>}
+            {step.type==="reflect"&&<div><div style={{background:"#f5f0ff",borderRadius:16,padding:"24px",marginBottom:24}}><p style={{fontSize:17,lineHeight:1.6,color:"#5b21b6",fontWeight:500,whiteSpace:"pre-line"}}>{step.prompt}</p></div><textarea value={lReflectText} onChange={e=>setLReflectText(e.target.value)} placeholder="Write your response here..." style={{width:"100%",minHeight:180,padding:20,borderRadius:16,border:"1.5px solid #e8e8ed",fontSize:16,lineHeight:1.6,fontFamily:"inherit",resize:"vertical",outline:"none",boxSizing:"border-box",background:"white",color:"#1d1d1f"}} onFocus={e=>e.target.style.borderColor="#7c3aed"} onBlur={e=>e.target.style.borderColor="#e8e8ed"}/></div>}
+          </div>
+          <div style={{position:"fixed",bottom:0,left:0,right:0,background:"rgba(251,251,253,.95)",backdropFilter:"blur(20px)",borderTop:"1px solid #e8e8ed",padding:"16px 24px"}}>
+            <div style={{maxWidth:800,margin:"0 auto",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+              <button onClick={()=>{if(lModuleStep>0){setLModuleStep(lModuleStep-1);setLReflectText("");}}} style={{padding:"10px 24px",borderRadius:980,border:"1px solid #e8e8ed",background:"white",fontSize:15,fontWeight:500,cursor:lModuleStep>0?"pointer":"default",opacity:lModuleStep>0?1:.4,color:"#1d1d1f"}}>Previous</button>
+              {isLast?<div style={{display:"flex",alignItems:"center",gap:12}}>{lCompletionTime!==null&&<div style={{display:"flex",alignItems:"center",gap:6,padding:"6px 14px",borderRadius:980,background:"#f5f0ff",border:"1px solid #e9d5ff"}}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span style={{fontSize:12,fontWeight:600,color:"#7c3aed"}}>Completed in {lCompletionTime<1?"under 1":lCompletionTime} min</span></div>}<button onClick={completeLModule} style={{padding:"10px 28px",borderRadius:980,background:"#1d1d1f",color:"white",fontSize:15,fontWeight:500,border:"none",cursor:"pointer",display:"flex",alignItems:"center",gap:8}}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>Mark Complete</button></div>
+              :<button onClick={()=>{setLModuleStep(lModuleStep+1);setLReflectText("");}} style={{padding:"10px 28px",borderRadius:980,background:"#7c3aed",color:"white",fontSize:15,fontWeight:500,border:"none",cursor:"pointer",display:"flex",alignItems:"center",gap:6}}>Next<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>}
+            </div>
+          </div>
+        </div>);
+      })()}
+
+      </>}
+
+      {/* ===== UNIFIED MANAGER DASHBOARD ===== */}
+      {view==="academy-mgr"&&(
+        <section style={{minHeight:"100vh"}}>
+          <div style={{position:"relative",overflow:"hidden",padding:"100px 24px 60px",textAlign:"center"}}>
+            <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg, #0a1628 0%, #132d55 25%, #1a4a6e 45%, #2563a0 60%, #3b82f6 80%, #93c5fd 100%)"}}>
+              <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 50% 80%, rgba(255,255,255,.08) 0%, transparent 60%)"}}/>
+            </div>
+            <button onClick={()=>{setView("login");window.scrollTo(0,0);}} style={{position:"absolute",top:64,left:20,zIndex:10,display:"flex",alignItems:"center",gap:6,background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"8px 16px",color:"rgba(255,255,255,.9)",fontSize:13,fontWeight:500,cursor:"pointer",transition:"all .2s"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+              Log out
+            </button>
+            <div style={{position:"relative",zIndex:2,maxWidth:680,margin:"0 auto",animation:"fu .8s ease"}}>
+              <p style={{fontSize:14,fontWeight:600,color:"rgba(255,255,255,.7)",letterSpacing:".1em",textTransform:"uppercase",marginBottom:16}}>ALL Accor+ Academy</p>
+              <h1 style={{fontSize:"clamp(36px,6vw,56px)",fontWeight:700,lineHeight:1.08,letterSpacing:"-.04em",marginBottom:12,color:"white",textShadow:"0 2px 20px rgba(0,0,0,.3)"}}>Manager<br/>Dashboard.</h1>
+              <p style={{fontSize:"clamp(16px,2vw,19px)",color:"rgba(255,255,255,.7)",lineHeight:1.5,maxWidth:460,margin:"0 auto"}}>Track your team's progress across all programmes.</p>
+            </div>
+          </div>
+
+          <div style={{maxWidth:1100,margin:"0 auto",padding:"40px 24px 80px"}}>
+            {/* KPI Cards */}
+            <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:16,marginBottom:40}}>
+              {[
+                {v:"12",l:"Active Learners",c:"#0071e3",sub:"Across all programmes"},
+                {v:"67%",l:"Avg Completion",c:"#34d399",sub:"Onboarding programme"},
+                {v:"3.8",l:"Avg Days to Complete",c:"#f59e0b",sub:"Per destination"},
+                {v:"91%",l:"Quiz Accuracy",c:"#8b5cf6",sub:"Across all quizzes"}
+              ].map((s,i)=>(
+                <div key={i} style={{background:"white",borderRadius:20,padding:"28px 24px",border:"1px solid #e8e8ed",textAlign:"center"}}>
+                  <div style={{fontSize:40,fontWeight:700,color:s.c,letterSpacing:"-.02em"}}>{s.v}</div>
+                  <div style={{fontSize:14,fontWeight:600,color:"#1d1d1f",marginTop:4}}>{s.l}</div>
+                  <div style={{fontSize:11,color:"#b4b4b4",marginTop:2}}>{s.sub}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Onboarding Programme Section */}
+            <div style={{background:"white",borderRadius:20,border:"1px solid #e8e8ed",overflow:"hidden",marginBottom:24}}>
+              <div style={{padding:"20px 24px",borderBottom:"1px solid #e8e8ed",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                <div style={{display:"flex",alignItems:"center",gap:12}}>
+                  <div style={{width:36,height:36,borderRadius:10,background:"linear-gradient(135deg,#0a1628,#d4785a)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:16}}>&#9992;&#65039;</div>
+                  <div>
+                    <h3 style={{fontSize:18,fontWeight:700}}>Onboarding Programme</h3>
+                    <p style={{fontSize:12,color:"#86868b"}}>Explorer Digital Passport</p>
+                  </div>
+                </div>
+                <div style={{display:"flex",alignItems:"center",gap:8}}>
+                  <span style={{fontSize:13,color:"#10b981",fontWeight:600}}>8 of 12 active</span>
+                  <div style={{width:60,height:4,borderRadius:2,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:"67%",height:"100%",borderRadius:2,background:"#10b981"}}/></div>
+                </div>
+              </div>
+              {[
+                {name:"Priya Sharma",dest:"India",prog:100,mods:"19/19",col:"#10b981",status:"Complete"},
+                {name:"Liam Chen",dest:"Indonesia",prog:75,mods:"14/19",col:"#0071e3",status:"In Progress"},
+                {name:"Jared Croxton",dest:"New Zealand",prog:overallPct,mods:`${completedCount}/${totalMods}`,col:overallPct===100?"#10b981":"#0071e3",status:overallPct===100?"Complete":"In Progress"},
+                {name:"Anika Patel",dest:"Australia",prog:50,mods:"8/19",col:"#0071e3",status:"In Progress"},
+                {name:"Tom Walker",dest:"Australia",prog:42,mods:"8/19",col:"#0071e3",status:"In Progress"},
+                {name:"Mai Nguyen",dest:"New Zealand",prog:25,mods:"4/19",col:"#f59e0b",status:"In Progress"},
+                {name:"Rizky Pratama",dest:"Not Started",prog:0,mods:"0/19",col:"#86868b",status:"Not Started"}
+              ].map((m,i)=>(
+                <div key={i} style={{padding:"14px 24px",borderBottom:"1px solid #f5f5f7",display:"flex",alignItems:"center",gap:14}}>
+                  <div style={{width:34,height:34,borderRadius:"50%",background:"linear-gradient(135deg,#e8e8ed,#d2d2d7)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,fontWeight:700,color:"#86868b",flexShrink:0}}>{m.name.split(" ").map(n=>n[0]).join("")}</div>
+                  <div style={{flex:1}}>
+                    <div style={{display:"flex",justifyContent:"space-between",marginBottom:3}}>
+                      <span style={{fontSize:14,fontWeight:600}}>{m.name}</span>
+                      <span style={{fontSize:11,color:m.col,fontWeight:600}}>{m.status}</span>
+                    </div>
+                    <div style={{display:"flex",alignItems:"center",gap:8}}>
+                      <div style={{flex:1,height:4,borderRadius:2,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:`${m.prog}%`,height:"100%",borderRadius:2,background:m.col}}/></div>
+                      <span style={{fontSize:11,color:"#86868b",flexShrink:0}}>{m.mods}</span>
+                    </div>
+                  </div>
+                  <span style={{fontSize:11,color:"#86868b",background:"#f5f5f7",padding:"4px 10px",borderRadius:980}}>{m.dest}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Leadership Programme Section */}
+            <div style={{background:"white",borderRadius:20,border:"1px solid #e8e8ed",overflow:"hidden",marginBottom:24}}>
+              <div style={{padding:"20px 24px",borderBottom:"1px solid #e8e8ed",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                <div style={{display:"flex",alignItems:"center",gap:12}}>
+                  <div style={{width:36,height:36,borderRadius:10,background:"linear-gradient(135deg,#1a1040,#7c3aed)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:16}}>&#127775;</div>
+                  <div>
+                    <h3 style={{fontSize:18,fontWeight:700}}>Leadership Programme</h3>
+                    <p style={{fontSize:12,color:"#86868b"}}>Volume 1 & Volume 2</p>
+                  </div>
+                </div>
+                <div style={{display:"flex",alignItems:"center",gap:8}}>
+                  <span style={{fontSize:13,color:"#0071e3",fontWeight:600}}>3 of 6 enrolled</span>
+                  <div style={{width:60,height:4,borderRadius:2,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:"50%",height:"100%",borderRadius:2,background:"#7c3aed"}}/></div>
+                </div>
+              </div>
+              {[
+                {name:"Jared Croxton",prog:"Volume 1",pct:40,mods:"5/12",col:"#7c3aed",status:"In Progress"},
+                {name:"Priya Sharma",prog:"Volume 1",pct:75,mods:"9/12",col:"#7c3aed",status:"In Progress"},
+                {name:"Liam Chen",prog:"Not Started",pct:0,mods:"0/12",col:"#86868b",status:"Enrolled"}
+              ].map((m,i)=>(
+                <div key={i} style={{padding:"14px 24px",borderBottom:"1px solid #f5f5f7",display:"flex",alignItems:"center",gap:14}}>
+                  <div style={{width:34,height:34,borderRadius:"50%",background:"linear-gradient(135deg,#e8e8ed,#d2d2d7)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,fontWeight:700,color:"#86868b",flexShrink:0}}>{m.name.split(" ").map(n=>n[0]).join("")}</div>
+                  <div style={{flex:1}}>
+                    <div style={{display:"flex",justifyContent:"space-between",marginBottom:3}}>
+                      <span style={{fontSize:14,fontWeight:600}}>{m.name}</span>
+                      <span style={{fontSize:11,color:m.col,fontWeight:600}}>{m.status}</span>
+                    </div>
+                    <div style={{display:"flex",alignItems:"center",gap:8}}>
+                      <div style={{flex:1,height:4,borderRadius:2,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:`${m.pct}%`,height:"100%",borderRadius:2,background:m.col}}/></div>
+                      <span style={{fontSize:11,color:"#86868b",flexShrink:0}}>{m.mods}</span>
+                    </div>
+                  </div>
+                  <span style={{fontSize:11,color:"#86868b",background:"#f5f5f7",padding:"4px 10px",borderRadius:980}}>{m.prog}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Compliance Programme Section */}
+            <div style={{background:"white",borderRadius:20,border:"1px solid #e8e8ed",overflow:"hidden",opacity:.6}}>
+              <div style={{padding:"20px 24px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                <div style={{display:"flex",alignItems:"center",gap:12}}>
+                  <div style={{width:36,height:36,borderRadius:10,background:"linear-gradient(135deg,#1a2a3a,#475569)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:16}}>&#128221;</div>
+                  <div>
+                    <h3 style={{fontSize:18,fontWeight:700}}>Compliance Programme</h3>
+                    <p style={{fontSize:12,color:"#86868b"}}>Launching Q3 2026</p>
+                  </div>
+                </div>
+                <span style={{fontSize:12,color:"#86868b",background:"#f5f5f7",padding:"6px 14px",borderRadius:980}}>Coming Soon</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ===== ONBOARDING LOGIN HERO ===== */}
+      {view==="onboarding"&&(
+        <section style={{minHeight:"100vh",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",textAlign:"center",padding:"0",position:"relative",overflow:"hidden"}}>
+          <button onClick={()=>{setView("academy");window.scrollTo(0,0);}} style={{position:"absolute",top:64,left:20,zIndex:10,display:"flex",alignItems:"center",gap:6,background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"8px 16px",color:"rgba(255,255,255,.9)",fontSize:13,fontWeight:500,cursor:"pointer",transition:"all .2s"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+            Academy
+          </button>
+          <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg, #0a1628 0%, #132d55 30%, #1a4a6e 50%, #d4785a 75%, #e8a87c 90%, #f0c8a0 100%)"}}>
+            <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 50% 70%, rgba(212,120,90,.15) 0%, transparent 60%)"}}/>
+          </div>
+          <div style={{position:"relative",zIndex:2,animation:"fu .8s ease",maxWidth:680,padding:"120px 24px 80px"}}>
+            <p style={{fontSize:15,fontWeight:600,color:"rgba(255,255,255,.85)",letterSpacing:".08em",textTransform:"uppercase",marginBottom:16}}>ALL Accor+ Explorer</p>
+            <h1 style={{fontSize:"clamp(44px,8vw,80px)",fontWeight:700,lineHeight:1.05,letterSpacing:"-.04em",marginBottom:24,color:"white",textShadow:"0 2px 20px rgba(0,0,0,.3)"}}>Your Digital<br/>Passport.</h1>
+            <div style={{animation:"fu .8s ease .3s both",display:"flex",justifyContent:"center"}}>
+              <img src={cardImg} alt="ALL Accor+ Explorer Card" style={{width:280,borderRadius:16,boxShadow:"0 20px 60px rgba(0,0,0,.35), 0 4px 16px rgba(0,0,0,.2)",transform:"perspective(800px) rotateY(-4deg) rotateX(2deg)",transition:"transform .4s ease"}} onMouseEnter={e=>e.target.style.transform="perspective(800px) rotateY(0deg) rotateX(0deg) scale(1.03)"} onMouseLeave={e=>e.target.style.transform="perspective(800px) rotateY(-4deg) rotateX(2deg)"}/>
+            </div>
+            <div style={{animation:"fu .8s ease .6s both",display:"flex",justifyContent:"center",marginTop:32}}>
+              <button onClick={()=>{setView("agent");window.scrollTo(0,0);}} style={{padding:"16px 40px",borderRadius:980,background:"rgba(255,255,255,.95)",border:"none",cursor:"pointer",boxShadow:"0 4px 24px rgba(0,0,0,.12)",transition:"all .2s",backdropFilter:"blur(12px)",display:"flex",alignItems:"center",gap:8}} onMouseEnter={e=>{e.currentTarget.style.transform="scale(1.05)";e.currentTarget.style.boxShadow="0 8px 32px rgba(0,0,0,.16)"}} onMouseLeave={e=>{e.currentTarget.style.transform="scale(1)";e.currentTarget.style.boxShadow="0 4px 24px rgba(0,0,0,.12)"}}><span className="apple-grad" style={{fontSize:17,fontWeight:700}}>Continue</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0071e3" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ===== ACADEMY HUB ===== */}
+      {view==="academy"&&(
+        <section style={{minHeight:"100vh"}}>
+          {/* Academy Hero */}
+          <div style={{position:"relative",overflow:"hidden",padding:"100px 24px 60px",textAlign:"center"}}>
+            <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg, #0a1628 0%, #132d55 25%, #1a4a6e 45%, #2563a0 60%, #3b82f6 80%, #93c5fd 100%)"}}>
+              <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 50% 80%, rgba(255,255,255,.08) 0%, transparent 60%)"}}/>
+            </div>
+            <div style={{position:"relative",zIndex:2,maxWidth:680,margin:"0 auto",animation:"fu .8s ease"}}>
+              <p style={{fontSize:14,fontWeight:600,color:"rgba(255,255,255,.7)",letterSpacing:".1em",textTransform:"uppercase",marginBottom:16}}>ALL Accor+ Academy</p>
+              <h1 style={{fontSize:"clamp(40px,7vw,68px)",fontWeight:700,lineHeight:1.08,letterSpacing:"-.04em",marginBottom:16,color:"white",textShadow:"0 2px 20px rgba(0,0,0,.3)"}}>Your Learning<br/>Hub.</h1>
+              <p style={{fontSize:"clamp(16px,2vw,19px)",color:"rgba(255,255,255,.7)",lineHeight:1.5,maxWidth:460,margin:"0 auto"}}>Everything you need to grow, develop, and succeed as an ALL Accor+ team member.</p>
+            </div>
+          </div>
+
+
+
+          {/* Course Tiles */}
+          <div style={{maxWidth:1000,margin:"0 auto",padding:"20px 24px 80px"}}>
+            <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:20}}>
+              {/* Onboarding */}
+              <div onClick={()=>{setView("onboarding");window.scrollTo(0,0);}} style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",cursor:"pointer",transition:"all .3s"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 16px 48px rgba(0,0,0,.1)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
+                <div style={{height:140,position:"relative",overflow:"hidden",background:"linear-gradient(180deg,#0a1628 0%,#132d55 40%,#d4785a 75%,#e8a87c 100%)"}}>
+                  <svg viewBox="0 0 400 100" preserveAspectRatio="none" style={{position:"absolute",bottom:0,left:0,width:"100%",height:"70%",opacity:.3}}><path d="M0,100 L0,70 L15,70 L15,55 L25,55 L25,70 L35,70 L35,45 L45,45 L45,70 L55,70 L55,60 L60,40 L65,60 L70,60 L75,35 L80,60 L90,60 L90,50 L100,50 L100,70 L110,70 L110,30 L115,30 L115,25 L120,25 L120,30 L125,30 L125,70 L140,70 L140,40 L150,40 L150,70 L165,70 L165,55 L175,55 L175,45 L180,45 L180,55 L185,55 L185,70 L200,70 L200,35 L205,35 L205,25 L210,20 L215,25 L215,35 L220,35 L220,70 L235,70 L235,50 L245,50 L245,70 L260,70 L260,60 L265,45 L270,30 L275,45 L280,60 L285,60 L285,70 L300,70 L300,40 L310,40 L310,30 L315,25 L320,30 L320,40 L325,40 L325,70 L340,70 L340,55 L350,55 L350,70 L365,70 L365,45 L375,45 L375,70 L400,70 L400,100 Z" fill="white"/></svg>
+                  </div>
+                <div style={{padding:"24px"}}>
+                  <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f0fdf4",padding:"3px 10px",borderRadius:980,marginBottom:12}}>
+                    <div style={{width:6,height:6,borderRadius:"50%",background:"#10b981"}}/>
+                    <span style={{fontSize:11,fontWeight:600,color:"#10b981"}}>Active</span>
+                  </div>
+                  <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>Onboarding</h3>
+                  <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:16}}>Your Explorer digital passport. Four destinations, real Accor content, and your path to becoming a certified specialist.</p>
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                    <span style={{fontSize:12,color:"#b4b4b4"}}>19 modules</span>
+                    <div style={{display:"flex",alignItems:"center",gap:4,color:"#0071e3",fontSize:13,fontWeight:600}}>
+                      Enter
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Leadership */}
+              <div onClick={()=>{setView("leadership-learn");window.scrollTo(0,0);}} style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",cursor:"pointer",transition:"all .3s"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 16px 48px rgba(0,0,0,.1)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
+                <div style={{height:140,position:"relative",overflow:"hidden",background:"linear-gradient(180deg,#0a0a20 0%,#1a1040 30%,#2d1b69 60%,#7c3aed 100%)"}}>
+                  <svg viewBox="0 0 400 100" preserveAspectRatio="none" style={{position:"absolute",bottom:0,left:0,width:"100%",height:"70%",opacity:.25}}><path d="M0,100 L0,65 L20,65 L20,50 L30,50 L30,65 L50,65 L50,45 L55,45 L55,35 L60,30 L65,35 L65,45 L70,45 L70,65 L85,65 L85,40 L95,40 L95,65 L110,65 L110,55 L115,55 L115,50 L120,50 L120,55 L125,55 L125,65 L140,65 L140,20 L145,20 L145,15 L165,15 L165,20 L170,20 L170,65 L175,65 L178,18 L205,14 L208,65 L215,65 L215,25 L220,25 L220,20 L240,20 L240,25 L245,25 L245,65 L260,65 L260,50 L270,50 L270,65 L285,65 L285,35 L290,30 L295,25 L300,30 L305,35 L305,65 L320,65 L320,45 L330,45 L330,65 L345,65 L345,55 L355,55 L355,65 L375,65 L375,50 L385,50 L385,65 L400,65 L400,100 Z" fill="white"/></svg>
+                  </div>
+                <div style={{padding:"24px"}}>
+                  <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f0fdf4",padding:"3px 10px",borderRadius:980,marginBottom:12}}>
+                    <div style={{width:6,height:6,borderRadius:"50%",background:"#10b981"}}/>
+                    <span style={{fontSize:11,fontWeight:600,color:"#10b981"}}>Active</span>
+                  </div>
+                  <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>Leadership</h3>
+                  <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:16}}>Develop your leadership capabilities through two self-paced programmes designed for Accor Plus team leaders.</p>
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                    <span style={{fontSize:12,color:"#b4b4b4"}}>2 programmes</span>
+                    <div style={{display:"flex",alignItems:"center",gap:4,color:"#0071e3",fontSize:13,fontWeight:600}}>
+                      Enter
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Pocket Customer */}
+              <div onClick={()=>window.open("https://performos.vip/login","_blank")} style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",cursor:"pointer",transition:"all .3s"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 16px 48px rgba(0,0,0,.1)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
+                <div style={{height:140,position:"relative",overflow:"hidden",background:"linear-gradient(180deg,#0a1628 0%,#14532d 40%,#16a34a 75%,#4ade80 100%)"}}>
+                  <svg viewBox="0 0 400 100" preserveAspectRatio="none" style={{position:"absolute",bottom:0,left:0,width:"100%",height:"70%",opacity:.25}}><path d="M0,100 L0,65 L20,65 L25,55 L30,50 L35,55 L40,65 L60,65 L65,45 L70,40 L75,45 L80,65 L100,65 L100,50 L110,50 L110,65 L130,65 L135,55 L140,45 L145,40 L150,45 L155,55 L160,65 L180,65 L185,50 L190,45 L195,50 L200,65 L220,65 L225,55 L230,50 L235,55 L240,65 L260,65 L265,45 L270,40 L275,45 L280,65 L300,65 L305,55 L310,50 L315,55 L320,65 L340,65 L345,50 L350,45 L355,50 L360,65 L380,65 L385,55 L390,50 L395,55 L400,65 L400,100 Z" fill="white"/></svg>
+                </div>
+                <div style={{padding:"24px"}}>
+                  <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f0fdf4",padding:"3px 10px",borderRadius:980,marginBottom:12}}>
+                    <div style={{width:6,height:6,borderRadius:"50%",background:"#10b981"}}/>
+                    <span style={{fontSize:11,fontWeight:600,color:"#10b981"}}>Active</span>
+                  </div>
+                  <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>Pocket Customer</h3>
+                  <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:16}}>Practice your sales conversations with an AI-powered roleplay simulator. The AI plays the customer. You close the deal.</p>
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                    <span style={{fontSize:12,color:"#b4b4b4"}}>Voice roleplay</span>
+                    <div style={{display:"flex",alignItems:"center",gap:4,color:"#0071e3",fontSize:13,fontWeight:600}}>
+                      Launch
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Compliance */}
+              <div style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",opacity:.55}}>
+                <div style={{height:140,position:"relative",overflow:"hidden",background:"linear-gradient(180deg,#1a2a3a 0%,#2d3f50 40%,#475569 70%,#64748b 100%)"}}>
+                  <svg viewBox="0 0 400 100" preserveAspectRatio="none" style={{position:"absolute",bottom:0,left:0,width:"100%",height:"70%",opacity:.2}}><path d="M0,100 L0,65 L20,65 L20,55 L30,55 L30,65 L50,65 L50,50 L55,40 L58,25 L60,15 L62,25 L65,40 L70,50 L70,65 L90,65 L90,45 L100,45 L100,65 L115,65 L115,55 L120,55 L120,50 L125,50 L125,55 L130,55 L130,65 L150,65 L155,50 L158,35 L160,20 L162,10 L164,20 L166,35 L170,50 L170,65 L190,65 L190,40 L200,40 L200,30 L205,25 L210,30 L210,40 L215,40 L215,65 L235,65 L240,45 L243,30 L245,18 L247,30 L250,45 L255,65 L275,65 L275,50 L285,50 L285,65 L300,65 L300,55 L310,55 L310,45 L315,40 L320,45 L320,55 L325,55 L325,65 L345,65 L345,50 L355,50 L355,65 L375,65 L375,55 L385,55 L385,65 L400,65 L400,100 Z" fill="white"/></svg>
+                  </div>
+                <div style={{padding:"24px"}}>
+                  <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f5f5f7",padding:"3px 10px",borderRadius:980,marginBottom:12}}>
+                    <div style={{width:6,height:6,borderRadius:"50%",background:"#b4b4b4"}}/>
+                    <span style={{fontSize:11,fontWeight:600,color:"#86868b"}}>Coming Soon</span>
+                  </div>
+                  <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>Compliance</h3>
+                  <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:16}}>Annual compliance modules including data privacy, workplace safety, and code of conduct. Launching soon.</p>
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                    <span style={{fontSize:12,color:"#b4b4b4"}}>Coming Q3 2026</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b4b4b4" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ===== LEADERSHIP PAGE ===== */}
+      {view==="leadership"&&(
+        <section style={{minHeight:"100vh"}}>
+          <div style={{position:"relative",overflow:"hidden",padding:"100px 24px 60px",textAlign:"center"}}>
+            <button onClick={()=>{setView("academy");window.scrollTo(0,0);}} style={{position:"absolute",top:64,left:20,zIndex:10,display:"flex",alignItems:"center",gap:6,background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"8px 16px",color:"rgba(255,255,255,.9)",fontSize:13,fontWeight:500,cursor:"pointer",transition:"all .2s"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+              Academy
+            </button>
+            <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg, #0a1628 0%, #1a1040 25%, #2d1b69 45%, #4a2080 60%, #7c3aed 80%, #a78bfa 100%)"}}>
+              <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 50% 80%, rgba(255,255,255,.06) 0%, transparent 60%)"}}/>
+            </div>
+            <div style={{position:"relative",zIndex:2,maxWidth:680,margin:"0 auto",animation:"fu .8s ease"}}>
+              <p style={{fontSize:14,fontWeight:600,color:"rgba(255,255,255,.7)",letterSpacing:".1em",textTransform:"uppercase",marginBottom:16}}>ALL Accor+ Academy</p>
+              <h1 style={{fontSize:"clamp(40px,7vw,68px)",fontWeight:700,lineHeight:1.08,letterSpacing:"-.04em",marginBottom:16,color:"white",textShadow:"0 2px 20px rgba(0,0,0,.3)"}}>Leadership<br/>Programme.</h1>
+              <p style={{fontSize:"clamp(16px,2vw,19px)",color:"rgba(255,255,255,.7)",lineHeight:1.5,maxWidth:460,margin:"0 auto"}}>Self-paced leadership development for Accor Plus team leaders across APAC.</p>
+            </div>
+          </div>
+
+          <div style={{maxWidth:800,margin:"0 auto",padding:"40px 24px 80px"}}>
+            <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:20}}>
+              {/* Volume 1 */}
+              <div style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",transition:"all .3s"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-4px)";e.currentTarget.style.boxShadow="0 12px 40px rgba(0,0,0,.08)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
+                <div style={{height:120,background:"linear-gradient(135deg,#2d1b69,#7c3aed)",display:"flex",alignItems:"center",justifyContent:"center"}}>
+                  <span style={{fontSize:40}}>&#128218;</span>
+                </div>
+                <div style={{padding:"24px"}}>
+                  <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f5f5f7",padding:"3px 10px",borderRadius:980,marginBottom:12}}>
+                    <div style={{width:6,height:6,borderRadius:"50%",background:"#b4b4b4"}}/>
+                    <span style={{fontSize:11,fontWeight:600,color:"#86868b"}}>Coming Soon</span>
+                  </div>
+                  <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>Leadership Volume 1</h3>
+                  <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:12}}>Foundations of leadership. Psychological safety, coaching with GROW, radical candour, and leading with purpose.</p>
+                  <span style={{fontSize:12,color:"#b4b4b4"}}>12 modules</span>
+                </div>
+              </div>
+
+              {/* Volume 2 */}
+              <div style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",transition:"all .3s"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-4px)";e.currentTarget.style.boxShadow="0 12px 40px rgba(0,0,0,.08)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
+                <div style={{height:120,background:"linear-gradient(135deg,#4a2080,#a78bfa)",display:"flex",alignItems:"center",justifyContent:"center"}}>
+                  <span style={{fontSize:40}}>&#127941;</span>
+                </div>
+                <div style={{padding:"24px"}}>
+                  <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f5f5f7",padding:"3px 10px",borderRadius:980,marginBottom:12}}>
+                    <div style={{width:6,height:6,borderRadius:"50%",background:"#b4b4b4"}}/>
+                    <span style={{fontSize:11,fontWeight:600,color:"#86868b"}}>Coming Soon</span>
+                  </div>
+                  <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>Leadership Volume 2</h3>
+                  <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:12}}>Advanced leadership. Strategic thinking, change management, performance culture, and leading across cultures.</p>
+                  <span style={{fontSize:12,color:"#b4b4b4"}}>12 modules</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Manager Dashboard */}
       {view==="manager"&&(
@@ -1229,7 +1985,7 @@ export default function App(){
       </>
       }
 
-      <footer style={{padding:"24px",borderTop:"1px solid #e8e8ed",textAlign:"center",background:"#f5f5f7"}}><p style={{fontSize:12,color:"#86868b"}}>ALL Accor+ Explorer Onboarding &middot; Pioneering the art of responsible hospitality.</p></footer>
+      <footer style={{padding:"24px",borderTop:"1px solid #e8e8ed",textAlign:"center",background:"#f5f5f7"}}><p style={{fontSize:12,color:"#86868b"}}>ALL Accor+ Explorer Onboarding &middot; Pioneering the art of subscription loyalty.</p></footer>
 
       {/* Detail Panel */}
       {dt!==null&&(
