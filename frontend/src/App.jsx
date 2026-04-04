@@ -1617,14 +1617,6 @@ export default function App(){
         <section style={{minHeight:"100vh"}}>
           {/* Academy Hero */}
           <div style={{position:"relative",overflow:"hidden",padding:"100px 24px 60px",textAlign:"center"}}>
-            <div style={{position:"absolute",top:20,right:20,zIndex:10}}>
-            <button onClick={()=>setShowLangMenu(!showLangMenu)} style={{fontSize:12,fontWeight:600,color:"rgba(255,255,255,.8)",background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"6px 14px",cursor:"pointer",transition:"all .2s",display:"flex",alignItems:"center",gap:6}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>{lang==="en"?"English \u{1F1EC}\u{1F1E7}":lang==="id"?"Bahasa \u{1F1EE}\u{1F1E9}":"\u0E44\u0E17\u0E22 \u{1F1F9}\u{1F1ED}"}<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="6 9 12 15 18 9"/></svg></button>
-            {showLangMenu&&<div style={{position:"absolute",top:"100%",right:0,marginTop:6,background:"rgba(30,30,30,.95)",backdropFilter:"blur(16px)",border:"1px solid rgba(255,255,255,.15)",borderRadius:12,overflow:"hidden",minWidth:160,boxShadow:"0 8px 32px rgba(0,0,0,.3)"}}>
-              {[{code:"en",label:"English",flag:"\u{1F1EC}\u{1F1E7}"},{code:"id",label:"Bahasa Indonesia",flag:"\u{1F1EE}\u{1F1E9}"},{code:"th",label:"\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",flag:"\u{1F1F9}\u{1F1ED}"}].map(l=>(
-                <button key={l.code} onClick={()=>{setLang(l.code);setShowLangMenu(false);}} style={{display:"flex",alignItems:"center",gap:8,width:"100%",padding:"10px 16px",background:lang===l.code?"rgba(255,255,255,.15)":"transparent",border:"none",color:"white",fontSize:13,fontWeight:lang===l.code?600:400,cursor:"pointer",textAlign:"left"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.1)"} onMouseLeave={e=>e.currentTarget.style.background=lang===l.code?"rgba(255,255,255,.15)":"transparent"}><span>{l.flag}</span>{l.label}{lang===l.code&&<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" style={{marginLeft:"auto"}}><polyline points="20 6 9 17 4 12"/></svg>}</button>
-              ))}
-            </div>}
-          </div>
         <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg, #0a1628 0%, #132d55 25%, #1a4a6e 45%, #2563a0 60%, #3b82f6 80%, #93c5fd 100%)"}}>
               <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 50% 80%, rgba(255,255,255,.08) 0%, transparent 60%)"}}/>
             </div>
