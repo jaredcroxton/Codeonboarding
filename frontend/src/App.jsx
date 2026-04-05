@@ -972,7 +972,7 @@ export default function App(){
     }
   };
   const isModComplete=(d,m)=>!!completedMods[`${d}-${m}`];
-  const modTimes={0:[5,25,25,30,25],1:[5,25,25,25,25],2:[5,25,20,20,25],3:[5,20,15,15,15,15,15,15],4:[5,20,20,20,20,20]};
+  const modTimes={0:[25,25,30,25],1:[25,25,25,25],2:[25,20,20,25],3:[20,15,15,15,15,15,15],4:[20,20,20,20,20]};
   const isDestComplete=(di)=>{if(!MODULES[di])return false;return MODULES[di].every((_,mi)=>isModComplete(di,mi));};
   const isDestUnlocked=(di)=>{if(di===0)return true;const prev=[0,0,1,2,2];return isDestComplete(prev[di]);};
   const totalMods=MODULES[0]?MODULES[0].length:0;
@@ -1363,7 +1363,7 @@ export default function App(){
       <nav className="nv" style={{position:"fixed",top:0,left:0,right:0,zIndex:100,borderBottom:"1px solid rgba(0,0,0,.06)"}}>
         <div style={{maxWidth:1024,margin:"0 auto",padding:"0 22px",height:48,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
           <div style={{display:"flex",alignItems:"center",gap:10}}><div style={{width:26,height:26,borderRadius:7,background:"#1d1d1f",display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,fontWeight:800,color:"white"}}>A+</div><span style={{fontSize:12,fontWeight:600}}>Accor+ Academy</span></div>
-          {view!=="login"&&view!=="onboarding"&&view!=="academy-mgr"&&view!=="lounge"&&<div style={{display:"flex",alignItems:"center",gap:16}}>
+          {view!=="login"&&view!=="onboarding"&&view!=="academy-mgr"&&<div style={{display:"flex",alignItems:"center",gap:16}}>
             <span style={{fontSize:12,color:"#86868b"}}>{t.welcome} <strong style={{color:"#1d1d1f"}}>Jared</strong></span>
             {(view==="agent"||view==="manager")&&<div style={{display:"flex",alignItems:"center",gap:8}}><div style={{width:100,height:3,borderRadius:2,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:`${overallPct}%`,height:"100%",borderRadius:2,background:"linear-gradient(90deg,#0071e3,#34d399)"}}/></div><span style={{fontSize:11,color:"#86868b",fontWeight:500}}>{completedCount}/{totalMods}</span></div>}
             {view==="leadership-learn"&&<div style={{display:"flex",alignItems:"center",gap:8}}><div style={{width:100,height:3,borderRadius:2,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:`${lOverallPct}%`,height:"100%",borderRadius:2,background:"linear-gradient(90deg,#7c3aed,#ec4899)"}}/></div><span style={{fontSize:11,color:"#86868b",fontWeight:500}}>{lDoneMods}/{lOverallMods}</span></div>}
