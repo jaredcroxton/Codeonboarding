@@ -635,6 +635,9 @@ export default function App(){
   const [lang,setLang]=useState("en");
   const [showLangMenu,setShowLangMenu]=useState(false);
   const [darkMode,setDarkMode]=useState(false);
+  const [coachMessages,setCoachMessages]=useState([]);
+  const [coachInput,setCoachInput]=useState("");
+  const [coachLoading,setCoachLoading]=useState(false);
   React.useEffect(()=>{document.body.style.background=darkMode?"#0a0a0f":"#fbfbfd";},[darkMode]);
   const [pulseActive,setPulseActive]=useState(null);
   const [pulseAnswers,setPulseAnswers]=useState({});
@@ -678,7 +681,12 @@ export default function App(){
       downloadCert:"Download Certificate",shareLinkedIn:"Share to LinkedIn",verifyUrl:"Verification URL",
       certId:"Certificate ID",certIssued:"Issued",
       contentUpdated:"Updated",lastReviewed:"Last reviewed",contentCurrent:"Content is current",contentNeedsReview:"Review recommended",
-      poweredBy:"Powered by "
+      poweredBy:"Powered by ",
+      lounge:"The Lounge",loungeDesc:"Advanced modules, product updates, and AI coaching for certified Explorers. You have graduated. This is where you stay sharp.",
+      advSales:"Advanced Sales Techniques",forCertified:"For certified team members",
+      askCoach:"Ask Coach",coachPlaceholder:"Ask a question about sales, products, or objection handling...",coachSend:"Send",coachThinking:"Thinking...",
+      step1Adv:"Connect Early: Advanced",step2Adv:"Clarify Needs: Advanced",step3Adv:"Confirm and Present: Advanced",step4Adv:"Close and Manage Concerns: Advanced",
+      comingSoonContent:"Content coming soon. This module is being developed."
     },
     id:{
       bizProposal:"PROPOSAL BISNIS",acad:"Akademi.",tagline:"Merintis seni loyalitas berlangganan",teamMember:"Anggota Tim",manager:"Manajer",
@@ -728,6 +736,11 @@ export default function App(){
       ofText:"dari",acrossAllProg:"Di semua program",
       backAcademy:"Akademi",
       poweredBy:"Didukung oleh",
+      lounge:"The Lounge",loungeDesc:"Modul lanjutan, pembaruan produk, dan pelatih AI untuk Explorer bersertifikat. Anda telah lulus. Di sinilah Anda tetap tajam.",
+      advSales:"Teknik Penjualan Lanjutan",forCertified:"Untuk anggota tim bersertifikat",
+      askCoach:"Tanya Pelatih",coachPlaceholder:"Ajukan pertanyaan tentang penjualan, produk, atau penanganan keberatan...",coachSend:"Kirim",coachThinking:"Berpikir...",
+      step1Adv:"Connect Early: Lanjutan",step2Adv:"Clarify Needs: Lanjutan",step3Adv:"Confirm and Present: Lanjutan",step4Adv:"Close and Manage: Lanjutan",
+      comingSoonContent:"Konten segera hadir. Modul ini sedang dikembangkan.",
       apply:"Terapkan",listen:"Dengarkan",mission:"Misi",
       applyLabel:"SKENARIO",listenLabel:"DENGARKAN",missionLabel:"MISI MINGGUAN",
       chooseApproach:"Pilih pendekatan Anda",
@@ -782,6 +795,11 @@ export default function App(){
       completedAll:"คุณได้ทำทุกจุดหมายสำเร็จและได้รับการรับรอง Explorer",
       howItWorks:"วิธีการทำงาน.",
       poweredBy:"ขับเคลื่อนโดย",
+      lounge:"The Lounge",loungeDesc:"โมดูลขั้นสูง อัปเดตผลิตภัณฑ์ และโค้ช AI สำหรับ Explorer ที่ได้รับการรับรอง คุณสำเร็จการศึกษาแล้ว ที่นี่คือที่ที่คุณพัฒนาต่อ",
+      advSales:"เทคนิคการขายขั้นสูง",forCertified:"สำหรับสมาชิกทีมที่ได้รับการรับรอง",
+      askCoach:"ถามโค้ช",coachPlaceholder:"ถามคำถามเกี่ยวกับการขาย ผลิตภัณฑ์ หรือการจัดการข้อโต้แย้ง...",coachSend:"ส่ง",coachThinking:"กำลังคิด...",
+      step1Adv:"Connect Early: ขั้นสูง",step2Adv:"Clarify Needs: ขั้นสูง",step3Adv:"Confirm and Present: ขั้นสูง",step4Adv:"Close and Manage: ขั้นสูง",
+      comingSoonContent:"เนื้อหาเร็วๆ นี้ กำลังพัฒนาโมดูลนี้",
       apply:"นำไปใช้",listen:"ฟัง",mission:"ภารกิจ",
       applyLabel:"สถานการณ์จำลอง",listenLabel:"ฟัง",missionLabel:"ภารกิจประจำสัปดาห์",
       chooseApproach:"เลือกแนวทางของคุณ",
@@ -816,7 +834,12 @@ export default function App(){
       downloadCert:"Tải Chứng Chỉ",shareLinkedIn:"Chia sẻ lên LinkedIn",verifyUrl:"URL Xác minh",
       certId:"Mã Chứng Chỉ",certIssued:"Cấp ngày",
       contentUpdated:"Đã cập nhật",lastReviewed:"Xem xét lần cuối",contentCurrent:"Nội dung hiện tại",contentNeedsReview:"Khuyến nghị xem xét",
-      poweredBy:"Được hỗ trợ bởi"
+      poweredBy:"Được hỗ trợ bởi",
+      lounge:"The Lounge",loungeDesc:"Mô-đun nâng cao, cập nhật sản phẩm và huấn luyện AI cho Explorer được chứng nhận. Bạn đã tốt nghiệp. Đây là nơi bạn tiếp tục phát triển.",
+      advSales:"Kỹ Thuật Bán Hàng Nâng Cao",forCertified:"Dành cho thành viên được chứng nhận",
+      askCoach:"Hỏi Huấn Luyện Viên",coachPlaceholder:"Đặt câu hỏi về bán hàng, sản phẩm hoặc xử lý phản đối...",coachSend:"Gửi",coachThinking:"Đang suy nghĩ...",
+      step1Adv:"Connect Early: Nâng cao",step2Adv:"Clarify Needs: Nâng cao",step3Adv:"Confirm and Present: Nâng cao",step4Adv:"Close and Manage: Nâng cao",
+      comingSoonContent:"Nội dung sắp ra mắt. Mô-đun đang được phát triển."
     },
     vi:{
       bizProposal:"ĐỀ XUẤT KINH DOANH",acad:"Học Viện.",tagline:"Tiên phong trong nghệ thuật trung thành đăng ký",teamMember:"Thành Viên",manager:"Quản Lý",
@@ -866,7 +889,12 @@ export default function App(){
       downloadCert:"Tải Chứng Chỉ",shareLinkedIn:"Chia sẻ LinkedIn",verifyUrl:"URL Xác minh",
       certId:"Mã Chứng Chỉ",certIssued:"Cấp ngày",
       contentUpdated:"Đã cập nhật",lastReviewed:"Xem xét lần cuối",contentCurrent:"Nội dung hiện tại",contentNeedsReview:"Khuyến nghị xem xét",
-      poweredBy:"Được hỗ trợ bởi"
+      poweredBy:"Được hỗ trợ bởi",
+      lounge:"The Lounge",loungeDesc:"Mô-đun nâng cao, cập nhật sản phẩm và huấn luyện AI cho Explorer được chứng nhận. Bạn đã tốt nghiệp. Đây là nơi bạn tiếp tục phát triển.",
+      advSales:"Kỹ Thuật Bán Hàng Nâng Cao",forCertified:"Dành cho thành viên được chứng nhận",
+      askCoach:"Hỏi Huấn Luyện Viên",coachPlaceholder:"Đặt câu hỏi về bán hàng, sản phẩm hoặc xử lý phản đối...",coachSend:"Gửi",coachThinking:"Đang suy nghĩ...",
+      step1Adv:"Connect Early: Nâng cao",step2Adv:"Clarify Needs: Nâng cao",step3Adv:"Confirm and Present: Nâng cao",step4Adv:"Close and Manage: Nâng cao",
+      comingSoonContent:"Nội dung sắp ra mắt. Mô-đun đang được phát triển."
     }
   };
   const t=T[lang]||T.en;
@@ -1335,7 +1363,7 @@ export default function App(){
       <nav className="nv" style={{position:"fixed",top:0,left:0,right:0,zIndex:100,borderBottom:"1px solid rgba(0,0,0,.06)"}}>
         <div style={{maxWidth:1024,margin:"0 auto",padding:"0 22px",height:48,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
           <div style={{display:"flex",alignItems:"center",gap:10}}><div style={{width:26,height:26,borderRadius:7,background:"#1d1d1f",display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,fontWeight:800,color:"white"}}>A+</div><span style={{fontSize:12,fontWeight:600}}>Accor+ Academy</span></div>
-          {view!=="login"&&view!=="onboarding"&&view!=="academy-mgr"&&<div style={{display:"flex",alignItems:"center",gap:16}}>
+          {view!=="login"&&view!=="onboarding"&&view!=="academy-mgr"&&view!=="lounge"&&<div style={{display:"flex",alignItems:"center",gap:16}}>
             <span style={{fontSize:12,color:"#86868b"}}>{t.welcome} <strong style={{color:"#1d1d1f"}}>Jared</strong></span>
             {(view==="agent"||view==="manager")&&<div style={{display:"flex",alignItems:"center",gap:8}}><div style={{width:100,height:3,borderRadius:2,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:`${overallPct}%`,height:"100%",borderRadius:2,background:"linear-gradient(90deg,#0071e3,#34d399)"}}/></div><span style={{fontSize:11,color:"#86868b",fontWeight:500}}>{completedCount}/{totalMods}</span></div>}
             {view==="leadership-learn"&&<div style={{display:"flex",alignItems:"center",gap:8}}><div style={{width:100,height:3,borderRadius:2,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:`${lOverallPct}%`,height:"100%",borderRadius:2,background:"linear-gradient(90deg,#7c3aed,#ec4899)"}}/></div><span style={{fontSize:11,color:"#86868b",fontWeight:500}}>{lDoneMods}/{lOverallMods}</span></div>}
@@ -1360,14 +1388,7 @@ export default function App(){
       
       <section style={{minHeight:"100vh",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",textAlign:"center",padding:"0",position:"relative",overflow:"hidden"}}>
           <button onClick={()=>setDarkMode(!darkMode)} style={{position:"absolute",top:20,left:20,zIndex:10,fontSize:16,background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"6px 12px",cursor:"pointer"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>{darkMode?"\u2600\uFE0F":"\u{1F319}"}</button>
-        <div style={{position:"absolute",top:20,right:20,zIndex:10}}>
-            <button onClick={()=>setShowLangMenu(!showLangMenu)} style={{fontSize:12,fontWeight:600,color:"rgba(255,255,255,.8)",background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"6px 14px",cursor:"pointer",transition:"all .2s",display:"flex",alignItems:"center",gap:6}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>{lang==="en"?"English \u{1F1EC}\u{1F1E7}":lang==="id"?"Bahasa \u{1F1EE}\u{1F1E9}":lang==="th"?"\u0E44\u0E17\u0E22 \u{1F1F9}\u{1F1ED}":"Vi\u1EC7t \u{1F1FB}\u{1F1F3}"}<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="6 9 12 15 18 9"/></svg></button>
-            {showLangMenu&&<div style={{position:"absolute",top:"100%",right:0,marginTop:6,background:"rgba(30,30,30,.95)",backdropFilter:"blur(16px)",border:"1px solid rgba(255,255,255,.15)",borderRadius:12,overflow:"hidden",minWidth:160,boxShadow:"0 8px 32px rgba(0,0,0,.3)"}}>
-              {[{code:"en",label:"English",flag:"\u{1F1EC}\u{1F1E7}"},{code:"id",label:"Bahasa Indonesia",flag:"\u{1F1EE}\u{1F1E9}"},{code:"th",label:"\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",flag:"\u{1F1F9}\u{1F1ED}"},{code:"vi",label:"Ti\u1EBFng Vi\u1EC7t",flag:"\u{1F1FB}\u{1F1F3}"}].map(l=>(
-                <button key={l.code} onClick={()=>{setLang(l.code);setShowLangMenu(false);}} style={{display:"flex",alignItems:"center",gap:8,width:"100%",padding:"10px 16px",background:lang===l.code?"rgba(255,255,255,.15)":"transparent",border:"none",color:"white",fontSize:13,fontWeight:lang===l.code?600:400,cursor:"pointer",textAlign:"left"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.1)"} onMouseLeave={e=>e.currentTarget.style.background=lang===l.code?"rgba(255,255,255,.15)":"transparent"}><span>{l.flag}</span>{l.label}{lang===l.code&&<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" style={{marginLeft:"auto"}}><polyline points="20 6 9 17 4 12"/></svg>}</button>
-              ))}
-            </div>}
-          </div>
+
         <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg, #0a1628 0%, #132d55 25%, #1a4a6e 45%, #2563a0 60%, #3b82f6 80%, #93c5fd 100%)"}}>
 
           <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 50% 70%, rgba(212,120,90,.15) 0%, transparent 60%)"}}/>
@@ -1743,14 +1764,7 @@ export default function App(){
       {view==="academy-mgr"&&(
         <section style={{minHeight:"100vh"}}>
           <div style={{position:"relative",overflow:"hidden",padding:"100px 24px 60px",textAlign:"center"}}>
-            <div style={{position:"absolute",top:20,right:20,zIndex:10}}>
-            <button onClick={()=>setShowLangMenu(!showLangMenu)} style={{fontSize:12,fontWeight:600,color:"rgba(255,255,255,.8)",background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"6px 14px",cursor:"pointer",transition:"all .2s",display:"flex",alignItems:"center",gap:6}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>{lang==="en"?"English \u{1F1EC}\u{1F1E7}":lang==="id"?"Bahasa \u{1F1EE}\u{1F1E9}":lang==="th"?"\u0E44\u0E17\u0E22 \u{1F1F9}\u{1F1ED}":"Vi\u1EC7t \u{1F1FB}\u{1F1F3}"}<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="6 9 12 15 18 9"/></svg></button>
-            {showLangMenu&&<div style={{position:"absolute",top:"100%",right:0,marginTop:6,background:"rgba(30,30,30,.95)",backdropFilter:"blur(16px)",border:"1px solid rgba(255,255,255,.15)",borderRadius:12,overflow:"hidden",minWidth:160,boxShadow:"0 8px 32px rgba(0,0,0,.3)"}}>
-              {[{code:"en",label:"English",flag:"\u{1F1EC}\u{1F1E7}"},{code:"id",label:"Bahasa Indonesia",flag:"\u{1F1EE}\u{1F1E9}"},{code:"th",label:"\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",flag:"\u{1F1F9}\u{1F1ED}"},{code:"vi",label:"Ti\u1EBFng Vi\u1EC7t",flag:"\u{1F1FB}\u{1F1F3}"}].map(l=>(
-                <button key={l.code} onClick={()=>{setLang(l.code);setShowLangMenu(false);}} style={{display:"flex",alignItems:"center",gap:8,width:"100%",padding:"10px 16px",background:lang===l.code?"rgba(255,255,255,.15)":"transparent",border:"none",color:"white",fontSize:13,fontWeight:lang===l.code?600:400,cursor:"pointer",textAlign:"left"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.1)"} onMouseLeave={e=>e.currentTarget.style.background=lang===l.code?"rgba(255,255,255,.15)":"transparent"}><span>{l.flag}</span>{l.label}{lang===l.code&&<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" style={{marginLeft:"auto"}}><polyline points="20 6 9 17 4 12"/></svg>}</button>
-              ))}
-            </div>}
-          </div>
+    
         <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg, #0a1628 0%, #132d55 25%, #1a4a6e 45%, #2563a0 60%, #3b82f6 80%, #93c5fd 100%)"}}>
               <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 50% 80%, rgba(255,255,255,.08) 0%, transparent 60%)"}}/>
             </div>
@@ -1944,6 +1958,109 @@ export default function App(){
       )}
 
       {/* ===== ONBOARDING LOGIN HERO ===== */}
+      {view==="lounge"&&(
+        <section style={{minHeight:"100vh"}}>
+          {/* Lounge Hero */}
+          <div style={{position:"relative",overflow:"hidden",padding:"100px 24px 60px",textAlign:"center"}}>
+            <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg,#021a1a 0%,#0d3330 30%,#0f766e 60%,#14b8a6 100%)"}}>
+              <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 50% 80%, rgba(255,255,255,.06) 0%, transparent 60%)"}}/>
+            </div>
+            <button onClick={()=>{setView("academy");window.scrollTo(0,0);}} style={{position:"absolute",top:64,left:20,zIndex:10,display:"flex",alignItems:"center",gap:6,background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"8px 16px",color:"rgba(255,255,255,.9)",fontSize:13,fontWeight:500,cursor:"pointer"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+              {t.academy}
+            </button>
+            <div style={{position:"relative",zIndex:2,maxWidth:680,margin:"0 auto",animation:"fu .8s ease"}}>
+              <p style={{fontSize:48,marginBottom:8}}>&#x2615;</p>
+              <h1 style={{fontSize:"clamp(36px,6vw,56px)",fontWeight:700,lineHeight:1.08,letterSpacing:"-.04em",marginBottom:12,color:"white"}}>{t.lounge}</h1>
+              <p style={{fontSize:"clamp(16px,2vw,19px)",color:"rgba(255,255,255,.7)",lineHeight:1.5,maxWidth:460,margin:"0 auto"}}>{t.loungeDesc}</p>
+            </div>
+          </div>
+
+          {/* Advanced Sales Techniques */}
+          <div style={{maxWidth:900,margin:"0 auto",padding:"40px 24px 40px"}}>
+            <h2 style={{fontSize:28,fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>{t.advSales}</h2>
+            <p style={{fontSize:15,color:"#86868b",marginBottom:32}}>{t.forCertified}</p>
+
+            <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:16}} className="hiw-grid">
+              {[
+                {num:"01",title:t.step1Adv,desc:"Advanced rapport-building techniques. The psychology of the first 30 seconds. Warm calling vs cold calling. Personalisation at scale.",col:"#3B82F6",icon:"\u{1F91D}"},
+                {num:"02",title:t.step2Adv,desc:"Deep discovery frameworks. Reading buying signals. Identifying the real need behind the stated need. Advanced questioning sequences.",col:"#f59e0b",icon:"\u{1F50D}"},
+                {num:"03",title:t.step3Adv,desc:"Tailored value presentations. Storytelling with data. The art of the personalised calculation. Presenting without sounding scripted.",col:"#10b981",icon:"\u{1F381}"},
+                {num:"04",title:t.step4Adv,desc:"Advanced objection handling. The 'I need to think about it' playbook. Assumptive closing. Managing price sensitivity. The callback framework.",col:"#ef4444",icon:"\u{1F3AF}"}
+              ].map((mod,mi)=>(
+                <div key={mi} style={{background:"white",borderRadius:20,border:"1px solid #e8e8ed",overflow:"hidden",cursor:"pointer",transition:"all .3s"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-4px)";e.currentTarget.style.boxShadow="0 12px 40px rgba(0,0,0,.08)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
+                  <div style={{height:4,background:mod.col}}/>
+                  <div style={{padding:"28px 24px"}}>
+                    <div style={{display:"flex",alignItems:"center",gap:14,marginBottom:16}}>
+                      <div style={{width:44,height:44,borderRadius:12,background:mod.col+"12",display:"flex",alignItems:"center",justifyContent:"center",fontSize:22}}>{mod.icon}</div>
+                      <div>
+                        <p style={{fontSize:11,fontWeight:700,color:mod.col,letterSpacing:".06em"}}>{lang==="id"?"LANGKAH":lang==="th"?"ขั้นตอน":lang==="vi"?"BƯỚC":"STEP"} {mod.num}</p>
+                        <h3 style={{fontSize:17,fontWeight:700}}>{mod.title}</h3>
+                      </div>
+                    </div>
+                    <p style={{fontSize:14,color:"#86868b",lineHeight:1.6,marginBottom:16}}>{mod.desc}</p>
+                    <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#f5f5f7",padding:"5px 14px",borderRadius:980}}>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#b4b4b4" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                      <span style={{fontSize:11,fontWeight:600,color:"#b4b4b4"}}>{t.comingSoonContent}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Explorer Coach - AI Chatbot */}
+          <div style={{maxWidth:900,margin:"0 auto",padding:"20px 24px 80px"}}>
+            <div style={{background:"linear-gradient(135deg,#ecfdf5,#e8f4ff)",borderRadius:24,padding:"32px",border:"1px solid #e8e8ed"}}>
+              <div style={{display:"flex",alignItems:"center",gap:14,marginBottom:24}}>
+                <div style={{width:48,height:48,borderRadius:14,background:"linear-gradient(135deg,#0d9488,#3b82f6)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:24}}>&#x1F916;</div>
+                <div>
+                  <h2 style={{fontSize:22,fontWeight:700}}>{t.askCoach}</h2>
+                  <p style={{fontSize:13,color:"#86868b"}}>{lang==="id"?"Didukung oleh AI. Dilatih pada metodologi penjualan Accor Plus.":lang==="th"?"ขับเคลื่อนด้วย AI ฝึกตามวิธีการขายของ Accor Plus":lang==="vi"?"Được hỗ trợ bởi AI. Được đào tạo theo phương pháp bán hàng Accor Plus.":"Powered by AI. Trained on the Accor Plus sales methodology."}</p>
+                </div>
+              </div>
+
+              {/* Chat messages */}
+              <div style={{background:"white",borderRadius:16,border:"1px solid #e8e8ed",minHeight:200,maxHeight:400,overflowY:"auto",padding:"16px",marginBottom:16}}>
+                {coachMessages.length===0&&(
+                  <div style={{textAlign:"center",padding:"40px 20px"}}>
+                    <p style={{fontSize:32,marginBottom:12}}>&#x1F4AC;</p>
+                    <p style={{fontSize:14,color:"#86868b",lineHeight:1.6}}>{lang==="id"?"Tanyakan apa saja tentang penjualan Explorer, penanganan keberatan, atau teknik penutupan.":lang==="th"?"ถามอะไรก็ได้เกี่ยวกับการขาย Explorer การจัดการข้อโต้แย้ง หรือเทคนิคการปิดการขาย":lang==="vi"?"Hỏi bất cứ điều gì về bán hàng Explorer, xử lý phản đối hoặc kỹ thuật chốt đơn.":"Ask anything about Explorer sales, objection handling, or closing techniques."}</p>
+                    <div style={{display:"flex",flexWrap:"wrap",gap:8,justifyContent:"center",marginTop:16}}>
+                      {[
+                        lang==="id"?"Bagaimana menangani keberatan harga?":lang==="th"?"จัดการข้อโต้แย้งเรื่องราคาอย่างไร?":lang==="vi"?"Xử lý phản đối giá thế nào?":"How do I handle the price objection?",
+                        lang==="id"?"Berikan saya skrip pembuka":"Give me an opening script",
+                        lang==="id"?"Hitung nilai untuk pelancong keluarga":"Calculate value for a family traveller"
+                      ].map((q,qi)=>(
+                        <button key={qi} onClick={()=>setCoachInput(q)} style={{padding:"8px 16px",borderRadius:980,background:"#ecfdf5",border:"1px solid #d1fae5",fontSize:12,color:"#0d9488",fontWeight:500,cursor:"pointer"}}>{q}</button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {coachMessages.map((msg,mi)=>(
+                  <div key={mi} style={{display:"flex",justifyContent:msg.role==="user"?"flex-end":"flex-start",marginBottom:12}}>
+                    <div style={{maxWidth:"80%",padding:"12px 16px",borderRadius:msg.role==="user"?"16px 16px 4px 16px":"16px 16px 16px 4px",background:msg.role==="user"?"#0d9488":"#f5f5f7",color:msg.role==="user"?"white":"#1d1d1f"}}>
+                      <p style={{fontSize:14,lineHeight:1.6,whiteSpace:"pre-wrap"}}>{msg.text}</p>
+                    </div>
+                  </div>
+                ))}
+                {coachLoading&&<div style={{display:"flex",gap:4,padding:"12px"}}><div style={{width:8,height:8,borderRadius:"50%",background:"#0d9488",animation:"gp 1s ease infinite"}}/>
+                <div style={{width:8,height:8,borderRadius:"50%",background:"#0d9488",animation:"gp 1s ease .2s infinite"}}/>
+                <div style={{width:8,height:8,borderRadius:"50%",background:"#0d9488",animation:"gp 1s ease .4s infinite"}}/></div>}
+              </div>
+
+              {/* Input */}
+              <div style={{display:"flex",gap:10}}>
+                <input value={coachInput} onChange={e=>setCoachInput(e.target.value)} onKeyDown={e=>{if(e.key==="Enter"&&coachInput.trim()){const newMsgs=[...coachMessages,{role:"user",text:coachInput}];setCoachMessages(newMsgs);setCoachInput("");setCoachLoading(true);setTimeout(()=>{setCoachMessages([...newMsgs,{role:"assistant",text:lang==="id"?"Fitur ini akan terhubung ke API OpenAI. Saat diaktifkan, saya akan menjawab pertanyaan Anda menggunakan metodologi penjualan Accor Plus, detail produk Explorer, dan teknik penanganan keberatan.":lang==="th"?"ฟีเจอร์นี้จะเชื่อมต่อกับ OpenAI API เมื่อเปิดใช้งาน ฉันจะตอบคำถามของคุณโดยใช้วิธีการขายของ Accor Plus รายละเอียดผลิตภัณฑ์ Explorer และเทคนิคการจัดการข้อโต้แย้ง":lang==="vi"?"Tính năng này sẽ kết nối với OpenAI API. Khi được kích hoạt, tôi sẽ trả lời câu hỏi của bạn bằng phương pháp bán hàng Accor Plus, chi tiết sản phẩm Explorer và kỹ thuật xử lý phản đối.":"This feature will connect to the OpenAI API. When activated, I will answer your questions using the Accor Plus sales methodology, Explorer product details, and objection handling techniques. For now, this is a preview of the interface."}]);setCoachLoading(false);},1500);}}} placeholder={t.coachPlaceholder} style={{flex:1,padding:"14px 20px",borderRadius:980,border:"1.5px solid #e8e8ed",fontSize:15,fontFamily:"inherit",outline:"none",background:"white"}} />
+                <button onClick={()=>{if(!coachInput.trim())return;const newMsgs=[...coachMessages,{role:"user",text:coachInput}];setCoachMessages(newMsgs);setCoachInput("");setCoachLoading(true);setTimeout(()=>{setCoachMessages([...newMsgs,{role:"assistant",text:"This feature will connect to the OpenAI API. When activated, I will answer your questions using the Accor Plus sales methodology, Explorer product details, and objection handling techniques. For now, this is a preview of the interface."}]);setCoachLoading(false);},1500);}} style={{padding:"14px 28px",borderRadius:980,background:"#0d9488",color:"white",fontSize:15,fontWeight:600,border:"none",cursor:"pointer",transition:"all .2s"}} onMouseEnter={e=>e.currentTarget.style.background="#0f766e"} onMouseLeave={e=>e.currentTarget.style.background="#0d9488"}>{t.coachSend}</button>
+              </div>
+            </div>
+          </div>
+
+          <footer style={{padding:"24px",borderTop:"1px solid #e8e8ed",textAlign:"center",background:"#f5f5f7"}}><p style={{fontSize:12,color:"#86868b"}}>{lang==="id"?"Didukung oleh ":"Được hỗ trợ bởi " }PerformOS</p></footer>
+        </section>
+      )}
+
       {view==="onboarding"&&(
         <section style={{minHeight:"100vh",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",textAlign:"center",padding:"0",position:"relative",overflow:"hidden"}}>
           <button onClick={()=>{setView("academy");window.scrollTo(0,0);}} style={{position:"absolute",top:64,left:20,zIndex:10,display:"flex",alignItems:"center",gap:6,background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"8px 16px",color:"rgba(255,255,255,.9)",fontSize:13,fontWeight:500,cursor:"pointer",transition:"all .2s"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>
@@ -1972,6 +2089,7 @@ export default function App(){
           {/* Academy Hero */}
           <div style={{position:"relative",overflow:"hidden",padding:"100px 24px 60px",textAlign:"center"}}>
             <button onClick={()=>setDarkMode(!darkMode)} style={{position:"absolute",top:20,left:20,zIndex:10,fontSize:16,background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"6px 12px",cursor:"pointer"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>{darkMode?"\u2600\uFE0F":"\u{1F319}"}</button>
+    
         <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg, #0a1628 0%, #132d55 25%, #1a4a6e 45%, #2563a0 60%, #3b82f6 80%, #93c5fd 100%)"}}>
               <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 50% 80%, rgba(255,255,255,.08) 0%, transparent 60%)"}}/>
             </div>
@@ -1986,7 +2104,7 @@ export default function App(){
 
           {/* Course Tiles */}
           <div style={{maxWidth:1000,margin:"0 auto",padding:"20px 24px 80px"}}>
-            <div className="hub-grid" style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:20}}>
+            <div className="hub-grid" style={{display:"grid",gridTemplateColumns:"repeat(5,1fr)",gap:16}}>
               {/* Onboarding */}
               <div onClick={()=>{setView("onboarding");window.scrollTo(0,0);}} style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",cursor:"pointer",transition:"all .3s",display:"flex",flexDirection:"column"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 16px 48px rgba(0,0,0,.1)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
                 <div style={{height:140,position:"relative",overflow:"hidden",background:"linear-gradient(180deg,#0a1628 0%,#132d55 40%,#d4785a 75%,#e8a87c 100%)"}}>
@@ -2048,6 +2166,29 @@ export default function App(){
                     <div style={{display:"flex",alignItems:"center",gap:4,color:"#0071e3",fontSize:13,fontWeight:600}}>
                       {t.launch}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* The Lounge */}
+              <div onClick={()=>{setView("lounge");window.scrollTo(0,0);}} style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",cursor:"pointer",transition:"all .3s",display:"flex",flexDirection:"column"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 16px 48px rgba(0,0,0,.1)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
+                <div style={{height:140,position:"relative",overflow:"hidden",background:"linear-gradient(180deg,#021a1a 0%,#0d3330 30%,#0f766e 60%,#14b8a6 100%)"}}>
+                  <svg viewBox="0 0 400 100" preserveAspectRatio="none" style={{position:"absolute",bottom:0,left:0,width:"100%",height:"70%",opacity:.2}}><path d="M0,100 L0,70 Q50,40 100,65 Q150,30 200,60 Q250,45 300,55 Q350,35 400,65 L400,100 Z" fill="white"/></svg>
+                  <div style={{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center"}}><span style={{fontSize:48,opacity:.3}}>&#x2615;</span></div>
+                </div>
+                <div style={{padding:"24px",display:"flex",flexDirection:"column",flex:1}}>
+                  <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"#ecfdf5",padding:"3px 10px",borderRadius:980,marginBottom:12,alignSelf:"flex-start"}}>
+                    <div style={{width:6,height:6,borderRadius:"50%",background:"#0d9488"}}/>
+                    <span style={{fontSize:11,fontWeight:600,color:"#0d9488"}}>{t.forCertified}</span>
+                  </div>
+                  <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>{t.lounge}</h3>
+                  <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:16,flex:1}}>{t.loungeDesc}</p>
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                    <span style={{fontSize:12,color:"#b4b4b4"}}>{t.advSales}</span>
+                    <div style={{display:"flex",alignItems:"center",gap:4,color:"#0d9488",fontSize:13,fontWeight:600}}>
+                      {t.enter}
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </div>
                   </div>
                 </div>
@@ -2969,26 +3110,17 @@ export default function App(){
                 <div style={{textAlign:"center"}}><div style={{fontSize:42,marginBottom:8}}>{d.icon}</div><h2 style={{fontSize:26,fontWeight:700,letterSpacing:"-.02em",marginBottom:3}}>{d.city}</h2><p style={{fontSize:15,fontWeight:600,color:d.col}}>{d.mod}</p><p style={{fontSize:13,color:"#86868b",marginTop:3}}>{d.tag}</p></div>
               </div>
               <div style={{padding:"24px 28px"}}>
-                <p style={{fontSize:11,fontWeight:700,color:"#86868b",letterSpacing:".06em",marginBottom:14}}>{lang==="id"?"MODUL PEMBELAJARAN":lang==="th"?"โมดูลการเรียนรู้":"LEARNING MODULES"}</p>
+                <p style={{fontSize:11,fontWeight:700,color:"#86868b",letterSpacing:".06em",marginBottom:14}}>{lang==="id"?"MODUL PEMBELAJARAN":lang==="th"?"\u0e42\u0e21\u0e14\u0e39\u0e25\u0e01\u0e32\u0e23\u0e40\u0e23\u0e35\u0e22\u0e19\u0e23\u0e39\u0e49":lang==="vi"?"M\u00d4-\u0110UN H\u1eccC T\u1eacP":"LEARNING MODULES"}</p>
                 <div style={{display:"flex",flexDirection:"column",gap:6}}>
-                  {d.tp.map((tp,ti)=>{
-                    const done=isModComplete(dt,ti);
-                    const hasModules=getModules(dt)&&getModules(dt)[ti];
-                    return(
-                    <div key={ti} className="rw" onClick={()=>{if(hasModules){startModule(dt,ti);sDt(null);}}} style={{padding:"14px 16px",background:done?`${d.col}10`:tp.s?`${d.col}08`:"transparent",border:`1px solid ${done?`${d.col}30`:tp.s?`${d.col}20`:"#e8e8ed"}`,display:"flex",gap:12,borderRadius:14,cursor:hasModules?"pointer":"default",transition:"all .2s"}}>
-                      <div style={{width:26,height:26,borderRadius:7,background:done?"#10b981":tp.s?d.col:"#f5f5f7",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,color:done?"white":tp.s?"white":"#86868b"}}>{done?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>:<Ar/>}</div>
-                      <div><p style={{fontSize:14,fontWeight:600,color:done?"#10b981":"#1d1d1f",marginBottom:2}}>{(lang==="id"&&dt===0&&MODULES_ID[0]&&MODULES_ID[0][ti])?MODULES_ID[0][ti].title:(lang==="th"&&dt===0&&MODULES_TH[0]&&MODULES_TH[0][ti])?MODULES_TH[0][ti].title:tp.t}{done?" \u2713":""}</p><p style={{fontSize:12,color:"#86868b",lineHeight:1.5}}>{tp.d}</p></div>
-                    </div>
-                    );
-                  })}
+                  {d.tp.map((tp,ti)=>{const done=isModComplete(dt,ti);return(
+                    <div key={ti} className="rw" onClick={()=>{startModule(dt,ti);sDt(null);}} style={{padding:"12px 14px",background:done?`${d.col}10`:"transparent",border:`1px solid ${done?`${d.col}30`:"#e8e8ed"}`,display:"flex",gap:10,alignItems:"center",cursor:"pointer",borderRadius:14,marginBottom:2}}>
+                      <div style={{width:24,height:24,borderRadius:7,background:done?"#10b981":d.col,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,color:"white"}}>{done?<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>:<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="5 3 19 12 5 21"/></svg>}</div>
+                      <div style={{flex:1}}><p style={{fontSize:13,fontWeight:600,color:done?"#10b981":"#1d1d1f"}}>{tp}{done?" \u2713":""}</p><p style={{fontSize:11,color:"#86868b"}}>{getModules(dt)[ti]?getModules(dt)[ti].steps.length:0} {lang==="id"?"langkah":lang==="th"?"\u0e02\u0e31\u0e49\u0e19\u0e15\u0e2d\u0e19":lang==="vi"?"b\u01b0\u1edbc":"steps"}</p></div>
+                    </div>);})}
                 </div>
-                <button onClick={()=>{const idx=d.tp.findIndex((_,ti)=>!isModComplete(dt,ti));if(idx>=0&&getModules(dt)&&getModules(dt)[idx]){startModule(dt,idx);sDt(null);}}} style={{width:"100%",padding:"14px",borderRadius:980,background:d.col,color:"white",fontSize:17,border:"none",cursor:"pointer",marginTop:24}}>{d.tp.every((_,ti)=>isModComplete(dt,ti))?t.allComplete+" \u2713":getModules(dt)?t.continueLearning:t.comingSoon}</button>
-                <div style={{display:"flex",justifyContent:"space-between",marginTop:20,paddingTop:16,borderTop:"1px solid #e8e8ed"}}>
-                  <button disabled={dt===0} onClick={()=>{sDt(null);setTimeout(()=>go(dt-1),250)}} style={{background:"transparent",border:"none",color:dt===0?"#d2d2d7":"#0071e3",fontSize:14,fontWeight:500,cursor:dt===0?"not-allowed":"pointer"}}>{"\u2190"} Previous</button>
-                  <button disabled={dt===3} onClick={()=>{sDt(null);setTimeout(()=>go(dt+1),250)}} style={{background:"transparent",border:"none",color:dt===3?"#d2d2d7":"#0071e3",fontSize:14,fontWeight:500,cursor:dt===3?"not-allowed":"pointer"}}>Next {"\u2192"}</button>
-                </div>
+                <button onClick={()=>{const idx=d.tp.findIndex((_,ti)=>!isModComplete(dt,ti));if(idx>=0){startModule(dt,idx);sDt(null);}}} style={{width:"100%",padding:"14px",borderRadius:980,background:d.col,color:"white",fontSize:17,border:"none",cursor:"pointer",marginTop:20}}>{isDestComplete(dt)?"All Complete \u2713":(lang==="id"?"Lanjutkan Belajar":lang==="th"?"\u0e40\u0e23\u0e35\u0e22\u0e19\u0e23\u0e39\u0e49\u0e15\u0e48\u0e2d":lang==="vi"?"Ti\u1ebfp t\u1ee5c H\u1ecdc":"Continue Learning")}</button>
               </div>
-            </>)})()}
+            </>);})()}
           </div>
         </div>
       )}
