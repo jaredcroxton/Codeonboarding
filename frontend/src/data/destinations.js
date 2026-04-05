@@ -1,0 +1,24 @@
+// Destination data for onboarding and leadership programmes
+
+export const D=[
+  {id:"auckland",city:"Auckland",country:"New Zealand",mx:790,my:400,icon:"\u{1F1F3}\u{1F1FF}",mod:"Our Story",tag:"Where it all began",col:"#60a5fa",glow:"rgba(96,165,250,.4)",
+    tp:[{t:"The ALL Accor+ Journey",d:"From a single Novotel in Lille, 1967, to 5,700+ hotels across 110 countries.",s:1},{t:"The Accor Plus Journey",d:"Our vision, mission and the story behind subscription loyalty in Asia Pacific.",s:0},{t:"Our Brand Portfolio",d:"Raffles, Fairmont, Sofitel, Pullman, Novotel, Mercure, ibis and beyond.",s:0},{t:"Key Hotels in Asia Pacific",d:"Highlighting our flagship properties and presence across 18 APAC countries.",s:0}]},
+  {id:"sydney",city:"Sydney",country:"Australia",mx:680,my:430,icon:"\u{1F1E6}\u{1F1FA}",mod:"Loyalty & Subscription Loyalty",tag:"The power of belonging",col:"#f59e0b",glow:"rgba(245,158,11,.4)",
+    tp:[{t:"Why Loyalty Matters",d:"How subscription loyalty drives deeper engagement than points-only programmes.",s:1},{t:"Why Members Stay Loyal",d:"What keeps Accor Plus members renewing year after year.",s:0},{t:"ALL Loyalty Tiers",d:"Classic, Silver, Gold, Platinum, Diamond: how status nights unlock privileges.",s:0},{t:"Retention & Renewal",d:"How to articulate renewal value and drive lifetime engagement.",s:0}]},
+  {id:"jakarta",city:"Jakarta",country:"Indonesia",mx:430,my:305,icon:"\u{1F1EE}\u{1F1E9}",mod:"The Explorer Product",tag:"Know it. Own it. Sell it.",col:"#34d399",glow:"rgba(52,211,153,.4)",
+    tp:[{t:"Explorer Deep Dive",d:"Two Stay Plus nights, 30% dining, 15% drinks, instant Gold, 30 bonus nights.",s:1},{t:"Customer Profiles",d:"Who buys Explorer and why. Understanding the motivations behind every purchase.",s:0},{t:"Ease",d:"How simple it is to use, book and enjoy every Explorer benefit.",s:0},{t:"Value Calculators",d:"Building a compelling ROI story for every prospect.",s:0}]},
+  {id:"india",city:"Mumbai",country:"India",mx:135,my:185,icon:"\u{1F1EE}\u{1F1F3}",mod:"Outbound Acquisition",tag:"Our Sales Methodology",col:"#f472b6",glow:"rgba(244,114,182,.4)",
+    tp:[{t:"Sales Principles",d:"The foundations of consultative selling and what drives conversion.",s:1},{t:"Connect Early",d:"Building rapport in the first 30 seconds.",s:0},{t:"Clarify Needs",d:"Asking the right questions about travel habits and lifestyle.",s:0},{t:"Confirm and Present",d:"Matching benefits to needs. Personal, not transactional.",s:0},{t:"Close & Manage Concerns",d:"Handling objections with confidence and closing with conviction.",s:0},{t:"Celebrate Belonging",d:"Welcoming new members into the Explorer community.",s:0},{t:"Zendesk & Expectations",d:"Platform training, workflows and performance expectations for your role.",s:0}]},
+  {id:"membercare",city:"Mumbai",country:"India",mx:135,my:185,icon:"\u{1F1EE}\u{1F1F3}",mod:"Member Care",tag:"Support. Resolve. Retain.",col:"#8b5cf6",glow:"rgba(139,92,246,.4)",
+    tp:[{t:"Onboarding Years",d:"Understanding the member lifecycle from day one through renewal.",s:1},{t:"ACE Framework",d:"Acknowledge, Clarify, Execute: the foundation of every member interaction.",s:0},{t:"Positive First Response",d:"Setting the tone with empathy and ownership from the first contact.",s:0},{t:"Complaint Identifying",d:"Recognising complaint types and escalation pathways.",s:0},{t:"Zendesk System & Tickets",d:"Platform navigation, ticket management and SLA expectations.",s:0}]},
+];
+
+
+export const LD=[
+  {id:"nz",city:"Auckland",country:"New Zealand",mod:"Vision & Purpose",icon:"\u{1F1F3}\u{1F1FF}",col:"#3B82F6",mx:790,my:385,tag:"Module 1",tp:[{t:"Vision, Purpose & the Why",d:"Why does this team exist beyond the revenue target?"}]},
+  {id:"au",city:"Sydney",country:"Australia",mod:"Wellbeing",icon:"\u{1F1E6}\u{1F1FA}",col:"#84CC16",mx:605,my:400,tag:"Module 2",tp:[{t:"The Wellbeing Wheel",d:"You cannot lead a sustainable team from an unsustainable life."}]},
+  {id:"ph",city:"Manila",country:"Philippines",mod:"Radical Candour",icon:"\u{1F1F5}\u{1F1ED}",col:"#EC4899",mx:500,my:260,tag:"Module 3",tp:[{t:"Radical Candour",d:"Care personally. Challenge directly."}]},
+  {id:"id",city:"Jakarta",country:"Indonesia",mod:"GROW Coaching",icon:"\u{1F1EE}\u{1F1E9}",col:"#8B5CF6",mx:430,my:305,tag:"Module 4",tp:[{t:"GROW Conversations",d:"The discipline of coaching, not telling."}]},
+  {id:"th",city:"Bangkok",country:"Thailand",mod:"Values-Based Leadership",icon:"\u{1F1F9}\u{1F1ED}",col:"#F59E0B",mx:340,my:255,tag:"Module 5",tp:[{t:"Values-Based Leadership",d:"What do you stand for when pressure is on?"}]},
+  {id:"in",city:"Mumbai",country:"India",mod:"High Performance",icon:"\u{1F1EE}\u{1F1F3}",col:"#EF4444",mx:155,my:200,tag:"Module 6",tp:[{t:"High Performance Standards",d:"Coaching unlocks potential. Standards define what it looks like."}]}
+];
