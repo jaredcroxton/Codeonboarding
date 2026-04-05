@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 const D=[
   {id:"auckland",city:"Auckland",country:"New Zealand",mx:790,my:400,icon:"\u{1F1F3}\u{1F1FF}",mod:"Our Story",tag:"Where it all began",col:"#60a5fa",glow:"rgba(96,165,250,.4)",
@@ -184,74 +184,124 @@ const MODULES={
   1:[
     {title:"Immigration",steps:[{type:"immigration",title:"Immigration Check: Australia",country:"Australia",maori:"G\u0027day",flag:"\u{1F1E6}\u{1F1FA}",welcomeMsg:"G\u0027day mate! Welcome to Australia. Before you dive into loyalty, let us check your knowledge of the land down under. Five questions. No wrong answers, just fun facts.",outcomes:["Why loyalty matters more than discounts in subscription models","What makes Accor Plus members stay and renew year after year","The ALL loyalty tier system from Classic to Diamond","How to articulate renewal value and drive lifetime engagement"],facts:[{q:"Australia has more wild camels than any other country. How many?",opts:["50,000","250,000","500,000","Over 1 million"],correct:3,fact:"Australia is home to over 1 million wild camels, the largest feral camel population in the world. Originally imported in the 1800s for outback transport."},{q:"Which is wider: Australia or the Moon?",opts:["The Moon","Australia","They are the same","Depends on season"],correct:1,fact:"Australia is approximately 4,000 km wide. The Moon is 3,474 km. Australia is genuinely wider than the Moon."},{q:"Why are the kangaroo and emu on Australia coat of arms?",opts:["Most common animals","Cannot walk backwards","Oldest species","Represent six states"],correct:1,fact:"Neither kangaroos nor emus can easily walk backwards. They symbolise a nation always moving forward."},{q:"How long is the Great Barrier Reef?",opts:["500 km","1,200 km","2,300 km","4,000 km"],correct:2,fact:"The Great Barrier Reef stretches over 2,300 km along the Queensland coast. Nearly 3,000 individual reef systems, visible from space."},{q:"What was Australia the second country to achieve?",opts:["Universal healthcare","Women right to vote","Free public education","Minimum wage"],correct:1,fact:"In 1902, Australia became the second country after New Zealand to give women the right to vote nationally."}]}]},
     {title:"Why Loyalty Matters",steps:[
-      {type:"learn",title:"The Power of Loyalty",content:"Loyalty programmes are no longer just about points. They are about creating emotional connections that drive repeat behaviour. In the hospitality industry, loyal guests spend 67% more than new ones and are five times more likely to rebook.\n\nSubscription loyalty, the model behind ALL Accor+ Explorer, goes further. Members pay upfront, creating commitment and a psychological motivation to maximise their membership. This is why Explorer members stay five times more nights than non-members.",img:"\u{1F4A1}"},
+      {type:"learn",title:"What You Will Learn",content:"Welcome to Australia, the home of Accor Plus. In this module, you will understand why subscription loyalty is fundamentally different from points programmes, and why that difference matters every time you pick up the phone.\n\nWhat you will learn:\n\u2022 The difference between transactional loyalty and emotional loyalty\n\u2022 Why subscription members spend more, stay longer, and refer more\n\u2022 The psychology behind why people pay for memberships they already value\n\nWhat you will be required to do:\n\u2022 Explain the loyalty difference in your own words\n\u2022 Identify which type of loyalty your current members demonstrate\n\u2022 Reflect on what makes someone choose to pay annually for belonging",img:"\u{1F4CB}"},
+      {type:"learn",title:"Transactional vs Emotional Loyalty",content:"Most hotel loyalty programmes are transactional. Stay 10 nights, earn a free night. Collect points, redeem for rewards. The relationship is a ledger.\n\nSubscription loyalty is different. When someone pays $349 for Explorer, they are not collecting points. They are buying into a lifestyle. They are saying: I travel enough, I dine enough, and I value the experience enough to invest in it upfront.\n\nThis changes everything about the relationship:\n\u2022 Transactional members compare. Subscription members belong\n\u2022 Transactional members calculate. Subscription members experience\n\u2022 Transactional members leave when a competitor offers more points. Subscription members stay because the membership is part of how they see themselves\n\nThe data proves it: Accor Plus members book 5x more room nights than non-members. They spend more per stay. They renew at rates that make traditional loyalty programmes look fragile.",img:"\u{1F4A1}"},
+      {type:"video",title:"The Power of Belonging",duration:"6:00",desc:"As you watch, focus on two things:\n\n1. Why people who pay upfront for a membership use it more than people who earn rewards passively. The psychology of commitment drives usage, not the other way around.\n\n2. How the best subscription businesses (Netflix, Amazon Prime, Costco) create a sense of belonging that goes beyond the transaction. Accor Plus does the same thing with travel and dining."},
+      {type:"learn",title:"Why Subscription Outperforms Points",content:"Here is the commercial reality of why subscription loyalty matters:\n\n\u2022 Explorer members book 5x more room nights than non-members\n\u2022 Members who use benefits in the first 90 days are 3x more likely to renew\n\u2022 The average Explorer member saves over $1,100 in their first year\n\u2022 Renewal rates exceed 60% when members use Stay Plus nights\n\u2022 Members who dine with their membership renew at 72%\n\nEvery call you make is not selling a product. It is inviting someone into a community of travellers who have decided that experiences matter enough to invest in them.\n\nWhen a prospect says \u0027I already have a loyalty programme,\u0027 your response is simple: \u0027Points programmes reward you after you spend. Explorer saves you before you arrive.\u0027",img:"\u{1F4C8}"},
       {type:"quiz",title:"Knowledge Check",questions:[
-        {q:"How much more do loyal guests typically spend compared to new guests?",opts:["25% more","50% more","67% more","80% more"],correct:2},
-        {q:"What type of loyalty model does ALL Accor+ Explorer use?",opts:["Points-only","Subscription loyalty","Free tier only","Cashback"],correct:1}
+        {q:"How many more room nights do Explorer members book compared to non-members?",opts:["2x more","3x more","5x more","10x more"],correct:2},
+        {q:"What is the renewal rate for members who use Stay Plus nights?",opts:["40%","50%","60%+","80%"],correct:2},
+        {q:"Members who use benefits in the first 90 days are how much more likely to renew?",opts:["1.5x","2x","3x","5x"],correct:2}
       ]},
-      {type:"reflect",title:"Your Reflection",prompt:"Think about a subscription you personally value. What keeps you renewing? How can you apply that same logic when explaining Explorer to a prospect?"}
+      {type:"apply",title:"Scenario: The Points Comparison",scenario:"A prospect says: \u0027I already have Marriott Bonvoy. I get free nights from my points. Why would I pay $349 when I get loyalty for free?\u0027\n\nThis is the most common objection in outbound. What do you do?",choices:[
+        {label:"Explain that Explorer gives instant Gold status and 30 bonus nights, which takes years to earn with Marriott",col:"#3b82f6",feedback:"Good tactical response but you are still playing on their terms, comparing feature to feature. You have not changed the frame. They are still thinking transactionally."},
+        {label:"Acknowledge Bonvoy is great, then reframe: \u0027Points reward you after you spend. Explorer saves you before you arrive. Two Stay Plus nights alone return more than the membership cost.\u0027",col:"#10b981",feedback:"This is the strongest approach. You validate their existing programme (no criticism), then reframe the value proposition entirely. You move the conversation from points to savings, from earning to experiencing. The Stay Plus example makes it tangible and immediate."},
+        {label:"Offer a discount on the membership to make it more competitive",col:"#ef4444",feedback:"Never lead with discounts. It undermines the value of the product and signals that $349 is not worth it. If you discount now, they will expect it at renewal. The product is worth $349. Your job is to help them see why, not to lower the price."}
+      ]},
+      {type:"reflect",title:"Your Reflection",prompt:"Think about the last time you paid for a subscription (Netflix, Spotify, a gym, a meal kit). What made you decide to pay rather than use a free alternative?\n\nNow apply that thinking to Explorer. What is the emotional reason someone would choose to pay $349 for a travel membership? Not the logical reason (savings). The emotional reason (identity, belonging, lifestyle).\n\nWrite it in one sentence. That sentence is your most powerful selling tool."}
     ]},
     {title:"Why Members Stay Loyal",steps:[
-      {type:"learn",title:"What Drives Renewal",content:"Accor Plus members renew because they see tangible value:\n\n\u2022 Two Stay Plus nights can save over $500 annually\n\u2022 Dining discounts of 30% off food used year-round\n\u2022 Instant Gold status worth 30 qualifying nights\n\u2022 Red Hot Room deals of up to 50% off\n\u2022 The sense of belonging to a travel community\n\nMembers who use their benefits in the first 90 days are 3x more likely to renew. Your role in setting expectations at point of sale directly impacts retention.",img:"\u{1F91D}"},
+      {type:"learn",title:"What You Will Learn",content:"In this module, you will understand what drives renewal, not just initial purchase. Why do members come back year after year? What makes them stay?\n\nWhat you will learn:\n\u2022 The three drivers of renewal: usage, value perception, and emotional connection\n\u2022 Why the first 90 days determine whether a member stays for years\n\u2022 What separates a one-year member from a lifetime member",img:"\u{1F4CB}"},
+      {type:"learn",title:"The Three Drivers of Renewal",content:"Members renew for three reasons. In order of importance:\n\n1. Usage. Members who use their benefits renew. Members who do not, cancel. It is that simple. If someone books a Stay Plus night in the first 90 days, they are 3x more likely to renew. If they use dining within the first month, renewal probability jumps to 72%.\n\n2. Value perception. The member needs to feel they got more than $349 worth of value. This is not always about money. A member who stayed one night at the Sofitel in Sydney and felt like a VIP because of their Gold status may value that experience at far more than the room rate saved.\n\n3. Emotional connection. The member feels like they belong to something. They identify as an Explorer member. They recommend it to friends. They look forward to their annual renewal because the membership has become part of how they travel.\n\nYour job on every call is to drive all three. Sell the membership, help them use it quickly, and make them feel they have joined something worth belonging to.",img:"\u{1F91D}"},
+      {type:"video",title:"What Makes Members Stay",duration:"5:00",desc:"As you watch, focus on:\n\n1. The critical 90-day window. Everything that happens in the first three months determines the next three years. If a member books a Stay Plus night, uses dining, and downloads the app in the first 90 days, they are essentially locked in.\n\n2. The difference between satisfaction and loyalty. Satisfied members leave when a competitor offers something better. Loyal members stay because the membership is part of their identity."},
+      {type:"learn",title:"The First 90 Days",content:"Here is what the data tells us about the first 90 days:\n\n\u2022 Members who book a Stay Plus night within 90 days: 3x renewal rate\n\u2022 Members who use dining within 30 days: 72% renewal\n\u2022 Members who download the ALL app: 2x more likely to use benefits\n\u2022 Members who receive a welcome call within 7 days: 15% higher engagement\n\nThis means your role does not end when the sale is made. The way you close the call, the expectations you set, and the actions you encourage in the first week directly impact whether that member is still paying $349 in three years.\n\nWhen you close a sale, always do three things:\n1. Help them download the ALL app before the call ends\n2. Suggest their first Stay Plus booking destination\n3. Mention a nearby restaurant where they can use dining this weekend",img:"\u{1F680}"},
       {type:"quiz",title:"Knowledge Check",questions:[
-        {q:"Members who use benefits in the first 90 days are how much more likely to renew?",opts:["1.5x","2x","3x","5x"],correct:2},
-        {q:"What is the dining discount for Explorer members?",opts:["15% off food","20% off food","25% off food","30% off food"],correct:3}
+        {q:"Members who book Stay Plus within 90 days are how much more likely to renew?",opts:["1.5x","2x","3x","5x"],correct:2},
+        {q:"What is the renewal rate for members who use dining within 30 days?",opts:["45%","55%","65%","72%"],correct:3},
+        {q:"What three things should you do when closing a sale?",opts:["Upsell, cross-sell, refer","App download, first booking, nearby dining","Send email, follow up, survey","Confirm payment, send receipt, log call"],correct:1}
       ]},
-      {type:"reflect",title:"Your Reflection",prompt:"How would you ensure a new member uses their benefits within the first 90 days? What would you say on the welcome call?"}
+      {type:"reflect",title:"Your Reflection",prompt:"Think about your last five sales. For each one, did you help the member take action in the first 90 days?\n\n1. How many of those members have you helped download the app, suggest a first booking, or mention a dining option?\n\n2. If you were a new Explorer member and nobody told you what to do first, how long would it take you to use the membership? What would you wish someone had told you on day one?"}
     ]},
     {title:"ALL Loyalty Tiers",steps:[
-      {type:"learn",title:"From Classic to Diamond",content:"ALL Accor has five status tiers, each unlocking greater privileges:\n\n\u2022 Classic: Base tier, earn points on stays\n\u2022 Silver (10 nights): Priority check-in, late checkout\n\u2022 Gold (30 nights): Room upgrade, welcome drink, late checkout\n\u2022 Platinum (60 nights): Guaranteed room, suite upgrade, breakfast, lounge access\n\u2022 Diamond (90+ nights): All Platinum benefits plus dedicated concierge\n\nExplorer members receive instant Gold status with 30 bonus nights annually. This is worth approximately 2,800 EUR in qualifying spend.",img:"\u{1F451}"},
+      {type:"learn",title:"What You Will Learn",content:"In this module, you will master the ALL Accor loyalty tier system. This matters because Gold status is one of Explorer\u0027s most powerful selling points, and you need to explain it with confidence.\n\nWhat you will learn:\n\u2022 The five ALL loyalty tiers and what each unlocks\n\u2022 How Explorer members receive instant Gold status\n\u2022 Why Gold is the sweet spot for most travellers\n\u2022 How to use tier benefits as a selling tool",img:"\u{1F4CB}"},
+      {type:"learn",title:"The Five Tiers",content:"ALL Accor Live Limitless has five status tiers:\n\n1. Classic: Entry level. Earn points, basic benefits. No stay requirement.\n\n2. Silver: 10 qualifying nights. Early check-in, late check-out (subject to availability).\n\n3. Gold: 30 qualifying nights. Welcome drink, room upgrade (subject to availability), late check-out guaranteed until 2pm, lounge access at selected hotels. This is what Explorer members receive instantly.\n\n4. Platinum: 60 qualifying nights. Guaranteed upgrade, guaranteed lounge access, dedicated concierge line, suite upgrade once per year.\n\n5. Diamond: 90+ qualifying nights or invitation only. Best room in the house, VIP treatment, personalised experiences.\n\nKey selling point: A business traveller would need 30 nights (roughly $6,000+ in hotel spend) to earn Gold status naturally. Explorer members get it on day one for $349.",img:"\u{1F451}"},
+      {type:"video",title:"Understanding Status",duration:"4:00",desc:"Watch for how status tiers change the hotel experience. Focus on:\n\n1. The tangible difference between a Classic guest and a Gold guest at check-in. The welcome drink, the upgrade conversation, the late checkout guarantee. These are not just perks. They are how the hotel makes you feel valued.\n\n2. How to articulate the Gold status value to a prospect who has never experienced it. They do not know what they are missing. Your job is to paint the picture."},
+      {type:"learn",title:"Gold Status as a Selling Tool",content:"Here is how to use Gold status in your sales conversations:\n\nFor the business traveller: \u0027You travel 10 nights a year for work. Without Explorer, you would be a Classic member. With Explorer, you are Gold from day one. That means guaranteed late checkout, welcome drinks, and room upgrades at 1,400+ hotels. Your work travel just became significantly more comfortable.\u0027\n\nFor the leisure traveller: \u0027Imagine arriving at the Sofitel in Bali and being greeted as a Gold member. Welcome drink at check-in, upgraded room, late checkout so you do not have to rush on your last morning. That is what $349 buys you before you even use the Stay Plus nights.\u0027\n\nFor the status-conscious: \u0027Gold status normally takes 30 nights to earn. That is $6,000+ in hotel spend. Explorer gives it to you instantly. Plus 30 bonus status nights, so you are already halfway to Platinum.\u0027\n\nAlways match the tier story to the person. What matters to them about status?",img:"\u{1F3AF}"},
       {type:"quiz",title:"Knowledge Check",questions:[
-        {q:"How many status nights does an Explorer member receive annually?",opts:["10","20","30","60"],correct:2},
-        {q:"What status tier requires 60 qualifying nights?",opts:["Silver","Gold","Platinum","Diamond"],correct:2}
+        {q:"How many qualifying nights are needed to earn Gold status without Explorer?",opts:["10 nights","20 nights","30 nights","50 nights"],correct:2},
+        {q:"What status do ALL Accor+ Explorer members receive instantly?",opts:["Silver","Gold","Platinum","Diamond"],correct:1},
+        {q:"Which Gold benefit is guaranteed (not subject to availability)?",opts:["Room upgrade","Early check-in","Late checkout until 2pm","Suite upgrade"],correct:2}
       ]},
-      {type:"reflect",title:"Your Reflection",prompt:"A prospect says they already have Gold status with a competitor. How would you position ALL Accor Gold and the Explorer membership as a stronger proposition?"}
+      {type:"reflect",title:"Your Reflection",prompt:"Write a 30-second pitch for Gold status tailored to each of these prospects:\n\n1. A couple who travel to Bali once a year for a week-long holiday.\n\n2. A business executive who stays at Novotel 15 nights per year for work.\n\n3. A retiree who wants to do a European river cruise and stay at Accor hotels along the way."}
     ]},
     {title:"Retention and Renewal",steps:[
-      {type:"learn",title:"Driving Lifetime Value",content:"Retention is the engine of the business. Every renewed member is revenue secured without acquisition cost.\n\nKey retention drivers:\n\u2022 Early activation: Ensure members book within 30 days\n\u2022 Benefit awareness: Members who know all their benefits renew at 2x the rate\n\u2022 Emotional connection: Members who attend events feel part of a community\n\u2022 Value articulation: At renewal, remind them what they saved\n\nYour role at point of sale is to plant the seeds for renewal by setting clear expectations about what they will gain in year one.",img:"\u{1F504}"},
+      {type:"learn",title:"What You Will Learn",content:"This is the final module in Australia. It brings everything together: loyalty, usage, status, and now retention. Because acquiring a member is only half the job. Keeping them is where the real value is built.\n\nWhat you will learn:\n\u2022 The cost of losing a member vs keeping one\n\u2022 How to set expectations that drive renewal\n\u2022 The renewal conversation framework\n\u2022 How your initial sale directly impacts retention 12 months later",img:"\u{1F4CB}"},
+      {type:"learn",title:"The Economics of Retention",content:"Here is a truth that should change how you think about every call:\n\n\u2022 Acquiring a new member costs 5 to 7x more than retaining an existing one\n\u2022 A member who renews for 5 years is worth $1,745 in subscription revenue alone\n\u2022 Long-term members book more, dine more, and refer more than new members\n\u2022 Every cancelled member is a new member you need to replace just to stay flat\n\nWhen you close a sale, you are not just hitting today\u0027s target. You are planting a seed that could generate revenue for five years. The way you close, the expectations you set, and the first action you encourage all determine whether that seed grows or dies.\n\nRetention starts at the point of sale. Not 12 months later.",img:"\u{1F4B0}"},
+      {type:"video",title:"Setting Up for Renewal",duration:"5:00",desc:"Watch for:\n\n1. How the best salespeople set expectations during the close that make renewal feel natural 12 months later. They do not just sell the first year. They sell the ongoing relationship.\n\n2. The three actions that predict renewal: booking within 90 days, using dining within 30 days, and downloading the app. Notice how these are all things you can influence on the very first call."},
+      {type:"learn",title:"The Close That Drives Renewal",content:"Here is exactly what to do in the last two minutes of every sale to maximise the chance of renewal:\n\n1. Confirm the value: \u0027So you are getting two Stay Plus nights, 30% off dining, Gold status, and the 15% member rate at 4,500 hotels. Your first Stay Plus night alone could save you more than the membership cost.\u0027\n\n2. Set the first action: \u0027Where is your next trip? Let me help you find a Stay Plus hotel there right now.\u0027\n\n3. Create the dining habit: \u0027Is there a restaurant near you where you eat regularly? Check the app this weekend. If they are on the network, you will save 30% next time you go.\u0027\n\n4. Set the renewal expectation: \u0027In 12 months, your membership renews automatically. By then, most members have saved well over $1,000. You will wonder how you ever travelled without it.\u0027\n\nThis is not a script. It is a framework. Make it natural. Make it yours.",img:"\u{1F4DD}"},
       {type:"quiz",title:"Knowledge Check",questions:[
-        {q:"What is the ideal timeframe for a new member to make their first booking?",opts:["7 days","30 days","90 days","6 months"],correct:1},
-        {q:"Members who know all their benefits renew at what rate compared to those who do not?",opts:["Same rate","1.5x","2x","3x"],correct:2}
+        {q:"Acquiring a new member costs how much more than retaining one?",opts:["2x","3-4x","5-7x","10x"],correct:2},
+        {q:"A member who renews for 5 years generates how much in subscription revenue?",opts:["$875","$1,245","$1,745","$2,100"],correct:2},
+        {q:"Retention starts at what point?",opts:["At the 6-month mark","When the renewal notice is sent","At the point of sale","After the first complaint"],correct:2}
       ]},
-      {type:"reflect",title:"Your Reflection",prompt:"Write down three things you would say to a member at point of sale that would set them up for a successful first year and drive renewal."}
+      {type:"reflect",title:"Your Reflection",prompt:"Think about your closing process right now.\n\n1. Do you currently set a first action for new members before the call ends? If not, what would you say?\n\n2. Write the exact words you would use to set the renewal expectation during the close. Practice saying it out loud. It should feel natural, not scripted."}
     ]}
   ],
   2:[
+    {title:"Immigration",steps:[{type:"immigration",title:"Immigration Check: Indonesia",country:"Indonesia",maori:"Selamat Datang",flag:"\u{1F1EE}\u{1F1E9}",welcomeMsg:"Selamat Datang! Welcome to Indonesia, the world\u0027s largest archipelago. Before you explore the Explorer product, let us see how much you know about this extraordinary country.",outcomes:["The complete ALL Accor+ Explorer membership package and pricing","Five customer profiles and how to match benefits to each","How easy Explorer is to use from day one","How to build a personalised ROI story for every prospect"],facts:[{q:"How many islands make up Indonesia?",opts:["3,000","8,500","13,000","Over 17,000"],correct:3,fact:"Indonesia has over 17,000 islands, making it the world\u0027s largest archipelago. Only about 6,000 are inhabited. The country stretches 5,120 km from east to west."},{q:"The Komodo dragon is the world\u0027s largest living lizard. How long can they grow?",opts:["1.5 metres","2 metres","3 metres","4 metres"],correct:2,fact:"Komodo dragons can grow up to 3 metres long and weigh over 70 kg. They are found only on a few Indonesian islands. Accor has properties near Komodo National Park."},{q:"What is batik and why is it significant?",opts:["A traditional dance","A UNESCO-recognised textile art","A type of cuisine","A martial art"],correct:1,fact:"Indonesian batik was recognised by UNESCO as an Intangible Cultural Heritage of Humanity in 2009. The wax-resist dyeing technique dates back centuries and each region has its own patterns."},{q:"What is unique about Bali temple etiquette?",opts:["Shoes must be removed","A sarong must be worn","No photography allowed","Silence is required"],correct:1,fact:"Visitors must wear a sarong and sash to enter Balinese temples. Most temples provide them at the entrance. It is a sign of respect that applies to all visitors regardless of religion."},{q:"The Rafflesia arnoldii, found in Indonesian rainforests, holds what world record?",opts:["Tallest flower","Fastest growing plant","Largest individual flower","Most fragrant bloom"],correct:2,fact:"The Rafflesia arnoldii produces the world\u0027s largest individual flower, measuring up to 1 metre across and weighing up to 11 kg. It is also known for its strong odour, earning it the nickname corpse flower."}]}]},
     {title:"Explorer Deep Dive",steps:[
-      {type:"learn",title:"The Complete Explorer Package",content:"ALL Accor+ Explorer is a 12-month subscription priced at AUD $349 that includes:\n\n\u2022 Two Stay Plus complimentary nights at 1,300+ hotels across 25+ brands\n\u2022 Up to 50% off with Red Hot Room exclusive deals\n\u2022 30% off food and 15% off drinks at 1,600+ restaurants and 1,200+ bars\n\u2022 15% off public rates at 4,500+ hotels across 30+ brands worldwide\n\u2022 Instant ALL Accor Gold status with 30 bonus status nights\n\u2022 Member-only events and experiences across Asia Pacific\n\nA single Stay Plus night at a luxury property like Raffles or Sofitel can return the full membership cost.",img:"\u{1F48E}"},
+      {type:"learn",title:"What You Will Learn",content:"Welcome to Jakarta. In this module, you will learn the Explorer product inside out. Every benefit, every number, every selling point. By the end, you will be able to explain the membership in your sleep.\n\nWhat you will learn:\n\u2022 The complete Explorer package: every benefit and its value\n\u2022 How to calculate the financial return for any prospect\n\u2022 The difference between Explorer and other travel loyalty programmes\n\nWhat you will be required to do:\n\u2022 Know every benefit and its value from memory\n\u2022 Build a value calculation for three different prospect types\n\u2022 Practise your 60-second product pitch",img:"\u{1F4CB}"},
+      {type:"learn",title:"The Complete Explorer Package",content:"ALL Accor+ Explorer is a 12-month subscription priced at AUD $349. Here is exactly what a member receives:\n\n\u2022 Two Stay Plus complimentary nights at 1,300+ hotels across 25+ brands. A single night at a Sofitel or Pullman can return the full membership cost\n\u2022 Up to 50% off with Red Hot Room exclusive deals, available only to members\n\u2022 30% off food and 15% off drinks at 1,600+ restaurants and 1,200+ bars\n\u2022 15% off public rates at 4,500+ hotels across 30+ brands worldwide. No blackout dates\n\u2022 Instant ALL Accor Gold status with 30 bonus status nights toward Platinum\n\u2022 Member-only events and experiences across Asia Pacific\n\nThe maths is simple: two Stay Plus nights alone are worth $460+ on average. Add dining, the 15% discount, and Gold status perks, and the first-year return exceeds $1,100 on a $349 investment.",img:"\u{1F48E}"},
+      {type:"video",title:"Explorer in 5 Minutes",duration:"5:00",desc:"Watch for two things:\n\n1. How the video positions Explorer as a lifestyle choice, not a discount card. The language matters: belonging, not buying. Experiencing, not saving.\n\n2. The specific examples of value. Notice how every benefit is tied to a real scenario: a family holiday, a business trip, a weekend dinner. Abstract benefits do not sell. Specific scenarios do."},
+      {type:"learn",title:"Explorer vs Everything Else",content:"Prospects will compare Explorer to other programmes. Here is how to handle each:\n\nVs Marriott Bonvoy / Hilton Honors:\n\u0027Those are points programmes. You earn after you spend. Explorer saves before you arrive. Two free nights, instant Gold status, 30% dining. No points to accumulate. Value from day one.\u0027\n\nVs booking direct on hotel websites:\n\u0027The 15% member rate applies across 4,500 hotels and 30 brands. No other single programme gives you that breadth. Plus Gold status means upgrades and late checkout that direct booking does not include.\u0027\n\nVs not having any programme:\n\u0027If you travel twice a year and dine out regularly, you are already spending the money. Explorer just makes sure you get more for it. $349 returns $1,100+. It is not an expense. It is an investment in how you travel.\u0027\n\nNever criticise the competitor. Acknowledge, then reframe.",img:"\u{1F4AC}"},
       {type:"quiz",title:"Knowledge Check",questions:[
         {q:"What is the annual price of an ALL Accor+ Explorer membership?",opts:["AUD $199","AUD $249","AUD $349","AUD $449"],correct:2},
-        {q:"How many Stay Plus complimentary nights are included per year?",opts:["One","Two","Three","Unlimited"],correct:1}
+        {q:"How many Stay Plus complimentary nights are included per year?",opts:["One","Two","Three","Unlimited"],correct:1},
+        {q:"What is the approximate first-year return on a $349 membership?",opts:["$500","$800","$1,100+","$2,000"],correct:2}
       ]},
-      {type:"reflect",title:"Your Reflection",prompt:"A prospect asks: \'Why should I pay $349 when I can just book hotels normally?\' Write your response using specific benefits and value examples."}
+      {type:"apply",title:"Scenario: The Price Objection",scenario:"A prospect says: \u0027$349 is a lot of money. I am not sure I travel enough to make it worthwhile.\u0027\n\nThis is the most common objection you will face. What do you do?",choices:[
+        {label:"Offer a payment plan or mention that the price might go up next year",col:"#f59e0b",feedback:"Payment plans reduce friction but do not address the core objection. The prospect does not think they travel enough. You need to help them see that they do, or that the dining benefit alone can return the cost without any travel at all."},
+        {label:"Ask how often they dine out and travel, then build a personalised value calculation showing they will save more than $349",col:"#10b981",feedback:"This is the strongest approach. You are not arguing about the price. You are changing the conversation to their specific habits. If they dine out twice a month at $150 per meal, the 30% dining discount alone saves $1,080 per year. The membership pays for itself through dining without a single hotel stay."},
+        {label:"Emphasise that membership is fully refundable in the cooling-off period if they change their mind",col:"#3b82f6",feedback:"The cooling-off period is a good safety net to mention, but leading with it signals you are not confident in the value. Use it as reassurance at the end, not as the core argument."}
+      ]},
+      {type:"reflect",title:"Your Reflection",prompt:"A prospect asks: \u0027Why should I pay $349 when I can just book hotels normally?\u0027\n\nWrite your complete response. Include:\n\u2022 A specific value calculation based on two trips per year and dining twice a month\n\u2022 The emotional benefit beyond the financial return\n\u2022 A closing question that invites them to see themselves as a member"}
     ]},
     {title:"Customer Profiles",steps:[
-      {type:"learn",title:"Who Buys Explorer",content:"Understanding your customer is the foundation of every sale. Explorer members typically fall into these profiles:\n\n\u2022 The Frequent Traveller: 4+ trips per year, values status and upgrades\n\u2022 The Dining Enthusiast: Eats out regularly, the 30% dining discount alone can pay for membership\n\u2022 The Family Planner: Plans annual holidays, Stay Plus nights transform the family budget\n\u2022 The Business Traveller: Travels for work, wants the 15% global discount and Gold status\n\u2022 The Aspirational Explorer: Dreams of luxury stays, Red Hot Rooms make it accessible\n\nMatch the benefit to the person. Never lead with everything; lead with what matters to them.",img:"\u{1F465}"},
+      {type:"learn",title:"What You Will Learn",content:"Knowing the product is not enough. You need to know who buys it and why. In this module, you will learn the five Explorer customer profiles and how to match the right benefit to the right person.\n\nWhat you will learn:\n\u2022 Five distinct customer profiles\n\u2022 The primary buying trigger for each profile\n\u2022 Which benefit to lead with for each type\n\u2022 How to identify the profile within the first 60 seconds of a call",img:"\u{1F4CB}"},
+      {type:"learn",title:"The Five Profiles",content:"Every Explorer prospect falls into one of these profiles. Your job is to identify which one within 60 seconds and lead with the benefit that matters most to them.\n\n1. The Frequent Traveller: 4+ trips per year. Values status, upgrades, and convenience. Lead with Gold status and the 15% member rate.\n\n2. The Dining Enthusiast: Eats out regularly, possibly weekly. The 30% dining discount can save $1,000+ per year without any travel. Lead with dining.\n\n3. The Family Planner: Plans one to two big family holidays per year. Budget matters. Stay Plus nights transform the family holiday budget. Lead with free nights.\n\n4. The Business Traveller: Travels for work, wants comfort and recognition. Gold status makes every business trip better. Lead with status and upgrades.\n\n5. The Aspirational Explorer: Dreams of staying at Raffles or Sofitel but thinks it is out of reach. Red Hot Rooms and Stay Plus make luxury accessible. Lead with the dream.\n\nMatch the benefit to the person. Never lead with everything. Lead with what makes their eyes light up.",img:"\u{1F465}"},
+      {type:"video",title:"Reading Your Prospect",duration:"4:00",desc:"Watch for:\n\n1. The discovery questions that reveal which profile someone fits. What someone says about their travel habits in the first 60 seconds tells you exactly which benefit to lead with.\n\n2. The mistake of listing all benefits. Notice how the best salespeople pick one or two benefits maximum based on what the prospect has told them. Less is more when it is the right less."},
+      {type:"learn",title:"Identifying the Profile in 60 Seconds",content:"Here are the discovery questions that reveal the profile:\n\n\u0027How often do you and your family travel for leisure?\u0027\nFrequent answer (4+): Frequent Traveller or Business. Follow up with: \u0027Is that mostly for work or leisure?\u0027\nInfrequent answer (1-2): Family Planner or Aspirational. Follow up with: \u0027When you do travel, what kind of hotel do you look for?\u0027\n\n\u0027Do you dine out at restaurants regularly?\u0027\nYes (weekly+): Dining Enthusiast. This is your hook.\nOccasionally: Pivot to travel benefits.\n\n\u0027Have you ever stayed at an Accor hotel?\u0027\nYes with positive memory: Build on the experience.\nNo: Paint the picture of what they are missing.\n\nListen for triggers: frequency, frustration, aspiration, and budget. These are your selling anchors.",img:"\u{1F50D}"},
       {type:"quiz",title:"Knowledge Check",questions:[
         {q:"Which benefit would most appeal to a Dining Enthusiast?",opts:["Stay Plus nights","30% off food","Gold status","Red Hot Rooms"],correct:1},
-        {q:"What is the recommended approach when presenting benefits?",opts:["List everything","Lead with price","Match benefit to the person","Focus on status only"],correct:2}
+        {q:"What is the recommended approach when presenting benefits?",opts:["List everything","Lead with price","Match benefit to the person","Focus on status only"],correct:2},
+        {q:"What are the four listening triggers in discovery?",opts:["Price, product, place, people","Frequency, frustration, aspiration, budget","Name, age, location, income","Brand, tier, points, status"],correct:1}
       ]},
-      {type:"reflect",title:"Your Reflection",prompt:"Think of someone you know who travels. Which customer profile do they fit? What specific Explorer benefit would you lead with for them?"}
+      {type:"reflect",title:"Your Reflection",prompt:"Think of three people you know who travel or dine out.\n\n1. Which customer profile does each person fit? What specific benefit would you lead with for each?\n\n2. Write a 30-second opening for a call to someone who fits the Dining Enthusiast profile. What discovery question would you ask first?"}
     ]},
-    {title:"Ease",steps:[
-      {type:"learn",title:"Simple to Use, Easy to Love",content:"One of the strongest selling points of Explorer is how easy it is to use:\n\n\u2022 Membership activates within 24 hours of purchase\n\u2022 Gold status and 30 bonus nights appear automatically\n\u2022 Stay Plus nights are booked through accorplus.com or the ALL app\n\u2022 Dining discounts apply by showing the ALL app at any participating restaurant\n\u2022 The 15% member rate applies automatically when booking through ALL\n\u2022 No blackout dates on the 15% discount\n\nWhen a prospect hesitates, ease removes friction. It is not complicated. It just works.",img:"\u2705"},
+    {title:"Ease of Use",steps:[
+      {type:"learn",title:"What You Will Learn",content:"The best product in the world fails if people think it is complicated. In this module, you will learn how to position Explorer as effortless. Because it is.\n\nWhat you will learn:\n\u2022 The activation timeline: what happens from purchase to first use\n\u2022 How to walk a prospect through their first week as a member\n\u2022 How to use ease as an objection-handling tool",img:"\u{1F4CB}"},
+      {type:"learn",title:"From Purchase to First Use",content:"Here is exactly what happens when someone becomes an Explorer member:\n\n\u2022 Within 24 hours: Membership activates. Confirmation email arrives with member number\n\u2022 Day 1: Gold status and 30 bonus nights appear in their ALL account automatically\n\u2022 Day 1: Stay Plus nights available to book through accorplus.com or the ALL app\n\u2022 Day 1: Dining discounts active. Show the ALL app at any participating restaurant\n\u2022 Day 1: 15% member rate applies automatically when booking through ALL\n\u2022 No blackout dates on the 15% discount. No restrictions on dining\n\nWhen a prospect says \u0027it sounds complicated,\u0027 your response is: \u0027You sign up today. Tomorrow you are a Gold member. This weekend you can save 30% at dinner. Next month you can book a free night at a Pullman. It does not get simpler than that.\u0027",img:"\u2705"},
+      {type:"video",title:"Making It Simple",duration:"3:00",desc:"Watch for:\n\n1. The specific words used to describe the activation process. Simple, instant, automatic, effortless. These words matter because they counter the assumption that membership programmes are complicated.\n\n2. How the presenter connects ease to action. It is not just easy. It is easy to start right now, today, this weekend."},
+      {type:"learn",title:"Ease as an Objection Handler",content:"When a prospect hesitates, ease is often the final push. Here are the most common hesitation points and how ease addresses each:\n\n\u0027I do not have time to set it up.\u0027\n\u0027There is nothing to set up. You sign up, you are a member. Gold status is automatic. The app is a free download.\u0027\n\n\u0027What if I forget to use it?\u0027\n\u0027The app sends you reminders when you are near a participating restaurant. And the 15% rate applies every time you book through ALL. You do not have to remember anything.\u0027\n\n\u0027What if I want to cancel?\u0027\n\u0027You have a cooling-off period after purchase. But honestly, most members are amazed at how much they save in the first month alone. You will not want to cancel.\u0027\n\nEase is not a feature. It is the reason people say yes when they are almost there.",img:"\u{1F3AF}"},
       {type:"quiz",title:"Knowledge Check",questions:[
         {q:"How quickly does an Explorer membership activate after purchase?",opts:["Immediately","Within 24 hours","Within 48 hours","Within 7 days"],correct:1},
-        {q:"How do members access their dining discount?",opts:["Print a voucher","Call the hotel","Show the ALL app","Email reception"],correct:2}
+        {q:"How do members access their dining discount?",opts:["Print a voucher","Call the hotel","Show the ALL app","Email reception"],correct:2},
+        {q:"Are there blackout dates on the 15% member rate?",opts:["Yes, peak season only","Yes, school holidays","No blackout dates","Only at luxury brands"],correct:2}
       ]},
-      {type:"reflect",title:"Your Reflection",prompt:"A prospect says: \'It sounds complicated.\' Write a 30-second response that demonstrates how simple Explorer is to use from day one."}
+      {type:"reflect",title:"Your Reflection",prompt:"A prospect says: \u0027It sounds great but I am worried it will be complicated to use.\u0027\n\nWrite your response. Walk them through exactly what their first week as a member looks like, day by day. Make it feel effortless."}
     ]},
     {title:"Value Calculators",steps:[
-      {type:"learn",title:"Building the ROI Story",content:"Every prospect needs to see themselves saving more than $349. Here is how to build the value story:\n\n\u2022 One Stay Plus night at a Pullman (avg $280) + one at a Novotel (avg $180) = $460 in free stays\n\u2022 Dining twice a month at 30% off on a $150 bill = $540 saved per year\n\u2022 Two weekend getaways using the 15% member rate = $120 saved\n\u2022 Gold status lounge access and upgrades = priceless confidence\n\nTotal estimated first-year value: $1,120+ on a $349 investment. That is a 3.2x return.\n\nAlways personalise the calculation based on the prospect\'s travel and dining habits.",img:"\u{1F4B0}"},
+      {type:"learn",title:"What You Will Learn",content:"This is the final module in Indonesia. You have learned the product, the profiles, and the ease. Now you learn how to make the value irresistible by building a personalised ROI story for every prospect.\n\nWhat you will learn:\n\u2022 How to build a value calculation in real time on a call\n\u2022 The three value stories: dining, travel, and combined\n\u2022 How to present value without sounding like you are reading a brochure",img:"\u{1F4CB}"},
+      {type:"learn",title:"Building the ROI Story",content:"Every prospect needs to see themselves saving more than $349. Here is how to build the story based on their profile:\n\nThe Dining Story (for Dining Enthusiasts):\nDine out twice a month, average bill $150. 30% off food = $45 saved per visit. 24 visits per year = $1,080 saved. Membership cost: $349. Net saving: $731. Return: 3.1x.\n\nThe Travel Story (for Frequent Travellers):\nOne Stay Plus night at Pullman ($280) + one at Novotel ($180) = $460 free. Two weekend trips using 15% rate, saving $60 per trip = $120. Gold status upgrades: priceless. Total: $580+.\n\nThe Combined Story (for Family Planners):\nAnnual family holiday with Stay Plus ($460) + monthly dining ($540) + 15% rate on a business trip ($90) = $1,090 total value on $349 investment.\n\nAlways personalise. Use their numbers, not yours. Ask: \u0027How much do you typically spend on dinner?\u0027 Then calculate in front of them.",img:"\u{1F4B0}"},
+      {type:"video",title:"Value in Action",duration:"4:00",desc:"Watch for:\n\n1. How the calculation is built live during a conversation, not presented as a slide. The prospect sees their own numbers reflected back to them. That is what creates conviction.\n\n2. The moment the prospect realises they are already spending enough to justify the membership. That is the tipping point. Your job is to get them there."},
+      {type:"learn",title:"Presenting Value Without Sounding Scripted",content:"The biggest mistake agents make with value calculators is sounding like they are reading from a sheet. Here is how to make it natural:\n\nDo not say: \u0027The membership includes two Stay Plus nights valued at $460, 30% dining saving $540 per year, and a 15% rate saving $120.\u0027\n\nDo say: \u0027So you dine out twice a month, right? At $150 a time, that is $300 a month on dining. With Explorer, you save 30% on the food, which is about $45 each visit. Over a year, that is over a thousand dollars back in your pocket, and that is before we even talk about the free hotel nights.\u0027\n\nThe difference: the first version tells them what the product is worth. The second version shows them what they personally save. Same numbers. Completely different impact.\n\nAlways pause after the calculation. Let the number sit. Then ask: \u0027Does that sound like something that would work for you?\u0027",img:"\u{1F4AC}"},
       {type:"quiz",title:"Knowledge Check",questions:[
-        {q:"What is the approximate return multiple on a $349 Explorer membership?",opts:["1.5x","2x","3.2x","5x"],correct:2},
-        {q:"What should you always personalise when presenting value?",opts:["The membership price","The calculation based on their habits","The brand portfolio","The status tier"],correct:1}
+        {q:"What is the approximate return multiple on a $349 membership for someone who dines twice monthly?",opts:["1.5x","2x","3.1x","5x"],correct:2},
+        {q:"What should you always personalise when presenting value?",opts:["The membership price","The calculation based on their habits","The brand portfolio","The status tier"],correct:1},
+        {q:"What should you do after presenting the value calculation?",opts:["Move straight to close","List more benefits","Pause and let the number sit","Offer a discount"],correct:2}
       ]},
-      {type:"reflect",title:"Your Reflection",prompt:"Build a personalised value calculation for someone who travels twice a year for leisure and dines out every weekend. What is their estimated annual saving?"}
+      {type:"apply",title:"Scenario: The Reluctant Calculator",scenario:"You are on a call with a prospect who dines out weekly and travels twice a year. You have calculated their annual saving at $1,400.\n\nThey say: \u0027Those numbers sound good on paper, but I never end up using these things.\u0027\n\nWhat do you do?",choices:[
+        {label:"Reassure them with the cooling-off period so they can try it risk-free",col:"#f59e0b",feedback:"The cooling-off period reduces risk but does not address their core belief: they think they will not use it. You need to change that belief, not just remove the risk."},
+        {label:"Ask when their next dinner out is and suggest they try the dining discount this weekend as proof it works",col:"#10b981",feedback:"This is the best approach. You are moving from abstract savings to a concrete first action. If they dine out this weekend and save $45 with zero effort, the membership becomes real. One experience is worth a thousand calculations."},
+        {label:"Share testimonials from other members who felt the same way and now love it",col:"#3b82f6",feedback:"Testimonials have some value but they are someone else\u0027s story. The prospect needs to see themselves using it. Connecting the first action to something they are already going to do (their next dinner) is more powerful than any testimonial."}
+      ]},
+      {type:"reflect",title:"Your Reflection",prompt:"Build a personalised value calculation for someone who:\n\u2022 Travels twice a year for leisure (one beach holiday, one city break)\n\u2022 Dines out every weekend with their partner ($120 average)\n\u2022 Has never had a hotel loyalty programme\n\nCalculate their estimated annual saving. Then write the exact words you would say to present this on a call. Make it conversational, not scripted."}
     ]}
   ],
   3:[
+    {title:"Immigration",steps:[{type:"immigration",title:"Immigration Check: India",country:"India",maori:"Namaste",flag:"\u{1F1EE}\u{1F1F3}",welcomeMsg:"Namaste! Welcome to India, a country of 1.4 billion people and infinite diversity. Before you learn our sales methodology, let us test your knowledge of the subcontinent.",outcomes:["The foundations of consultative selling and what drives conversion","How to build rapport in the first 30 seconds of a call","Discovery questions that reveal what matters to the prospect","How to present value personally and close with confidence"],facts:[{q:"The Taj Mahal receives approximately how many visitors per year?",opts:["2 million","4 million","7 million","10 million"],correct:2,fact:"The Taj Mahal receives approximately 7 to 8 million visitors per year. Built in 1632 by Emperor Shah Jahan as a memorial to his wife, it took 22 years and 20,000 workers to complete."},{q:"India produces more films per year than Hollywood. Approximately how many?",opts:["500","1,000","1,500","2,000"],correct:2,fact:"India produces roughly 1,500 to 2,000 films per year across multiple languages, compared to Hollywood\u0027s approximately 700. Bollywood alone produces around 250 Hindi films annually."},{q:"How many people travel by Indian Railways every single day?",opts:["5 million","10 million","15 million","25 million"],correct:3,fact:"Indian Railways carries approximately 23 to 25 million passengers every day across 68,000 km of track. It is the fourth largest railway network in the world and one of the largest employers on Earth."},{q:"India is the world\u0027s largest producer of which everyday product?",opts:["Coffee","Spices","Rice","Cotton"],correct:1,fact:"India is the world\u0027s largest producer, consumer, and exporter of spices. The spice trade has shaped global history for over 3,000 years. Kerala, known as the Spice Garden of India, is home to several Accor properties."},{q:"Cricket is India\u0027s most popular sport. How many people watched the 2023 Cricket World Cup final?",opts:["100 million","250 million","500 million","Over 1 billion"],correct:2,fact:"The 2023 Cricket World Cup final between India and Australia was watched by an estimated 500 million viewers worldwide. Cricket in India is more than a sport. It is a shared national experience."}]}]},
     {title:"Sales Principles",steps:[
+      {type:"learn",title:"What You Will Learn",content:"Welcome to Mumbai. This is where your sales career begins. Over the next seven modules, you will learn the complete Accor Plus sales methodology, from the first hello to the moment a new member belongs.\n\nWhat you will learn in this module:\n\u2022 The foundations of consultative selling\n\u2022 Why listening drives conversion more than talking\n\u2022 The five-stage sales process: Connect, Clarify, Present, Close, Celebrate\n\u2022 What separates average agents from top performers\n\nWhat you will be required to do:\n\u2022 Understand each stage of the process\n\u2022 Practise your opening, discovery, and close\n\u2022 Listen to real call examples and identify what works",img:"\u{1F4CB}"},
       {type:"learn",title:"The Foundation of Consultative Selling",content:"At Accor Plus, we do not push products. We have conversations that uncover needs and present solutions.\n\nCore principles:\n\u2022 Listen more than you speak. The prospect should talk 60% of the time.\n\u2022 Ask questions, not assumptions. Never assume you know what they want.\n\u2022 Lead with value, not price. Price is the last thing you discuss.\n\u2022 Be authentic. Prospects can hear scripted pitches instantly.\n\u2022 Every call is a human connection, not a transaction.\n\nThese principles apply to every step of the five-stage sales methodology you are about to learn.",img:"\u{1F3AF}"},
       {type:"quiz",title:"Knowledge Check",questions:[
         {q:"What percentage of the conversation should the prospect ideally be talking?",opts:["30%","40%","50%","60%"],correct:3},
@@ -260,6 +310,7 @@ const MODULES={
       {type:"reflect",title:"Your Reflection",prompt:"Think about the best sales experience you have ever had as a customer. What made it great? How can you apply those same principles on your calls?"}
     ]},
     {title:"Connect Early",steps:[
+      {type:"learn",title:"What You Will Learn",content:"In this module, you learn the most critical skill in outbound sales: earning the right to continue the conversation in the first 30 seconds.\n\nWhat you will learn:\n\u2022 The Connect Early framework\n\u2022 Why the first 30 seconds determine the entire call\n\u2022 How to use warmth, names, and permission questions\n\u2022 What a connected prospect sounds like vs a disconnected one",img:"\u{1F4CB}"},
       {type:"learn",title:"The First 30 Seconds",content:"You have 30 seconds to earn the right to continue the conversation. Connection is everything.\n\nThe Connect Early framework:\n\u2022 Warm greeting with energy and a smile (they can hear it)\n\u2022 Use their name naturally within the first 10 seconds\n\u2022 State your purpose clearly and briefly\n\u2022 Ask a permission question: \'Do you have a couple of minutes?\'\n\u2022 Bridge to discovery: \'I noticed you...\'\n\nA connected prospect stays on the line. A disconnected one hangs up.",img:"\u{1F44B}"},
       {type:"listen",title:"Listen: Connect Early",duration:"0:45",context:"An agent calls a lapsed member. Listen to how they build rapport in the opening 30 seconds before any mention of the product."},
       {type:"quiz",title:"Knowledge Check",questions:[
@@ -269,6 +320,7 @@ const MODULES={
       {type:"reflect",title:"Your Reflection",prompt:"Write your ideal opening 30 seconds for a call to a prospect named David who recently stayed at a Novotel in Sydney."}
     ]},
     {title:"Clarify Needs",steps:[
+      {type:"learn",title:"What You Will Learn",content:"In this module, you learn that the best salespeople are the best question-askers. Discovery is where you learn what matters.\n\nWhat you will learn:\n\u2022 Open questions that reveal travel and dining habits\n\u2022 The four listening triggers: frequency, frustration, aspiration, budget\n\u2022 How to identify which Explorer benefit to lead with\n\u2022 When to stop asking and start presenting",img:"\u{1F4CB}"},
       {type:"learn",title:"Discovery Through Questions",content:"The best salespeople are the best question-askers. Clarify Needs is where you learn what matters.\n\nKey discovery questions:\n\u2022 \'How often do you and your family travel for leisure?\'\n\u2022 \'When you travel, what type of hotels do you typically stay at?\'\n\u2022 \'Do you dine out at hotel restaurants regularly?\'\n\u2022 \'What would make your travel experiences even better?\'\n\u2022 \'Have you ever had a loyalty programme that you really valued?\'\n\nListen for triggers: frequency, frustration, aspiration, and budget signals. These are your selling anchors.",img:"\u{1F50D}"},
       {type:"listen",title:"Listen: Clarify Needs",duration:"1:15",context:"The agent asks open questions to understand the member\'s travel habits, dining preferences, and what they valued most about their previous membership."},
       {type:"quiz",title:"Knowledge Check",questions:[
@@ -278,6 +330,7 @@ const MODULES={
       {type:"reflect",title:"Your Reflection",prompt:"Write three discovery questions you would ask a prospect who mentioned they travel to Bali every year with their partner."}
     ]},
     {title:"Confirm and Present",steps:[
+      {type:"learn",title:"What You Will Learn",content:"In this module, you learn how to present the Explorer membership in a way that feels personal, not scripted.\n\nWhat you will learn:\n\u2022 The Confirm and Present framework\n\u2022 Why you lead with their top two benefits, not all of them\n\u2022 How to use specific numbers to make value tangible\n\u2022 The bridge from discovery to presentation",img:"\u{1F4CB}"},
       {type:"learn",title:"Matching Benefits to Needs",content:"Now you present, but only what matters to them. This is not a feature dump.\n\nThe Confirm and Present framework:\n\u2022 Confirm: \'So what I am hearing is you travel twice a year and love dining out.\'\n\u2022 Bridge: \'Based on that, there is something that would be perfect for you.\'\n\u2022 Present: Lead with their top two benefits, not all of them\n\u2022 Prove: Use specific numbers. \'At 30% off dining twice a month, that is $540 saved.\'\n\u2022 Check: \'Does that sound like something that would work for you?\'\n\nPersonal, specific, and relevant. Every time.",img:"\u{1F381}"},
       {type:"listen",title:"Listen: Confirm and Present",duration:"1:30",context:"The agent links specific Explorer benefits to the member\'s stated needs. Listen for whether the presentation feels personal or scripted."},
       {type:"quiz",title:"Knowledge Check",questions:[
@@ -287,6 +340,7 @@ const MODULES={
       {type:"reflect",title:"Your Reflection",prompt:"A prospect told you they dine out weekly and take one big family holiday a year. Write your Confirm and Present script for them."}
     ]},
     {title:"Close and Manage Concerns",steps:[
+      {type:"learn",title:"What You Will Learn",content:"In this module, you learn to handle objections with confidence and close with conviction.\n\nWhat you will learn:\n\u2022 The three most common objections and how to address each\n\u2022 Why objections are buying signals, not rejections\n\u2022 The assumptive close technique\n\u2022 How to stay calm when a prospect pushes back",img:"\u{1F4CB}"},
       {type:"learn",title:"Closing with Conviction",content:"Closing is not aggressive. It is a natural conclusion to a good conversation.\n\nCommon concerns and responses:\n\u2022 \'I need to think about it\' > \'Of course. What specifically would you like to think through?\'\n\u2022 \'It is too expensive\' > \'I understand. Let me show you the maths on what you would save.\'\n\u2022 \'I do not travel enough\' > \'Even one trip plus regular dining covers the cost.\'\n\u2022 \'I already have a loyalty programme\' > \'Great, you clearly value rewards. Explorer stacks on top.\'\n\nClose with confidence: \'Shall I get you set up today so you can start using your benefits straight away?\'",img:"\u{1F91D}"},
       {type:"listen",title:"Listen: Close and Manage Concerns",duration:"1:00",context:"The member says \'I need to think about it.\' Listen to how the agent acknowledges the concern and guides the conversation toward a decision."},
       {type:"quiz",title:"Knowledge Check",questions:[
@@ -296,6 +350,7 @@ const MODULES={
       {type:"reflect",title:"Your Reflection",prompt:"Write responses to these two objections in your own words: \'It is too expensive\' and \'I do not travel enough.\'"}
     ]},
     {title:"Celebrate Belonging",steps:[
+      {type:"learn",title:"What You Will Learn",content:"In this module, you learn that the sale is not the finish line. It is the starting line. How you celebrate belonging determines whether this member stays for one year or five.\n\nWhat you will learn:\n\u2022 The post-sale experience that drives renewal\n\u2022 How to set expectations that create immediate action\n\u2022 The three things every new member should do in week one\n\u2022 Why celebration is a retention strategy, not just politeness",img:"\u{1F4CB}"},
       {type:"learn",title:"The Welcome Moment",content:"The sale is not the finish line. It is the starting line.\n\nCelebrate Belonging means:\n\u2022 Congratulate them genuinely: \'Welcome to Explorer, you are going to love this.\'\n\u2022 Set expectations: Walk them through what happens next (activation, app, first booking)\n\u2022 Highlight one immediate action: \'Your Gold status is active in 24 hours. Check the app tomorrow.\'\n\u2022 Plant the renewal seed: \'Members who book early get the most out of their first year.\'\n\u2022 Thank them by name: \'Thanks David, enjoy your Explorer journey.\'\n\nThis moment determines whether they become a one-year member or a lifetime advocate.",img:"\u{1F389}"},
       {type:"listen",title:"Listen: Celebrate Belonging",duration:"0:50",context:"The sale is made. Listen to how the agent sets expectations for the membership and makes the new member feel they made the right decision."},
       {type:"quiz",title:"Knowledge Check",questions:[
@@ -305,6 +360,7 @@ const MODULES={
       {type:"reflect",title:"Your Reflection",prompt:"Write your ideal post-sale welcome script. Include congratulations, next steps, and a renewal seed."}
     ]},
     {title:"Zendesk and Expectations",steps:[
+      {type:"learn",title:"What You Will Learn",content:"In this final module, you will learn the tools and workflows that support your daily work.\n\nWhat you will learn:\n\u2022 Zendesk platform navigation and ticket management\n\u2022 SLA expectations and response time standards\n\u2022 Performance expectations for your role\n\u2022 How your daily metrics connect to team and company goals",img:"\u{1F4CB}"},
       {type:"learn",title:"Your Tools and Standards",content:"Zendesk is your primary platform for managing customer interactions.\n\nKey expectations:\n\u2022 All calls are logged in Zendesk with accurate notes\n\u2022 Ticket categories must be correctly assigned\n\u2022 Follow-up tasks are created for callbacks within 24 hours\n\u2022 Quality scores are based on methodology adherence, not just outcomes\n\u2022 Daily targets: Dials, talk time, connects, presentations, and sales\n\nYour KPIs will be tracked through the Workforce Dashboard. Your team leader will review these with you weekly using the GROW coaching framework.",img:"\u{1F4BB}"},
       {type:"quiz",title:"Knowledge Check",questions:[
         {q:"What is the primary platform for managing customer interactions?",opts:["Salesforce","HubSpot","Zendesk","Excel"],correct:2},
@@ -314,7 +370,9 @@ const MODULES={
     ]}
   ],
   4:[
+    {title:"Immigration",steps:[{type:"immigration",title:"Immigration Check: India",country:"India",maori:"Namaste",flag:"\u{1F1EE}\u{1F1F3}",welcomeMsg:"Namaste! Welcome to India. You are joining the Member Care team, the voice of Accor Plus for hundreds of thousands of members. Let us see what you know about this incredible country.",outcomes:["Understanding the member lifecycle from day one through renewal","The ACE Framework: Acknowledge, Clarify, Execute","Setting the tone with empathy and ownership from the first contact","Recognising complaint types and escalation pathways"],facts:[{q:"The Taj Mahal receives approximately how many visitors per year?",opts:["2 million","4 million","7 million","10 million"],correct:2,fact:"The Taj Mahal receives approximately 7 to 8 million visitors per year. Built in 1632 by Emperor Shah Jahan, it took 22 years and 20,000 workers to complete."},{q:"India produces more films per year than Hollywood. Approximately how many?",opts:["500","1,000","1,500","2,000"],correct:2,fact:"India produces roughly 1,500 to 2,000 films per year across multiple languages, compared to Hollywood\u0027s approximately 700."},{q:"How many people travel by Indian Railways every single day?",opts:["5 million","10 million","15 million","25 million"],correct:3,fact:"Indian Railways carries approximately 23 to 25 million passengers every day across 68,000 km of track."},{q:"India is the world\u0027s largest producer of which everyday product?",opts:["Coffee","Spices","Rice","Cotton"],correct:1,fact:"India is the world\u0027s largest producer, consumer, and exporter of spices. The trade has shaped global history for over 3,000 years."},{q:"Cricket is India\u0027s most popular sport. How many watched the 2023 World Cup final?",opts:["100 million","250 million","500 million","Over 1 billion"],correct:2,fact:"The 2023 Cricket World Cup final was watched by an estimated 500 million viewers worldwide."}]}]},
     {title:"Onboarding Years",steps:[
+      {type:"learn",title:"What You Will Learn",content:"Welcome to Member Care. You are the voice of Accor Plus for hundreds of thousands of members across Asia Pacific. In this module, you will understand the member lifecycle from day one through renewal.\n\nWhat you will learn:\n\u2022 The member journey from purchase to renewal\n\u2022 Critical touchpoints that determine retention\n\u2022 What members expect at each stage of their membership\n\u2022 How your interactions shape whether they stay or leave",img:"\u{1F4CB}"},
       {type:"learn",title:"The Member Lifecycle",content:"As a Member Care specialist, you support members from their first day through renewal and beyond.\n\nThe member lifecycle:\n\u2022 Year 1 (Activation): First 90 days are critical. Help them book, use dining, and understand benefits.\n\u2022 Year 1 (Engagement): Months 3 to 9. Ensure they are using Red Hot Rooms and events.\n\u2022 Year 1 (Renewal): Months 10 to 12. Articulate the value they received and why year two is even better.\n\u2022 Year 2+: Loyal members who know the product. Focus on new features and experiences.\n\nEvery interaction you have either strengthens or weakens the renewal decision.",img:"\u{1F4C5}"},
       {type:"quiz",title:"Knowledge Check",questions:[
         {q:"What is the most critical period in the member lifecycle?",opts:["First 90 days","Months 6 to 9","Month 12","Year 2"],correct:0},
@@ -323,6 +381,7 @@ const MODULES={
       {type:"reflect",title:"Your Reflection",prompt:"A member calls at month 11 saying they are considering not renewing. What three things would you say to help them see the value?"}
     ]},
     {title:"ACE Framework",steps:[
+      {type:"learn",title:"What You Will Learn",content:"In this module, you will learn the ACE Framework: the foundation of every member interaction.\n\nWhat you will learn:\n\u2022 Acknowledge: how to validate the member\u0027s concern immediately\n\u2022 Clarify: how to understand the real issue, not just the stated one\n\u2022 Execute: how to resolve and confirm with confidence\n\u2022 How ACE transforms complaints into loyalty moments",img:"\u{1F4CB}"},
       {type:"learn",title:"Acknowledge, Clarify, Execute",content:"ACE is the foundation of every member interaction in Member Care.\n\n\u2022 Acknowledge: Show the member you hear them. \'I completely understand your frustration.\' Never dismiss, minimise, or skip this step.\n\u2022 Clarify: Ensure you understand the full picture before acting. \'Let me make sure I have this right...\'\n\u2022 Execute: Take clear action and confirm. \'Here is exactly what I am going to do for you, and here is when it will be resolved.\'\n\nACE works for every scenario: questions, complaints, requests, and escalations. It builds trust because the member feels heard, understood, and helped.",img:"\u{1F31F}"},
       {type:"listen",title:"Listen: ACE Framework",duration:"1:20",context:"A member calls about a billing discrepancy. Listen to how the agent Acknowledges the concern, Clarifies the details, and Executes a resolution."},
       {type:"quiz",title:"Knowledge Check",questions:[
@@ -332,6 +391,7 @@ const MODULES={
       {type:"reflect",title:"Your Reflection",prompt:"A member calls saying their Stay Plus night was not honoured at a hotel. Write out your ACE response step by step."}
     ]},
     {title:"Positive First Response",steps:[
+      {type:"learn",title:"What You Will Learn",content:"In this module, you learn that the first 15 seconds of a member interaction set the tone for everything that follows.\n\nWhat you will learn:\n\u2022 How empathy and ownership sound on a call\n\u2022 The difference between sympathy and empathy in service\n\u2022 Phrases that build trust vs phrases that destroy it\n\u2022 How to take ownership without making promises you cannot keep",img:"\u{1F4CB}"},
       {type:"learn",title:"Setting the Tone",content:"The first 15 seconds of a member care interaction set the tone for everything that follows.\n\nPositive First Response means:\n\u2022 Warm, genuine greeting: energy and empathy\n\u2022 Use their name and membership status: \'Welcome back, Gold member.\'\n\u2022 Assume positive intent from the member\n\u2022 Take ownership immediately: \'I can absolutely help with that.\'\n\u2022 Never say: \'That is not my department\' or \'I cannot do that\'\n\u2022 Instead say: \'Let me find the best way to resolve this for you.\'\n\nMembers remember how you made them feel, not what you said.",img:"\u2764\uFE0F"},
       {type:"listen",title:"Listen: Positive First Response",duration:"1:00",context:"An upset member calls about a hotel experience. Listen to how the agent sets the tone with empathy and ownership from the first words."},
       {type:"quiz",title:"Knowledge Check",questions:[
@@ -341,6 +401,7 @@ const MODULES={
       {type:"reflect",title:"Your Reflection",prompt:"Write your ideal opening 15 seconds for a member care call with a Platinum member named Sarah who sounds frustrated."}
     ]},
     {title:"Complaint Identifying",steps:[
+      {type:"learn",title:"What You Will Learn",content:"In this module, you will learn to identify complaint types quickly and route them to the right resolution pathway.\n\nWhat you will learn:\n\u2022 The four complaint categories and how to identify each\n\u2022 Escalation pathways and when to use them\n\u2022 The difference between a complaint and a query\n\u2022 How to document complaints for audit and trend analysis",img:"\u{1F4CB}"},
       {type:"learn",title:"Types and Escalation",content:"Not all complaints are equal. Identifying the type determines your response.\n\n\u2022 Service complaint: Hotel did not deliver on a promise. Resolve with ACE and compensation guidelines.\n\u2022 Product complaint: Member does not understand a benefit or feels misled. Educate and clarify.\n\u2022 Billing complaint: Charge dispute or refund request. Follow financial escalation process.\n\u2022 Systemic complaint: Multiple members reporting the same issue. Flag to team leader immediately.\n\nEscalation triggers:\n\u2022 Member requests a manager\n\u2022 Legal or media threats\n\u2022 Health and safety concerns\n\u2022 Three or more contacts on the same issue",img:"\u26A0\uFE0F"},
       {type:"listen",title:"Listen: Complaint Identifying",duration:"1:30",context:"A member describes multiple issues across two stays. Listen to how the agent identifies the core complaint type and determines the escalation pathway."},
       {type:"quiz",title:"Knowledge Check",questions:[
@@ -350,6 +411,7 @@ const MODULES={
       {type:"reflect",title:"Your Reflection",prompt:"A member calls saying three different hotels have refused to honour their dining discount. How would you classify this complaint and what action would you take?"}
     ]},
     {title:"Zendesk System and Tickets",steps:[
+      {type:"learn",title:"What You Will Learn",content:"In this final module, you will learn the tools that support your daily work in Member Care.\n\nWhat you will learn:\n\u2022 Zendesk ticket management and navigation\n\u2022 SLA expectations and priority levels\n\u2022 How to categorise and tag interactions correctly\n\u2022 Performance metrics and quality standards for your role",img:"\u{1F4CB}"},
       {type:"learn",title:"Platform Mastery",content:"Zendesk is your workspace. Mastering it means faster resolutions and better member experiences.\n\nKey workflows:\n\u2022 Every interaction creates or updates a ticket\n\u2022 Tickets must be categorised: Enquiry, Complaint, Request, Technical\n\u2022 Priority levels: Low (general), Medium (billing), High (escalation), Urgent (legal/safety)\n\u2022 Internal notes are used for handovers and manager visibility\n\u2022 SLA targets: First response within 4 hours, resolution within 48 hours\n\u2022 Member history is always reviewed before responding\n\nClean data means better reporting. Better reporting means better decisions for the whole team.",img:"\u{1F4BB}"},
       {type:"quiz",title:"Knowledge Check",questions:[
         {q:"What is the SLA target for first response?",opts:["1 hour","4 hours","24 hours","48 hours"],correct:1},
@@ -363,6 +425,7 @@ const MODULES={
 
 const LT_ID={"0_0":"Apa yang Akan Anda Pelajari & Lakukan","0_1":"Apa itu Visi dan Mengapa Penting?","0_2":"Mulai dari Mengapa","0_3":"Baca: 3 Elemen Visi","0_4":"Apa itu BHAG?","0_5":"Bangun Visi Anda","0_6":"Aktivitas: Rapat Tim, 1:1 & Huddle","0_7":"Skenario: Tim yang Tidak Terlibat","0_8":"Refleksi Mendalam","0_9":"Misi: Bagikan Visi Anda","0_t":"Visi, Tujuan & Mengapa","1_0":"Apa yang Akan Anda Pelajari & Lakukan","1_1":"Apa itu Kesejahteraan dan Mengapa Penting?","1_2":"Menuju Kesejahteraan","1_3":"Baca: Roda Kesejahteraan dalam Praktik","1_4":"Cara Memfasilitasi Percakapan","1_5":"Lengkapi Roda Anda","1_6":"Aktivitas: 1:1 dan Kesadaran Tim","1_7":"Skenario: Bintang yang Bermasalah","1_8":"Refleksi Mendalam","1_9":"Misi: Jalankan Roda","1_t":"Roda Kesejahteraan","2_0":"Apa yang Akan Anda Pelajari & Lakukan","2_1":"Apa itu Keterbukaan Radikal?","2_2":"Cara Menjadi Bos yang Lebih Baik","2_3":"Baca: Empat Kuadran di Contact Centre","2_4":"Cara Memberikan Umpan Balik","2_5":"Tulis Umpan Balik Anda","2_6":"Aktivitas: Umpan Balik dalam 1:1","2_7":"Skenario: Umpan Balik yang Dihindari","2_8":"Refleksi Mendalam","2_9":"Misi: Berikan Umpan Balik Jujur","2_t":"Keterbukaan Radikal","3_0":"Apa yang Akan Anda Pelajari & Lakukan","3_1":"Apa itu Coaching dan Mengapa Penting?","3_2":"Model GROW: Coaching untuk Kinerja","3_3":"Baca: Model GROW dalam Praktik","3_4":"Pertanyaan yang Membuat GROW Berhasil","3_5":"Rencanakan Percakapan GROW Anda","3_6":"Aktivitas: Coaching dalam 1:1 dan Tim","3_7":"Skenario: Agen yang Ingin Jawaban","3_8":"Refleksi Mendalam","3_9":"Misi: Jalankan GROW Lengkap","3_t":"Percakapan GROW","4_0":"Apa yang Akan Anda Pelajari & Lakukan","4_1":"Apa itu Kepemimpinan Berbasis Nilai?","4_2":"Pemimpin Makan Terakhir","4_3":"Baca: Nilai dan Keselarasan Tujuan","4_4":"Cara Menjalankan Percakapan Nilai Tim","4_5":"Tentukan Hal yang Tidak Bisa Ditawar","4_6":"Aktivitas: Hidup dengan Nilai","4_7":"Skenario: Target vs Nilai","4_8":"Refleksi Mendalam","4_9":"Misi: Tentukan dan Jalani Nilai","4_t":"Kepemimpinan Berbasis Nilai","5_0":"Apa yang Akan Anda Pelajari & Lakukan","5_1":"Apa itu Standar dan Mengapa Menurun?","5_2":"Menetapkan dan Mempertahankan Standar","5_3":"Baca: Menentukan Standar Anda","5_4":"Cara Mengkomunikasikan Standar","5_5":"Tetapkan Standar Anda","5_6":"Aktivitas: Menetapkan, Melacak, Mempertahankan","5_7":"Skenario: Standar yang Menurun","5_8":"Refleksi Mendalam","5_9":"Misi: Tetapkan dan Pertahankan Standar","5_t":"Standar Kinerja Tinggi"};
 const LT_TH={"0_0":"สิ่งที่คุณจะเรียนรู้ & สิ่งที่ต้องทำ","0_1":"วิสัยทัศน์คืออะไรและทำไมจึงสำคัญ?","0_2":"เริ่มต้นด้วยเหตุผล","0_3":"อ่าน: 3 องค์ประกอบของวิสัยทัศน์","0_4":"BHAG คืออะไร?","0_5":"สร้างวิสัยทัศน์ของคุณ","0_6":"กิจกรรม: การประชุมทีม, 1:1 & ฮัดเดิล","0_7":"สถานการณ์จำลอง: ทีมที่ไม่มีส่วนร่วม","0_8":"การสะท้อนเชิงลึก","0_9":"ภารกิจ: แบ่งปันวิสัยทัศน์ของคุณ","0_t":"วิสัยทัศน์ จุดมุ่งหมาย & เหตุผล","1_0":"สิ่งที่คุณจะเรียนรู้ & สิ่งที่ต้องทำ","1_1":"สุขภาวะคืออะไรและทำไมจึงสำคัญ?","1_2":"การทำงานสู่สุขภาวะ","1_3":"อ่าน: วงล้อสุขภาวะในทางปฏิบัติ","1_4":"วิธีอำนวยความสะดวกในการสนทนา","1_5":"ทำวงล้อของคุณให้สมบูรณ์","1_6":"กิจกรรม: 1:1 และความตระหนักของทีม","1_7":"สถานการณ์จำลอง: ผู้ปฏิบัติงานชั้นนำที่มีปัญหา","1_8":"การสะท้อนเชิงลึก","1_9":"ภารกิจ: ดำเนินการวงล้อ","1_t":"วงล้อสุขภาวะ","2_0":"สิ่งที่คุณจะเรียนรู้ & สิ่งที่ต้องทำ","2_1":"ความตรงไปตรงมาอย่างจริงจังคืออะไร?","2_2":"วิธีเป็นหัวหน้าที่ดีขึ้น","2_3":"อ่าน: สี่ควอดแรนท์ในศูนย์ติดต่อ","2_4":"วิธีให้ข้อเสนอแนะ","2_5":"เขียนข้อเสนอแนะของคุณ","2_6":"กิจกรรม: ข้อเสนอแนะใน 1:1","2_7":"สถานการณ์จำลอง: ข้อเสนอแนะที่หลีกเลี่ยง","2_8":"การสะท้อนเชิงลึก","2_9":"ภารกิจ: ให้ข้อเสนอแนะอย่างตรงไปตรงมา","2_t":"ความตรงไปตรงมาอย่างจริงจัง","3_0":"สิ่งที่คุณจะเรียนรู้ & สิ่งที่ต้องทำ","3_1":"การโค้ชคืออะไรและทำไมจึงสำคัญ?","3_2":"โมเดล GROW: การโค้ชเพื่อผลงาน","3_3":"อ่าน: โมเดล GROW ในทางปฏิบัติ","3_4":"คำถามที่ทำให้ GROW ได้ผล","3_5":"วางแผนการสนทนา GROW ของคุณ","3_6":"กิจกรรม: การโค้ชใน 1:1 และทีม","3_7":"สถานการณ์จำลอง: ตัวแทนที่ต้องการคำตอบ","3_8":"การสะท้อนเชิงลึก","3_9":"ภารกิจ: ดำเนินการ GROW อย่างสมบูรณ์","3_t":"การสนทนา GROW","4_0":"สิ่งที่คุณจะเรียนรู้ & สิ่งที่ต้องทำ","4_1":"ภาวะผู้นำบนพื้นฐานค่านิยมคืออะไร?","4_2":"ผู้นำกินสุดท้าย","4_3":"อ่าน: ค่านิยมและการจัดวางเป้าหมาย","4_4":"วิธีดำเนินการสนทนาค่านิยมของทีม","4_5":"กำหนดสิ่งที่ไม่สามารถต่อรองได้","4_6":"กิจกรรม: ใช้ชีวิตตามค่านิยม","4_7":"สถานการณ์จำลอง: เป้าหมาย vs ค่านิยม","4_8":"การสะท้อนเชิงลึก","4_9":"ภารกิจ: กำหนดและใช้ชีวิตตามค่านิยม","4_t":"ภาวะผู้นำบนพื้นฐานค่านิยม","5_0":"สิ่งที่คุณจะเรียนรู้ & สิ่งที่ต้องทำ","5_1":"มาตรฐานคืออะไรและทำไมจึงลดลง?","5_2":"การตั้งและรักษามาตรฐาน","5_3":"อ่าน: กำหนดมาตรฐานของคุณ","5_4":"วิธีสื่อสารและรักษามาตรฐาน","5_5":"กำหนดมาตรฐานของคุณ","5_6":"กิจกรรม: ตั้ง ติดตาม และรักษา","5_7":"สถานการณ์จำลอง: มาตรฐานที่ลดลง","5_8":"การสะท้อนเชิงลึก","5_9":"ภารกิจ: ตั้งและรักษามาตรฐาน","5_t":"มาตรฐานผลงานระดับสูง"};
+const LT_VI={"0_0":"Bạn Sẽ Học Gì & Làm Gì","0_1":"Tầm nhìn là gì và tại sao quan trọng?","0_2":"Bắt đầu từ Tại sao","0_3":"Đọc: 3 Yếu tố của Tầm nhìn","0_4":"BHAG là gì?","0_5":"Xây dựng Tầm nhìn","0_6":"Hoạt động: Họp nhóm, 1:1 & Huddle","0_7":"Tình huống: Đội ngũ Mất động lực","0_8":"Phản ánh Sâu","0_9":"Nhiệm vụ: Chia sẻ Tầm nhìn","0_t":"Tầm nhìn, Mục đích & Lý do","1_0":"Bạn Sẽ Học Gì & Làm Gì","1_1":"Sức khỏe là gì và tại sao quan trọng?","1_2":"Hướng tới Sức khỏe","1_3":"Đọc: Bánh xe Sức khỏe","1_4":"Cách Hỗ trợ Cuộc trò chuyện","1_5":"Hoàn thành Bánh xe","1_6":"Hoạt động: 1:1 và Nhận thức Nhóm","1_7":"Tình huống: Ngôi sao Gặp khó","1_8":"Phản ánh Sâu","1_9":"Nhiệm vụ: Thực hiện Bánh xe","1_t":"Bánh Xe Sức Khỏe","2_0":"Bạn Sẽ Học Gì & Làm Gì","2_1":"Thẳng thắn Triệt để là gì?","2_2":"Cách Trở thành Sếp Tốt hơn","2_3":"Đọc: Bốn Góc phần tư","2_4":"Cách Đưa Phản hồi","2_5":"Viết Phản hồi","2_6":"Hoạt động: Phản hồi trong 1:1","2_7":"Tình huống: Phản hồi Bị Tránh","2_8":"Phản ánh Sâu","2_9":"Nhiệm vụ: Đưa Phản hồi Thẳng thắn","2_t":"Thẳng Thắn Triệt Để","3_0":"Bạn Sẽ Học Gì & Làm Gì","3_1":"Huấn luyện là gì và tại sao quan trọng?","3_2":"Mô hình GROW: Huấn luyện Hiệu suất","3_3":"Đọc: Mô hình GROW Thực hành","3_4":"Câu hỏi Giúp GROW Hiệu quả","3_5":"Lập kế hoạch Cuộc trò chuyện GROW","3_6":"Hoạt động: Huấn luyện trong 1:1","3_7":"Tình huống: Nhân viên Muốn Câu trả lời","3_8":"Phản ánh Sâu","3_9":"Nhiệm vụ: Thực hiện GROW Đầy đủ","3_t":"Hội Thoại GROW","4_0":"Bạn Sẽ Học Gì & Làm Gì","4_1":"Lãnh đạo dựa trên Giá trị là gì?","4_2":"Người Lãnh đạo Ăn Sau","4_3":"Đọc: Giá trị và Mục tiêu","4_4":"Cách Thảo luận Giá trị Nhóm","4_5":"Xác định Nguyên tắc Bất di bất dịch","4_6":"Hoạt động: Sống theo Giá trị","4_7":"Tình huống: Mục tiêu vs Giá trị","4_8":"Phản ánh Sâu","4_9":"Nhiệm vụ: Xác định và Sống theo Giá trị","4_t":"Lãnh Đạo Dựa Trên Giá Trị","5_0":"Bạn Sẽ Học Gì & Làm Gì","5_1":"Tiêu chuẩn là gì và tại sao giảm?","5_2":"Thiết lập và Duy trì Tiêu chuẩn","5_3":"Đọc: Xác định Tiêu chuẩn","5_4":"Cách Truyền đạt Tiêu chuẩn","5_5":"Đặt Tiêu chuẩn","5_6":"Hoạt động: Đặt, Theo dõi, Duy trì","5_7":"Tình huống: Tiêu chuẩn Sụt giảm","5_8":"Phản ánh Sâu","5_9":"Nhiệm vụ: Đặt và Duy trì Tiêu chuẩn","5_t":"Tiêu Chuẩn Hiệu Suất Cao"};
 const CONTENT_REVIEWS={
   onboarding:[
     {dest:"New Zealand",modules:["The ALL Accor+ Journey","The Accor Plus Journey","Our Brand Portfolio","Key Hotels in APAC"],reviewed:"28 March 2026",status:"current"},
@@ -507,6 +570,61 @@ const MODULES_TH={
     ]}
   ]
 };
+const MODULES_VI={
+  0:[
+    {title:"Hành Trình ALL Accor+",steps:[
+      {type:"learn",title:"Chào Mừng Đến Câu Chuyện Của Chúng Tôi",content:"Chào mừng bạn đến mô-đun đầu tiên. Trong các bước tiếp theo, bạn sẽ khám phá hành trình đáng kinh ngạc của Accor từ một khách sạn duy nhất bên đường ở miền bắc nước Pháp đến một trong những tập đoàn khách sạn lớn nhất thế giới. Khi kết thúc, bạn sẽ hiểu về di sản, quy mô và tham vọng đằng sau mọi tương tác của bạn với tư cách thành viên đội ngũ ALL Accor+ Explorer.",img:"\u{1F30F}"},
+      {type:"video",title:"Câu Chuyện Thành Lập",duration:"4:30",desc:"Năm 1967, hai nhà tầm nhìn Paul Dubrule và Gerard Pelisson đã mở Novotel đầu tiên bên đường gần Lille ở miền bắc nước Pháp. Du lịch đang bùng nổ khắp châu Âu và ngành khách sạn chưa mở rộng để đáp ứng nhu cầu. Ý tưởng của họ đơn giản nhưng mang tính cách mạng: khách sạn tiêu chuẩn với tiện nghi hiện đại. Đây là khởi đầu của tất cả."},
+      {type:"learn",title:"Tăng Trưởng và Mở Rộng",content:"Từ Novotel đầu tiên đó, Accor phát triển nhanh chóng:\n\n1967: Novotel đầu tiên mở tại Lille, Pháp\n1974: Thương hiệu ibis ra mắt tại Bordeaux\n1975: Chuỗi Mercure được mua lại\n1980: Sofitel được mua lại, đánh dấu bước vào phân khúc sang trọng\n1983: Công ty chính thức trở thành \u0027Accor\u0027\n1990s: Mở rộng sang châu Á Thái Bình Dương\n\nĐến thiên niên kỷ mới, Accor đã trở thành công ty khách sạn toàn cầu thực sự.",img:"\u{1F4C8}"},
+      {type:"learn",title:"Accor Ngày Nay",content:"Ngày nay, Accor là gã khổng lồ khách sạn toàn cầu:\n\n\u2022 5.700+ khách sạn và resort trên toàn thế giới\n\u2022 850.000 phòng tại 110+ quốc gia\n\u2022 Hơn 45 thương hiệu khách sạn\n\u2022 360.000 nhân viên trên toàn cầu\n\u2022 100+ triệu thành viên trong hệ sinh thái ALL",img:"\u{1F3E8}"},
+      {type:"learn",title:"Mục Đích Của Chúng Tôi",content:"Mục đích của Accor rõ ràng và mạnh mẽ:\n\n\u0027Tiên phong trong nghệ thuật trung thành đăng ký, kết nối các nền văn hóa, với sự chăm sóc tận tâm.\u0027\n\nĐây không chỉ là khẩu hiệu. Nó thúc đẩy mọi quyết định. Với tư cách thành viên đội ngũ ALL Accor+ Explorer, bạn là một phần của mục đích này.",img:"\u2764\uFE0F"},
+      {type:"quiz",title:"Kiểm Tra Kiến Thức",questions:[
+        {q:"Khách sạn Novotel đầu tiên mở vào năm nào?",opts:["1957","1963","1967","1975"],correct:2},
+        {q:"Ai là hai nhà sáng lập Accor?",opts:["Sebastien Bazin và Emilie Couton","Paul Dubrule và Gerard Pelisson","Jean-Marc Espalioux và Gilles Pelisson","Pierre Lamond và Jacques Borel"],correct:1},
+        {q:"Accor vận hành khoảng bao nhiêu khách sạn trên toàn thế giới?",opts:["2.500+","4.000+","5.700+","8.000+"],correct:2}
+      ]},
+      {type:"reflect",title:"Phản Ánh Của Bạn",prompt:"Bây giờ bạn đã biết câu chuyện Accor, phần nào trong hành trình của công ty gây ấn tượng nhất với bạn? Hiểu lịch sử này giúp bạn cảm thấy kết nối với thương hiệu mà bạn sẽ đại diện hàng ngày như thế nào?"}
+    ]},
+    {title:"Hành Trình Accor Plus",steps:[
+      {type:"learn",title:"Chào Mừng Đến Câu Chuyện Accor Plus",content:"Trong mô-đun này, bạn sẽ tìm hiểu về Accor Plus, doanh nghiệp thành viên trung thành mà bạn đã là một phần. Được thành lập tại Sydney năm 1994, Accor Plus đã dẫn đầu trong phân khúc thành viên trung thành ở châu Á Thái Bình Dương hơn 30 năm.",img:"\u{1F48E}"},
+      {type:"video",title:"Accor Plus Là Gì?",duration:"5:15",desc:"Accor Plus là doanh nghiệp thành viên trung thành của Accor, công ty con phát triển, bán và quản lý thành viên cao cấp tại 20 quốc gia ở châu Á Thái Bình Dương. Với hơn 450.000 thành viên, thành viên Accor Plus đặt phòng nhiều hơn 5 lần so với người không phải thành viên."},
+      {type:"learn",title:"Tầm Nhìn và Sứ Mệnh",content:"Sứ mệnh của chúng tôi:\n\u0027Trở thành chương trình được yêu thích nhất cho thành viên và đối tác, truyền cảm hứng cho đội ngũ Heartist mọi bước.\u0027\n\nTầm nhìn:\nTrở thành thành viên trung thành du lịch hàng đầu thế giới, mang lại giá trị và trải nghiệm thực sự ở lại với thành viên.",img:"\u{1F31F}"},
+      {type:"learn",title:"Hệ Sinh Thái ALL",content:"ALL Accor+ Explorer tích hợp liền mạch trong hệ sinh thái trung thành toàn cầu ALL Accor:\n\n\u2022 100+ triệu thành viên trên toàn thế giới\n\u2022 Tích lũy và đổi điểm thưởng tại 5.700+ khách sạn\n\u2022 Năm cấp độ: Classic, Silver, Gold, Platinum, Diamond\n\u2022 110+ đối tác toàn cầu\n\u2022 2.000+ sự kiện và trải nghiệm độc quyền",img:"\u{1F310}"},
+      {type:"learn",title:"Tiến Hóa Thành ALL Accor+ Explorer",content:"Ngày 1 tháng 10 năm 2025, Accor Plus đổi thương hiệu thành ALL Accor+ Explorer. Thay đổi lớn nhất trong lịch sử 30 năm của chương trình.\n\nĐiểm thay đổi:\n\u2022 Hợp nhất tất cả loại thành viên dưới một sản phẩm Explorer\n\u2022 Đảm bảo trạng thái Gold cho mọi thành viên\n\u2022 30 đêm trạng thái thưởng mỗi năm\n\u2022 Giảm 15% toàn cầu tại 4.500+ khách sạn",img:"\u{1F680}"},
+      {type:"quiz",title:"Kiểm Tra Kiến Thức",questions:[
+        {q:"Accor Plus được thành lập năm nào?",opts:["1987","1994","2001","2010"],correct:1},
+        {q:"Accor Plus có bao nhiêu thành viên?",opts:["150.000+","250.000+","450.000+","750.000+"],correct:2},
+        {q:"Thành viên Explorer nhận trạng thái gì tự động?",opts:["Silver","Gold","Platinum","Diamond"],correct:1}
+      ]},
+      {type:"reflect",title:"Phản Ánh Của Bạn",prompt:"Sứ mệnh của chúng tôi là trở thành \u0027chương trình được yêu thích nhất.\u0027 Theo bạn, \u0027được yêu thích nhất\u0027 có nghĩa là gì?"}
+    ]},
+    {title:"Danh Mục Thương Hiệu",steps:[
+      {type:"learn",title:"Chào Mừng Đến Thế Giới Thương Hiệu",content:"Accor là ngôi nhà của hơn 45 thương hiệu khách sạn. Mỗi thương hiệu có cá tính, lời hứa và vị trí thị trường riêng. Trong mô-đun này, bạn sẽ khám phá danh mục từ siêu sang đến tiết kiệm.",img:"\u{1F3E8}"},
+      {type:"video",title:"Danh Mục Không Ai Sánh Bằng",duration:"3:45",desc:"Không có công ty khách sạn nào trên thế giới có sự đa dạng như vậy. Từ Raffles huyền thoại ở Singapore đến ibis sôi động giữa Bangkok. Thương hiệu Accor bao phủ mọi thời điểm du lịch và mọi ngân sách."},
+      {type:"learn",title:"Thương Hiệu Sang Trọng",content:"Đỉnh cao của danh mục Accor:\n\n\u2022 Orient Express: Thương hiệu tàu hỏa và khách sạn huyền thoại\n\u2022 Raffles: Biểu tượng từ 1887, ngôi nhà của Singapore Sling\n\u2022 Fairmont: Khách sạn sang trọng bao gồm The Savoy London\n\u2022 Sofitel: Sang trọng Pháp với 120+ địa điểm\n\u2022 MGallery: Bộ sưu tập boutique độc đáo",img:"\u{1F451}"},
+      {type:"learn",title:"Thương Hiệu Cao Cấp",content:"Điểm cân bằng giữa phong cách và chất lượng:\n\n\u2022 Pullman: Khách sạn quốc tế cho du khách có kinh nghiệm\n\u2022 Swissotel: Sự chính xác và hiếu khách Thụy Sĩ\n\u2022 Movenpick: Nổi tiếng về ẩm thực và rượu vang\n\u2022 Grand Mercure: Bản sắc địa phương cao cấp\n\u2022 Peppers: Thương hiệu resort Úc và New Zealand",img:"\u2B50"},
+      {type:"quiz",title:"Kiểm Tra Kiến Thức",questions:[
+        {q:"Thương hiệu Accor nào được thành lập đầu tiên?",opts:["Sofitel","ibis","Novotel","Mercure"],correct:2},
+        {q:"Thương hiệu nào được mô tả là \u0027sang trọng Pháp\u0027?",opts:["Raffles","Fairmont","MGallery","Sofitel"],correct:3},
+        {q:"Accor vận hành khoảng bao nhiêu thương hiệu?",opts:["15+","25+","35+","45+"],correct:3}
+      ]},
+      {type:"reflect",title:"Phản Ánh Của Bạn",prompt:"Thương hiệu nào trong danh mục Accor khiến bạn hào hứng nhất và tại sao? Bạn sẽ sử dụng kiến thức về thương hiệu này để tạo sự hứng thú trong cuộc trò chuyện bán hàng như thế nào?"}
+    ]},
+    {title:"Khách Sạn Trọng Điểm Tại APAC",steps:[
+      {type:"learn",title:"Chào Mừng Đến Sự Hiện Diện APAC",content:"Châu Á Thái Bình Dương là ngôi nhà của ALL Accor+ Explorer. Với 1.400+ khách sạn tại 18 quốc gia và 25+ thương hiệu, đây là nơi thành viên du lịch, ẩm thực và tạo kỷ niệm.",img:"\u{1F30D}"},
+      {type:"video",title:"Dấu Ấn APAC",duration:"4:00",desc:"Từ bãi biển Bali đến đường chân trời Sydney, từ đền chùa Bangkok đến núi non Queenstown. Sự hiện diện của Accor tại châu Á Thái Bình Dương không ai sánh bằng. Hơn 1.400 khách sạn với 25+ thương hiệu."},
+      {type:"learn",title:"Úc và New Zealand",content:"Thị trường quê nhà và khu vực lớn nhất:\n\n\u2022 Sofitel Sydney Darling Harbour: Sang trọng năm sao nhìn ra bến cảng\n\u2022 Pullman Auckland: Cao cấp trung tâm thành phố\n\u2022 Novotel Sydney Olympic Park: Lý tưởng cho gia đình\n\u2022 Peppers Cradle Mountain Lodge: Trải nghiệm hoang dã Tasmania huyền thoại",img:"\u{1F1E6}\u{1F1FA}"},
+      {type:"learn",title:"Đông Nam Á",content:"Khu vực mà Explorer tỏa sáng:\n\n\u2022 Raffles Singapore: Khách sạn nổi tiếng nhất thế giới\n\u2022 Sofitel Bali Nusa Dua: Sang trọng nhiệt đới năm sao\n\u2022 Pullman Bangkok Hotel G: Khách sạn sôi động giữa Silom\n\u2022 Fairmont Jakarta: Khách sạn kinh doanh cao cấp",img:"\u{1F334}"},
+      {type:"learn",title:"Ấn Độ và Thị Trường Mới Nổi",content:"Ấn Độ là thị trường tăng trưởng nhanh nhất của Accor tại APAC:\n\n\u2022 Đối tác Accor và InterGlobe: Tăng từ 70 lên 300 khách sạn vào 2030\n\u2022 Fairmont Jaipur: Di sản hoàng gia gặp sang trọng hiện đại\n\u2022 Novotel Mumbai Juhu Beach: Ven biển cao cấp\n\nVới sự mở rộng nhanh chóng tại Thái Lan, Việt Nam, Philippines và Indonesia, mạng lưới mà thành viên tiếp cận ngày càng lớn.",img:"\u{1F1EE}\u{1F1F3}"},
+      {type:"quiz",title:"Kiểm Tra Kiến Thức",questions:[
+        {q:"Accor vận hành bao nhiêu khách sạn tại châu Á Thái Bình Dương?",opts:["800+","1.000+","1.400+","2.000+"],correct:2},
+        {q:"Khách sạn biểu tượng Singapore nào thuộc Accor?",opts:["Marina Bay Sands","The Fullerton","Raffles Singapore","Shangri-La"],correct:2},
+        {q:"Đến 2030, có kế hoạch bao nhiêu khách sạn Accor tại Ấn Độ?",opts:["100","200","300","500"],correct:2}
+      ]},
+      {type:"reflect",title:"Phản Ánh Của Bạn",prompt:"Hãy nghĩ về một khách hàng tiềm năng thích du lịch Đông Nam Á. Từ những gì bạn đã học, bạn sẽ giải thích giá trị thành viên Explorer cho họ như thế nào?"}
+    ]}
+  ]
+};
 
 const Lk=()=><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>;
 const Ar=()=><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>;
@@ -516,6 +634,8 @@ export default function App(){
   const [isManager,setIsManager]=useState(false);
   const [lang,setLang]=useState("en");
   const [showLangMenu,setShowLangMenu]=useState(false);
+  const [darkMode,setDarkMode]=useState(false);
+  React.useEffect(()=>{document.body.style.background=darkMode?"#0a0a0f":"#fbfbfd";},[darkMode]);
   const [pulseActive,setPulseActive]=useState(null);
   const [pulseAnswers,setPulseAnswers]=useState({});
   const [pulseDismissed,setPulseDismissed]=useState({});
@@ -680,7 +800,73 @@ export default function App(){
       certId:"รหัสใบรับรอง",certIssued:"ออกเมื่อ",certHolder:"ขอรับรองว่า",certCompleted:"ได้สำเร็จหลักสูตร",
       certOnboarding:"โปรแกรมปฐมนิเทศ ALL Accor+ Explorer",certLeadership:"โปรแกรมภาวะผู้นำ เล่มที่ 1",
       contentUpdated:"อัปเดต",lastReviewed:"ตรวจสอบล่าสุด",reviewAll:"ตรวจสอบวันที่เนื้อหาทั้งหมด",
-      contentCurrent:"เนื้อหาเป็นปัจจุบัน",contentNeedsReview:"แนะนำให้ตรวจสอบ"
+      contentCurrent:"เนื้อหาเป็นปัจจุบัน",contentNeedsReview:"แนะนำให้ตรวจสอบ",
+      apply:"Áp dụng",listen:"Nghe",mission:"Nhiệm vụ",
+      applyLabel:"TÌNH HUỐNG",listenLabel:"NGHE",missionLabel:"NHIỆM VỤ HÀNG TUẦN",
+      chooseApproach:"Chọn cách tiếp cận của bạn",
+      whatHappens:"Điều gì xảy ra với cách tiếp cận này:",
+      listenPlaceholder:"Clip âm thanh sẽ có sẵn tại đây. Nghe cuộc gọi, sau đó trả lời câu hỏi bên dưới.",
+      listenQ1:"Nhân viên đã làm tốt điều gì?",listenQ2:"Bạn sẽ thay đổi điều gì?",
+      missionBrief:"Nhiệm vụ của bạn tuần này:",
+      missionDoc:"Ghi lại những gì đã xảy ra:",
+      missionWhat:"Bạn đã làm gì?",missionObserved:"Bạn quan sát được gì?",missionDiff:"Bạn sẽ làm gì khác?",
+      knowledgePulse:"Kiểm Tra Kiến Thức",pulseIntro:"Đã 14 ngày kể từ khi bạn hoàn thành",pulseQuestion:"Bạn còn trả lời được không?",
+      pulseCorrect:"Bạn nhớ rồi!",pulseWrong:"Đến lúc xem lại mô-đun này.",pulseScore:"Điểm ghi nhớ của bạn:",reviewModule:"Xem lại Mô-đun",pulseDismiss:"Đóng",
+      coachingInsights:"Thông Tin Huấn Luyện",insightAction:"Cần hành động",insightCelebrate:"Chúc mừng",insightFollowUp:"Theo dõi",
+      downloadCert:"Tải Chứng Chỉ",shareLinkedIn:"Chia sẻ lên LinkedIn",verifyUrl:"URL Xác minh",
+      certId:"Mã Chứng Chỉ",certIssued:"Cấp ngày",
+      contentUpdated:"Đã cập nhật",lastReviewed:"Xem xét lần cuối",contentCurrent:"Nội dung hiện tại",contentNeedsReview:"Khuyến nghị xem xét",
+      poweredBy:"Được hỗ trợ bởi"
+    },
+    vi:{
+      bizProposal:"ĐỀ XUẤT KINH DOANH",acad:"Học Viện.",tagline:"Tiên phong trong nghệ thuật trung thành đăng ký",teamMember:"Thành Viên",manager:"Quản Lý",
+      hub:"Trung Tâm Học Tập.",hubSub:"Mọi thứ bạn cần để phát triển và thành công với tư cách thành viên đội ngũ ALL Accor+.",
+      onboarding:"Đào Tạo Hội Nhập",onbDesc:"Hoàn thành Hộ Chiếu Kỹ Thuật Số Explorer qua 4 điểm đến APAC. 19 mô-đun tương tác bao gồm câu chuyện, lòng trung thành, sản phẩm và vai trò của bạn.",
+      leadership:"Lãnh Đạo",leadDesc:"Phát triển năng lực lãnh đạo thông qua hai chương trình tự học được thiết kế cho trưởng nhóm Accor Plus.",
+      pocketCust:"Pocket Customer",pocketDesc:"Luyện tập hội thoại bán hàng với trình mô phỏng nhập vai AI. AI đóng vai khách hàng. Bạn chốt đơn.",
+      compliance:"Tuân Thủ",compDesc:"Các mô-đun tuân thủ hàng năm bao gồm quyền riêng tư dữ liệu, an toàn lao động và quy tắc ứng xử. Sắp ra mắt.",
+      active:"Hoạt động",comingSoon:"Sắp ra mắt",enter:"Vào",launch:"Mở",voiceRoleplay:"Nhập vai giọng nói",
+      passport:"Hộ Chiếu Kỹ Thuật Số.",cont:"Tiếp tục",welcome:"Chào mừng,",begin:"Bắt đầu",
+      programmes:"chương trình",comingQ3:"Q3 2026",
+      leaderV1:"Lãnh Đạo Tập 1.",sixDest:"Sáu điểm đến, sáu năng lực lãnh đạo",
+      modComplete:"mô-đun hoàn thành",inProgress:"Đang tiến hành",progComplete:"Chương trình hoàn thành",
+      selectDest:"Chọn điểm đến để bắt đầu",selectYourDest:"Chọn điểm đến của bạn để bắt đầu học",
+      leaderPassport:"Hộ chiếu lãnh đạo của bạn.",
+      completeStamp:"Hoàn thành mỗi mô-đun để nhận tem của bạn",
+      completeEachDest:"Hoàn thành mỗi điểm đến để nhận tem của bạn.",
+      stamped:"Đã đóng dấu",locked:"Khóa",
+      leaderCert:"Lãnh Đạo Tập 1 Hoàn Thành!",certCongrats:"Chúc mừng Jared. Bạn đã hoàn thành sáu mô-đun lãnh đạo và nhận được Chứng Nhận Lãnh Đạo.",
+      certified:"Được chứng nhận",backToModule:"Quay lại Mô-đun",step:"Bước",of:"trong",prev:"Trước",next:"Tiếp",markComplete:"Đánh dấu Hoàn thành",
+      completedIn:"Hoàn thành trong",min:"phút",underOne:"dưới 1",
+      mgrDash:"Bảng Điều Khiển.",mgrSub:"Theo dõi tiến độ đội của bạn trên tất cả chương trình.",
+      activeLearners:"Học viên hoạt động",avgCompletion:"Hoàn thành trung bình",avgDays:"Số ngày trung bình",quizAccuracy:"Độ chính xác bài kiểm tra",
+      acrossAll:"Trên tất cả chương trình",onbProg:"Chương trình đào tạo",perDest:"Mỗi điểm đến",acrossQuiz:"Trên tất cả bài kiểm tra",
+      onbProgTitle:"Chương Trình Đào Tạo",explorerPass:"Hộ Chiếu Kỹ Thuật Số Explorer",leadProgTitle:"Chương Trình Lãnh Đạo",vol12:"Tập 1 & Tập 2",
+      compProgTitle:"Chương Trình Tuân Thủ",launchingQ3:"Ra mắt Q3 2026",
+      logOut:"Đăng xuất",academy:"Học viện",complete:"Hoàn thành",continueLearning:"Tiếp tục học",allComplete:"Tất cả hoàn thành",
+      learningModules:"MÔ-ĐUN HỌC TẬP",steps:"bước",knowledgeCheck:"Kiểm tra kiến thức",yourReflection:"Phản ánh của bạn",
+      correct:"Đúng!",incorrect:"Chưa đúng",tryAgain:"Thử lại",score:"Điểm",
+      yourPassport:"Hộ Chiếu Explorer Của Bạn.",
+      notRequired:"Không bắt buộc",required:"Bắt buộc",
+      explorerCertified:"EXPLORER ĐƯỢC CHỨNG NHẬN",congratsJared:"Chúc mừng Jared.",
+      completedAll:"Bạn đã hoàn thành tất cả điểm đến và nhận được Chứng Nhận Explorer.",
+      howItWorks:"Cách Thức Hoạt Động.",
+      nzStory:"Câu Chuyện",auLoyalty:"Trung Thành & Đăng Ký",idProduct:"Sản Phẩm Explorer",inSales:"Bán Hàng hoặc Chăm Sóc",
+      apply:"Áp dụng",listen:"Nghe",mission:"Nhiệm vụ",
+      applyLabel:"TÌNH HUỐNG",listenLabel:"NGHE",missionLabel:"NHIỆM VỤ HÀNG TUẦN",
+      chooseApproach:"Chọn cách tiếp cận",
+      whatHappens:"Điều gì xảy ra với cách này:",
+      listenPlaceholder:"Clip âm thanh sẽ có sẵn. Nghe cuộc gọi, sau đó trả lời bên dưới.",
+      listenQ1:"Nhân viên làm tốt điều gì?",listenQ2:"Bạn sẽ thay đổi gì?",
+      missionBrief:"Nhiệm vụ tuần này:",missionDoc:"Ghi lại những gì xảy ra:",
+      missionWhat:"Bạn đã làm gì?",missionObserved:"Bạn quan sát được gì?",missionDiff:"Bạn sẽ làm gì khác?",
+      knowledgePulse:"Kiểm Tra Kiến Thức",pulseIntro:"Đã 14 ngày kể từ khi bạn hoàn thành",pulseQuestion:"Bạn còn trả lời được không?",
+      pulseCorrect:"Bạn nhớ rồi!",pulseWrong:"Đến lúc xem lại mô-đun.",pulseScore:"Điểm ghi nhớ:",reviewModule:"Xem lại",pulseDismiss:"Đóng",
+      coachingInsights:"Thông Tin Huấn Luyện",insightAction:"Cần hành động",insightCelebrate:"Chúc mừng",insightFollowUp:"Theo dõi",
+      downloadCert:"Tải Chứng Chỉ",shareLinkedIn:"Chia sẻ LinkedIn",verifyUrl:"URL Xác minh",
+      certId:"Mã Chứng Chỉ",certIssued:"Cấp ngày",
+      contentUpdated:"Đã cập nhật",lastReviewed:"Xem xét lần cuối",contentCurrent:"Nội dung hiện tại",contentNeedsReview:"Khuyến nghị xem xét",
+      poweredBy:"Được hỗ trợ bởi"
     }
   };
   const t=T[lang]||T.en;
@@ -758,7 +944,7 @@ export default function App(){
     }
   };
   const isModComplete=(d,m)=>!!completedMods[`${d}-${m}`];
-  const modTimes={0:[25,25,30,25],1:[20,20,20,20],2:[20,15,15,20],3:[15,15,15,15,15,15,15],4:[20,20,20,20,20]};
+  const modTimes={0:[5,25,25,30,25],1:[5,25,25,25,25],2:[5,25,20,20,25],3:[5,20,15,15,15,15,15,15],4:[5,20,20,20,20,20]};
   const isDestComplete=(di)=>{if(!MODULES[di])return false;return MODULES[di].every((_,mi)=>isModComplete(di,mi));};
   const isDestUnlocked=(di)=>{if(di===0)return true;const prev=[0,0,1,2,2];return isDestComplete(prev[di]);};
   const totalMods=MODULES[0]?MODULES[0].length:0;
@@ -793,7 +979,7 @@ export default function App(){
   },[lFl,lCur,lCompletedMods]);
 
   
-  const getModules=(dest)=>{if(lang==="id"&&dest===0&&MODULES_ID[0])return MODULES_ID[0];if(lang==="th"&&dest===0&&MODULES_TH[0])return MODULES_TH[0];return MODULES[dest]||[];};
+  const getModules=(dest)=>{if(lang==="id"&&dest===0&&MODULES_ID[0])return MODULES_ID[0];if(lang==="th"&&dest===0&&MODULES_TH[0])return MODULES_TH[0];if(lang==="vi"&&dest===0&&MODULES_VI&&MODULES_VI[0])return MODULES_VI[0];return MODULES[dest]||[];};
   const allNZDone=isDestComplete(0);
   const isLModComplete=(d,m)=>!!lCompletedMods[`${d}-${m}`];
   const isLDestComplete=(di)=>LMODULES[di]&&LMODULES[di].every((_,mi)=>isLModComplete(di,mi));
@@ -967,7 +1153,7 @@ export default function App(){
   ];
 
   return(
-    <div style={{minHeight:"100vh",background:"#fbfbfd",color:"#1d1d1f",fontFamily:"-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif"}}>
+    <div className={darkMode?"dm":""} style={{minHeight:"100vh",background:"#fbfbfd",color:"#1d1d1f",fontFamily:"-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif"}}>
       <style>{`
         *{box-sizing:border-box;margin:0;padding:0}
         .nv{backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);background:rgba(251,251,253,.8)}
@@ -1004,6 +1190,146 @@ export default function App(){
         .bo{animation:bb 2.5s ease-in-out infinite}
         ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#d2d2d7;border-radius:3px}
         body{background:#fbfbfd!important}
+
+        /* ===== RESPONSIVE: TABLET (max 1024px) ===== */
+        @media(max-width:1024px){
+          .hub-grid{grid-template-columns:repeat(2,1fr)!important}
+          .dest-grid{grid-template-columns:repeat(2,1fr)!important}
+          .stamp-grid{grid-template-columns:repeat(2,1fr)!important}
+          .hiw-grid{grid-template-columns:1fr!important}
+          .kpi-grid{grid-template-columns:repeat(2,1fr)!important}
+          .map-section{overflow-x:auto;-webkit-overflow-scrolling:touch}
+          .map-section svg{min-width:700px}
+        }
+
+        /* ===== RESPONSIVE: PHONE (max 640px) ===== */
+        @media(max-width:640px){
+          .hub-grid{grid-template-columns:1fr!important;gap:14px!important}
+          .dest-grid{grid-template-columns:1fr!important;gap:10px!important}
+          .stamp-grid{grid-template-columns:repeat(2,1fr)!important;gap:14px!important}
+          .stats-grid{grid-template-columns:1fr!important;gap:16px!important}
+          .hiw-grid{grid-template-columns:1fr!important;gap:14px!important}
+          .kpi-grid{grid-template-columns:repeat(2,1fr)!important;gap:10px!important}
+          .mod-learn{padding:70px 16px 100px!important}
+          .map-section{padding:0 0 30px!important}
+          .map-section svg{min-width:600px}
+          nav .nv{height:auto!important}
+        }
+
+        /* Hero sections responsive */
+        @media(max-width:768px){
+          section>div[style*="padding: 100px"]{padding:70px 20px 40px!important}
+          section>div[style*="padding:100px"]{padding:70px 20px 40px!important}
+        }
+
+
+        /* ===== DARK MODE ===== */
+        .dm{background:#0a0a0f!important;color:#e2e2e8!important}
+        .dm .nv{background:rgba(14,14,20,.85)!important;border-bottom-color:rgba(255,255,255,.06)!important}
+        .dm .nv span,.dm .nv strong{color:#e2e2e8!important}
+
+        /* Sections with white/light backgrounds */
+        .dm section[style*="background: white"],.dm section[style*="background:white"],.dm section[style*='background:"white"']{background:#111118!important}
+        .dm div[style*="background:white"],.dm div[style*="background: white"]{background:#16161e!important}
+
+        /* Cards and surfaces */
+        .dm .hub-grid>div{background:#16161e!important;border-color:#2a2a35!important}
+        .dm .hub-grid>div>div:last-child{background:#16161e!important}
+        .dm .hub-grid h3{color:#e2e2e8!important}
+        .dm .hub-grid p{color:#8b8b95!important}
+        .dm .hub-grid span[style*="color:#b4b4b4"]{color:#666!important}
+
+        /* Destination cards */
+        .dm .dest-grid>div{background:#16161e!important;border-color:#2a2a35!important}
+        .dm .dest-grid h3{color:#e2e2e8!important}
+        .dm .dest-grid p{color:#8b8b95!important}
+
+        /* Stamps */
+        .dm .stamp-grid>div div{color:#e2e2e8!important}
+
+        /* Stats */
+        .dm .stats-grid>div>div:last-child{color:#8b8b95!important}
+
+        /* How It Works cards */
+        .dm .hiw-grid>div{background:#16161e!important;border-color:#2a2a35!important}
+        .dm .hiw-grid h3{color:#e2e2e8!important}
+        .dm .hiw-grid p{color:#8b8b95!important}
+
+        /* Module learning page */
+        .dm .mod-learn{background:transparent!important}
+        .dm .mod-learn h1{color:#e2e2e8!important}
+        .dm .mod-learn p{color:#b0b0b8!important}
+        .dm .mod-learn textarea{background:#1a1a24!important;border-color:#2a2a35!important;color:#e2e2e8!important}
+        .dm .mod-learn textarea:focus{border-color:#5b5bf0!important}
+
+        /* Reflect cards */
+        .dm div[style*="background:#f5f0ff"],.dm div[style*="background: #f5f0ff"]{background:#1e1530!important}
+        .dm div[style*="background:#f0f5ff"],.dm div[style*="background: #f0f5ff"]{background:#101828!important}
+        .dm div[style*="background:#fefce8"],.dm div[style*="background: #fefce8"]{background:#1c1a10!important}
+        .dm div[style*="background:#ecfdf5"],.dm div[style*="background: #ecfdf5"]{background:#0c1c15!important}
+        .dm div[style*="background:#fffbeb"],.dm div[style*="background: #fffbeb"]{background:#1c1a10!important}
+
+        /* Apply scenario cards */
+        .dm div[style*="border:1.5px solid #e8e8ed"]{border-color:#2a2a35!important;background:#16161e!important}
+        .dm div[style*="border: 1.5px solid #e8e8ed"]{border-color:#2a2a35!important;background:#16161e!important}
+
+        /* Fixed overlays and panels */
+        .dm div[style*="position:fixed"][style*="background:#fbfbfd"],.dm div[style*="position: fixed"][style*="background:#fbfbfd"]{background:#0a0a0f!important}
+        .dm div[style*="background:rgba(251,251,253"],.dm div[style*="background: rgba(251,251,253"]{background:rgba(14,14,20,.92)!important}
+
+        /* Sticky headers in module learning */
+        .dm div[style*="position:sticky"]{background:rgba(14,14,20,.92)!important;border-bottom-color:rgba(255,255,255,.06)!important}
+
+        /* Bottom navigation in module learning */
+        .dm div[style*="position:fixed"][style*="border-top"]{background:rgba(14,14,20,.95)!important;border-top-color:rgba(255,255,255,.06)!important}
+
+        /* Buttons */
+        .dm button[style*="background:white"],.dm button[style*="background: white"]{background:#1a1a24!important;color:#e2e2e8!important;border-color:#2a2a35!important}
+
+        /* KPI cards in manager dashboard */
+        .dm .kpi-grid>div{background:#16161e!important;border-color:#2a2a35!important}
+
+        /* Tables and rows */
+        .dm .rw{border-color:#2a2a35!important}
+        .dm .rw:hover{background:rgba(255,255,255,.04)!important}
+
+        /* Certificate section */
+        .dm div[style*="background:linear-gradient(135deg,#fefefe"]{background:linear-gradient(135deg,#16161e,#1a1528)!important;border-color:#2a2a35!important}
+
+        /* Immigration check card */
+        .dm div[style*="border:1.5px solid #e8e8ed"][style*="border-radius:20px"]{background:#16161e!important;border-color:#2a2a35!important}
+
+        /* General overrides for text colors */
+        .dm h2,.dm h3{color:#e2e2e8!important}
+        .dm p[style*="color:#424245"],.dm p[style*="color: #424245"]{color:#b0b0b8!important}
+        .dm p[style*="color:#86868b"],.dm p[style*="color: #86868b"]{color:#8b8b95!important}
+        .dm span[style*="color:#86868b"],.dm span[style*="color: #86868b"]{color:#8b8b95!important}
+        .dm p[style*="color:#1d1d1f"],.dm p[style*="color: #1d1d1f"]{color:#e2e2e8!important}
+
+        /* Scrollbar for dark mode */
+        .dm ::-webkit-scrollbar-thumb{background:#3a3a45}
+        .dm ::-webkit-scrollbar-track{background:#0a0a0f}
+
+        /* Footer */
+        .dm footer{background:#0a0a0f!important;border-top-color:rgba(255,255,255,.06)!important}
+        .dm footer p{color:#666!important}
+
+        /* Knowledge Pulse in dark mode */
+        .dm div[style*="background:#fffbeb"]{background:#1c1a10!important}
+        .dm div[style*="background:linear-gradient(135deg,#fefce8"]{background:#1c1a10!important}
+
+        /* Content review and coaching insights */
+        .dm div[style*="border:1px solid #e8e8ed"]{border-color:#2a2a35!important}
+        .dm div[style*="border-bottom:1px solid #f5f5f7"]{border-color:#1e1e28!important}
+        .dm div[style*="border-bottom:1px solid #e8e8ed"]{border-color:#2a2a35!important}
+        .dm div[style*="background:#f5f5f7"]{background:#16161e!important}
+
+        /* White section backgrounds */
+        .dm section[style*="padding:"][style*="background:white"],
+        .dm section[style*="padding:"][style*='background:"white"']{background:#111118!important}
+
+        /* Body override */
+        .dm~body,.dm body{background:#0a0a0f!important}
       `}</style>
 
       <nav className="nv" style={{position:"fixed",top:0,left:0,right:0,zIndex:100,borderBottom:"1px solid rgba(0,0,0,.06)"}}>
@@ -1016,15 +1342,16 @@ export default function App(){
             {view==="manager"&&<button onClick={()=>setView("agent")} style={{fontSize:11,fontWeight:600,color:"#0071e3",background:"none",border:"none",cursor:"pointer"}}>Agent View</button>}
             <div style={{width:28,height:28,borderRadius:"50%",background:"linear-gradient(135deg,#0071e3,#64acff)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,fontWeight:700,color:"white"}}>J</div>
             <div style={{position:"relative"}}>
-            <button onClick={()=>setShowLangMenu(!showLangMenu)} style={{fontSize:11,fontWeight:600,color:"#0071e3",background:"#f0f5ff",border:"1px solid #dbeafe",borderRadius:980,padding:"4px 10px",cursor:"pointer",transition:"all .2s",display:"flex",alignItems:"center",gap:4}} onMouseEnter={e=>e.currentTarget.style.background="#dbeafe"} onMouseLeave={e=>e.currentTarget.style.background="#f0f5ff"}>{lang==="en"?"EN \u{1F1EC}\u{1F1E7}":lang==="id"?"ID \u{1F1EE}\u{1F1E9}":"TH \u{1F1F9}\u{1F1ED}"}<svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <button onClick={()=>setShowLangMenu(!showLangMenu)} style={{fontSize:11,fontWeight:600,color:"#0071e3",background:"#f0f5ff",border:"1px solid #dbeafe",borderRadius:980,padding:"4px 10px",cursor:"pointer",transition:"all .2s",display:"flex",alignItems:"center",gap:4}} onMouseEnter={e=>e.currentTarget.style.background="#dbeafe"} onMouseLeave={e=>e.currentTarget.style.background="#f0f5ff"}>{lang==="en"?"EN \u{1F1EC}\u{1F1E7}":lang==="id"?"ID \u{1F1EE}\u{1F1E9}":lang==="th"?"TH \u{1F1F9}\u{1F1ED}":"VI \u{1F1FB}\u{1F1F3}"}<svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="6 9 12 15 18 9"/></svg></button>
             {showLangMenu&&<div style={{position:"absolute",top:"100%",right:0,marginTop:6,background:"white",border:"1px solid #e8e8ed",borderRadius:12,overflow:"hidden",minWidth:150,boxShadow:"0 8px 32px rgba(0,0,0,.12)",zIndex:100}}>
-              {[{code:"en",label:"English",flag:"\u{1F1EC}\u{1F1E7}"},{code:"id",label:"Bahasa",flag:"\u{1F1EE}\u{1F1E9}"},{code:"th",label:"\u0E44\u0E17\u0E22",flag:"\u{1F1F9}\u{1F1ED}"}].map(l=>(
+              {[{code:"en",label:"English",flag:"\u{1F1EC}\u{1F1E7}"},{code:"id",label:"Bahasa",flag:"\u{1F1EE}\u{1F1E9}"},{code:"th",label:"\u0E44\u0E17\u0E22",flag:"\u{1F1F9}\u{1F1ED}"},{code:"vi",label:"Vi\u1EC7t",flag:"\u{1F1FB}\u{1F1F3}"}].map(l=>(
                 <button key={l.code} onClick={()=>{setLang(l.code);setShowLangMenu(false);}} style={{display:"flex",alignItems:"center",gap:8,width:"100%",padding:"8px 14px",background:lang===l.code?"#f0f5ff":"transparent",border:"none",color:"#1d1d1f",fontSize:12,fontWeight:lang===l.code?600:400,cursor:"pointer",textAlign:"left"}} onMouseEnter={e=>e.currentTarget.style.background="#f5f5f7"} onMouseLeave={e=>e.currentTarget.style.background=lang===l.code?"#f0f5ff":"transparent"}><span>{l.flag}</span>{l.label}{lang===l.code&&<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0071e3" strokeWidth="3" style={{marginLeft:"auto"}}><polyline points="20 6 9 17 4 12"/></svg>}</button>
               ))}
             </div>}
           </div>
             {(view==="agent"||view==="manager"||view==="leadership"||view==="leadership-learn"||view==="compliance"||view==="onboarding")&&<button onClick={()=>{setView("academy");window.scrollTo(0,0);}} style={{fontSize:12,fontWeight:600,color:"#0071e3",background:"none",border:"none",cursor:"pointer",display:"flex",alignItems:"center",gap:4}}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="15 18 9 12 15 6"/></svg>Academy</button>}
-            <button onClick={()=>{setView("login");window.scrollTo(0,0);}} style={{fontSize:11,fontWeight:500,color:"#86868b",background:"none",border:"none",cursor:"pointer",marginLeft:4}}>{t.logOut}</button>
+            <button onClick={()=>setDarkMode(!darkMode)} style={{fontSize:13,background:"none",border:"none",cursor:"pointer",padding:"4px 6px",marginLeft:4}} title="Toggle dark mode">{darkMode?"\u2600\uFE0F":"\u{1F319}"}</button>
+            <button onClick={()=>{setView("login");window.scrollTo(0,0);}} style={{fontSize:11,fontWeight:500,color:darkMode?"#a0a0a5":"#86868b",background:"none",border:"none",cursor:"pointer",marginLeft:4}}>{t.logOut}</button>
           </div>}
         </div>
       </nav>
@@ -1032,10 +1359,11 @@ export default function App(){
       {view==="login"&&<>
       
       <section style={{minHeight:"100vh",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",textAlign:"center",padding:"0",position:"relative",overflow:"hidden"}}>
+          <button onClick={()=>setDarkMode(!darkMode)} style={{position:"absolute",top:20,left:20,zIndex:10,fontSize:16,background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"6px 12px",cursor:"pointer"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>{darkMode?"\u2600\uFE0F":"\u{1F319}"}</button>
         <div style={{position:"absolute",top:20,right:20,zIndex:10}}>
-            <button onClick={()=>setShowLangMenu(!showLangMenu)} style={{fontSize:12,fontWeight:600,color:"rgba(255,255,255,.8)",background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"6px 14px",cursor:"pointer",transition:"all .2s",display:"flex",alignItems:"center",gap:6}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>{lang==="en"?"English \u{1F1EC}\u{1F1E7}":lang==="id"?"Bahasa \u{1F1EE}\u{1F1E9}":"\u0E44\u0E17\u0E22 \u{1F1F9}\u{1F1ED}"}<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <button onClick={()=>setShowLangMenu(!showLangMenu)} style={{fontSize:12,fontWeight:600,color:"rgba(255,255,255,.8)",background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"6px 14px",cursor:"pointer",transition:"all .2s",display:"flex",alignItems:"center",gap:6}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>{lang==="en"?"English \u{1F1EC}\u{1F1E7}":lang==="id"?"Bahasa \u{1F1EE}\u{1F1E9}":lang==="th"?"\u0E44\u0E17\u0E22 \u{1F1F9}\u{1F1ED}":"Vi\u1EC7t \u{1F1FB}\u{1F1F3}"}<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="6 9 12 15 18 9"/></svg></button>
             {showLangMenu&&<div style={{position:"absolute",top:"100%",right:0,marginTop:6,background:"rgba(30,30,30,.95)",backdropFilter:"blur(16px)",border:"1px solid rgba(255,255,255,.15)",borderRadius:12,overflow:"hidden",minWidth:160,boxShadow:"0 8px 32px rgba(0,0,0,.3)"}}>
-              {[{code:"en",label:"English",flag:"\u{1F1EC}\u{1F1E7}"},{code:"id",label:"Bahasa Indonesia",flag:"\u{1F1EE}\u{1F1E9}"},{code:"th",label:"\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",flag:"\u{1F1F9}\u{1F1ED}"}].map(l=>(
+              {[{code:"en",label:"English",flag:"\u{1F1EC}\u{1F1E7}"},{code:"id",label:"Bahasa Indonesia",flag:"\u{1F1EE}\u{1F1E9}"},{code:"th",label:"\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",flag:"\u{1F1F9}\u{1F1ED}"},{code:"vi",label:"Ti\u1EBFng Vi\u1EC7t",flag:"\u{1F1FB}\u{1F1F3}"}].map(l=>(
                 <button key={l.code} onClick={()=>{setLang(l.code);setShowLangMenu(false);}} style={{display:"flex",alignItems:"center",gap:8,width:"100%",padding:"10px 16px",background:lang===l.code?"rgba(255,255,255,.15)":"transparent",border:"none",color:"white",fontSize:13,fontWeight:lang===l.code?600:400,cursor:"pointer",textAlign:"left"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.1)"} onMouseLeave={e=>e.currentTarget.style.background=lang===l.code?"rgba(255,255,255,.15)":"transparent"}><span>{l.flag}</span>{l.label}{lang===l.code&&<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" style={{marginLeft:"auto"}}><polyline points="20 6 9 17 4 12"/></svg>}</button>
               ))}
             </div>}
@@ -1078,7 +1406,7 @@ export default function App(){
           <h1 style={{fontSize:"clamp(36px,6vw,56px)",fontWeight:700,lineHeight:1.08,letterSpacing:"-.04em",marginBottom:12}}>{t.leaderV1}</h1>
           <p style={{fontSize:"clamp(17px,2.5vw,21px)",color:"#86868b",lineHeight:1.5,maxWidth:480,margin:"0 auto"}}>{lOverallPct===100?"All six {t.modComplete} You are certified.":lDoneMods>0?`${lDoneMods} of ${lOverallMods} {t.modComplete}`:"Six destinations. Six leadership capabilities."}</p>
           {lOverallPct>0&&lOverallPct<100&&<div style={{maxWidth:320,margin:"20px auto 0"}}><div style={{height:6,borderRadius:3,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:`${lOverallPct}%`,height:"100%",borderRadius:3,background:"linear-gradient(90deg,#7c3aed,#ec4899)",transition:"width .6s ease"}}/></div><p style={{fontSize:12,color:"#b4b4b4",marginTop:8}}>{lOverallPct}%</p></div>}
-          {(()=>{const nm=Object.keys(LMODULES).flatMap(k=>LMODULES[parseInt(k)].map((m,mi)=>({dest:parseInt(k),mod:mi,title:(lang!=="en"&&(lang==="id"?LT_ID:LT_TH)[parseInt(k)+"_t"])||m.title}))).find(m=>!isLModComplete(m.dest,m.mod));return nm?<button onClick={()=>startLModule(nm.dest,nm.mod)} style={{display:"inline-flex",alignItems:"center",gap:8,marginTop:28,padding:"14px 32px",borderRadius:980,background:"#7c3aed",color:"white",fontSize:16,fontWeight:600,border:"none",cursor:"pointer",boxShadow:"0 4px 16px rgba(124,58,237,.3)",transition:"all .2s"}} onMouseEnter={e=>{e.currentTarget.style.transform="scale(1.03)"}} onMouseLeave={e=>{e.currentTarget.style.transform="scale(1)"}}>{lDoneMods===0?"Begin":"Continue"}: {nm.title}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>:null;})()}
+          {(()=>{const nm=Object.keys(LMODULES).flatMap(k=>LMODULES[parseInt(k)].map((m,mi)=>({dest:parseInt(k),mod:mi,title:(lang!=="en"&&(lang==="id"?LT_ID:lang==="th"?LT_TH:LT_VI)[parseInt(k)+"_t"])||m.title}))).find(m=>!isLModComplete(m.dest,m.mod));return nm?<button onClick={()=>startLModule(nm.dest,nm.mod)} style={{display:"inline-flex",alignItems:"center",gap:8,marginTop:28,padding:"14px 32px",borderRadius:980,background:"#7c3aed",color:"white",fontSize:16,fontWeight:600,border:"none",cursor:"pointer",boxShadow:"0 4px 16px rgba(124,58,237,.3)",transition:"all .2s"}} onMouseEnter={e=>{e.currentTarget.style.transform="scale(1.03)"}} onMouseLeave={e=>{e.currentTarget.style.transform="scale(1)"}}>{lDoneMods===0?"Begin":"Continue"}: {nm.title}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>:null;})()}
         </div>
       </section>
 
@@ -1210,7 +1538,7 @@ export default function App(){
                 {unlocked?<span style={{fontSize:14}}>{d.icon}</span>:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b4b4b4" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>}
               </div>
               <h3 style={{fontSize:13,fontWeight:700,marginBottom:2,lineHeight:1.2}}>{d.city}</h3>
-              <p style={{fontSize:10,color:"#86868b"}}>{lang==="id"&&i===0?"Kisah Kami":lang==="id"&&i===1?"Loyalitas & Langganan":lang==="id"&&i===2?"Produk Explorer":lang==="id"?"Penjualan atau Layanan":lang==="th"&&i===0?"เรื่องราวของเรา":lang==="th"&&i===1?"ความภักดี & สมาชิก":lang==="th"&&i===2?"ผลิตภัณฑ์ Explorer":lang==="th"?"การขายหรือบริการ":d.mod}</p>
+              <p style={{fontSize:10,color:"#86868b"}}>{lang==="id"&&i===0?"Kisah Kami":lang==="id"&&i===1?"Loyalitas & Langganan":lang==="id"&&i===2?"Produk Explorer":lang==="id"?"Penjualan atau Layanan":lang==="th"&&i===0?"เรื่องราวของเรา":lang==="th"&&i===1?"ความภักดี & สมาชิก":lang==="th"&&i===2?"ผลิตภัณฑ์ Explorer":lang==="th"?"การขายหรือบริการ":lang==="vi"&&i===0?"Câu Chuyện":lang==="vi"&&i===1?"Trung Thành & Đăng Ký":lang==="vi"&&i===2?"Sản Phẩm Explorer":lang==="vi"?"Bán Hàng hoặc Chăm Sóc":d.mod}</p>
               {done&&<div style={{display:"inline-flex",alignItems:"center",gap:3,background:"#f0fdf4",border:"1px solid #bbf7d0",padding:"2px 8px",borderRadius:980,marginTop:6}}><span style={{fontSize:9,fontWeight:600,color:"#16a34a"}}>Complete</span></div>}
             </div>
           );})}
@@ -1253,19 +1581,19 @@ export default function App(){
 
       {/* How it Works */}
       <section style={{padding:"80px 24px",background:"white"}}>
-        <div style={{maxWidth:980,margin:"0 auto",display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24,textAlign:"center"}}>
-          {[{v:"6",l:lang==="id"?"Modul Kepemimpinan":lang==="th"?"โมดูลภาวะผู้นำ":"Leadership Modules"},{v:"4",l:lang==="id"?"Minggu Per Modul":lang==="th"?"สัปดาห์ต่อโมดูล":"Weeks Per Module"},{v:"1:1",l:lang==="id"?"Pembinaan Pemimpin Mingguan":lang==="th"?"การโค้ชผู้นำรายสัปดาห์":"Weekly Leader Coaching"}].map((s,i)=><div key={i}><div className="apple-grad" style={{fontSize:"clamp(32px,4vw,48px)",fontWeight:700,letterSpacing:"-.03em"}}>{s.v}</div><div style={{fontSize:14,color:"#86868b",marginTop:4}}>{s.l}</div></div>)}
+        <div className="stats-grid" style={{maxWidth:980,margin:"0 auto",display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24,textAlign:"center"}}>
+          {[{v:"6",l:lang==="id"?"Modul Kepemimpinan":lang==="th"?"โมดูลภาวะผู้นำ":lang==="vi"?"Mô-đun Lãnh đạo":"Leadership Modules"},{v:"4",l:lang==="id"?"Minggu Per Modul":lang==="th"?"สัปดาห์ต่อโมดูล":lang==="vi"?"Tuần mỗi Mô-đun":"Weeks Per Module"},{v:"1:1",l:lang==="id"?"Pembinaan Pemimpin Mingguan":lang==="th"?"การโค้ชผู้นำรายสัปดาห์":lang==="vi"?"Huấn luyện hàng tuần":"Weekly Leader Coaching"}].map((s,i)=><div key={i}><div className="apple-grad" style={{fontSize:"clamp(32px,4vw,48px)",fontWeight:700,letterSpacing:"-.03em"}}>{s.v}</div><div style={{fontSize:14,color:"#86868b",marginTop:4}}>{s.l}</div></div>)}
         </div>
       </section>
 
       <section style={{padding:"0 24px 100px",maxWidth:1100,margin:"0 auto"}}>
-        <div style={{textAlign:"center",marginBottom:56}}><h2 style={{fontSize:"clamp(32px,5vw,48px)",fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>{lang==="id"?"Cara kerjanya.":lang==="th"?"วิธีการทำงาน":"How it works."}</h2><p style={{fontSize:19,color:"#86868b"}}>{lang==="id"?"Siklus pembelajaran hibrida empat minggu untuk setiap modul.":lang==="th"?"วงจรการเรียนรู้แบบผสมผสานสี่สัปดาห์สำหรับทุกโมดูล":"A four-week hybrid learning cycle for every module."}</p></div>
-        <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:20}}>
+        <div style={{textAlign:"center",marginBottom:56}}><h2 style={{fontSize:"clamp(32px,5vw,48px)",fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>{lang==="id"?"Cara kerjanya.":lang==="th"?"วิธีการทำงาน":lang==="vi"?"Cách thức hoạt động.":"How it works."}</h2><p style={{fontSize:19,color:"#86868b"}}>{lang==="id"?"Siklus pembelajaran hibrida empat minggu untuk setiap modul.":lang==="th"?"วงจรการเรียนรู้แบบผสมผสานสี่สัปดาห์สำหรับทุกโมดูล":lang==="vi"?"Chu kỳ học tập kết hợp bốn tuần cho mỗi mô-đun.":"A four-week hybrid learning cycle for every module."}</p></div>
+        <div className="hiw-grid" style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:20}}>
           {[
-            {s:"01",t:lang==="id"?"Sesi Pengenalan Langsung":lang==="th"?"เซสชันแนะนำสด":"Live Introduction Session",d:lang==="id"?"Setiap modul dimulai dengan sesi fasilitasi satu jam. Fasilitator Anda memperkenalkan konsep inti, kerangka kerja, dan tantangan kepemimpinan untuk empat minggu ke depan. Di sinilah pemikiran dimulai.":lang==="th"?"แต่ละโมดูลเริ่มต้นด้วยเซสชันที่มีผู้อำนวยความสะดวกหนึ่งชั่วโมง ผู้อำนวยความสะดวกของคุณแนะนำแนวคิดหลัก กรอบงาน และความท้าทายด้านภาวะผู้นำสำหรับสี่สัปดาห์ข้างหน้า นี่คือจุดเริ่มต้นของการคิด":"Each module begins with a one-hour facilitated session. Your facilitator introduces the core concepts, frameworks, and the leadership challenge for the coming four weeks. This is where the thinking starts.",ic:"\u{1F399}\uFE0F",bg:"linear-gradient(135deg,#f5f0ff 0%,#e8f4ff 100%)"},
-            {s:"02",t:lang==="id"?"Modul Mandiri & Praktik":lang==="th"?"โมดูลเรียนรู้ด้วยตนเอง & ฝึกปฏิบัติ":"Self-Paced Module & Practice",d:lang==="id"?"Selesaikan modul online sesuai kecepatan Anda selama empat minggu. Tonton video, baca materi, dan selesaikan bidang praktik dengan tindakan nyata dari tim Anda. Pertanyaan terbuka, roleplay, dan kerja skenario menghidupkan konten.":lang==="th"?"ทำโมดูลออนไลน์ตามจังหวะของคุณตลอดสี่สัปดาห์ ดูวิดีโอ อ่านเนื้อหา และทำแบบฝึกปฏิบัติด้วยการกระทำจริงจากทีมของคุณ คำถามเปิด การแสดงบทบาท และงานสถานการณ์จำลองทำให้เนื้อหามีชีวิต":"Complete the online module at your own pace across the four weeks. Watch the video, read the material, and complete the practice fields with real actions from your team. Open questions, role plays, and scenario work bring the content to life.",ic:"\u{1F4D6}",bg:"linear-gradient(135deg,#e8f4ff 0%,#f0faf5 100%)"},
-            {s:"03",t:lang==="id"?"Lingkaran Belajar & Sesi 1:1":lang==="th"?"วงเรียนรู้ & การประชุมตัวต่อตัว":"Learning Circles & One-on-Ones",d:lang==="id"?"Setiap minggu, bergabunglah dengan lingkaran belajar rekan Anda untuk mendiskusikan bagaimana Anda menerapkan konsep. Bagikan apa yang berhasil, apa yang tidak, dan apa yang akan Anda coba selanjutnya. Secara paralel, sesi 1:1 mingguan Anda dengan pemimpin menjadi percakapan pembinaan yang didasarkan pada konten modul.":lang==="th"?"ทุกสัปดาห์ เข้าร่วมวงเรียนรู้กับเพื่อนร่วมงานเพื่อหารือเกี่ยวกับการนำแนวคิดไปใช้ แบ่งปันสิ่งที่ได้ผล สิ่งที่ไม่ได้ผล และสิ่งที่คุณจะลองต่อไป ควบคู่ไปกับการประชุมตัวต่อตัวรายสัปดาห์กับผู้นำของคุณที่กลายเป็นบทสนทนาโค้ชที่มีรากฐานจากเนื้อหาโมดูล":"Every week, join your peer learning circle to discuss how you applied the concepts. Share what worked, what did not, and what you are trying next. In parallel, your weekly one-on-one with your leader becomes a coaching conversation grounded in the module content.",ic:"\u{1F91D}",bg:"linear-gradient(135deg,#f0faf5 0%,#fff5f0 100%)"},
-            {s:"04",t:lang==="id"?"Pertemuan Tim & Tinjauan Kompetensi":lang==="th"?"การประชุมทีม & การทบทวนสมรรถนะ":"Team Huddle & Competency Review",d:lang==="id"?"Di minggu keempat, kelompok berkumpul untuk pertemuan tim. Anda mempresentasikan apa yang Anda lakukan, bagaimana Anda menerapkan kerangka kerja, dan apa yang berubah di tim Anda. Di sinilah pembelajaran menjadi terlihat dan kompetensi ditunjukkan. Kepemimpinan nyata, ditunjukkan bukan hanya dipelajari.":lang==="th"?"ในสัปดาห์ที่สี่ กลุ่มมารวมกันเพื่อประชุมทีม คุณนำเสนอสิ่งที่คุณทำ วิธีที่คุณนำกรอบงานไปใช้ และสิ่งที่เปลี่ยนแปลงในทีมของคุณ นี่คือจุดที่การเรียนรู้กลายเป็นสิ่งที่มองเห็นได้และสมรรถนะถูกแสดงออกมา ภาวะผู้นำที่แท้จริง แสดงให้เห็นไม่ใช่แค่เรียนรู้":"In week four, the cohort comes together for a team huddle. You present what you did, how you applied the framework, and what changed in your team. This is where the learning becomes visible and the competency is demonstrated. Real leadership, shown not just studied.",ic:"\u{1F3C6}",bg:"linear-gradient(135deg,#fff5f0 0%,#f5f0ff 100%)"}
+            {s:"01",t:lang==="id"?"Sesi Pengenalan Langsung":lang==="th"?"เซสชันแนะนำสด":lang==="vi"?"Phiên Giới thiệu Trực tuyến":"Live Introduction Session",d:lang==="id"?"Setiap modul dimulai dengan sesi fasilitasi satu jam. Fasilitator Anda memperkenalkan konsep inti, kerangka kerja, dan tantangan kepemimpinan untuk empat minggu ke depan. Di sinilah pemikiran dimulai.":lang==="th"?"แต่ละโมดูลเริ่มต้นด้วยเซสชันที่มีผู้อำนวยความสะดวกหนึ่งชั่วโมง ผู้อำนวยความสะดวกของคุณแนะนำแนวคิดหลัก กรอบงาน และความท้าทายด้านภาวะผู้นำสำหรับสี่สัปดาห์ข้างหน้า นี่คือจุดเริ่มต้นของการคิด":"Each module begins with a one-hour facilitated session. Your facilitator introduces the core concepts, frameworks, and the leadership challenge for the coming four weeks. This is where the thinking starts.",ic:"\u{1F399}\uFE0F",bg:"linear-gradient(135deg,#f5f0ff 0%,#e8f4ff 100%)"},
+            {s:"02",t:lang==="id"?"Modul Mandiri & Praktik":lang==="th"?"โมดูลเรียนรู้ด้วยตนเอง & ฝึกปฏิบัติ":lang==="vi"?"Mô-đun Tự học & Thực hành":"Self-Paced Module & Practice",d:lang==="id"?"Selesaikan modul online sesuai kecepatan Anda selama empat minggu. Tonton video, baca materi, dan selesaikan bidang praktik dengan tindakan nyata dari tim Anda. Pertanyaan terbuka, roleplay, dan kerja skenario menghidupkan konten.":lang==="th"?"ทำโมดูลออนไลน์ตามจังหวะของคุณตลอดสี่สัปดาห์ ดูวิดีโอ อ่านเนื้อหา และทำแบบฝึกปฏิบัติด้วยการกระทำจริงจากทีมของคุณ คำถามเปิด การแสดงบทบาท และงานสถานการณ์จำลองทำให้เนื้อหามีชีวิต":"Complete the online module at your own pace across the four weeks. Watch the video, read the material, and complete the practice fields with real actions from your team. Open questions, role plays, and scenario work bring the content to life.",ic:"\u{1F4D6}",bg:"linear-gradient(135deg,#e8f4ff 0%,#f0faf5 100%)"},
+            {s:"03",t:lang==="id"?"Lingkaran Belajar & Sesi 1:1":lang==="th"?"วงเรียนรู้ & การประชุมตัวต่อตัว":lang==="vi"?"Nhóm Học tập & Gặp 1:1":"Learning Circles & One-on-Ones",d:lang==="id"?"Setiap minggu, bergabunglah dengan lingkaran belajar rekan Anda untuk mendiskusikan bagaimana Anda menerapkan konsep. Bagikan apa yang berhasil, apa yang tidak, dan apa yang akan Anda coba selanjutnya. Secara paralel, sesi 1:1 mingguan Anda dengan pemimpin menjadi percakapan pembinaan yang didasarkan pada konten modul.":lang==="th"?"ทุกสัปดาห์ เข้าร่วมวงเรียนรู้กับเพื่อนร่วมงานเพื่อหารือเกี่ยวกับการนำแนวคิดไปใช้ แบ่งปันสิ่งที่ได้ผล สิ่งที่ไม่ได้ผล และสิ่งที่คุณจะลองต่อไป ควบคู่ไปกับการประชุมตัวต่อตัวรายสัปดาห์กับผู้นำของคุณที่กลายเป็นบทสนทนาโค้ชที่มีรากฐานจากเนื้อหาโมดูล":"Every week, join your peer learning circle to discuss how you applied the concepts. Share what worked, what did not, and what you are trying next. In parallel, your weekly one-on-one with your leader becomes a coaching conversation grounded in the module content.",ic:"\u{1F91D}",bg:"linear-gradient(135deg,#f0faf5 0%,#fff5f0 100%)"},
+            {s:"04",t:lang==="id"?"Pertemuan Tim & Tinjauan Kompetensi":lang==="th"?"การประชุมทีม & การทบทวนสมรรถนะ":lang==="vi"?"Họp Nhóm & Đánh giá Năng lực":"Team Huddle & Competency Review",d:lang==="id"?"Di minggu keempat, kelompok berkumpul untuk pertemuan tim. Anda mempresentasikan apa yang Anda lakukan, bagaimana Anda menerapkan kerangka kerja, dan apa yang berubah di tim Anda. Di sinilah pembelajaran menjadi terlihat dan kompetensi ditunjukkan. Kepemimpinan nyata, ditunjukkan bukan hanya dipelajari.":lang==="th"?"ในสัปดาห์ที่สี่ กลุ่มมารวมกันเพื่อประชุมทีม คุณนำเสนอสิ่งที่คุณทำ วิธีที่คุณนำกรอบงานไปใช้ และสิ่งที่เปลี่ยนแปลงในทีมของคุณ นี่คือจุดที่การเรียนรู้กลายเป็นสิ่งที่มองเห็นได้และสมรรถนะถูกแสดงออกมา ภาวะผู้นำที่แท้จริง แสดงให้เห็นไม่ใช่แค่เรียนรู้":"In week four, the cohort comes together for a team huddle. You present what you did, how you applied the framework, and what changed in your team. This is where the learning becomes visible and the competency is demonstrated. Real leadership, shown not just studied.",ic:"\u{1F3C6}",bg:"linear-gradient(135deg,#fff5f0 0%,#f5f0ff 100%)"}
           ].map((it,i)=>(
             <div key={i} style={{background:it.bg,borderRadius:24,padding:"40px 36px",border:"1px solid rgba(0,0,0,.04)",position:"relative",overflow:"hidden",minHeight:220,display:"flex",flexDirection:"column",justifyContent:"space-between",transition:"transform .3s ease,box-shadow .3s ease",cursor:"default"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-4px)";e.currentTarget.style.boxShadow="0 12px 40px rgba(0,0,0,.08)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
               <div style={{position:"absolute",top:24,right:28,fontSize:64,opacity:.15,lineHeight:1}}>{it.ic}</div>
@@ -1325,13 +1653,13 @@ export default function App(){
               </div>
               <div style={{padding:"24px 28px"}}>
                 <p style={{fontSize:11,fontWeight:700,color:"#86868b",letterSpacing:".06em",marginBottom:14}}>MODULE</p>
-                {LMODULES[lDt]&&LMODULES[lDt].map((mod,mi)=>{const done=isLModComplete(lDt,mi);const modTitle=(lang!=="en"&&(lang==="id"?LT_ID:LT_TH)[lDt+"_t"])||mod.title;return(
+                {LMODULES[lDt]&&LMODULES[lDt].map((mod,mi)=>{const done=isLModComplete(lDt,mi);const modTitle=(lang!=="en"&&(lang==="id"?LT_ID:lang==="th"?LT_TH:LT_VI)[lDt+"_t"])||mod.title;return(
                   <div key={mi} className="rw" onClick={()=>{startLModule(lDt,mi);setLDt(null);}} style={{padding:"14px 16px",background:done?`${d.col}10`:"transparent",border:`1px solid ${done?`${d.col}30`:"#e8e8ed"}`,display:"flex",gap:12,borderRadius:14,cursor:"pointer",marginBottom:6}}>
                     <div style={{width:26,height:26,borderRadius:7,background:done?"#10b981":d.col,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,color:"white"}}>{done?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="5 3 19 12 5 21"/></svg>}</div>
                     <div style={{flex:1}}><p style={{fontSize:14,fontWeight:600,color:done?"#10b981":"#1d1d1f"}}>{modTitle}{done?" \u2713":""}</p><p style={{fontSize:12,color:"#86868b"}}>{mod.steps.length} {lang==="id"?"langkah":lang==="th"?"ขั้นตอน":"steps"}</p></div>
                   </div>
                 );})}
-                <button onClick={()=>{const idx=LMODULES[lDt]?LMODULES[lDt].findIndex((_,mi)=>!isLModComplete(lDt,mi)):-1;if(idx>=0){startLModule(lDt,idx);setLDt(null);}}} style={{width:"100%",padding:"14px",borderRadius:980,background:d.col,color:"white",fontSize:17,border:"none",cursor:"pointer",marginTop:20}}>{LMODULES[lDt]&&LMODULES[lDt].every((_,mi)=>isLModComplete(lDt,mi))?(lang==="id"?"Semua Selesai \u2713":lang==="th"?"ทั้งหมดเสร็จ \u2713":"All Complete \u2713"):(lang==="id"?"Lanjutkan Belajar":lang==="th"?"เรียนรู้ต่อ":"Continue Learning")}</button>
+                <button onClick={()=>{const idx=LMODULES[lDt]?LMODULES[lDt].findIndex((_,mi)=>!isLModComplete(lDt,mi)):-1;if(idx>=0){startLModule(lDt,idx);setLDt(null);}}} style={{width:"100%",padding:"14px",borderRadius:980,background:d.col,color:"white",fontSize:17,border:"none",cursor:"pointer",marginTop:20}}>{LMODULES[lDt]&&LMODULES[lDt].every((_,mi)=>isLModComplete(lDt,mi))?(lang==="id"?"Semua Selesai \u2713":lang==="th"?"ทั้งหมดเสร็จ \u2713":lang==="vi"?"Tất cả Hoàn thành \u2713":"All Complete \u2713"):(lang==="id"?"Lanjutkan Belajar":lang==="th"?"เรียนรู้ต่อ":lang==="vi"?"Tiếp tục Học":"Continue Learning")}</button>
               </div>
             </>);})()}
           </div>
@@ -1340,9 +1668,9 @@ export default function App(){
 
       {/* Leadership Module Learning Page */}
       {lActiveModule!==null&&LMODULES[lActiveModule.dest]&&(()=>{
-        const modData=LMODULES[lActiveModule.dest][lActiveModule.mod];const modDataTitle=(lang!=="en"&&(lang==="id"?LT_ID:LT_TH)[lActiveModule.dest+"_t"])||modData.title;
+        const modData=LMODULES[lActiveModule.dest][lActiveModule.mod];const modDataTitle=(lang!=="en"&&(lang==="id"?LT_ID:lang==="th"?LT_TH:LT_VI)[lActiveModule.dest+"_t"])||modData.title;
         const steps=modData.steps;
-        const step=steps[lModuleStep];const stepTitle=(lang!=="en"&&(lang==="id"?LT_ID:LT_TH)[lActiveModule.dest+"_"+lModuleStep])||step.title;
+        const step=steps[lModuleStep];const stepTitle=(lang!=="en"&&(lang==="id"?LT_ID:lang==="th"?LT_TH:LT_VI)[lActiveModule.dest+"_"+lModuleStep])||step.title;
         const isLast=lModuleStep===steps.length-1;
         const pct=((lModuleStep+1)/steps.length)*100;
         return(
@@ -1352,7 +1680,7 @@ export default function App(){
             <span style={{fontSize:13,color:"#86868b",fontWeight:500}}>{t.step} {lModuleStep+1} {t.of} {steps.length}</span>
           </div>
           <div style={{padding:"0 24px",maxWidth:800,margin:"0 auto"}}><div style={{height:3,background:"#e8e8ed",borderRadius:2,marginTop:16,overflow:"hidden"}}><div style={{width:`${pct}%`,height:"100%",background:"linear-gradient(90deg,#7c3aed,#ec4899)",borderRadius:2,transition:"width .4s ease"}}/></div><div style={{display:"flex",justifyContent:"space-between",marginTop:8,marginBottom:32}}><span style={{fontSize:12,color:"#86868b"}}>{t.step} {lModuleStep+1} {t.of} {steps.length}</span><span style={{fontSize:12,color:"#86868b"}}>{Math.round(pct)}%</span></div></div>
-          <div style={{maxWidth:800,margin:"0 auto",padding:"0 24px 120px"}}>
+          <div className="mod-learn" style={{maxWidth:800,margin:"0 auto",padding:"0 24px 120px"}}>
             <div style={{marginBottom:16}}><span style={{fontSize:11,fontWeight:700,letterSpacing:".06em",textTransform:"uppercase",color:step.type==="reflect"?"#8b5cf6":step.type==="video"?"#ef4444":step.type==="apply"?"#f59e0b":step.type==="listen"?"#0ea5e9":step.type==="mission"?"#10b981":"#7c3aed",background:step.type==="reflect"?"#ede9fe":step.type==="video"?"#fee2e2":step.type==="apply"?"#fef3c7":step.type==="listen"?"#e0f2fe":step.type==="mission"?"#d1fae5":"#f0e7ff",padding:"4px 12px",borderRadius:980}}>{step.type==="learn"?"Learn":step.type==="video"?"Watch":step.type==="reflect"?"Practice & Reflect":step.type==="apply"?t.apply:step.type==="listen"?t.listen:step.type==="mission"?t.mission:step.type==="immigration"?(lang==="id"?"Imigrasi":lang==="th"?"ตรวจคนเข้าเมือง":"Immigration"):step.type}</span></div>
             <h1 style={{fontSize:"clamp(28px,4vw,40px)",fontWeight:700,letterSpacing:"-.03em",marginBottom:24,lineHeight:1.15}}>{stepTitle}</h1>
             {step.type==="learn"&&<div>{step.img&&<div style={{fontSize:48,marginBottom:20}}>{step.img}</div>}{step.content.split("\n\n").map((p,pi)=><p key={pi} style={{fontSize:17,lineHeight:1.7,color:"#424245",marginBottom:16,whiteSpace:"pre-line"}}>{p}</p>)}</div>}
@@ -1416,9 +1744,9 @@ export default function App(){
         <section style={{minHeight:"100vh"}}>
           <div style={{position:"relative",overflow:"hidden",padding:"100px 24px 60px",textAlign:"center"}}>
             <div style={{position:"absolute",top:20,right:20,zIndex:10}}>
-            <button onClick={()=>setShowLangMenu(!showLangMenu)} style={{fontSize:12,fontWeight:600,color:"rgba(255,255,255,.8)",background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"6px 14px",cursor:"pointer",transition:"all .2s",display:"flex",alignItems:"center",gap:6}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>{lang==="en"?"English \u{1F1EC}\u{1F1E7}":lang==="id"?"Bahasa \u{1F1EE}\u{1F1E9}":"\u0E44\u0E17\u0E22 \u{1F1F9}\u{1F1ED}"}<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <button onClick={()=>setShowLangMenu(!showLangMenu)} style={{fontSize:12,fontWeight:600,color:"rgba(255,255,255,.8)",background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"6px 14px",cursor:"pointer",transition:"all .2s",display:"flex",alignItems:"center",gap:6}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>{lang==="en"?"English \u{1F1EC}\u{1F1E7}":lang==="id"?"Bahasa \u{1F1EE}\u{1F1E9}":lang==="th"?"\u0E44\u0E17\u0E22 \u{1F1F9}\u{1F1ED}":"Vi\u1EC7t \u{1F1FB}\u{1F1F3}"}<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="6 9 12 15 18 9"/></svg></button>
             {showLangMenu&&<div style={{position:"absolute",top:"100%",right:0,marginTop:6,background:"rgba(30,30,30,.95)",backdropFilter:"blur(16px)",border:"1px solid rgba(255,255,255,.15)",borderRadius:12,overflow:"hidden",minWidth:160,boxShadow:"0 8px 32px rgba(0,0,0,.3)"}}>
-              {[{code:"en",label:"English",flag:"\u{1F1EC}\u{1F1E7}"},{code:"id",label:"Bahasa Indonesia",flag:"\u{1F1EE}\u{1F1E9}"},{code:"th",label:"\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",flag:"\u{1F1F9}\u{1F1ED}"}].map(l=>(
+              {[{code:"en",label:"English",flag:"\u{1F1EC}\u{1F1E7}"},{code:"id",label:"Bahasa Indonesia",flag:"\u{1F1EE}\u{1F1E9}"},{code:"th",label:"\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",flag:"\u{1F1F9}\u{1F1ED}"},{code:"vi",label:"Ti\u1EBFng Vi\u1EC7t",flag:"\u{1F1FB}\u{1F1F3}"}].map(l=>(
                 <button key={l.code} onClick={()=>{setLang(l.code);setShowLangMenu(false);}} style={{display:"flex",alignItems:"center",gap:8,width:"100%",padding:"10px 16px",background:lang===l.code?"rgba(255,255,255,.15)":"transparent",border:"none",color:"white",fontSize:13,fontWeight:lang===l.code?600:400,cursor:"pointer",textAlign:"left"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.1)"} onMouseLeave={e=>e.currentTarget.style.background=lang===l.code?"rgba(255,255,255,.15)":"transparent"}><span>{l.flag}</span>{l.label}{lang===l.code&&<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" style={{marginLeft:"auto"}}><polyline points="20 6 9 17 4 12"/></svg>}</button>
               ))}
             </div>}
@@ -1432,7 +1760,7 @@ export default function App(){
             </button>
             <div style={{position:"relative",zIndex:2,maxWidth:680,margin:"0 auto",animation:"fu .8s ease"}}>
               <p style={{fontSize:14,fontWeight:600,color:"rgba(255,255,255,.7)",letterSpacing:".1em",textTransform:"uppercase",marginBottom:16}}>ALL Accor+ Academy</p>
-              <h1 style={{fontSize:"clamp(36px,6vw,56px)",fontWeight:700,lineHeight:1.08,letterSpacing:"-.04em",marginBottom:12,color:"white",textShadow:"0 2px 20px rgba(0,0,0,.3)"}}>{lang==="en"?"Manager":lang==="id"?"Manajer":"ผู้จัดการ"}<br/>{lang==="en"?"Dashboard.":lang==="id"?"Dasbor.":"แดชบอร์ด"}</h1>
+              <h1 style={{fontSize:"clamp(36px,6vw,56px)",fontWeight:700,lineHeight:1.08,letterSpacing:"-.04em",marginBottom:12,color:"white",textShadow:"0 2px 20px rgba(0,0,0,.3)"}}>{lang==="en"?"Manager":lang==="id"?"Manajer":lang==="th"?"ผู้จัดการ":"Quản Lý"}<br/>{lang==="en"?"Dashboard.":lang==="id"?"Dasbor.":lang==="th"?"แดชบอร์ด":"Bảng Điều Khiển."}</h1>
               <p style={{fontSize:"clamp(16px,2vw,19px)",color:"rgba(255,255,255,.7)",lineHeight:1.5,maxWidth:460,margin:"0 auto"}}>{t.mgrSub}</p>
             </div>
           </div>
@@ -1643,6 +1971,15 @@ export default function App(){
         <section style={{minHeight:"100vh"}}>
           {/* Academy Hero */}
           <div style={{position:"relative",overflow:"hidden",padding:"100px 24px 60px",textAlign:"center"}}>
+            <button onClick={()=>setDarkMode(!darkMode)} style={{position:"absolute",top:20,left:20,zIndex:10,fontSize:16,background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"6px 12px",cursor:"pointer"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>{darkMode?"\u2600\uFE0F":"\u{1F319}"}</button>
+            <div style={{position:"absolute",top:20,right:20,zIndex:10}}>
+            <button onClick={()=>setShowLangMenu(!showLangMenu)} style={{fontSize:12,fontWeight:600,color:"rgba(255,255,255,.8)",background:"rgba(255,255,255,.12)",backdropFilter:"blur(8px)",border:"1px solid rgba(255,255,255,.2)",borderRadius:980,padding:"6px 14px",cursor:"pointer",transition:"all .2s",display:"flex",alignItems:"center",gap:6}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.25)"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,.12)"}>{lang==="en"?"English \u{1F1EC}\u{1F1E7}":lang==="id"?"Bahasa \u{1F1EE}\u{1F1E9}":lang==="th"?"\u0E44\u0E17\u0E22 \u{1F1F9}\u{1F1ED}":"Vi\u1EC7t \u{1F1FB}\u{1F1F3}"}<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+            {showLangMenu&&<div style={{position:"absolute",top:"100%",right:0,marginTop:6,background:"rgba(30,30,30,.95)",backdropFilter:"blur(16px)",border:"1px solid rgba(255,255,255,.15)",borderRadius:12,overflow:"hidden",minWidth:160,boxShadow:"0 8px 32px rgba(0,0,0,.3)"}}>
+              {[{code:"en",label:"English",flag:"\u{1F1EC}\u{1F1E7}"},{code:"id",label:"Bahasa Indonesia",flag:"\u{1F1EE}\u{1F1E9}"},{code:"th",label:"\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",flag:"\u{1F1F9}\u{1F1ED}"},{code:"vi",label:"Ti\u1EBFng Vi\u1EC7t",flag:"\u{1F1FB}\u{1F1F3}"}].map(l=>(
+                <button key={l.code} onClick={()=>{setLang(l.code);setShowLangMenu(false);}} style={{display:"flex",alignItems:"center",gap:8,width:"100%",padding:"10px 16px",background:lang===l.code?"rgba(255,255,255,.15)":"transparent",border:"none",color:"white",fontSize:13,fontWeight:lang===l.code?600:400,cursor:"pointer",textAlign:"left"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,.1)"} onMouseLeave={e=>e.currentTarget.style.background=lang===l.code?"rgba(255,255,255,.15)":"transparent"}><span>{l.flag}</span>{l.label}{lang===l.code&&<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" style={{marginLeft:"auto"}}><polyline points="20 6 9 17 4 12"/></svg>}</button>
+              ))}
+            </div>}
+          </div>
         <div style={{position:"absolute",inset:0,zIndex:0,background:"linear-gradient(180deg, #0a1628 0%, #132d55 25%, #1a4a6e 45%, #2563a0 60%, #3b82f6 80%, #93c5fd 100%)"}}>
               <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 50% 80%, rgba(255,255,255,.08) 0%, transparent 60%)"}}/>
             </div>
@@ -1657,7 +1994,7 @@ export default function App(){
 
           {/* Course Tiles */}
           <div style={{maxWidth:1000,margin:"0 auto",padding:"20px 24px 80px"}}>
-            <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:20}}>
+            <div className="hub-grid" style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:20}}>
               {/* Onboarding */}
               <div onClick={()=>{setView("onboarding");window.scrollTo(0,0);}} style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",cursor:"pointer",transition:"all .3s",display:"flex",flexDirection:"column"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 16px 48px rgba(0,0,0,.1)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
                 <div style={{height:140,position:"relative",overflow:"hidden",background:"linear-gradient(180deg,#0a1628 0%,#132d55 40%,#d4785a 75%,#e8a87c 100%)"}}>
@@ -1671,7 +2008,7 @@ export default function App(){
                   <h3 style={{fontSize:20,fontWeight:700,letterSpacing:"-.02em",marginBottom:6}}>{t.onboarding}</h3>
                   <p style={{fontSize:14,color:"#86868b",lineHeight:1.5,marginBottom:16,flex:1}}>{t.onbDesc}</p>
                   <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-                    <span style={{fontSize:12,color:"#b4b4b4"}}>{lang==="id"?"19 modul":lang==="th"?"19 โมดูล":"19 modules"}</span>
+                    <span style={{fontSize:12,color:"#b4b4b4"}}>{lang==="id"?"19 modul":lang==="th"?"19 โมดูล":lang==="vi"?"19 mô-đun":"19 modules"}</span>
                     <div style={{display:"flex",alignItems:"center",gap:4,color:"#0071e3",fontSize:13,fontWeight:600}}>
                       {t.enter}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -1766,7 +2103,7 @@ export default function App(){
           </div>
 
           <div style={{maxWidth:800,margin:"0 auto",padding:"40px 24px 80px"}}>
-            <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:20}}>
+            <div className="hiw-grid" style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:20}}>
               {/* Volume 1 */}
               <div style={{background:"white",borderRadius:24,overflow:"hidden",border:"1px solid #e8e8ed",transition:"all .3s"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-4px)";e.currentTarget.style.boxShadow="0 12px 40px rgba(0,0,0,.08)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
                 <div style={{height:120,background:"linear-gradient(135deg,#2d1b69,#7c3aed)",display:"flex",alignItems:"center",justifyContent:"center"}}>
@@ -1863,7 +2200,7 @@ export default function App(){
             <span style={{fontSize:12,fontWeight:600,color:"#0071e3"}}>{overallPct===100?(lang==="id"?"Perjalanan Selesai":"Journey Complete"):(lang==="id"?"Perjalanan Berlangsung":"Journey in Progress")}</span>
           </div>
           <h1 style={{fontSize:"clamp(36px,6vw,56px)",fontWeight:700,lineHeight:1.08,letterSpacing:"-.04em",marginBottom:12}}>{t.welcome} Jared.</h1>
-          <p style={{fontSize:"clamp(17px,2.5vw,21px)",color:"#86868b",lineHeight:1.5,maxWidth:480,margin:"0 auto"}}>{overallPct===100?(lang==="id"?"Semua Selandia Baru selesai. Australia menunggu.":"All New Zealand complete. Australia awaits."):overallPct>0?(lang==="id"?`${completedCount} dari ${totalMods} modul selesai di Selandia Baru.`:`${completedCount} of ${totalMods} modules complete across New Zealand.`):(lang==="id"?"Perjalanan Explorer Anda dimulai di Selandia Baru.":lang==="th"?"การเดินทาง Explorer ของคุณเริ่มต้นที่นิวซีแลนด์":"Your Explorer journey begins in New Zealand.")}</p>
+          <p style={{fontSize:"clamp(17px,2.5vw,21px)",color:"#86868b",lineHeight:1.5,maxWidth:480,margin:"0 auto"}}>{overallPct===100?(lang==="id"?"Semua Selandia Baru selesai. Australia menunggu.":"All New Zealand complete. Australia awaits."):overallPct>0?(lang==="id"?`${completedCount} dari ${totalMods} modul selesai di Selandia Baru.`:`${completedCount} of ${totalMods} modules complete across New Zealand.`):(lang==="id"?"Perjalanan Explorer Anda dimulai di Selandia Baru.":lang==="th"?"การเดินทาง Explorer ของคุณเริ่มต้นที่นิวซีแลนด์":lang==="vi"?"Hành trình Explorer của bạn bắt đầu tại New Zealand.":"Your Explorer journey begins in New Zealand.")}</p>
           {overallPct>0&&overallPct<100&&<div style={{maxWidth:320,margin:"20px auto 0"}}>
             <div style={{height:6,borderRadius:3,background:"#e8e8ed",overflow:"hidden"}}><div style={{width:`${overallPct}%`,height:"100%",borderRadius:3,background:"linear-gradient(90deg,#60a5fa,#34d399)",transition:"width .6s ease"}}/></div>
             <p style={{fontSize:12,color:"#b4b4b4",marginTop:8}}>{overallPct}%</p>
@@ -1880,7 +2217,7 @@ export default function App(){
       </section>
 
       {/* ===== THE HERO MAP SECTION ===== */}
-      <section id="mp" style={{padding:"0 0 60px",maxWidth:1200,margin:"0 auto"}}>
+      <section id="mp" className="map-section" style={{padding:"0 0 60px",maxWidth:1200,margin:"0 auto"}}>
         <div style={{textAlign:"center",padding:"20px 24px 32px"}}>
           <p style={{fontSize:14,fontWeight:600,color:"#86868b",letterSpacing:".04em"}}>{t.selectYourDest}</p>
         </div>
@@ -2027,7 +2364,7 @@ export default function App(){
         </div>
 
         {/* Compact destination cards */}
-        <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:12,padding:"0 16px",maxWidth:1160,margin:"0 auto"}}>
+        <div className="dest-grid" style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:12,padding:"0 16px",maxWidth:1160,margin:"0 auto"}}>
           {[0,1,2].map(i=>{const d=D[i];const unlocked=isDestUnlocked(i);return(
             <div key={d.id} className={unlocked?"cd":""} onClick={()=>go(i)} style={{background:cur===i?d.col+"12":"white",borderRadius:16,padding:"18px 16px",border:cur===i?`1.5px solid ${d.col}30`:"1px solid #e8e8ed",cursor:unlocked?"pointer":"default",opacity:unlocked?1:.55}}>
               <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:10}}>
@@ -2120,7 +2457,7 @@ export default function App(){
         <div style={{maxWidth:800,margin:"0 auto",textAlign:"center"}}>
           <h2 style={{fontSize:"clamp(28px,4vw,40px)",fontWeight:700,letterSpacing:"-.03em",marginBottom:6}}>Your Passport.</h2>
           <p style={{fontSize:17,color:"#86868b",marginBottom:40}}>Complete all modules in a destination to earn your stamp.</p>
-          <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:20}}>
+          <div className="stamp-grid" style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:20}}>
             {[{n:"New Zealand",i:0,col:"#60a5fa"},{n:"Australia",i:1,col:"#f59e0b"},{n:"Indonesia",i:2,col:"#34d399"},{n:"India",i:3,col:teamChoice===4?"#8b5cf6":"#f472b6"}].map((s,si)=>{
               const skipped=si===3&&teamChoice==="done";
               const done=skipped?false:(si===3?(isDestComplete(3)||isDestComplete(4)):isDestComplete(s.i));
@@ -2157,7 +2494,7 @@ export default function App(){
             <div style={{marginBottom:20,display:"flex",justifyContent:"center"}}>
               <img src={cardImg} alt="Explorer Card" style={{width:180,borderRadius:12,boxShadow:"0 8px 30px rgba(0,0,0,.12)"}}/>
             </div>
-            <h2 style={{fontSize:32,fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>{lang==="id"?"Selamat, Jared!":lang==="th"?"ยินดีด้วย Jared!":"Congratulations, Jared!"}</h2>
+            <h2 style={{fontSize:32,fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>{lang==="id"?"Selamat, Jared!":lang==="th"?"ยินดีด้วย Jared!":lang==="vi"?"Chúc mừng Jared!":"Congratulations, Jared!"}</h2>
             <p style={{fontSize:17,color:"#424245",lineHeight:1.6,marginBottom:24}}>You have successfully completed all onboarding modules and earned your Explorer Certification as an ALL Accor+ specialist. You are ready.</p>
             <div style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:8,marginBottom:24}}>
               {(teamChoice==="done"?[{n:"Our Story",col:"#60a5fa"},{n:"Loyalty & Subscription Loyalty",col:"#f59e0b"},{n:"The Explorer Product",col:"#34d399"}]:[{n:"Our Story",col:"#60a5fa"},{n:"Loyalty & Subscription Loyalty",col:"#f59e0b"},{n:"The Explorer Product",col:"#34d399"},{n:safeTeam===4?"Member Care":"Outbound Acquisition",col:safeTeam===4?"#8b5cf6":"#f472b6"}]).map((d,di)=>(
@@ -2207,18 +2544,18 @@ export default function App(){
       {/* Stats + How it works */}
       <section style={{padding:"80px 24px",background:"white"}}>
         <div style={{maxWidth:980,margin:"0 auto",display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24,textAlign:"center"}}>
-          {[{v:"460,000+",l:lang==="id"?"Anggota Explorer di Asia Pasifik":lang==="th"?"สมาชิก Explorer ทั่วเอเชียแปซิฟิก":"Explorer Members across Asia Pacific"},{v:"1,400+",l:lang==="id"?"Hotel untuk Stay Plus Nights":lang==="th"?"โรงแรมสำหรับคืน Stay Plus":"Hotels for Stay Plus Nights"},{v:"1,300+",l:lang==="id"?"Restoran dengan Diskon Makan":lang==="th"?"ร้านอาหารพร้อมส่วนลด":"Restaurants with Dining Discounts"}].map((s,i)=><div key={i}><div className="apple-grad" style={{fontSize:"clamp(32px,4vw,48px)",fontWeight:700,letterSpacing:"-.03em"}}>{s.v}</div><div style={{fontSize:14,color:"#86868b",marginTop:4}}>{s.l}</div></div>)}
+          {[{v:"460,000+",l:lang==="id"?"Anggota Explorer di Asia Pasifik":lang==="th"?"สมาชิก Explorer ทั่วเอเชียแปซิฟิก":lang==="vi"?"Thành viên Explorer khắp Châu Á Thái Bình Dương":"Explorer Members across Asia Pacific"},{v:"1,400+",l:lang==="id"?"Hotel untuk Stay Plus Nights":lang==="th"?"โรงแรมสำหรับคืน Stay Plus":lang==="vi"?"Khách sạn cho đêm Stay Plus":"Hotels for Stay Plus Nights"},{v:"1,300+",l:lang==="id"?"Restoran dengan Diskon Makan":lang==="th"?"ร้านอาหารพร้อมส่วนลด":lang==="vi"?"Nhà hàng có ưu đãi ẩm thực":"Restaurants with Dining Discounts"}].map((s,i)=><div key={i}><div className="apple-grad" style={{fontSize:"clamp(32px,4vw,48px)",fontWeight:700,letterSpacing:"-.03em"}}>{s.v}</div><div style={{fontSize:14,color:"#86868b",marginTop:4}}>{s.l}</div></div>)}
         </div>
       </section>
 
       <section style={{padding:"80px 24px 100px",maxWidth:1100,margin:"0 auto"}}>
-        <div style={{textAlign:"center",marginBottom:56}}><h2 style={{fontSize:"clamp(32px,5vw,48px)",fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>{lang==="id"?"Cara kerjanya.":lang==="th"?"วิธีการทำงาน":"How it works."}</h2><p style={{fontSize:19,color:"#86868b"}}>{lang==="id"?"Sesi langsung dan modul mandiri, bekerja bersama.":lang==="th"?"เซสชันสดและโมดูลเรียนรู้ด้วยตนเอง ทำงานร่วมกัน":"Live sessions and self-paced modules, working together."}</p></div>
+        <div style={{textAlign:"center",marginBottom:56}}><h2 style={{fontSize:"clamp(32px,5vw,48px)",fontWeight:700,letterSpacing:"-.03em",marginBottom:8}}>{lang==="id"?"Cara kerjanya.":lang==="th"?"วิธีการทำงาน":lang==="vi"?"Cách thức hoạt động.":"How it works."}</h2><p style={{fontSize:19,color:"#86868b"}}>{lang==="id"?"Sesi langsung dan modul mandiri, bekerja bersama.":lang==="th"?"เซสชันสดและโมดูลเรียนรู้ด้วยตนเอง ทำงานร่วมกัน":lang==="vi"?"Phiên trực tuyến và mô-đun tự học, phối hợp cùng nhau.":"Live sessions and self-paced modules, working together."}</p></div>
         <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:20}}>
           {[
-            {s:"01",t:lang==="id"?"Ikuti Sesi Langsung":lang==="th"?"เข้าร่วมเซสชันสด":"Join a Live Session",d:lang==="id"?"Terhubung dengan tim Anda melalui Google Meet untuk panduan konten inti setiap destinasi. Pemimpin Anda membawa Anda melalui hal-hal yang paling penting.":lang==="th"?"เชื่อมต่อกับทีมของคุณผ่าน Google Meet เพื่อแนะนำเนื้อหาหลักของแต่ละจุดหมาย ผู้นำของคุณจะพาคุณผ่านสิ่งที่สำคัญที่สุด":"Connect with your team via Google Meet for guided walkthroughs of each destination's core content. Your leaders take you through what matters most.",ic:"\u{1F4E1}",bg:"linear-gradient(135deg,#f5f0ff 0%,#e8f4ff 100%)"},
-            {s:"02",t:lang==="id"?"Jelajahi Modul Anda":lang==="th"?"สำรวจโมดูลของคุณ":"Explore Your Modules",d:lang==="id"?"Setelah setiap sesi langsung, selami modul interaktif mandiri di destinasi Anda saat ini. Belajar sesuai kecepatan Anda, di waktu Anda sendiri.":lang==="th"?"หลังจากแต่ละเซสชันสด ดำดิ่งสู่โมดูลเชิงโต้ตอบแบบเรียนรู้ด้วยตนเองในจุดหมายปัจจุบันของคุณ เรียนรู้ตามจังหวะของคุณ ในเวลาของคุณเอง":"After each live session, dive into interactive self-paced modules within your current destination. Learn at your own pace, on your own time.",ic:"\u{1F4D6}",bg:"linear-gradient(135deg,#e8f4ff 0%,#f0faf5 100%)"},
-            {s:"03",t:lang==="id"?"Selesaikan & Stempel":lang==="th"?"เสร็จสิ้น & ประทับตรา":"Complete & Stamp",d:lang==="id"?"Selesaikan semua modul di suatu destinasi untuk mendapatkan stempel paspor Anda dan membuka penerbangan berikutnya. Pantau kemajuan Anda.":lang==="th"?"ทำโมดูลทั้งหมดในจุดหมายให้เสร็จเพื่อรับตราประทับพาสปอร์ตของคุณและปลดล็อกเที่ยวบินถัดไป ติดตามความคืบหน้าของคุณ":"Finish all modules in a destination to earn your passport stamp and unlock the next flight. Track your progress as you go.",ic:"\u2705",bg:"linear-gradient(135deg,#f0faf5 0%,#fff5f0 100%)"},
-            {s:"04",t:lang==="id"?"Dapatkan Wisuda Orientasi Anda":lang==="th"?"รับวุฒิบัตรปฐมนิเทศของคุณ":"Earn Your Onboarding Graduation",d:lang==="id"?"Selesaikan keempat destinasi untuk lulus sebagai spesialis ALL Accor+ Explorer bersertifikat. Selamat datang di tim.":lang==="th"?"ทำทั้งสี่จุดหมายให้สำเร็จเพื่อสำเร็จการศึกษาในฐานะผู้เชี่ยวชาญ ALL Accor+ Explorer ที่ได้รับการรับรอง ยินดีต้อนรับสู่ทีม":"Complete all four destinations to graduate as a certified ALL Accor+ Explorer specialist. Welcome to the team.",ic:"\u{1F3C6}",bg:"linear-gradient(135deg,#fff5f0 0%,#f5f0ff 100%)"}
+            {s:"01",t:lang==="id"?"Ikuti Sesi Langsung":lang==="th"?"เข้าร่วมเซสชันสด":lang==="vi"?"Tham gia Phiên Trực tuyến":"Join a Live Session",d:lang==="id"?"Terhubung dengan tim Anda melalui Google Meet untuk panduan konten inti setiap destinasi. Pemimpin Anda membawa Anda melalui hal-hal yang paling penting.":lang==="th"?"เชื่อมต่อกับทีมของคุณผ่าน Google Meet เพื่อแนะนำเนื้อหาหลักของแต่ละจุดหมาย ผู้นำของคุณจะพาคุณผ่านสิ่งที่สำคัญที่สุด":lang==="vi"?"Kết nối với đội của bạn qua Google Meet để được hướng dẫn nội dung chính. Người dẫn dắt sẽ đưa bạn qua những điều quan trọng nhất.":"Connect with your team via Google Meet for guided walkthroughs of each destination's core content. Your leaders take you through what matters most.",ic:"\u{1F4E1}",bg:"linear-gradient(135deg,#f5f0ff 0%,#e8f4ff 100%)"},
+            {s:"02",t:lang==="id"?"Jelajahi Modul Anda":lang==="th"?"สำรวจโมดูลของคุณ":lang==="vi"?"Khám phá Mô-đun":"Explore Your Modules",d:lang==="id"?"Setelah setiap sesi langsung, selami modul interaktif mandiri di destinasi Anda saat ini. Belajar sesuai kecepatan Anda, di waktu Anda sendiri.":lang==="th"?"หลังจากแต่ละเซสชันสด ดำดิ่งสู่โมดูลเชิงโต้ตอบแบบเรียนรู้ด้วยตนเองในจุดหมายปัจจุบันของคุณ เรียนรู้ตามจังหวะของคุณ ในเวลาของคุณเอง":lang==="vi"?"Sau mỗi phiên trực tuyến, khám phá các mô-đun tương tác theo tốc độ của bạn. Học theo nhịp riêng, vào thời gian riêng.":"After each live session, dive into interactive self-paced modules within your current destination. Learn at your own pace, on your own time.",ic:"\u{1F4D6}",bg:"linear-gradient(135deg,#e8f4ff 0%,#f0faf5 100%)"},
+            {s:"03",t:lang==="id"?"Selesaikan & Stempel":lang==="th"?"เสร็จสิ้น & ประทับตรา":lang==="vi"?"Hoàn thành & Đóng dấu":"Complete & Stamp",d:lang==="id"?"Selesaikan semua modul di suatu destinasi untuk mendapatkan stempel paspor Anda dan membuka penerbangan berikutnya. Pantau kemajuan Anda.":lang==="th"?"ทำโมดูลทั้งหมดในจุดหมายให้เสร็จเพื่อรับตราประทับพาสปอร์ตของคุณและปลดล็อกเที่ยวบินถัดไป ติดตามความคืบหน้าของคุณ":lang==="vi"?"Hoàn thành tất cả mô-đun để nhận tem hộ chiếu và mở khóa chuyến bay tiếp theo. Theo dõi tiến độ.":"Finish all modules in a destination to earn your passport stamp and unlock the next flight. Track your progress as you go.",ic:"\u2705",bg:"linear-gradient(135deg,#f0faf5 0%,#fff5f0 100%)"},
+            {s:"04",t:lang==="id"?"Dapatkan Wisuda Orientasi Anda":lang==="th"?"รับวุฒิบัตรปฐมนิเทศของคุณ":lang==="vi"?"Nhận Chứng chỉ Đào tạo":"Earn Your Onboarding Graduation",d:lang==="id"?"Selesaikan keempat destinasi untuk lulus sebagai spesialis ALL Accor+ Explorer bersertifikat. Selamat datang di tim.":lang==="th"?"ทำทั้งสี่จุดหมายให้สำเร็จเพื่อสำเร็จการศึกษาในฐานะผู้เชี่ยวชาญ ALL Accor+ Explorer ที่ได้รับการรับรอง ยินดีต้อนรับสู่ทีม":lang==="vi"?"Hoàn thành bốn điểm đến để tốt nghiệp với tư cách chuyên gia ALL Accor+ Explorer. Chào mừng đến với đội ngũ.":"Complete all four destinations to graduate as a certified ALL Accor+ Explorer specialist. Welcome to the team.",ic:"\u{1F3C6}",bg:"linear-gradient(135deg,#fff5f0 0%,#f5f0ff 100%)"}
           ].map((it,i)=>(
             <div key={i} style={{background:it.bg,borderRadius:24,padding:"40px 36px",border:"1px solid rgba(0,0,0,.04)",position:"relative",overflow:"hidden",minHeight:220,display:"flex",flexDirection:"column",justifyContent:"space-between",transition:"transform .3s ease,box-shadow .3s ease",cursor:"default"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-4px)";e.currentTarget.style.boxShadow="0 12px 40px rgba(0,0,0,.08)"}} onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none"}}>
               <div style={{position:"absolute",top:24,right:28,fontSize:64,opacity:.15,lineHeight:1}}>{it.ic}</div>
@@ -2243,7 +2580,7 @@ export default function App(){
         <div style={{position:"fixed",inset:0,zIndex:900,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",background:"rgba(0,0,0,.75)",animation:"gradFadeIn .8s ease",backdropFilter:"blur(8px)"}}>
           <div style={{animation:"gradTitle 1s ease .3s both"}}>
             <p style={{fontSize:14,fontWeight:600,color:"rgba(255,255,255,.6)",letterSpacing:".1em",textTransform:"uppercase",marginBottom:12,textAlign:"center"}}>ALL Accor+ Explorer</p>
-            <h1 style={{fontSize:"clamp(40px,8vw,72px)",fontWeight:700,color:"white",textAlign:"center",letterSpacing:"-.04em",lineHeight:1.05,textShadow:"0 4px 30px rgba(0,0,0,.3)"}}>{lang==="id"?"Explorer Bersertifikat.":lang==="th"?"Explorer ได้รับการรับรอง":"Explorer Certified."}</h1>
+            <h1 style={{fontSize:"clamp(40px,8vw,72px)",fontWeight:700,color:"white",textAlign:"center",letterSpacing:"-.04em",lineHeight:1.05,textShadow:"0 4px 30px rgba(0,0,0,.3)"}}>{lang==="id"?"Explorer Bersertifikat.":lang==="th"?"Explorer ได้รับการรับรอง":lang==="vi"?"Explorer Được Chứng Nhận.":"Explorer Certified."}</h1>
           </div>
           <div style={{display:"flex",gap:20,marginTop:40}}>
             {(teamChoice==="done"?[{i:0,col:"#60a5fa"},{i:1,col:"#f59e0b"},{i:2,col:"#34d399"}]:[{i:0,col:"#60a5fa"},{i:1,col:"#f59e0b"},{i:2,col:"#34d399"},{i:teamChoice||3,col:D[safeTeam]?.col||"#f472b6"}]).map((s,si)=>(
@@ -2355,7 +2692,7 @@ export default function App(){
           </div>
 
           {/* Content area */}
-          <div style={{maxWidth:800,margin:"0 auto",padding:"0 24px 120px"}}>
+          <div className="mod-learn" style={{maxWidth:800,margin:"0 auto",padding:"0 24px 120px"}}>
             {/* Step type badge */}
             <div style={{marginBottom:16}}>
               <span style={{fontSize:11,fontWeight:700,letterSpacing:".06em",textTransform:"uppercase",color:step.type==="quiz"?"#f59e0b":step.type==="reflect"?"#8b5cf6":step.type==="video"?"#ef4444":step.type==="apply"?"#f59e0b":step.type==="listen"?"#0ea5e9":step.type==="mission"?"#10b981":step.type==="immigration"?"#f59e0b":"#0071e3",background:step.type==="quiz"?"#fef3c7":step.type==="reflect"?"#ede9fe":step.type==="video"?"#fee2e2":step.type==="apply"?"#fef3c7":step.type==="listen"?"#e0f2fe":step.type==="mission"?"#d1fae5":step.type==="immigration"?"#fef3c7":"#e0f2fe",padding:"4px 12px",borderRadius:980}}>{step.type==="learn"?"Learn":step.type==="video"?"Watch":step.type==="quiz"?"Quiz":step.type==="reflect"?"Reflect":step.type==="apply"?t.apply:step.type==="listen"?t.listen:step.type==="mission"?t.mission:step.type}</span>
@@ -2414,7 +2751,7 @@ export default function App(){
                           );
                         })}
                       </div>
-                      {answered&&<p style={{marginTop:12,fontSize:14,fontWeight:600,color:isCorrect?"#10b981":"#ef4444"}}>{isCorrect?(lang==="id"?"Benar!":lang==="th"?"ถูกต้อง!":"Correct!"):(lang==="id"?"Tidak tepat. Jawaban yang benar ditandai di atas.":"Not quite. The correct answer is highlighted above.")}</p>}
+                      {answered&&<p style={{marginTop:12,fontSize:14,fontWeight:600,color:isCorrect?"#10b981":"#ef4444"}}>{isCorrect?(lang==="id"?"Benar!":lang==="th"?"ถูกต้อง!":lang==="vi"?"Đúng rồi!":"Correct!"):(lang==="id"?"Tidak tepat. Jawaban yang benar ditandai di atas.":"Not quite. The correct answer is highlighted above.")}</p>}
                     </div>
                   );
                 })}
@@ -2442,14 +2779,14 @@ export default function App(){
                   <div style={{position:"relative",zIndex:1}}>
                     <div style={{fontSize:56,marginBottom:8}}>{step.flag}</div>
                     <p style={{fontSize:28,fontWeight:300,color:"rgba(255,255,255,.9)",marginBottom:4,fontStyle:"italic"}}>{step.maori}</p>
-                    <h2 style={{fontSize:24,fontWeight:700,color:"white",marginBottom:12}}>{lang==="id"?"Selamat Datang di":lang==="th"?"ยินดีต้อนรับสู่":"Welcome to"} {step.country}!</h2>
+                    <h2 style={{fontSize:24,fontWeight:700,color:"white",marginBottom:12}}>{lang==="id"?"Selamat Datang di":lang==="th"?"ยินดีต้อนรับสู่":lang==="vi"?"Chào mừng đến":"Welcome to"} {step.country}!</h2>
                     <p style={{fontSize:14,color:"rgba(255,255,255,.6)",lineHeight:1.6,maxWidth:480,margin:"0 auto"}}>{step.welcomeMsg}</p>
                   </div>
                 </div>
 
                 {/* Learning outcomes */}
                 <div style={{background:"#f0fdf4",borderRadius:16,padding:"20px 24px",marginBottom:28,border:"1px solid #bbf7d0"}}>
-                  <p style={{fontSize:13,fontWeight:700,color:"#065f46",letterSpacing:".04em",marginBottom:12}}>{lang==="id"?"HASIL PEMBELAJARAN":lang==="th"?"ผลลัพธ์การเรียนรู้":"LEARNING OUTCOMES"}</p>
+                  <p style={{fontSize:13,fontWeight:700,color:"#065f46",letterSpacing:".04em",marginBottom:12}}>{lang==="id"?"HASIL PEMBELAJARAN":lang==="th"?"ผลลัพธ์การเรียนรู้":lang==="vi"?"KẾT QUẢ HỌC TẬP":"LEARNING OUTCOMES"}</p>
                   {step.outcomes&&step.outcomes.map((o,oi)=>(
                     <div key={oi} style={{display:"flex",alignItems:"flex-start",gap:10,marginBottom:oi<step.outcomes.length-1?8:0}}>
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2.5" style={{flexShrink:0,marginTop:2}}><polyline points="20 6 9 17 4 12"/></svg>
@@ -2463,8 +2800,8 @@ export default function App(){
                   <div style={{padding:"20px 24px",background:"linear-gradient(135deg,#fef3c7,#fefce8)",borderBottom:"1px solid #fde68a",display:"flex",alignItems:"center",gap:12}}>
                     <div style={{width:40,height:40,borderRadius:12,background:"#f59e0b",display:"flex",alignItems:"center",justifyContent:"center",fontSize:20}}>&#x1F6C2;</div>
                     <div>
-                      <p style={{fontSize:16,fontWeight:700,color:"#92400e"}}>{lang==="id"?"Pemeriksaan Imigrasi":lang==="th"?"ตรวจคนเข้าเมือง":"Immigration Check"}</p>
-                      <p style={{fontSize:12,color:"#a16207"}}>{lang==="id"?"5 pertanyaan menyenangkan tentang":lang==="th"?"5 คำถามสนุกเกี่ยวกับ":"5 fun facts about"} {step.country}</p>
+                      <p style={{fontSize:16,fontWeight:700,color:"#92400e"}}>{lang==="id"?"Pemeriksaan Imigrasi":lang==="th"?"ตรวจคนเข้าเมือง":lang==="vi"?"Kiểm tra Nhập cảnh":"Immigration Check"}</p>
+                      <p style={{fontSize:12,color:"#a16207"}}>{lang==="id"?"5 pertanyaan menyenangkan tentang":lang==="th"?"5 คำถามสนุกเกี่ยวกับ":lang==="vi"?"5 câu hỏi thú vị về":"5 fun facts about"} {step.country}</p>
                     </div>
                   </div>
                   {step.facts&&step.facts.map((f,fi)=>{const key="imm_"+moduleStep+"_"+fi;const picked=immAnswers[key]!==undefined;const correct=immAnswers[key]===f.correct;return(
@@ -2482,7 +2819,7 @@ export default function App(){
                   );})}
                   {Object.keys(immAnswers).filter(k=>k.startsWith("imm_"+moduleStep)).length>=5&&(
                     <div style={{padding:"20px 24px",background:"linear-gradient(135deg,#d1fae5,#ecfdf5)",textAlign:"center"}}>
-                      <p style={{fontSize:18,fontWeight:700,color:"#065f46"}}>&#x1F6EB; {lang==="id"?"Imigrasi Disetujui!":lang==="th"?"ผ่านตรวจคนเข้าเมือง!":"Immigration Approved!"}</p>
+                      <p style={{fontSize:18,fontWeight:700,color:"#065f46"}}>&#x1F6EB; {lang==="id"?"Imigrasi Disetujui!":lang==="th"?"ผ่านตรวจคนเข้าเมือง!":lang==="vi"?"Nhập cảnh Được chấp thuận!":"Immigration Approved!"}</p>
                       <p style={{fontSize:13,color:"#047857",marginTop:4}}>{lang==="id"?"Selamat datang di "+step.country+". Sekarang mari kita mulai belajar.":lang==="th"?"ยินดีต้อนรับสู่"+step.country+" เริ่มเรียนรู้กันเลย":"Welcome to "+step.country+". Now let us start learning."}</p>
                     </div>
                   )}
